@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://www.staubli.com/robotics/VAL3/Project/3" >
+  <Parameters version="s7.2" stackSize="5000" millimeterUnit="true" />
+  <Programs>
+    <Program file="CmdDealTest.pgx" />
+    <Program file="CmdManage.pgx" />
+    <Program file="CmdTxtReading.pgx" />
+    <Program file="DataSend2PC.pgx" />
+    <Program file="F2_gohome.pgx" />
+    <Program file="F3_delete.pgx" />
+    <Program file="F3_insertPs.pgx" />
+    <Program file="F4_DELT.pgx" />
+    <Program file="F6_testmove.pgx" />
+    <Program file="F6_testsync.pgx" />
+    <Program file="FC_EndMotion.pgx" />
+    <Program file="FC_InitData.pgx" />
+    <Program file="FC_InitMotion.pgx" />
+    <Program file="FC_chrdeal.pgx" />
+    <Program file="HMI.pgx" />
+    <Program file="InitSocket.pgx" />
+    <Program file="PulesAdd.pgx" />
+    <Program file="TxtReadRoom1.pgx" />
+    <Program file="TxtReadRoom2.pgx" />
+    <Program file="TxtReadRoom3.pgx" />
+    <Program file="Txt_PkgInit.pgx" />
+    <Program file="Txt_initData.pgx" />
+    <Program file="hmi_keyinmain.pgx" />
+    <Program file="hmi_refreshmain.pgx" />
+    <Program file="initCmdBuf.pgx" />
+    <Program file="jCadClean.pgx" />
+    <Program file="pFrmCadToJoint.pgx" />
+    <Program file="partNum.pgx" />
+    <Program file="resetnum.pgx" />
+    <Program file="start.pgx" />
+    <Program file="stop.pgx" />
+    <Program file="stringToJoints.pgx" />
+    <Program file="stringtopoint.pgx" />
+    <Program file="sychronMove.pgx" />
+    <Program file="task_sychron.pgx" />
+    <Program file="testMove.pgx" />
+  </Programs>
+  <Database>
+    <Data file="Sychron_slave.dtx" />
+  </Database>
+  <Libraries>
+    <Library alias="TcpStrRec" path="Disk://TcpStrRec/TcpStrRec.pjx" autoload="true" password="" />
+  </Libraries>
+  <Types>
+  </Types>
+</Project>

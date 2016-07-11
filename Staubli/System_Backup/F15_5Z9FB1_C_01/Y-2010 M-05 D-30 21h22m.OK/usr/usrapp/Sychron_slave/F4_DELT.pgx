@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F4_DELT" access="private" >
+    <Code><![CDATA[begin
+  //delay(10)
+  delay(0.5)
+  while size(sString)>1
+    $ddel(sString,size(sString)-1)
+  endWhile
+  while size(nPulse)>1
+    $ddel(nPulse,size(nPulse)-1)
+  endWhile
+  while size(pfrmCad)>1
+    $ddel(pfrmCad,size(pfrmCad)-1)
+  endWhile
+  //sScrPts="NOT READY**"
+  //bTxtPrSv=false
+  bTxtPrSv=false
+  sScrPts="NOT READY**"
+  //n_sTxt=0
+  n_sTxt=0
+  call hmi_refreshmain()
+end]]></Code>
+  </Program>
+</Programs>

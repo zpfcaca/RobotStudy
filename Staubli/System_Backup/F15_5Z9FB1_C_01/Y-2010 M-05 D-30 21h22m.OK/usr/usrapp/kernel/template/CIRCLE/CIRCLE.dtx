@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Data/2">
+  <Datas>
+    <Data name="distance" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="moveType" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="1" />
+    </Data>
+    <Data name="nArmType" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nArray" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="1" />
+    </Data>
+    <Data name="nCenterSpeed" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="100" />
+    </Data>
+    <Data name="nCurveIn" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="0.5" />
+    </Data>
+    <Data name="nCurveOut" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="0.5" />
+    </Data>
+    <Data name="nCutIn" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="0.5" />
+    </Data>
+    <Data name="nCutInOutBlend" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="0.05" />
+    </Data>
+    <Data name="nCutOut" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="0.5" />
+    </Data>
+    <Data name="nFrameIndex" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="1" />
+    </Data>
+    <Data name="nGasPressure" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="90" />
+    </Data>
+    <Data name="nIndexGun" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="1" />
+    </Data>
+    <Data name="nJointSpeed" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="100" />
+    </Data>
+    <Data name="nLaserDelay" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="0.5" />
+    </Data>
+    <Data name="nLaserPower" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="60" />
+    </Data>
+    <Data name="nOverPass" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nPointQuantity" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="1000" />
+    </Data>
+    <Data name="nRadius" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="10" />
+    </Data>
+    <Data name="nStop" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nTcpAction" access="public" xsi:type="array" type="num" size="9">
+      <Value key="0" value="1" />
+    </Data>
+    <Data name="nTime" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nTotalPoint" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nX" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nXlength" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nXoffset" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nY" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nYlength" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nYoffset" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nPWMPercent" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="100" />
+    </Data>
+    <Data name="nOpenAngle" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nJointMode" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="comment" access="public" xsi:type="array" type="string" size="1">
+      <Value key="0" value="cicle..." />
+    </Data>
+    <Data name="instruction" access="public" xsi:type="array" type="string" size="9" />
+    <Data name="sAction" access="public" xsi:type="array" type="string" size="3" />
+    <Data name="bCutting" access="public" xsi:type="array" type="bool" size="1" />
+    <Data name="bRes" access="public" xsi:type="array" type="bool" size="1" />
+    <Data name="toStop" access="public" xsi:type="array" type="bool" size="1" />
+    <Data name="fTrack" access="public" xsi:type="array" type="frame" size="1">
+      <Value key="0" x="34" fatherId="world[0]" />
+    </Data>
+    <Data name="jConfig" access="public" xsi:type="array" type="jointRx" size="1" />
+    <Data name="jReadyIn" access="public" xsi:type="array" type="jointRx" size="1" />
+    <Data name="jReadyOut" access="public" xsi:type="array" type="jointRx" size="1" />
+    <Data name="jSynJoint" access="public" xsi:type="array" type="jointRx" size="10" />
+    <Data name="pCenter" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" fatherId="fTrack[0]" />
+    </Data>
+    <Data name="pCutting" access="public" xsi:type="array" type="pointRx" size="11">
+      <Value key="0" fatherId="fTrack[0]" />
+      <Value key="1" fatherId="fTrack[0]" />
+      <Value key="2" fatherId="fTrack[0]" />
+      <Value key="3" fatherId="fTrack[0]" />
+      <Value key="4" fatherId="fTrack[0]" />
+      <Value key="5" fatherId="fTrack[0]" />
+      <Value key="6" fatherId="fTrack[0]" />
+      <Value key="7" fatherId="fTrack[0]" />
+      <Value key="8" fatherId="fTrack[0]" />
+      <Value key="9" fatherId="fTrack[0]" />
+      <Value key="10" fatherId="fTrack[0]" />
+    </Data>
+    <Data name="pMoveTo" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" fatherId="fTrack[0]" />
+    </Data>
+    <Data name="pO" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" fatherId="world[0]" />
+    </Data>
+    <Data name="pX" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" fatherId="world[0]" />
+    </Data>
+    <Data name="pY" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" fatherId="world[0]" />
+    </Data>
+    <Data name="points" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" wrist="wfree" fatherId="fTrack[0]" />
+    </Data>
+    <Data name="nom_speed" access="public" xsi:type="array" type="mdesc" size="1">
+      <Value key="0" tmax="66.66" rmax="60" leave="0.05" reach="0.05" />
+    </Data>
+    <Data name="mJointSpeed" access="public" xsi:type="array" type="mdesc" size="1">
+      <Value key="0" vel="50" tmax="9999" rmax="9999" leave="30" reach="30" />
+    </Data>
+  </Datas>
+</Database>

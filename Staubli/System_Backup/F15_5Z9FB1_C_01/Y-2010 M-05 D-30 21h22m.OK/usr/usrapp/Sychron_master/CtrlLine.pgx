@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="CtrlLine" access="private" >
+    <Code><![CDATA[begin
+
+  //Ctrl:nCtrl的含义
+  //1：主手回起始点
+  //2：从手回起始点
+  //3：轨迹点初始化
+  //4：同步运动停止
+  //5：同步运动开始
+  //6：清空点库
+  //7：轨迹包初始化
+  //8：第八轴
+
+  //...........................
+
+  //51：主手回零完成
+  //52：从手回零完成
+  //531：初始化完毕
+  //532：初始化未进行
+  //54：同步运动完成
+  //55：同步运动中止
+  //56：点库已清空
+  //57：轨迹包初始化完毕
+  //80：第八轴运动结束
+  //.........................
+
+
+  TcpStrRec:nCtrl=0
+  while true
+    if TcpStrRec:nCtrl==40
+      socket="(RBNEXT)"
+      bNextStep=true
+      TcpStrRec:nCtrl=0
+    endIf
+    if TcpStrRec:nCtrl==1
+      call F1_r1home()
+      TcpStrRec:nCtrl=0
+    endIf
+    if TcpStrRec:nCtrl==2
+      call F2_r2home()
+      TcpStrRec:nCtrl=0
+    endIf
+    if TcpStrRec:nCtrl==3
+      socket="(RBPOIN)"
+      call txt_PkgInit()
+      TcpStrRec:nCtrl=0
+    endIf
+    if TcpStrRec:nCtrl==4
+      call F4_stop()
+      TcpStrRec:nCtrl=0
+    endIf
+    if TcpStrRec:nCtrl==5
+      call F5_start()
+      TcpStrRec:nCtrl=0
+    endIf
+    if TcpStrRec:nCtrl==6
+      call F6_DELT()
+      TcpStrRec:nCtrl=0
+    endIf
+    if TcpStrRec:nCtrl==7
+      call hmi_keyinmain()
+      TcpStrRec:nCtrl=0
+    endIf
+    if TcpStrRec:nCtrl==8
+      socket="(RBAXI8)"
+      TcpStrRec:nCtrl=0
+    endIf
+    if bRb2AXI8==true
+      TcpStrRec:nFeedback=80
+      bRb2AXI8=false
+    endIf
+
+
+
+
+
+
+
+
+  endWhile
+end]]></Code>
+  </Program>
+</Programs>

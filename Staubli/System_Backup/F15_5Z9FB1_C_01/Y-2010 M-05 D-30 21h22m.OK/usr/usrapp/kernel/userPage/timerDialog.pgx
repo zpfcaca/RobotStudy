@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="timerDialog" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sMsg" type="string" xsi:type="element" />
+      <Parameter name="x_nTime" type="num" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nTime" type="num" xsi:type="array" size="1" />
+      <Local name="l_nStartLine" type="num" xsi:type="array" size="1" />
+      <Local name="l_nLine" type="num" xsi:type="array" size="1" />
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // use for other task
+  //
+  if watch(bShowDialog==false,2)==false
+    bShowDialog=false
+    logMsg("error dialog resoursing")
+    return
+  else
+    setMutex(bShowDialog)
+    //
+    //call listempty()
+    //
+    l_nTime=clock()
+    call stringCopy(x_sMsg,sMessage)
+    call divideString(sMessage,l_nLine)
+    l_nStartLine=round(5-l_nLine/2)
+    do
+      // Start LINE
+      call type(0,l_nStartLine-2,"┌──────────────────────────────────────┐")
+      call type(0,l_nStartLine-1,"│                                      │")
+      // write the message
+      for i=0 to l_nLine
+        call type(0,l_nStartLine+i,"")
+        call type(39,l_nStartLine+i,"")
+        //call typeCenter(i+l_nStartLine,sMessage[i],38,false)
+        l_sMessage=sMessage[i]
+        call typeCenter(i+l_nStartLine,l_sMessage,38,false)
+        call type(0,l_nStartLine+i,"│"+l_sMessage+"│")
+      endFor
+      // end LINE
+      call type(0,l_nStartLine+l_nLine+1,"│                                      │")
+      call type(0,l_nStartLine+l_nLine+2,"└──────────────────────────────────────┘")
+      // release
+      if x_nTime==0
+        delay(0.1)
+      else
+        delay(0)
+      endIf
+    until (clock()-l_nTime)>=x_nTime
+    //
+    bShowDialog=false
+    bUseRefresh=true
+    delay(0)
+  endIf
+  // bLocking=false
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

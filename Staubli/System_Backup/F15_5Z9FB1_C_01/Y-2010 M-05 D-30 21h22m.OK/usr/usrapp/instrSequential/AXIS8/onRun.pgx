@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onRun" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItem" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nValue" type="num" xsi:type="array" size="1" />
+      <Local name="l_nValue1" type="num" xsi:type="array" size="1" />
+      <Local name="l_nVelocity" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // Done, when you execute it
+  //
+  ////  call findValue(x_sItem,l_nValue)
+  ////  aioSet(io:movePulse,l_nValue)
+  ////  io:move=true
+  ////  delay(0.5)
+  ////  io:move=false
+  ////  wait(io:atPosition==true or isKeyPressed(255))
+
+  aioSet(MbAO_aMoveDis,0)
+  aioSet(MbAO_bMovePos8,0)
+  aioSet(MbAO_b8Axis,1)
+  bAxisRun=true
+//  aioSet(MbAI_bAxis8Reac,0)
+  delay(0.5)
+  call findValue(x_sItem,l_nValue,l_nValue1)
+  call getVelocity(x_sItem,l_nVelocity)
+  l_nVelocity=l_nVelocity*1000/60
+  aioSet(MbAO_aMovePosL8,l_nValue)
+  aioSet(MbAO_aMovePosH8,l_nValue1)
+  aioSet(MbAO_aVelocity8,l_nVelocity)
+  aioSet(MbAO_bMovePos8,1)
+  delay(0.5)
+  wait(aioGet(MbAI_bAxis8Reac)==0)
+  wait(aioGet(MbAI_bAxis8Reac)==1 or isKeyPressed(255))
+  if isKeyPressed(255)
+    //if !cycleStatus:bCycle and !cycleStatus:bSimulation
+      if aioGet(MbAO_bStopMotor)==1
+        aioSet(MbAO_bStopMotor,0)
+        delay(0.2)
+        aioSet(MbAO_bStopMotor,1)
+        delay(0.2)
+      else
+        aioSet(MbAO_bStopMotor,1)
+        delay(0.4)
+        aioSet(MbAO_bStopMotor,0)
+      endIf
+    //endIf
+  endIf
+  aioSet(MbAO_bMovePos8,0)
+  aioSet(MbAO_b8Axis,0)
+  // aioSet(io:MbAI_bAxis7Reac,0)
+  bAxisRun=false
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

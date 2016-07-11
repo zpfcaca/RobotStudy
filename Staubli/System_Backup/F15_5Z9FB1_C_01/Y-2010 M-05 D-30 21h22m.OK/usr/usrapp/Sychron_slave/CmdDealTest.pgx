@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="CmdDealTest" access="private" >
+    <Locals>
+      <Local name="l_ni" type="num" xsi:type="array" size="1" />
+      <Local name="l_jTemp1" type="joint" xsi:type="array" size="1" />
+      <Local name="l_bTemp" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+
+
+  while true
+
+
+
+    if nReadPt!=nWritePt
+
+      strCmd=mid(CmdBuffer[nReadPt],6,1)
+
+      if strCmd=="RBREDY"
+
+        popUpMsg("_")
+        if bTxtPrSv==false
+          popUpMsg("请首先对点位文件初始化（按F3-PoIn）")
+        else
+          //        // go to jCad[1] position
+
+          //        //movej(jHome,tTool,mSlow)
+
+          //        movej(jCad[1],tTool,mSlow)
+
+          //        // movej(jReal,flange,mSlow)
+
+          //        waitEndMove()
+
+          //        //jConfig=herej()
+
+          MoveTo.trsf=pfrmCad[0].trsf
+
+          l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+
+          //    $movejSync(jJointRx[l_nCount])
+
+          l_jTemp1.j6=0
+          movej(l_jTemp1,tTool,mNomSpeed)
+
+          wait(isSettled()==true)
+
+          socket="(RBREDY)"
+        endIf
+
+      endIf
+
+      if strCmd=="RBSTOP"
+
+        bSychronOn=false
+
+        bRealM=false
+
+        call FC_EndMotion()
+
+        //        socket="(RBSTOP)"
+
+        if taskStatus("SychMove")!=-1
+
+          taskKill("SychMove")
+
+          wait(taskStatus("SychMove")==-1)
+
+        endIf
+
+        if taskStatus("strToJt")!=-1
+
+          taskKill("strToJt")
+
+          wait(taskStatus("strToJt")==-1)
+
+        endIf
+
+
+        //
+        call F4_DELT()
+        call hmi_refreshmain()
+      endIf
+
+
+      //      if strCmd=="RBINIT"
+
+      //        if nTotalPoints<=1
+
+      //          //no point
+
+      //          io:socket="(RBINIT)"
+
+      //        else
+
+      //          //delete points
+
+      //          for l_ni=nTotalPoints to 2 step -1
+
+      //            $ddel(jCad,nTotalPoints-1)
+
+      //            nTotalPoints=nTotalPoints-1
+
+      //            nScrPts=nTotalPoints
+
+      //            call hmi_refreshmain()
+
+      //          endFor
+
+      //          wait(nTotalPoints==1)
+
+      //          io:socket="(RBINIT)"
+
+      //        endIf
+
+      //      endIf
+
+      if strCmd=="REALTM"
+
+        //is realtime synchronous movement
+
+        bRealM=true
+
+      endIf
+
+      if strCmd=="RBSTAT"
+        if bTxtPrSv==false
+          popUpMsg("请首先对点位文件初始化（按F3-PoIn）")
+        else
+
+          bfnshint=true
+
+          //        if bfnshint==true
+
+          //delay(0.0968)
+
+          taskCreateSync "SychMove",0.004,bRes,task_sychron()
+
+          //call task_sychron()
+
+          //        else
+
+          //          popUpMsg("init points frist")
+
+          //          io:socket="(RBUNIN)"
+
+          //        endIf
+        endIf
+
+      endIf
+
+      CmdBuffer[nReadPt]=""
+
+      CmdTotal=CmdTotal-1
+
+      nReadPt=nReadPt+1
+
+      if nReadPt>=20
+
+        nReadPt=0
+
+      endIf
+
+    else
+
+    endIf
+
+    //delay(0)
+
+
+  endWhile
+
+end]]></Code>
+  </Program>
+</Programs>

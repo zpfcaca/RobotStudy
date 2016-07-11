@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="scroll" access="public">
+    <Description><![CDATA[create a scroll bar]]></Description>
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_nX" type="num" xsi:type="element" />
+      <Parameter name="x_nY" type="num" xsi:type="element" />
+      <Parameter name="x_nDim" type="num" xsi:type="element" />
+      <Parameter name="x_nPos" type="num" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_sLine" type="string" xsi:type="array" size="1" />
+      <Local name="l_nPos" type="num" xsi:type="array" size="1" />
+      <Local name="l_sScrool" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // use the scroll
+  if x_nPos>0 and x_nPos<=100
+    l_nPos=round(x_nDim*x_nPos/100)
+    if l_nPos>0
+      // make the scroll
+      call strfill(l_sScrool,l_nPos,l_sScrool)
+      call strfillchr(l_sScrool,l_sScrool,"■")
+    endIf
+    // make the line
+    call strfill(l_sLine,x_nDim-l_nPos,l_sLine)
+    call strfillchr(l_sLine,l_sLine,"─")
+    l_sMessage="├"+l_sScrool+l_sLine+"┤"
+    // show the line
+    call type(x_nX,x_nY,l_sMessage)
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

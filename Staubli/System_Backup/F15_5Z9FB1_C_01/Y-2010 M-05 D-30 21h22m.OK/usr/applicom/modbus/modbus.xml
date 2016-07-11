@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<TOPICSLIST>
+	<TOPIC Name="Modbus" Card="0" Channel="0" Equipment="0" RefreshPeriod="200" Actif="1">
+		<MODULE Tag_name_root="Bit" IDModule="BOOLEAN" InputSize="" OutputSize="0">
+			</MODULE>
+		<MODULE Tag_name_root="Word" IDModule="WORD" InputSize="" OutputSize="16">
+			<ITEM Name="mbItem1" Syntaxe="%IW0" Offset="0"/></MODULE>
+	</TOPIC>
+	<GENERAL_PARAMETERS TopicName="Modbus" TCP_Port="502" ConnectionNumber="2"/>
+</TOPICSLIST>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="setValue" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_nValue" type="num" xsi:type="element" />
+      <Parameter name="x_nIndex" type="num" xsi:type="element" />
+      <Parameter name="x_nValue1" type="num" xsi:type="element" />
+    </Parameters>
+    <Code><![CDATA[begin
+  // set the value
+  // saveAxis[x_nIndex].nValue=x_nValue
+  nSaveaxis[x_nIndex]=x_nValue
+  nSaveaxis1[x_nIndex]=x_nValue1
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

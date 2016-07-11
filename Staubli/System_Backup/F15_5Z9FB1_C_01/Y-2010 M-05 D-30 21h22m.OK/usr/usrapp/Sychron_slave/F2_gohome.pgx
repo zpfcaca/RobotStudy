@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F2_gohome" access="private" >
+    <Locals>
+      <Local name="l_jTemp1" type="joint" xsi:type="array" size="1" />
+      <Local name="l_bTemp" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  popUpMsg("ok")
+  // go to pfrmCad[1] position
+  if size(pfrmCad)>1
+    //            //movej(jHome,tTool,mSlow)
+    //            movej(jCad[1],flange,mSlow)
+    MoveTo.trsf=pfrmCad[0].trsf
+    l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+    //    $movejSync(jJointRx[l_nCount])
+    l_jTemp1.j6=0
+    movej(l_jTemp1,tTool,mNomSpeed)
+    waitEndMove()
+  else
+    popUpMsg("Motion need be initilized")
+  endIf
+end]]></Code>
+  </Program>
+</Programs>

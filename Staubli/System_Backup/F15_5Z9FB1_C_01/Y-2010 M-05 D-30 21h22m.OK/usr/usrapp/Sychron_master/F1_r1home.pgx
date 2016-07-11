@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F1_r1home" access="private" >
+    <Locals>
+      <Local name="l_jTemp1" type="joint" xsi:type="array" size="1" />
+      <Local name="l_bTemp" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+
+  //robot back to JHome and go to cad:pCad[1]
+  //    if bTxtPrSv==false
+  //    popUpMsg("请首先对点位文件初始化（按F3“PoIn”）")
+  //    else
+  if bTxtPrSv==false
+    TcpStrRec:nFeedback=532
+  else
+    if bSychronOn==false
+      //    MoveTo.trsf=cad:pCad[0].trsf
+      //    //MoveTo.trsf=position(cad:pCad[1],FrmDraw)
+      //    //sent fisrt point to another robot
+      //    call pointToString(MoveTo,sStrPoints)
+      //    //io:socket="(MOVE3M   "+sStrPoints+")"
+      //    movej(MoveTo,tTool,mNomSpeed)
+      //    //
+      //    movej(jCad[0],tTool,mNomSpeed)
+      MoveTo.trsf=pfrmCad[0].trsf
+      l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+      //    $movejSync(jJointRx[l_nCount])
+      l_jTemp1.j6=0
+      movej(l_jTemp1,tTool,mNomSpeed)
+      waitEndMove()
+      TcpStrRec:nCtrl=51
+    else
+      popUpMsg("robot is moving")
+    endIf
+  endIf
+
+
+end]]></Code>
+  </Program>
+</Programs>

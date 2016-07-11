@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="DataSend2PC" access="private" >
+    <Locals>
+      <Local name="jold" type="num" xsi:type="array" size="1" />
+      <Local name="bReconnect" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //this routine is to send the data to PC
+  while true
+    delay(0)
+  endWhile
+end]]></Code>
+  </Program>
+</Programs>

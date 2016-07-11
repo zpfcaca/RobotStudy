@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="message" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="message" type="string" xsi:type="array" use="reference" />
+      <Parameter name="index" type="num" xsi:type="element" />
+    </Parameters>
+    <Code><![CDATA[begin
+  // lenght of message
+  //
+  switch index
+    //VAL Laser
+    case -5001
+      message="< Polygon Traj. Editor >"
+    break
+    case -5000
+      message="< Circle Traj. Editor >"
+    break
+    case -4999
+      message="Select the frame, <┘ to validate"
+    break
+    case -4998
+      message="< frame. Editor >"
+    break
+     case -128
+      message="Teach .sencond point?"
+    break 
+    case -127
+      message="<┘ to type angle of rotation"
+    break 
+    case -126
+      message="Rotate angle?"
+    break 
+    case -125
+      message="Move .Second pos the the cor.pos then record it"
+    break 
+    case -124
+      message="Renew the polygon by mirror?"
+    break 
+    case -123
+      message="Mirror-wizard"
+    break 
+    case -122
+      message="Laser on"
+    break
+    case -121
+      message="Air on"
+    break
+    case -120
+      message="Para. Setting"
+    break
+    case -119
+      message="Follow on"
+    break
+    case -118
+      message="PWM Ratio"
+    break
+    case -117
+      message="Laser Power"
+    break
+    case -116
+      message="Gas pressure"
+    break
+    case -115
+      message="You want to change your profile?##(Warm prompt:Need type password)"
+    break
+    case -114
+      message="Laser over        "
+    break
+    case -113
+      message="Laser-timer:"
+    break
+    case -112
+      message="Pulse Time"
+    break
+    case -111
+      message="Process production data...please waiting"
+    break
+    case -110
+      message="load template call falied! code:"
+    break
+    case -109
+      message="Please type _ for the first chr of the name! "
+    break
+    case -108
+      message="Name already exit!"
+    break
+    case -107
+      message="New Call app. failed! code:"
+    break
+    case -106
+      message="New Call"
+    break
+    case -105
+      message=" New"
+    break
+    case -104
+      message="Open"
+    break
+    case -103
+      message="Can not find pjx file!"
+    break
+    case -102
+      message="Can not open ,please check!"
+    break
+    case -101
+      message= "App. is open in disk!"
+    break
+    case -100
+      message= "Staubli administrator Mode!"
+    break
+    case -99
+      message="You have to change to  manual mode!"
+    break
+    case -98
+      message="LaserPower:0%"
+    break
+    case -97
+      message="LaserPower:100%"
+    break
+    case -96
+      message="Follow:OFF"
+    break
+    case -95
+      message="Follow:ON"
+    break
+    case -94
+      message="Air:OFF"
+    break
+    case -93
+      message="Air:ON"
+    break
+    case -92
+      message="Laser:OFF"
+    break
+    case -91
+      message="Laser:ON"
+    break
+    case -90
+      message="LASER I/O"
+    break
+    case -89
+      message=" Loading TASK PLC "
+    break
+    case -88
+      message=" Loading TASK Remote "
+    break
+    case -87
+      message=" Loading TASK Interface "
+    break
+    case -86
+      message=" Init all the processes "
+    break
+    case -85
+      message="frame list"
+    break
+    case -84
+      message=" STOP CYCLE "
+    break
+    case -83
+      message="saveing frame..please wait"
+    break
+    case -82
+      message="Error load action,please contact staubli company"
+    break
+    case -81
+      message="File path:Disk://LaserCall"
+    break
+    case -80
+      message="Cannot reach the align point##Please move robot..."
+    break
+    case -79
+      message="For safety,impossible to modify for JOINT or HOME !"
+    break
+    case -78
+      message="Blend Mode"
+    break
+    case -77
+      message="Press Move/Hold key to align..."
+    break
+    case -76
+      message="Searching..."
+    break
+    case -75
+      message="Error:.third point={0,0,0,0,0,0}?"
+    break
+    case -74
+      message="Error:.second point={0,0,0,0,0,0}?"
+    break
+    case -73
+      message="Error:.first point={0,0,0,0,0,0}?"
+    break
+    case -72
+      message=" need to be updated "
+    break
+    case -71
+      message="No "
+    break
+    case -70
+      message="PWM Ratio"
+    break
+    case -69
+      message="Enter the Laser Power, all the points that have the same Laser Power will be change, use mm"
+    break
+    case -68
+      message="Once you change one selection,all the points that have the same parameter will be change"
+    break
+    case -67
+      message="need be updated"
+    break
+    case -66
+      message="No correlative "
+    break
+    case -65
+      message="Error:.Circle Center={0,0,0,0,0,0}?"
+    break
+    case -64
+      message="Error:.CutInOut Joint={0,0,0,0,0,0}?"
+    break
+    case -63
+      message="speed (%)"
+    break
+    case -62
+      message="Accelerat (%)"
+    break
+    case -61
+      message="New frame data now in useing..."
+    break
+    case -60
+      message="----->please input name"
+    break
+    case -59
+      message="Select frame:"
+    break
+    case -58
+      message="##Frame updata and saving..."
+    break
+    case -57
+      message="Frame changed,please wait,Search..."
+    break
+    case -56
+      message="In order to update the new frame##now you have to Reload ValLaser.."
+    break
+    case -55
+      message="laser tool->"
+    break
+    case -54
+      message="num of edge "
+    break
+    case -53
+      message="Open Angle(°)"
+    break
+    case -52
+      message="Laser Power"
+    break
+    case -51
+      message="Gas Pressure"
+    break
+    case -50
+      message="Laser Delay(s)"
+    break
+    case -49
+      message="Cutting Speed(m/min)"
+    break
+    case -48
+      message=" Radius "
+    break
+    case -47
+      message=" Blend(mm)  "
+    break
+    case -46
+      message="Rvel"
+    break
+    case -45
+      message=" Tvel(mm/s) "
+    break
+    case -44
+      message=" Decel(%)"
+    break
+    case -43
+      message="  Vel (%)"
+    break
+    case -42
+      message=" Accel(%)"
+    break
+    case -41
+      message=" Coord Rz (mm)"
+    break
+    case -40
+      message=" Coord Ry (mm)"
+    break
+    case -39
+      message=" Coord Rx (mm)"
+    break
+    case -38
+      message=" Coord  Z (mm)"
+    break
+    case -37
+      message=" Coord  Y (mm)"
+    break
+    case -36
+      message=" Coord  X (mm)"
+    break
+    case -35
+      message="Joint 6(Deg)"
+    break
+    case -34
+      message="Joint 5(Deg)"
+    break
+    case -33
+      message="Joint 4(Deg)"
+    break
+    case -32
+      message="Joint 3(Deg)"
+    break
+    case -31
+      message="Joint 2(Deg)"
+    break
+    case -30
+      message="Joint 1(Deg)"
+    break
+    case -29
+      message=",Frame,Tool,List,,,,Save"
+    break
+    case -28
+      message="Here,Frame,Tool,List,,,,Save"
+    break
+    case -27
+      message="End Action"
+    break
+    case -26
+      message="Start Action"
+    break
+    case -250
+      message=".First Point"
+    break
+    case -251
+      message=".Second Point"
+    break
+    case -252
+      message=".Third Point"
+    break
+    case -253
+      message=">length1: "
+    break
+    case -254
+      message=">length2: "
+    break
+    case -25
+      message=">Cutting Parameter"
+    break
+    case -249
+      message="Quantities(Dirction X)    :"
+    break
+    case -248
+      message="Interval(Direction X)(mm) :"
+    break
+    case -247    
+      message="Length(Dierction X)(mm)   :"
+    break
+    case -246 
+      message="Quantities(Dirction Y)    :"
+    break
+    case -245
+      message="Interval(Direction Y)(mm) :"
+    break
+    case -244
+      message="Length(Dierction Y)(mm)   :"
+    break
+    case -243
+      message="Array is invalid,switch on the Array trigger!!"
+    break
+    case -242
+      message=">Array Setting"
+    break
+    case -241
+      message="Array"
+    break
+    case -24
+      message=".Circle Center"
+    break
+    case -23
+      message=".CutInOut Joint "
+    break
+    // USEFUL
+    case -22
+      message="Index Number is Larger than Points Quantity:"
+    break
+    case -21
+      message="Please insert the Points Index Number:"
+    break
+    // USEFUL
+    case -20
+      message="Duplicate"
+    break
+    case -19
+      message="Delete"
+    break
+    case -18
+      message="New"
+    break
+    case -10
+      message="Insert one USB in the controller..."
+    break
+    case -9
+      message="This will take several minutes"
+    break
+    case -8
+      message="Wizard"
+    break
+    case -7
+      message="Error on loading: "
+    break
+    case -6
+      message="Error on saving: "
+    break
+    case -5
+      message="Error point out of range"
+    break
+    case -4
+      message="Saving .... please wait"
+    break
+    case -3
+      message="The value that you have entered is invalid"
+    break
+    case -2
+      message="The name already exist or not allowed to use, please change"
+    break
+    case -1
+      message="Do you want to save your last change?"
+    break
+    //Main page 0..9
+    case 0
+      message=" Operator "
+    break
+    case 1
+      message=" Programmer "
+    break
+    case 2
+      message=" Integrator "
+    break
+    case 3
+      message="The cycle is going to STOP"
+    break
+    case 4
+      message="Do you want EXIT from VALlaser?"
+    break
+    case 5
+      message="Profile"
+    break
+    case 6
+      message="Home Page"
+    break
+    // File manager
+    case 10
+      message="Copying files: "
+    break
+    case 11
+      message="Do you want to override the file: "
+    break
+    case 12
+      message="CHECKING IN: "
+    break
+    // NOTE    0123456789012345678901234567890123456" maximum
+    case 13
+      message="Press Escape to find new instruction"
+    break
+    case 14
+      message="SEARCHING INSTRUCTION"
+    break
+    case 15
+      message="LOADING INSTRUCTION"
+    break
+    case 16
+      message="ROBOT NOT CALIBRATED"
+    break
+    case 17
+      message=" VALlaser QUITTING...##PLEASE WAIT"
+    break
+    case 18
+      message="BUILD INSTRUCTION's LIST: "
+    break
+    case 19
+      message="LOADING ..."
+    break
+    case 20
+      message="LOADING PAGE"
+    break
+    //Select program 20..29
+    case 21
+      message="Name: "
+    break
+    case 22
+      message="Do you want to delete the program: "
+    break
+    case 23
+      message="Not possible to delete or rename: "
+    break
+    case 24
+      message="First delete this program from the cycle process list"
+    break
+    case 25
+      message="Production"
+    break
+    case 26
+      message="Maintenance"
+    break
+    case 27
+      message="Enter the number of cycle for this program: "
+    break
+    case 29
+      message=" is in use in "
+    break
+    //Set IN-OUT 30..39
+    case 30
+      message="Select the type INPUT or OUTPUT"
+    break
+    case 31
+      message="ERROR Input-Output NOT FOUND"
+    break
+    case 32
+      message="Changing: "
+    break
+    case 33
+      message="Waiting: "
+    break
+    case 34
+      message="Select the range from 0 to "
+    break
+    case 35
+      message="Select"
+    break
+    case 36
+      message="Unselect"
+    break
+    case 37
+      message="Enable"
+    break
+    case 38
+      message="Disable"
+    break
+    case 39
+      message="Select the identification model "
+    break
+    case 40
+      message="insert the state ON-OFF"
+    break
+    case 41
+      message="Select an operator or press enter to validate"
+    break
+    // ADVANCE 50..60
+    case 50
+      message="language"
+    break
+    case 51
+      message="rounding"
+    break
+    case 52
+      message="timeout"
+    break
+    case 53
+      message="multiSession"
+    break
+    case 54
+      message="displayCoord"
+    break
+    case 55
+      message="reloadProc.List"
+    break
+    // insert from the list
+    case 60
+      //0123456789012345678901234567890123456789
+      message="Select the Program, <┘ to validate"
+    break
+    case 61
+      message=",,,,,Duplicate,,New"
+    break
+    case 62
+      message="Select the Input, Return to validate"
+    break
+    case 63
+      message="Select the Output, Return to validate"
+    break
+    case 64
+      //      message="Filter"
+    break
+    case 65
+      message="Select the item, <┘ to validate"
+    break
+    case 66
+      message="Select the Instruction, <┘ to validate"
+    break
+    // PROCESS LIST 70..
+    case 70
+      message="Process List"
+    break
+    case 71
+      message="Processes"
+    break
+    case 72
+      message="START LIST"
+    break
+    case 73
+      message="PROCESS LIST"
+    break
+    case 74
+      message="END LIST"
+    break
+    case 75
+      message="RESET"
+    break
+    case 76
+      message="Full Process List"
+    break
+    case 77
+      message="Do you want to select as PROCESS LIST this program: "
+    break
+    case 78
+      message="Not possible to delete the process list in use during the cycle"
+    break
+    case 79
+      message="The first program in the process List, the program will be delete"
+    break
+    //change Program 80..
+    case 80
+      message="Do you want to delete the selection? "
+    break
+    case 81
+      message="Do you want to delete the trajectory? "
+    break
+    case 84
+      message="It's not possible to load this program "
+    break
+    case 85
+      message="Filter by name"
+    break
+    case 86
+      message="Filter by process List"
+    break
+    case 87
+      message="Generate File"
+    break
+    // Production Page 90...
+    case 90
+      message="Cycle time:"
+    break
+    case 91
+      message="No program into the processes list"
+    break
+    case 92
+      message="Put the robot in manual mode"
+    break
+    case 93
+      message="ROBOT IS MOVING..."
+    break
+    case 94
+      message="move to POINT : "
+    break
+    case 95
+      message="the ROBOT is NOT A POINT: "
+    break
+    case 96
+      message="Exporting the list to"
+    break
+    case 97
+      message="list has been created"
+    break
+    case 98
+      message="Start TIME"
+    break
+    case 99
+      message="Duration"
+    break
+    // Tool 120..129
+    case 120
+      message="Do you want to delete the tool with index: "
+    break
+    case 121
+      message="Reference Point Recorded.."
+    break
+    case 122
+      message="Tool not calculated"
+    break
+    case 123
+      message="Tool"
+    break
+    case 124
+      message="Tool"
+    break
+    case 125
+      message="Do you want to save this reference Point?"
+    break
+    case 126
+      message="Copy of: "
+    break
+    case 127
+      message="The select tool, "
+    break
+    case 128
+      message=" doesn't exist in memory"
+    break
+    case 129
+      message="The change of these values will shift all the trajectories using this gun"
+    break
+    //  TRAJECTORY 130..179
+    case 130
+      message="- Move_Hold to continue  "
+    break
+    case 131
+      message="Do you want to record the intermediate position?"
+    break
+    case 132
+      //      message="Set Home Program"
+    break
+    case 133
+      message="it's not possible to delete the trajectory HOME>home"
+    break
+    case 140
+      message="release the Joint_move to continue"
+    break
+    case 141
+      message="release the World_move to continue"
+    break
+    case 142
+      message="release the Tool_move to continue"
+    break
+    case 143
+      message="release the Point_move to continue"
+    break
+    case 144
+      message="press RESTART to continue"
+    break
+    case 145
+      message="connection movement"
+    break
+    case 146
+      message="Settling the power please wait..."
+    break
+    case 150
+      message="Here"
+    break
+    case 151
+      message="List"
+    break
+    case 152
+      message="Approach"
+    break
+    case 153
+      message="Teach"
+    break
+    case 154
+      message="Transformation"
+    break
+    case 157
+      message="MoveType"
+    break
+    case 158
+      message="Speed"
+    break
+    case 159
+      message="Acceleration"
+    break
+    case 160
+      message="Record current position, are you sure?"
+    break
+    case 161
+      message="Insert the speed, all the points that have the same speeed will be change, use"
+    break
+    case 162
+      message="Insert the accel, all the points that have the same accel will be change, use"
+    break
+    case 163
+      message=" OUT of RANGE "
+    break
+    case 164
+      message="Joint"
+    break
+    case 165
+      message="Linear"
+    break
+    case 166
+      message="Circle"
+    break
+    case 167
+      message="Edit"
+    break
+    case 168
+      message="- Edit to modify the point   "
+    break
+    case 169
+      message="ERROR! not valid coordinate"
+    break
+    case 170
+      message="Do you want to delete the selected point?"
+    break
+    case 171
+      message="Delete the selected action?"
+    break
+    case 172
+      message="Insert an other action?"
+    break
+    case 174
+      message="Stop"
+    break
+    case 175
+      message="Blend"
+    break
+    case 176
+      message="Action"
+    break
+    case 177
+      message="Anticipation"
+    break
+    case 178
+      message="Enter the blend, all the points that have the same blend will be change, use mm"
+    break
+    case 179
+      message="Select the action for the TOOL:#F1:     NONE    #F8: use TOOL ON-OFF"
+    break
+    // TABLE LIST 180..199
+    case 180
+      message="Enter the index for the Origin Point"
+    break
+    case 181
+      message="Enter the index to set the X Axis"
+    break
+    case 182
+      message="Enter the index to set the Y Axis"
+    break
+    case 183
+      message="ERROR  Frame not calculate"
+    break
+    case 184
+      message="NULL"
+    break
+    case 185
+      message="How many lines? "
+    break
+    case 186
+      message="ERROR changing the OFFSET related to world frame"
+    break
+    case 187
+      message="The Frame is related to the trajectory"
+    break
+    case 188
+      message="The offset is related to world frame"
+    break
+    case 189
+      message="The TRSF VIEW is related to all points"
+    break
+    case 190
+      message="Point"
+    break
+    case 191
+      message="Select the type enter to validate"
+    break
+    case 192
+      message="The modification is in tool Frame"
+    break
+    case 193
+      message="Point Recorded.."
+    break
+    case 194
+      message="Go to the Origin Point#- Here to record the position"
+    break
+    case 195
+      message="Go to the X axes Point#- Here to record the position"
+    break
+    case 196
+      message="Go to the Y axes Point#- Here to record the position"
+    break
+    case 197
+      message="Go to the Z axes Point#- Here to record the position"
+    break
+    case 198
+      message="Origin"
+    break
+    case 199
+      message="Axes"
+    break
+    // Other 200
+    case 200
+      message="Set the robot in AUTOMATIC mode"
+    break
+    case 201
+      message="Put the power ON"
+    break
+    case 202
+      message="Set the robot in MANUAL mode"
+    break
+    case 203
+      message="- Move_Hold to reach the point"
+    break
+    // Password
+    case 204
+      message="please enter your password"
+    break
+    case 205
+      message="F5   Change Password"
+    break
+    case 206
+      message="CHANGE"
+    break
+    case 207
+      message="Enter the new password "
+    break
+    case 208
+      message="Confirm the new password to validate"
+    break
+    case 209
+      message="the password has not been changed, the first password you entered is different from the second"
+    break
+    case 210
+      message="only basic function"
+    break
+    case 211
+      message="Programmer mode"
+    break
+    case 212
+      message="Integrator mode"
+    break
+    case 213
+      message="you are entering in VALlaser with "
+    break
+    case 214
+      message="Do you want to continue?"
+    break
+    case 215
+      message="Arrow keys to adjust, Return to validate"
+    break
+    // Warning
+    case 220
+      message="the VALlaser interface is reloading "
+    break
+    case 221
+      message="Do you want to reload the VALlaser interface? "
+    break
+    case 222
+      message="EMERGENCY ACTIVATED"
+    break
+    case 223
+      message="The robot is not in HOME position"
+    break
+    case 230
+      message="Time expired, please register"
+    break
+  endSwitch
+end]]></Code>
+  </Program>
+</Programs>

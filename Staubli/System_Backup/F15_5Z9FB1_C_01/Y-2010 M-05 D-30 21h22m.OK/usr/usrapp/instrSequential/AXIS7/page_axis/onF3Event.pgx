@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF3Event">
+    <Code><![CDATA[begin
+  // look if the bButton is enable
+  if bButton[2]
+//////////////    // make the calibration
+//////////////    
+//////////////    
+//////////////    ////    io:calibrate=true
+//////////////    ////    delay(0.5)
+//////////////    ////    io:calibrate=false
+//////////////    
+//////////////    
+//////////////    //
+//////////////    aioSet(MbAO_b7Axis,1)
+//////////////    aioSet(MbAO_bResetErr,1)
+////////////// 
+//////////////    delay(0.5)
+//////////////    aioSet(MbAO_b7Axis,0)
+//////////////     call use:timerDialog("7轴已经复位",1)
+//////////////     bResetAxis=true
+//////////////    logMsg("[VALlaser] INTERFACE:7Axis Reset")
+     call axis8Move:onF2Event()
+     
+  endIf
+//  call Axis8Move:onF2Event()
+end
+
+]]></Code>
+  </Program>
+</Programs>

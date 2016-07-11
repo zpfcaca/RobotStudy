@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="start" access="private" >
+    <Code><![CDATA[begin
+  call initdata()
+  waitEndMove()
+  delay(0)
+  taskCreate "RobotMotion",100,RobotMotion()
+  taskCreate "CmdTxtReading",85,CmdTxtReading()
+  //  taskCreateSync "CmdTxtReading",0.004,btrig,CmdTxtReading()
+
+  taskCreateSync "PositionTrigger",0.01,btrig,PositionTrigger()
+end]]></Code>
+  </Program>
+</Programs>

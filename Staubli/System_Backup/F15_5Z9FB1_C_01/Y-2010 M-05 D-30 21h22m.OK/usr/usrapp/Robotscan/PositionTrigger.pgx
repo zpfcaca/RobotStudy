@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="PositionTrigger" access="private" >
+    <Locals>
+      <Local name="nhere" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  ntime=clock()
+  nnnn=0
+  shere=pfrmCad[0]
+  call Transmission()
+  delay(0)
+
+  while true
+    if bSignal==true
+      //shere=here(tTool,FrmDraw)      
+      shere=here(tTool,world)
+      fout=false
+      delay(0)
+      fout=true
+      delay(0.005)
+      call Transmission()
+      delay(0)
+      ndelay=clock()-ntime
+      nnnn=nnnn+1
+    endIf
+    delay(0)
+
+  endWhile
+  ndelay=clock()-ntime
+end]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F2_r2home" access="private" >
+    <Code><![CDATA[begin
+  //robot 2 move home position
+  socket="(RBREDY)"
+  watch(bRb2Ready,10)
+  if bRb2Ready==true
+    TcpStrRec:nFeedback=52
+    //
+    popUpMsg("Robot 2 is ready!")
+  else
+    //popUpMsg("Robot 2 is not ready!")
+  endIf
+end]]></Code>
+  </Program>
+</Programs>

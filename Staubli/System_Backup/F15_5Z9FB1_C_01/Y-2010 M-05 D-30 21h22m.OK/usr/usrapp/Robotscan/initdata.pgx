@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="initdata" access="private" >
+    <Code><![CDATA[begin
+  nTxtTotal=11
+  nNumTotal=5031
+  n_sTxt=0
+  nNumrecord=0
+  fout=true
+  bSignal=false
+  bTxt1=false
+  bTxt2=false
+  bTxt3=false
+  btrig=true
+  call Txt_initData()
+  call txt_PkgInit()
+
+  //clearBuffer(sSocketout)
+  //sioSet(sSocketout,nByteOut)
+end]]></Code>
+  </Program>
+</Programs>

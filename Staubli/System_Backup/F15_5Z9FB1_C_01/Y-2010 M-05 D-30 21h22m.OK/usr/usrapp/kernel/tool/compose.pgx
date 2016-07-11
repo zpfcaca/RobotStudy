@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="compose" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_nIndexGun" type="num" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="tPar" type="trsf" xsi:type="array" size="1" />
+      <Local name="tGun" type="tool" xsi:type="array" size="1" />
+      <Local name="pPoint" type="point" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  pPoint=here(flange,world)
+  tPar=!pPoint.trsf*saveTool:rif2.trsf
+  tGun.trsf=tPar
+  call setTool(tGun,x_nIndexGun)
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

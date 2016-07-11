@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="stringinit" access="private" >
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_str" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //  for i=0 to 500
+  //    $dins(sTxtfile,i)
+  //    l_str=toString("1",i)
+  //    sTxtfile[i]="path"+l_str+".txt"
+  //  endFor
+end]]></Code>
+  </Program>
+</Programs>

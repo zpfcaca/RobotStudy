@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="strlength" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="pStr" type="string" xsi:type="array" use="reference" />
+      <Parameter name="pLen" type="num" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="lStrEmpty" type="string" xsi:type="array" size="1" />
+      <Local name="l_sTemp" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  lStrEmpty="                                        "
+  // look for asian message
+  if getDisplayLen(pStr)>pLen and pLen>0
+    // need to divide the message
+    if getDisplayLen(pStr)==len(pStr)
+      if mid(pStr,1,pLen)!=" "
+        // european message
+        pStr=mid(pStr,pLen-1,0)
+        pStr=pStr+"."
+      else
+        // found and empty space
+        pStr=mid(pStr,pLen,0)
+      endIf
+    else
+      // asian one
+      call midPos(pStr,pLen,0,pStr)
+    endIf
+  else
+    if getDisplayLen(pStr)<pLen
+      // european
+      if getDisplayLen(pStr)==len(pStr)
+        pStr=pStr+mid(lStrEmpty,pLen-getDisplayLen(pStr),0)
+      else
+        // asian
+        call midPos(lStrEmpty,pLen-getDisplayLen(pStr),0,l_sTemp)
+        pStr=pStr+l_sTemp
+      endIf
+    else
+      // they are the same
+      //
+    endIf
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

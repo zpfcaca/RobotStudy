@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://www.staubli.com/robotics/VAL3/Project/3" >
+  <Parameters version="s7.2" stackSize="5000" millimeterUnit="true" />
+  <Programs>
+    <Program file="CmdDeal.pgx" />
+    <Program file="CmdManage.pgx" />
+    <Program file="CmdTxtReading.pgx" />
+    <Program file="CtrlLine.pgx" />
+    <Program file="F1_r1home.pgx" />
+    <Program file="F2_r2home.pgx" />
+    <Program file="F4_stop.pgx" />
+    <Program file="F5_start.pgx" />
+    <Program file="F6_Axis8.pgx" />
+    <Program file="F6_DELT.pgx" />
+    <Program file="FC_EndMotion.pgx" />
+    <Program file="FC_InitData.pgx" />
+    <Program file="FC_InitMotion.pgx" />
+    <Program file="HMI.pgx" />
+    <Program file="TxtReadRoom1.pgx" />
+    <Program file="TxtReadRoom2.pgx" />
+    <Program file="TxtReadRoom3.pgx" />
+    <Program file="Txt_initData.pgx" />
+    <Program file="hmi_keyinmain.pgx" />
+    <Program file="hmi_refreshmain.pgx" />
+    <Program file="initCmdBuf.pgx" />
+    <Program file="setIOTask.pgx" />
+    <Program file="start.pgx" />
+    <Program file="stop.pgx" />
+    <Program file="stringinit.pgx" />
+    <Program file="stringtopoint.pgx" />
+    <Program file="sychronMove.pgx" />
+    <Program file="txt_PkgInit.pgx" />
+  </Programs>
+  <Database>
+    <Data file="Sychron_master.dtx" />
+  </Database>
+  <Libraries>
+    <Library alias="TcpStrRec" path="Disk://TcpStrRec/TcpStrRec.pjx" autoload="true" password="" />
+    <Library alias="Axis8" path="Disk://instrSequential/AXIS8/page_axis/page_axis.pjx" autoload="true" password="" />
+  </Libraries>
+  <Types>
+  </Types>
+</Project>

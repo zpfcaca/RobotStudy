@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="strfill" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="pStrIn" type="string" xsi:type="element" />
+      <Parameter name="pLenStrOut" type="num" xsi:type="element" />
+      <Parameter name="pStrOut" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="lEmpty" type="string" xsi:type="array" size="1" />
+      <Local name="lLen" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //---------------------------------
+  //  F I L L   O N E   S T R I N G
+  //---------------------------------
+  // To fill the string with space
+  // character
+  //
+  // look for asian message
+  if getDisplayLen(pStrIn)<pLenStrOut
+    // insert some space
+    lEmpty="                                        "
+    pStrOut=pStrIn
+    lLen=(pLenStrOut-getDisplayLen(pStrIn))
+    call midPos(lEmpty,lLen,0,pStrIn)
+    pStrOut=pStrOut+pStrIn
+  else
+    if getDisplayLen(pStrIn)>pLenStrOut
+      // divide the string
+      call midPos(pStrIn,pLenStrOut,0,pStrOut)
+    else
+      // they are the same
+      pStrOut=pStrIn
+    endIf
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

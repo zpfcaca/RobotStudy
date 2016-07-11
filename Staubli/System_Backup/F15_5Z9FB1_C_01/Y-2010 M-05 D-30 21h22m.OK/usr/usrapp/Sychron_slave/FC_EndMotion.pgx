@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="FC_EndMotion" access="private" >
+    <Code><![CDATA[begin
+  //this function is to finish the synchronous motion
+  $movejSyncEnd()
+  //delay(5)
+  //sScrPts="NOT READY"
+  //n_sTxt=0
+end]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="start" access="public" >
+    <Code><![CDATA[begin
+
+  prog:libLoad("Disk://XHS3023L/XHS3023L1")
+  wait(taskStatus("loading")==-1)
+  taskCreate "loading",10,loadNextOne("Disk://XHS3023L/XHS3023L2")
+  call prog:start()
+
+  prog:libLoad("Disk://XHS3023L/XHS3023L2")
+  wait(taskStatus("loading")==-1)
+  call prog:start()
+
+
+end]]></Code>
+  </Program>
+</Programs>

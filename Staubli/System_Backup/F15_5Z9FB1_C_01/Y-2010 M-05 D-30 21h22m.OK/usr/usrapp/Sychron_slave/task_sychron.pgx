@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="task_sychron">
+    <Locals>
+      <Local name="jTemp1" type="joint" xsi:type="array" size="1" />
+      <Local name="l_ni" type="num" xsi:type="array" size="1" />
+      <Local name="l_bTemp" type="bool" xsi:type="array" size="1" />
+      <Local name="l_nCount" type="num" xsi:type="array" size="1" />
+      <Local name="l_jTemp1" type="joint" xsi:type="array" size="1" />
+      <Local name="l_nTime" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //  call FC_InitMotion()
+  //  call FC_InitMotion()
+  //  //while true
+  //  for l_ni=1 to size(jCad)-1
+  //    $movejSync(jCad[l_ni])
+  //    delay(0)
+  //  endFor
+  //  call FC_EndMotion()
+  nn=0
+  call FC_InitMotion()
+  l_nCount=0
+  n_Roate=0
+  bSetIO=true
+  nRoateTotal=5
+  nsumtime=clock()
+  do
+    if pfrmCad[l_nCount].trsf!={0,0,0,0,0,0}
+      //////替换
+      //  for l_nCount=1 to size(pfrmCad)-1
+      //
+      l_nTime=clock()
+      MoveTo.trsf=pfrmCad[l_nCount].trsf
+      l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+      l_jTemp1.j6=0
+      $movejSync(l_jTemp1)
+      if nPulse[l_nCount]==1
+        fOut0=true
+        fOut0=false
+        nn=nn+1
+      else
+      endIf
+      /////运动部分/////
+      pfrmCad[l_nCount].trsf={0,0,0,0,0,0}
+      if l_nCount==600
+        bTxt1=true
+      endIf
+      if l_nCount==1100
+        bTxt2=true
+      endIf
+      if l_nCount==100
+        bTxt3=true
+      endIf
+    endIf
+    if l_nCount==1499
+      l_nCount=0
+    else
+      l_nCount=l_nCount+1
+    endIf
+    //    delay(0)
+    l_nTime=clock()-l_nTime
+    if l_nTime>nTime
+      nTime=l_nTime
+      nTestNum=l_nCount
+    endIf
+    delay(0)
+  until pfrmCad[l_nCount].trsf=={0,0,0,0,0,0}
+  
+  do 
+    if l_nCount>0 and l_nCount<500
+      l_nCount=500
+    endIf
+    
+    if 500<l_nCount and l_nCount<1000
+      l_nCount=1000
+    endIf
+    
+    if 1000<l_nCount and l_nCount<1500
+      l_nCount=0
+    endIf
+    
+    do
+      if pfrmCad[l_nCount].trsf!={0,0,0,0,0,0}
+        //////替换
+        //  for l_nCount=1 to size(pfrmCad)-1
+        //
+        l_nTime=clock()
+        MoveTo.trsf=pfrmCad[l_nCount].trsf
+        l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+        l_jTemp1.j6=0
+        $movejSync(l_jTemp1)
+        if nPulse[l_nCount]==1
+          fOut0=true
+          fOut0=false
+          nn=nn+1
+        else
+        endIf
+        /////运动部分/////
+        pfrmCad[l_nCount].trsf={0,0,0,0,0,0}
+        if l_nCount==600
+          bTxt1=true
+        endIf
+        if l_nCount==1100
+          bTxt2=true
+        endIf
+        if l_nCount==100
+          bTxt3=true
+        endIf
+      endIf
+      if l_nCount==1499
+        l_nCount=0
+      else
+        l_nCount=l_nCount+1
+      endIf
+      //    delay(0)
+      l_nTime=clock()-l_nTime
+      if l_nTime>nTime
+        nTime=l_nTime
+        nTestNum=l_nCount
+      endIf
+      delay(0)
+    until pfrmCad[l_nCount].trsf=={0,0,0,0,0,0}
+    
+    n_Roate=n_Roate+1
+  until n_Roate==nRoateTotal-1
+      
+  delay(1)
+
+  while size(sString)>1
+    $ddel(sString,size(sString)-1)
+  endWhile
+  while size(nPulse)>1
+    $ddel(nPulse,size(nPulse)-1)
+  endWhile
+  while size(pfrmCad)>1
+    $ddel(pfrmCad,size(pfrmCad)-1)
+  endWhile
+  delay(0)
+
+  call PulesAdd()
+
+  bTxt1=false
+  bTxt2=false
+  bTxt3=false
+  //    //
+  //    //    MoveTo.trsf=cad:pCad[l_nCount].trsf
+  //    //    l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+  //    //    $movejSync(jCad[l_nCount])
+  //    MoveTo.trsf=pfrmCad[l_nCount].trsf
+  //    l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+  //    $movejSync(l_jTemp1)
+  //    //$movejSync(cad:jJointRx[l_nCount])
+  //    l_nTime=clock()-l_nTime
+  //    if l_nTime>nTime
+  //      nTime=l_nTime
+  //      nTestNum=l_nCount
+  //    endIf
+  //    delay(0)
+  //  endFor
+  /////替换/
+  //  for l_nCount=0 to size(cad:pCad)-1
+  //    //
+  //    l_nTime=clock()
+  //    //
+  //    MoveTo.trsf=cad:pCad[l_nCount].trsf
+  //    l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+  //    $movejSync(l_jTemp1)
+  //    //$movejSync(cad:jJointRx[l_nCount])
+  //    l_nTime=clock()-l_nTime
+  //    if l_nTime>nTime
+  //      nTime=l_nTime
+  //      nTestNum=l_nCount
+  //    endIf
+  //    delay(0)
+  //  endFor
+  ///////替换
+  bSetIO=false
+  //io:socket="(RBSTOP)"
+  call FC_EndMotion()
+  nsumtime=clock()-nsumtime
+  bTxtPrSv=false
+  sScrPts="NotReady"
+  n_sTxt=0
+  call hmi_refreshmain()
+  //popUpMsg("move end!")
+  bTest=true
+end]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://www.staubli.com/robotics/VAL3/Project/3">
+  <Parameters version="s7.2.1" stackSize="5000" millimeterUnit="true" />
+  <Programs>
+    <Program file="find.pgx" />
+    <Program file="get.pgx" />
+    <Program file="getSize.pgx" />
+    <Program file="loadCycle.pgx" />
+    <Program file="onEdit.pgx" />
+    <Program file="onInsert.pgx" />
+    <Program file="onProgEnd.pgx" />
+    <Program file="onRun.pgx" />
+    <Program file="onStart.pgx" />
+    <Program file="onStop.pgx" />
+  </Programs>
+  <Database>
+    <Data file="AXISMOVER.dtx" />
+  </Database>
+  <Libraries>
+    <Library alias="io" path="Disk://io/io.pjx" />
+    <Library alias="use" path="Disk://kernel/userPage/userPage.pjx" />
+  </Libraries>
+</Project>

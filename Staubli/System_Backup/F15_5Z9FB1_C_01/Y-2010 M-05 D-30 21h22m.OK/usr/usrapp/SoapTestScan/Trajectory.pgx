@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="Trajectory">
+    <Code><![CDATA[begin
+   nMenu=0
+   very=0
+  hery=0
+  pery=0
+  Qery=0
+   xore=-180
+   yore=0
+   zore=-180
+   zmin=50
+   zmax=100
+   ymin=-50
+   ymax=50
+   xmin=-50
+   xmax=50
+   xtp =1
+   ytp =1
+   ztp =1
+   
+   switch nMenu 
+    case 0  
+     
+        for lpn = 0 to (ymax-ymin)/ytp step 2 
+          
+          for ppn = 0 to (xmax- xmin)/xtp step 2
+            if (hery % 2) ==0
+              sTap[nNum]= toString (".3",xmin + xtp*ppn)+","+ toString (".3",ymin + ytp *lpn)+","+ toString (".3",zmin)+","+toString (".3",xore)+","+toString (".3",yore)+","+toString (".3",zore) +","+"sfree,efree,wfree"
+              
+              //insert(sString , "xmin +xtp,ymin,zmin,xore,yore,zore" ,0)
+            else 
+              sTap[nNum]= toString (".3",xmax - xtp*ppn)+","+ toString (".3",ymin + ytp *lpn)+","+ toString (".3",zmin)+","+toString (".3",xore)+","+toString (".3",yore)+","+toString (".3",zore) +","+"sfree,efree,wfree"
+              
+            endIf 
+            nNum =nNum+1
+            //very = very +1
+          endFor       
+          
+          hery =hery +1
+        endFor 
+         
+    break 
+    
+    case 1   
+       for hpn= 0 to (zmax-zmin)/ztp step 2
+         
+         for lpn = 0 to (ymax-ymin)/ytp step 2 
+          if (pery % 2)==0
+            //sString[nNumrecord]="{xmin,ymin + ytp*lpn*(-1)^pery, zmin + ztp * hpn,xore,yore,zore}"
+            sTap[nNum]= toString (".3",xmin )+","+ toString (".3",ymin + ytp *lpn)+","+ toString (".3",zmin+ ztp * hpn)+","+toString (".3",xore)+","+toString (".3",yore)+","+toString (".3",zore) +","+"sfree,efree,wfree"             
+          else 
+            //sString[nNumrecord]="{xmin,ymax + ytp*lpn*(-1)^pery, zmin + ztp * hpn,xore,yore,zore}"
+            sTap[nNum]= toString (".3",xmin )+","+ toString (".3",ymax - ytp *lpn)+","+ toString (".3",zmin+ ztp * hpn)+","+toString (".3",xore)+","+toString (".3",yore)+","+toString (".3",zore) +","+"sfree,efree,wfree"             
+         
+          endIf 
+          //very =very +1
+          nNum =nNum+1
+        endFor 
+         pery =pery +1
+      endFor
+    break 
+    
+    case 2  
+      for hpn= 0 to (zmax-zmin)/ztp step 2
+        
+        for ppn = 0 to (xmax- xmin)/xtp step 2
+          if (Qery %2) ==0
+            //sString[nNumrecord]="{xmin + xtp*ppn*(-1)^hery,ymin ,zmin + ztp * hpn,xore,yore,zore}"
+            sTap[nNum]= toString (".3",xmin + xtp*ppn)+","+ toString (".3",ymin )+","+ toString (".3",zmin+ ztp * hpn)+","+toString (".3",xore)+","+toString (".3",yore)+","+toString (".3",zore)  +","+"sfree,efree,wfree"            
+            
+          else 
+            //sString[nNumrecord]="{xmax + xtp*ppn*(-1)^hery,ymin,zmin + ztp * hpn,xore,yore,zore}"
+            sTap[nNum]= toString (".3",xmax - xtp*ppn)+","+ toString (".3",ymin )+","+ toString (".3",zmin+ ztp * hpn)+","+toString (".3",xore)+","+toString (".3",yore)+","+toString (".3",zore) +","+"sfree,efree,wfree"
+          endIf 
+          //very =very +1
+          nNum =nNum+1
+        endFor 
+        Qery = Qery +1
+      endFor 
+      
+    break 
+    
+    case 3
+      for ppn = 0 to (xmax- xmin)/xtp step 2
+        for lpn = 0 to (ymax-ymin)/ytp step 2 
+          if (hery % 2) ==0
+          sTap[nNum]= toString (".3",xmin + xtp*ppn)+","+ toString (".3",ymin + ytp *lpn)+","+ toString (".3",zmin)+","+toString (".3",xore)+","+toString (".3",yore)+","+toString (".3",zore) +","+"sfree,efree,wfree"
+           else 
+              sTap[nNum]= toString (".3",xmin + xtp*ppn)+","+ toString (".3",ymax - ytp *lpn)+","+ toString (".3",zmin)+","+toString (".3",xore)+","+toString (".3",yore)+","+toString (".3",zore) +","+"sfree,efree,wfree"
+               endIf 
+            nNum =nNum+1  
+        endFor 
+          hery =hery +1
+      endFor 
+        
+    break 
+    
+    case 4
+      
+    break
+    
+    case 5
+      
+    break 
+    
+    default 
+    break 
+  endSwitch 
+    nNumTotal = nNum 
+   nTxtTotal = roundUp (nNum /500)
+end]]></Code>
+  </Program>
+</Programs>

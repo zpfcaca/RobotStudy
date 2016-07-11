@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="listcursor" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="pView" type="num" xsi:type="element" />
+      <Parameter name="pShow" type="bool" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="lX" type="num" xsi:type="array" size="1" />
+      <Local name="lY" type="num" xsi:type="array" size="1" />
+      <Local name="message" type="string" xsi:type="array" size="1" />
+      <Local name="l_bEmpty" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // toneage Staubli Copyright 2005
+  //
+  call isListEmpty(l_bEmpty)
+  if !l_bEmpty
+    nView=pView
+    lX=nTopX+1
+    lY=nTopY+1+pView
+    if (nView+nFirst)>(size(sItems)-1)
+      call strfill(sItems[size(sItems)-1],nBottomX,message)
+    else
+      call strfill(sItems[nView+nFirst],nBottomX,message)
+    endIf
+    gotoxy(lX,lY)
+    if (pShow==true)
+      setTextMode(1)
+      put(message)
+      setTextMode(0)
+    else
+      setTextMode(0)
+      put(message)
+    endIf
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

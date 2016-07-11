@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="start">
+    <Code><![CDATA[begin
+  //*******************************************
+  //Name: TestSoap
+  //Function: test soap function
+  //2012.05.28
+  //y.ye@staubli.com
+  //*******************************************
+  while true
+    //通过加载库，对库里面的值进行设置就可以实现上下位机的交互。
+    /
+    
+    
+    
+    
+    //给frame类型赋值
+    fFrame=PcData:fFrame
+    //给关节点类型赋值
+    jPos[0]=PcData:jJ[0]
+    jPos[1]=PcData:jJ[1]
+    //给数值类型赋值
+    nNum[0]=PcData:nNum[0]
+    nNum[1]=PcData:nNum[1]
+    //给字符串类型赋值
+    sString=PcData:sString
+    //给转换类型赋值
+    trTrsf=PcData:trTrsf
+    //给坐标系点类型赋值
+    pPos[0]=PcData:pPos[0]
+    
+    
+    title("Staubli Soap 测试程序：")
+    //把点显示在屏幕上
+    cls()
+    gotoxy(0,0)
+    put("变量名称:")
+    
+    gotoxy(0,1)
+    put("数值nNum[0]:"+toString("0",nNum[0]))
+    
+    gotoxy(0,2)
+    put("字符串sString:"+sString)
+    
+    gotoxy(0,3)
+    put("关节jPos[0]:"+toString("0",jPos[0].j1)+" "+toString("0",jPos[0].j2)+" "+toString("0",jPos[0].j3)+" "+toString("0",jPos[0].j4)+" "+toString("0",jPos[0].j5)+" "+toString("0",jPos[0].j6))
+    
+    gotoxy(0,4)
+    put("坐标系pPos[0]:"+toString("0",pPos[0].trsf.x)+" "+toString("0",pPos[0].trsf.x)+" "+toString("0",pPos[0].trsf.y)+" "+toString("0",pPos[0].trsf.z)+" "+toString("0",pPos[0].trsf.rx)+" "+toString("0",pPos[0].trsf.ry)+" "+toString("0",pPos[0].trsf.rz))
+    
+    
+    
+    delay(0)
+  endWhile
+end]]></Code>
+  </Program>
+</Programs>

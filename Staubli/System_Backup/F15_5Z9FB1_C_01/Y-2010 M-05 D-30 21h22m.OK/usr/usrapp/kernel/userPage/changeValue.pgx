@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="changeValue" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_nValue" type="num" xsi:type="array" use="reference" />
+      <Parameter name="x_nMin" type="num" xsi:type="element" />
+      <Parameter name="x_nMax" type="num" xsi:type="element" />
+      <Parameter name="x_nX" type="num" xsi:type="element" />
+      <Parameter name="x_nY" type="num" xsi:type="element" />
+      <Parameter name="x_sItems" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nOldValue" type="num" xsi:type="array" size="2" />
+      <Local name="l_sItem" type="string" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_sEmpty" type="string" xsi:type="array" size="1" />
+      <Local name="l_bComma" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //---------------------------------
+  // Staubli copyright 2005
+  //                By toneage
+  //[Public]-------------------------
+  //
+  // x_nValue:  num to change
+  // x_nMax:    max value
+  // x_nMin:    min value
+  // x_nX:      X position
+  // x_nY:      Y position
+  // x_sItems   message
+  //
+  // look if the value is between max and min
+  //
+  if x_nMin>x_nMax
+    return
+  endIf
+  //
+  // print the line in white
+  //
+  // call listCleanLine()
+  //
+  call nullKey(nKey)
+  l_nOldValue[1]=round(x_nValue)
+  x_nValue=(round(x_nValue*100))/100
+  l_nOldValue=x_nValue
+  // check if is using the comma or not
+  if l_nOldValue!=l_nOldValue[1]
+    l_bComma=true
+  else
+    l_bComma=false
+  endIf
+  // start
+  call clear(0,13)
+  do
+    if x_sItems==""
+      //
+      //  use the get num
+      //
+      if l_bComma
+        call strfill(l_sEmpty,len(toString(".2",x_nValue)),l_sEmpty)
+      else
+        call strfill(l_sEmpty,len(toString("",x_nValue)),l_sEmpty)
+      endIf
+      call type(x_nX,x_nY,l_sEmpty)
+      gotoxy(x_nX,x_nY)
+      nKey=get(x_nValue)
+      // check the comma again
+      if round(x_nValue)!=x_nValue
+        l_bComma=true
+      endIf
+      //
+      // CHECK for MIN MAX VALUE
+      //
+      if x_nMax!=x_nMin or x_nMin!=0
+        if x_nValue>x_nMax
+          //
+          // ask if you want to continue
+          //
+          popUpMsg("MAX: "+toString(".2",x_nMax))
+          x_nValue=l_nOldValue
+          //x_nValue=x_nMax
+          nKey=-1
+        else
+          if x_nValue<x_nMin
+            //
+            popUpMsg("MIN: "+toString(".2",x_nMin))
+            //x_nValue=x_nMin
+            x_nValue=l_nOldValue
+            nKey=-1
+          endIf
+        endIf
+      endIf
+      //
+      // UPDATE THE VALUE
+      //
+      if l_bComma
+        call type(x_nX,x_nY,toString(".2",x_nValue))
+      else
+        call type(x_nX,x_nY,toString("",x_nValue))
+      endIf
+    else
+      // STRING CHOICE
+      nKey=getKey()
+      switch nKey
+        // CHANGE THE ITEMS ARRAY
+        case 261
+          // UP
+          x_nValue=abs((x_nValue+1)%size(x_sItems))
+        break
+        case 266
+          // DOWN
+          x_nValue=abs((x_nValue+size(x_sItems)-1)%size(x_sItems))
+        break
+      endSwitch
+      //
+      // UPDATE THE VALUE
+      //
+      setTextMode(3)
+      call typeLen(x_nX,x_nY,x_sItems[x_nValue],10)
+      setTextMode(0)
+    endIf
+    // release the resource
+    delay(0)
+  until nKey==270 or nKey==255
+  if nKey==255
+    bUseEscape=true
+    x_nValue=l_nOldValue
+    if x_sItems!=""
+      x_sItems=x_sItems[l_nOldValue]
+    endIf
+  else
+    bUseEscape=false
+  endIf
+  // leave the resource
+  delay(0)
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

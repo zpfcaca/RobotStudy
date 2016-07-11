@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="listAdd">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sEvent" type="string" xsi:type="element" />
+    </Parameters>
+    <Code><![CDATA[
+begin
+  // add in the queue
+  if sList!=""
+    $dins(sList,size(sList))
+  endIf
+  sList[size(sList)-1]=x_sEvent
+end
+            
+      ]]></Code>
+  </Program>
+</Programs>

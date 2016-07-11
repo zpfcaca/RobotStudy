@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="page" access="public">
+    <Description><![CDATA[set all the page]]></Description>
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="menuname" type="string" xsi:type="array" use="reference" />
+      <Parameter name="index" type="num" xsi:type="element" />
+    </Parameters>
+    <Code><![CDATA[begin
+  //
+  //  PAGE
+  //
+  //,,,,,,,,,,,,,,,,,,,,,,,
+  //  KERNEL
+  //,,,,,,,,,,,,,,,,,,,,,,,
+  //
+  //  HOME PAGE
+  //
+  //
+  if index>=10 and index<=19
+    menuname="VALlaser 6.8"
+    title("< Home Page > "+menuname)
+  endIf
+  //  SELECT PROGRAM
+  if index>=100 and index<=109
+    title("< Select Program >")
+  endIf
+  //  SET IN,OUT
+  if index>=110 and index<=119
+    title("< Input / Output Editor >")
+  endIf
+  //  MAINTENANCE
+  if index>=130 and index<=139
+    title("< Maintenance >")
+  endIf
+  // ADVANCE
+  if index>=140 and index<=149
+    title("< Advance >")
+  endIf
+  // EDIT PROGRAM
+  if index>=1000 and index<=1009
+    title("< Program Editor >")
+  endIf
+  // SELECT TRAJ
+  if index>=1010 and index<=1019
+    title("< Select Trajectory >")
+  endIf
+  // PROCES LIST
+  if index>=1020 and index<=1029
+    title("< Process List >")
+  endIf
+  // SET PROCESS LIST
+  if index>=1030 and index<=1039
+    title("< Set Process List >")
+  endIf
+  // SET Tool
+  if index>=1400 and index<=1409
+    title("< Tool Definition >")
+  endIf
+  // EDIT TRAJ
+  if index>=10000 and index<=10009
+    title("< Traj Editor >")
+  endIf
+  // VIEW LIST OF PROG ITEM
+  if index>=10010 and index<=10019
+    title("< Program Viewer >")
+  endIf
+  // EDIT POINT
+  if index>=100000 and index<=100009
+    title("< Point Editor >")
+  endIf
+  // SELECT Tool
+  if index>=100010 and index<=100019
+    title("< Tool Selection >")
+  endIf
+  // TABLE
+  if index>=1000000 and index<=1000009
+    title("< Point List >")
+  endIf
+  //,,,,,,,,,,,,,,,,,,,,
+  //  CYCLE
+  //,,,,,,,,,,,,,,,,,,,,
+  if index>=20 and index<=29
+    title("< Production Page >")
+  endIf
+  if index>=200 and index<=209
+    title("< Simulation >")
+  endIf
+  if index>=210 and index<=219
+    title ("< Stepping Simulation >")
+  endIf
+  //
+  //  MENU
+  //
+  menuname=""
+  //,,,,,,,,,,,,,,,,,,,,
+  //  KERNEL
+  //,,,,,,,,,,,,,,,,,,,,
+  switch index
+    //
+    //  HOME PAGE
+    //
+    
+            case -1
+      // 
+      menuname=",,,,,Duplicate,Delete,New"
+            break
+    case 12
+      //  Operator
+      menuname="Maintenance,,,,PRODUCTION PAGE,,Password,Session"
+    break
+    case 11
+      //  Programmer
+      menuname="Program Menu,Trajectory Menu,Laser test,,PRODUCTION PAGE,Working-Axis,Advance,Quit"
+    break
+    case 10
+      //  Integrator
+      menuname="Program Menu,Trajectory Menu,Laser test,Table frame,PRODUCTION PAGE,Working-Axis,Advance,Quit"
+    break
+  // On Cycle
+    case 15
+      //  Operator
+      menuname="Maintenance,,,,PRODUCTION PAGE,,Password,"
+    break
+    case 14
+      //  Programmer
+      menuname="Program Menu,Trajectory Menu,,,PRODUCTION PAGE,,Advance,"
+    break
+    case 13
+      //  Integrator
+      menuname="Program Menu,Trajectory Menu,,,PRODUCTION PAGE,7-Axis,Advance,"
+    break
+    //
+    //  SELECT PROGRAM
+    //
+    case 102
+      // Operator
+      menuname="Simulation,,,"
+    break
+    case 101
+      // Programmer
+      menuname="Simulation,,,USB File Manager,Type,Duplicate,Delete,New"
+    break
+    case 100
+      // Integrator
+      menuname="Simulation,filter,,USB File Manager,Type,Duplicate,Delete,New"
+    break
+    // IN PRODUCTION
+    case 105
+      // Operator
+      menuname=",,,"
+    break
+    // In production
+    case 104
+      // Programmer
+      menuname=",,,USB File Manager,Type,Duplicate,,New"
+    break
+    case 103
+      // Integrator
+      menuname=",filter,,USB File Manager,Type,Duplicate,,New"
+    break
+    //
+    //  SET INPUT,OUTPUT
+    //
+    case 111,112
+      // Operator,Programmer
+      menuname=""
+    break
+    case 110
+      // Integrator
+      menuname=",,,,,,Delete,New"
+    break
+    //
+    //  SET ADVANCE
+    //
+    // integrator
+    case 140
+      menuname="Tool,Settings,Restore / Backup,,,Plc,Profile,Set Tracking"
+    break
+    // programmer
+    case 141
+      menuname="Tool,,Restore / Backup,,,Plc,Profile,"
+    break
+    // ON Cycle
+    // integrator
+    case 143
+      menuname="Tool,Settings,Restore / Backup,,,Plc,Profile,Set Tracking"
+    break
+    // programmer
+    case 144
+      menuname="Tool,,Restore / Backup,,,Plc,Profile,"
+    break    
+    //
+    //  EDIT PROGRAM
+    //
+    // Integrator programmer
+    case 1000,1001
+      menuname="Simulation,,,Paste,Mark,Delete,Insert,Save"
+    break
+    // Production
+    case 1003,1004
+      menuname=",,,Paste,Mark,Delete,Insert,Save"
+    break
+    //
+    //  SELECT TRAJ
+    //
+    // integrator
+    case 1010
+      menuname="Simulation,filter,ALIGN,USB File Manager,Type,Duplicate,Delete,New"
+    break
+    // programmer
+    case 1011
+      menuname="Simulation,,,USB File Manager,Type,Duplicate,Delete,New"
+    break
+    // cycle
+    // integrator
+    case 1013
+      menuname=",filter,,USB File Manager,Type,Duplicate,Delete,New"
+    break
+    // programmer
+    case 1014
+      menuname=",,,USB File Manager,Type,Duplicate,Delete,New"
+    break
+    //
+    //  PROCESS LIST
+    //
+    case 1020,1021,1022,1023,1024,1025
+      menuname="Loop,Show All,Export List,,Type,Clear,Delete,Insert"
+    break
+    //
+    // SET PROCESS LIST
+    // 
+    case 1032
+      // Operator
+      menuname="Select"
+    break
+    case 1031
+      // Programmer
+      menuname="Select,,,,,Duplicate,Delete,New"
+    break
+    case 1030
+      // Integrator
+      menuname="Select,,,,,Duplicate,Delete,New"
+    break
+    // IN PRODUCTION
+    case 1035
+      menuname=""
+    break
+    // Operator
+    case 1034
+      // Programmer
+      menuname=",,,,,Duplicate,,New"
+    break
+    case 1033
+      // Integrator
+      menuname=",,,,,Duplicate,,New"
+    break
+    //
+    //  SELECT TOOL
+    //
+    // integrator
+    case 1400,1401
+      menuname=",,,Compute,Move,Duplicate,Delete,New"
+    break
+    // in production
+    case 1403,1404
+      menuname=",,,,,Duplicate,,New"
+    break
+    case 1406,1407
+      //this is for the reference tool
+      menuname=",,Here,,Move,,,New"
+    break
+    // in production
+    case 1409,1410
+      //this is for the reference tool
+      menuname=",,,,,,,New"
+    break
+    //
+    //  EDIT TRAJ
+    //
+    case 10000,10001
+      menuname=",,Tool Selection,Paste,Mark,Delete,Insert,Save"
+    break
+    // On cycle
+    case 10003,10004
+      menuname=",,Tool Selection,Paste,Mark,Delete,Insert,Save"
+    break
+    //VALlaser/////////////////////////
+        case -10000,-10001
+      menuname=",frame,Tool Selection,Paste,Mark,Delete,Insert,Save"
+        break
+    // On cycle
+    case -10003,-10004
+      menuname=",frame,Tool Selection,Paste,Mark,Delete,Insert,Save"
+    break
+    ///////////////////////////
+    //
+    //  VIEW PROGRAM ITEM
+    //
+    // Integrator programmer
+    case 10010,10011
+      menuname="Simulation"
+    break
+    // Production
+    case 10013,10014
+      menuname=""
+    break
+    //
+    //  EDIT POINT
+    //
+    case 100000,100001
+      menuname=",,,,Parameter,Delete,Insert,Save"
+    break
+    // on Cycle
+    case 100003,100004
+      menuname=",,,,Parameter,Delete,Insert,Save"
+    break
+    //
+    //  SET TOOL
+    //
+    case 100010,100011
+      menuname="Edit TOOL"
+    break
+    // On Cycle
+    case 100013,100014
+      menuname=""
+    break
+    //
+    // CYCLE
+    //
+    case 20,21
+      // page PRODUCTION
+      menuname="HOME,,,"
+    break
+    case 22
+      // page PRODUCTION
+      menuname="HOME,,"
+    break
+    // On Cycle
+    case 23,24
+      // page PRODUCTION
+      menuname=",,,"
+    break
+    case 25
+      // page PRODUCTION Operator
+      menuname=",,"
+    break
+    //
+    case 200
+      // PAGE SIMULATION
+      menuname=",,,,,,STOP"
+    break
+    case 210,211
+      // STEP SIMULATION
+      menuname="Previous,Actual,Next,,,"
+    break
+  endSwitch
+end]]></Code>
+  </Program>
+</Programs>

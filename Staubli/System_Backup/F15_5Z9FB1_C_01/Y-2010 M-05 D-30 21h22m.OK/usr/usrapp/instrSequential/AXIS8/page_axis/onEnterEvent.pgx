@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onEnterEvent">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_bSave" type="bool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sItem" type="string" xsi:type="array" size="1" />
+      <Local name="l_nValue" type="num" xsi:type="array" size="1" />
+      <Local name="l_nMin" type="num" xsi:type="array" size="1" />
+      <Local name="l_nMax" type="num" xsi:type="array" size="1" />
+      <Local name="l_nValue1" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[
+begin
+  // look if the bButton is enable
+  call axis:get(l_sItem,nIndex)
+  
+  call axis:getVelocity(l_sItem,l_nValue)
+  if l_sItem!=""
+    // change the value
+    l_nMin=0.99
+    l_nMax=600.01
+    call use:insertDialog(l_sItem+"   ",l_nValue,l_nMin,l_nMax)
+    call axis:setVelocity(l_nValue,nIndex)
+    x_bSave=true
+  endIf
+  libSave(axis:libPath())
+  //
+  // NB sEvent is the selected 
+  // element in the LIST
+  // 
+end        
+      ]]></Code>
+  </Program>
+</Programs>

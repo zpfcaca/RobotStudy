@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="txt_rd" access="public" >
+    <Locals>
+      <Local name="l_ntest" type="num" xsi:type="array" size="1" />
+      <Local name="l_n" type="num" xsi:type="array" size="1" />
+      <Local name="l_mark" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //  l_ntest=$fileOpen("test2.txt","r")
+  //  //  直接更改数量，注意point及sstring要与其一致
+  //  //  for l_n=0 to 1
+  //  //    $fileGet(l_ntest,sString[l_n],1)
+  //  //    if sString[l_n]!=""
+  //  //      call stringtopoint(sString[l_n],l_n)
+  //  //    endIf
+  //  //  endFor
+  //  ///////初始化
+  //  l_n=0
+  //  while size(sString)>1
+  //    $ddel(sString,size(sString)-1)
+  //  endWhile
+  //  while size(pfrmCad)>1
+  //    $ddel(pfrmCad,size(pfrmCad)-1)
+  //  endWhile
+  //  ///////////////
+  //  do
+  //    if l_n!=0
+  //      $dins(sString,l_n)
+  //      $dins(pfrmCad,l_n)
+  //    endIf
+  //    $fileGet(l_ntest,sString[l_n],1)
+  //    if sString[l_n]!=""
+  //      call stringtopoint(sString[l_n],l_n)
+  //    else
+  //    endIf
+  //    l_n=l_n+1
+  //  until sString[l_n-1]==""
+  //  $ddel(sString,size(sString)-1)
+  //  $ddel(pfrmCad,size(pfrmCad)-1)
+  //  delay(0.1)
+  //  $fileClose(l_ntest)
+  //  //读取参考系中的点
+  //  call jCadClean()
+  //  //清空jcad
+  //  for l_mark=0 to size(pfrmCad)-1 step 1
+  //    pointToJoint(tTool,jConfig,pfrmCad[l_mark],jReal)
+  //    nTotalPoints=nTotalPoints+1
+  //    $dins(jCad,nTotalPoints-1)
+  //    jCad[nTotalPoints-1]=jReal
+  //    nScrPts=nTotalPoints
+  //    delay(0)
+  //
+  //
+  //  endFor
+  //  bfnshint=true
+  //  //将pfrmcad逐个转化成jcad的joint点。
+  //  /////////////////////////////////////
+  //  /////////////////////////////////////
+  ////        call stringToJoints(CmdBuffer[nReadPt],jReal)
+  ////        if bRealM==true
+  ////          //for realtime synchronous movement
+  ////        else
+  ////          //for initialize all points firstly
+  ////          //not realtime synchronous movement
+  ////          nTotalPoints=nTotalPoints+1
+  ////          $dins(jCad,nTotalPoints-1)
+  ////          jCad[nTotalPoints-1]=jReal
+  ////
+  ////          nScrPts=nTotalPoints
+  ////          call hmi_refreshmain()
+  ////        endIf
+  ////      endIf
+end]]></Code>
+  </Program>
+</Programs>

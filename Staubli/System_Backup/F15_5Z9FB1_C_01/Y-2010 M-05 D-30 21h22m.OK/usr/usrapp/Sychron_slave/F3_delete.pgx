@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F3_delete" access="private" >
+    <Locals>
+      <Local name="l_ni" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //delete points
+  //  nTotalPoints=size(pfrmCad)
+  //  if nTotalPoints>1
+  //    //      for l_ni=nTotalPoints to 2 step -1
+  //    //        $ddel(pfrmCad,l_ni-1)
+  //    ////        nTotalPoints=nTotalPoints-1
+  //    ////        nScrPts=nTotalPoints
+  //    //
+  //    //      endFor
+  //    //       call hmi_refreshmain()
+  //    for l_ni=nTotalPoints to 2 step -1
+  //      $ddel(pfrmCad,nTotalPoints-1)
+  //      nTotalPoints=nTotalPoints-1
+  //      nScrPts=nTotalPoints
+  //    endFor
+  //    call hmi_refreshmain()
+  //  else
+  //    popUpMsg("No points existed")
+  //  endIf
+end]]></Code>
+  </Program>
+</Programs>

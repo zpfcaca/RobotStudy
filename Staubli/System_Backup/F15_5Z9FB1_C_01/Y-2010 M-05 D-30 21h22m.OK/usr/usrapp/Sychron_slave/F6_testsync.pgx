@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F6_testsync" access="private" >
+    <Code><![CDATA[begin
+  //  if taskStatus("SychMove")==-1
+  //    taskCreateSync "SychMove",0.004,bRes,task_sychron()
+  //  endIf
+end]]></Code>
+  </Program>
+</Programs>

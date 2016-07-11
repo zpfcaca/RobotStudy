@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="listcreate" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sTitle" type="string" xsi:type="element" />
+    </Parameters>
+    <Code><![CDATA[begin
+  //
+  // Staubli Copyright 2003 07 31
+  //
+  sTitle=x_sTitle
+  call listframe(sTitle,nTopX,nTopY,nBottomX,nBottomY)
+  call listempty()
+  //nView=nFirst=0
+  //
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

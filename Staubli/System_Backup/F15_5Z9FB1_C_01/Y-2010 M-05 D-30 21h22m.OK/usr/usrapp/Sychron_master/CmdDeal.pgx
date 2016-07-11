@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="CmdDeal" access="private" >
+    <Locals>
+      <Local name="ln_i" type="num" xsi:type="array" size="1" />
+      <Local name="ln_total" type="num" xsi:type="array" size="1" />
+      <Local name="strX" type="string" xsi:type="array" size="1" />
+      <Local name="strY" type="string" xsi:type="array" size="1" />
+      <Local name="nPosX" type="num" xsi:type="array" size="1" />
+      <Local name="nPosY" type="num" xsi:type="array" size="1" />
+      <Local name="bOk" type="bool" xsi:type="array" size="1" />
+      <Local name="nPosZ" type="num" xsi:type="array" size="1" />
+      <Local name="strZ" type="string" xsi:type="array" size="1" />
+      <Local name="local1" type="num" xsi:type="array" size="1" />
+      <Local name="strAct" type="string" xsi:type="array" size="1" />
+      <Local name="nAct" type="num" xsi:type="array" size="1" />
+      <Local name="bTemp" type="bool" xsi:type="array" size="1" />
+      <Local name="jTemp1" type="joint" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  while true
+    //deal the command from another robot
+    if nReadPt!=nWritePt
+      strCmd=mid(CmdBuffer[nReadPt],6,1)
+
+      if strCmd=="RBNEXT"
+        TcpStrRec:nCtrl=0
+      endIf
+      if strCmd=="RBHOME"
+        bRb2Home=true
+        bRb2Ready=false
+      endIf
+      if strCmd=="RBREDY"
+        popUpMsg("okl")
+        bRb2Ready=true
+        bRb2Home=false
+      endIf
+      if strCmd=="RBSTOP"
+        bRb2Ready=false
+        bRb2Home=false
+        bRb2Stop=true
+        bRb2Start=false
+        bSychronOn=false
+      endIf
+      if strCmd=="RBSTAT"
+        bRb2Home=false
+        bRb2Stop=false
+        bRb2Start=true
+        bSychronOn=true
+      endIf
+      if strCmd=="RBINIT"
+        bRb2InitOk=true
+      endIf
+      if strCmd=="RBAXI8"
+        bRb2AXI8=true
+      endIf
+      CmdBuffer[nReadPt]=""
+      CmdTotal=CmdTotal-1
+      nReadPt=nReadPt+1
+      if nReadPt>=20
+        nReadPt=0
+      endIf
+    endIf
+    delay(0)
+  endWhile
+end]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="partNum" access="private" >
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_n" type="num" xsi:type="array" size="1" />
+      <Local name="l_ndis" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //  l_n=(size(pCircle)-1)/2
+  //  while l_n<size(nPartdis)
+  //    $ddel(nPartdis,size(nPartdis)-1)
+  //    $ddel(nPartNum,size(nPartNum)-1)
+  //  endWhile
+  //  while l_n>size(nPartdis)
+  //    $dins(nPartdis,size(nPartdis))
+  //    $dins(nPartNum,size(nPartNum))
+  //  endWhile
+  //  for i=0 to l_n-1
+  //    nPartdis[i]=distance(pCircle[2*i].trsf,pCircle[2*i+1].trsf)+distance(pCircle[2*i+2].trsf,pCircle[2*i+1].trsf)
+  //    l_ndis=l_ndis+nPartdis[i]
+  //  endFor
+  //  for i=0 to l_n-1
+  //    nPartNum[i]=round(nPointnum*nPartdis[i]/l_ndis)
+  //  endFor
+end]]></Code>
+  </Program>
+</Programs>

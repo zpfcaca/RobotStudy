@@ -1,0 +1,1587 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourcesList>
+  <Resources name="CHW" >
+    <String name="bootInitFieldbus" value="Fieldbus和Modbus正在初始化..." />
+    <String name="bootFieldbusUpdate" value="现场总线板固件需要更新,请等待" />
+    <String name="bootFieldbusReboot" value="现场总线板已更新,请重启" />
+    <String name="bootInitDrives" value="驱动器正在初始化..." />
+    <String name="bootCheckStarc" value="检查STARC固件，请等待" />
+    <String name="bootStarkReboot" value="STARC已更新，请重启" />
+    <String name="bootStarkDone" value="完成" />
+    <String name="bootStarkOk" value="Ok" />
+    <String name="bootMcpUpdate" value="示教盒的固件将被升级:" />
+    <String name="bootPressAnyKey" value="请按任意键开始升级..." />
+    <String name="bootWaitBeforeRestart1" value="等待%s直到背光亮" />
+    <String name="bootWaitBeforeRestart2" value="在重新启动之前保持关闭状态" />
+    <String name="cpuFpgaUpdateWait" value="CPU FPGA更新中,请稍候...&#13;&#10;" />
+    <String name="cpuFpgaUpdateSuccess" value="CPU FPGA更新完毕,&#13;&#10;请重新启动." />
+    <String name="cpuFpgaUpdateFailed" value="CPU FPGA更新失败&#13;&#10;" />
+    <String name="licenseNoDemo" value="可选项%z 不能在演示模式中使用" />
+    <String name="licenseInvalid" value="可选项%z的密码无效" />
+  </Resources>
+  <Resources name="CDS" >
+    <String name="applicationName" value="CoDeSys程序" help="CoDeSys程序" />
+    <String name="statusNodeName" value="状态 : " />
+    <String name="statusRun" value="运行中" />
+    <String name="statusStopBp" value="已停止(断点)" />
+    <String name="statusStopError" value="已停止(错误)" />
+    <String name="statusStopSrv" value="已停止(正常)" />
+    <String name="statusStopWd" value="已停止(看门狗)" />
+    <String name="treeName" value="CoDeSys" help="" />
+  </Resources>
+  <Resources name="PLC" >
+    <String name="applicationName" value="可编程逻辑控制(PLC) " help="编辑PLC程序,属性和状态的工具" />
+    <String name="cycleAllowedNode" value="设定周期时间 (ms) : " help="在PLC开发环境中定义的周期时间" />
+    <String name="cycleCurrentNode" value="测量周期时间 (ms) : " help="最后测量的周期时间" />
+    <String name="cycleMaxNode" value="极限情况下的周期时间 (ms) : " help="从PLC开始运行测量,其中最长的周期时间" />
+    <String name="error" value="PLC出错 : " />
+    <String name="errorBadDirection" value="输出允许" />
+    <String name="errorEmptyMap" value="无法和CS8的共享输入/输出" />
+    <String name="errorIoNotFound" value="未找到" />
+    <String name="errorMemory" value="内存已满" />
+    <String name="errorRead" value="读取错误" />
+    <String name="errorSramNotEnoughtPlace" value="静态存储器没有足够的空间用于保存变量" />
+    <String name="errorSramNotAvailable" value="没有可用的静态存储器用于保存变量" />
+    <String name="errorSramCorrupted" value="静态存储器崩溃, 无法恢复保存的变量" />
+    <String name="errorType" value="未知类型" />
+    <String name="errorWrite" value="写入错误" />
+    <String name="overrunLogMsg" value="PLC溢出" />
+    <String name="overrunNode" value="溢出 : " help="" />
+    <String name="startLogMsg" value="PLC %name已启动" />
+    <String name="statusPaused" value="已停止" />
+    <String name="statusRunning" value="运行中" />
+    <String name="stopLogMsg" value="PLC %name已停止" />
+    <String name="tcpChannelNode" value="以太网TCP端口 : " help="以太网TCP端口用于与PLC开发环境通信." />
+    <String name="trialTimeElapsed" value="PLC演示模式已过期" />
+    <String name="runFlag" value="PLC" />
+    <String name="overrunFlag" value="OVR" />
+  </Resources>
+  <Resources name="SCA" >
+    <String name="calibAdjustmentAll" value="校正所有轴" />
+    <String name="calibAdjustmentOne" value="校正轴 #" />
+    <String name="calibAskForExportArmParam" value="请插入一张软盘以备份手臂校正数据." />
+    <String name="calibAskForExportCellParam" value="请插入一张软盘以备份手臂校正参考位置." />
+    <String name="calibAxis" value="%d 轴" />
+    <String name="calibCurrentPosition" value="当前位置" />
+    <String name="calibEnabled" value="手臂已上电." />
+    <String name="calibEnumCellRef1" value="参考位1  " />
+    <String name="calibEnumCellRef2" value="参考位2  " />
+    <String name="calibEnumFactoryMark" value="工厂参考位  " />
+    <String name="calibEnumReferencePosition" value="参考位置 : " />
+    <String name="calibEnumUserMark" value="用户参考位  " />
+    <String name="calibEnumZeroMark" value="    零位    " />
+    <String name="calibFirstBootMsg" value="第一次校正零位时,请将手臂移动到接近标记,然后按下记录." />
+    <String name="buildErrorBootMsg" value="系统引导故障,机器人无法工作.查看事件记录了解更多信息." />
+    <String name="calibGotoAllAxisMsg" value="按住 Move/Hold移动手臂到所选参考位置." />
+    <String name="calibGotoOneAxisMsg" value="按住 Move/Hold移动所选轴到参考位置." />
+    <String name="calibHereAllAxisWarning" value="警告!参考位置将被修改." />
+    <String name="calibHereOneAxisWarning" value="警告!所选轴的参考位置将被修改." />
+    <String name="calibImportConfirmMsg" value="警告!手臂零位位置将在重启系统后设置." />
+    <String name="calibImportMsg" value="重新启动控制器以激活新的手臂设置.			" />
+    <String name="calibInfoPageTitle" value="编码器状态" />
+    <String name="calibMnuAxisGoto" value="移动" help="移动到选定轴的参考位置" />
+    <String name="calibMnuAxisHere" value="记录" help="分配当前位置为所选轴的参考位置" />
+    <String name="calibMnuAxisPositionRecovery" value="恢复" help="恢复选轴的位置" />
+    <String name="calibMnuAxisPositionSet" value="校正" help="校正选轴的位置" />
+    <String name="calibMnuGoto" value="移动" help="移动到所选参考位置" />
+    <String name="calibMnuHere" value="记录" help="分配当前位置为所有轴的参考位置" />
+    <String name="calibMnuInfo" value="信息" help="显示编码器状态" />
+    <String name="calibMnuJointEdit" value="编辑" help="编辑参考位置坐标" />
+    <String name="calibMnuLoad" value="导入" help="从软盘导入手臂设置" />
+    <String name="calibMnuPositionRecovery" value="恢复" help="控制器和手臂断开连接后,要恢复所有轴的位置.轴的位置必须参考点上(在一定的度数范围内)" />
+    <String name="calibMnuPositionSet" value="校准" help="在更换电机或手臂碰撞后,手臂的当前位置会自动设为零点,要让手臂能够正常使用,必须重新校准所有轴的零位,并且必须保证校准时的精度." />
+    <String name="calibMnuSave" value="导出" help="保存手臂设置数据到软盘上" />
+    <String name="calibPrecArmChangedQuestion" value="控制器的数据与手臂数据不匹配.是否确定要将手臂数据复制到控制器中(在更换新的手臂与连接原始控制器时或安装了有相位偏差的新传感器)?" />
+    <String name="calibPrecDisablePowerMsg" value="要使新的手臂零位生效,手臂将自动下电." />
+    <String name="calibPrecDsiChangedQuestion" value="确定要将控制器中的数据复制到手臂中去吗(新的DSI板)?" />
+    <String name="calibPrecFatalErrorMsg" value="当前手臂数据与控制器中的arm.cfx文件内容不匹配,必须找到问题原因，恢复正确的手臂校正." />
+    <String name="calibPrecMsg" value="注意,手臂位置将被恢复.手臂位置必须与参考位置一致." />
+    <String name="calibPrecRecoveryProcedureErrorMsg" value="如果安装了一个已经设置好编码器的马达,那么只要校正轴与零点的偏差(使用&apos;校正&apos;菜单).如果不确定编码器的偏差是否正确,则必须按以下步骤来校正编码器偏差." />
+    <String name="calibPrecSensorChangedQuestion" value="你已经更换过一个编码器或者马达吗?" />
+    <String name="calibPrecTitle" value="恢复机器人位置" />
+    <String name="calibPsetDisablePowerMsg" value="要使新的手臂零位生效,手臂将自动下电." />
+    <String name="calibPsetMsg" value="注意,轴的位置将被调整.手臂位置必须与参考位置一致." />
+    <String name="calibPsetTitle" value="单轴调整" />
+    <String name="calibRecoveryAll" value="恢复所有轴的位置" />
+    <String name="calibRecoveryOne" value="恢复轴# 的位置" />
+    <String name="calibReference" value="参考位置" />
+    <String name="calibReferenceModified" value="已修正" />
+    <String name="calibReferencePosition" value="参考位置" />
+    <String name="calibReferenceTeached" value="已示教" />
+    <String name="calibResultExportError" value="文件导出时出错" />
+    <String name="calibResultImportError" value="文件导入时出错" />
+    <String name="calibResultPositionRecoveryKo" value="位置恢复错误" />
+    <String name="calibResultPositionSetKo" value="位置设置错误" />
+    <String name="calibTitle" value="校准零位" help="恢复或校正手臂零位位置的维护工具" />
+    <String name="controlPanelApp" value="控制面板" help="控制并查看当前机器人设置的工具" />
+    <String name="ctrlPanelCbtTemp" value="控制柜温度 : " help="" />
+    <String name="ctrlPanelCom2Type" value="COM2 : "/>
+    <String name="ctrlPanelControllerNode" value="控制器" help="设置控制器" />
+    <String name="ctrlPanelControllerParametersNetworkNode" value="网络" help="" />
+    <String name="ctrlPanelControllerParametersNode" value="控制器配置" help="" />
+    <String name="ctrlPanelControllerStatusNode" value="控制器状态" help="" />
+    <String name="ctrlPanelDate" value="日期&amp;时间 : " />
+    <String name="ctrlPanelFreeDiskSpace" value="可用磁盘空间 : " />
+    <String name="ctrlPanelFreeMemory" value="可用内存 : " />
+    <String name="ctrlPanelFreeSramSpace" value="可用静态存储空间 : " />
+    <String name="ctrlPanelIp" value="IP地址 : " />
+    <String name="ctrlPanelIpConnector1" value="J204 IP地址 : " />
+    <String name="ctrlPanelIpConnector2" value="J205 IP地址 : " />
+    <String name="ctrlPanelLanguage" value="选择语言 : " help="" />
+    <String name="ctrlPanelMacAddr" value="Mac地址 : " />
+    <String name="ctrlPanelMaxManuCartSpeed" value="手动模式机器人迪卡尔运动速度: " help="编辑手动模式下机器人迪卡尔移动速度"/>
+    <String name="crtlPanelMnuStatusExport" value="导出" help="导出控制器状态为日志文件"/>
+    <String name="crtlPanelMnuConfigBackup" value="备份" help="备份完整控制器到U盘"/>
+    <String name="ctrlPanelMonitorSpeed" value="显示速度 : " />
+    <String name="ctrlPanelRecorder" value="记录器" />
+    <String name="ctrlPanelRemotePort" value="远程维护端口: " help="用来与SRS远程维护工具通信的以太网TCP端口" />
+    <String name="ctrlPanelRobotNode" value="手臂位置" help="显示手臂当前位置" />
+    <String name="ctrlPanelRsiDisplay" value="RSI7位数码显示管 : " />
+    <String name="crtlPanelStatusExportMsg" value="系统状态已经被导出为日志文件" />
+    <String name="ctrlPanelUnits" value="单位 : " />
+    <String name="errTitle" value="错误" />
+    <String name="warningTitle" value="警告" />
+    <String name="errorAppMnuSave" value="导出" help="导出日志文件,保存在软盘上" />
+    <String name="errorAppResultExportError" value="文件导出时出错" />
+    <String name="errorAppTitle" value="事件日志" help="查询系统事件和状态的工具" />
+    <String name="limitsArmEditTitle" value="手臂限位" help="" />
+    <String name="limitsCellEditTitle" value="单元限位" help="" />
+    <String name="limitsExternAxesEditTitle" value="外部限位" help="" />
+    <String name="logExportPopup" value="请插入软盘" />
+    <String name="loginMnuLock" value="默认" help="切换到默认用户帐号" />
+    <String name="loginappCurrentUserName" value="当前用户 : " help="拥有控制当前用户界面权限的用户名称" />
+    <String name="loginappIntegratorMsg" value="只有培训过的人员才能在低安全的系统下工作." />
+    <String name="loginappInvalidDefaultUserMsg" value="无法找到起始用户名,将不设置界面权限限制." />
+    <String name="loginappInvalidPasswordMsg" value="无效密码" />
+    <String name="loginappNewUserName" value="用户帐号 : " />
+    <String name="loginappPassword" value="密码 : " help="新用户的登录密码" />
+    <String name="loginappTitle" value="选择用户" help="进入选择一个新的登录用户或起始用户页面" />
+    <String name="portdioAppTitle" value="输入/输出" help="显示并激活系统输入/输出" />
+  </Resources>
+  <Resources name="EP" >
+    <String name="autoloadCancelled" value="VAL3应用程序的自动加载被取消(在启动时出现不可恢复系统错误)" />
+    <String name="bptPageMnuAdd" value="新建" help="在当前的指令处设置一个断点" />
+    <String name="bptPageMnuDel" value="删除" help="删除选中的断点" />
+    <String name="bptPageMnuDelAll" value="全部" help="删除全部断点" />
+    <String name="bptPageTitle" value="断点" help="列出应用程序&apos;s的断点　" />
+    <String name="cannotEditArrayNode" value="不能编辑数组结点" />
+    <String name="cannotEditInputData" value="无法编辑一个输入数据的值" />
+    <String name="cannotEditFlange" value="不能编辑法兰　" />
+    <String name="cannotEditWorld" value="不能编辑世界坐标" />
+    <String name="cannotMoveArrayNode" value="不能在数组结点上移动" />
+    <String name="cannotMoveToJoint" value="不能运动到关节类型" />
+    <String name="cannotMoveToPoint" value="不能运动到点类型" />
+    <String name="cannotTeachArrayNode" value="不能示教数组结点" />
+    <String name="cannotTeachThisJoint" value="不能示教关节类型" />
+    <String name="cannotTeachThisPoint" value="不能示教点类型" />
+    <String name="cellDelFrameMsg" value="首先删除坐标系和附属于这个坐标系的点" />
+    <String name="cellDelFrameTitle" value="删除坐标系" />
+    <String name="cellDelToolMsg" value="首先删除附属于这个工具的工具" />
+    <String name="cellDelToolTitle" value="删除工具" />
+    <String name="cellEditCloseDelay" value="关闭时间  : " help="关闭工具的延迟时间(秒)" />
+    <String name="cellEditDioName" value="io 名称 : " help="输出到工具的信号的名称" />
+    <String name="cellEditOpenDelay" value="打开时间  : " help="打开工具的延迟时间(秒)　" />
+    <String name="cellEditToolTitle" value="编辑 工具" help="编辑工具参数" />
+    <String name="cfgmanagerMenuDel" value="删除" help="" />
+    <String name="cfgmanagerMenuNew" value="新建" help="" />
+    <String name="cfgmanagerMenuSave" value="保存" help="保存应用" />
+    <String name="dataAddElementTitle" value="新键" help="添加一个新的元素" />
+    <String name="dataAttributExport" value="属性 : " />
+    <String name="dataContainer" value="容器 :" />
+    <String name="dataContainerArray" value="数组" />
+    <String name="dataContainerElement" value="元素" />
+    <String name="dataContainerList" value="集合" />
+    <String name="dataDim" value="元素数量:" help="数组尺寸　　" />
+    <String name="dataErrorCreation" value="不能创建数据" />
+    <String name="dataErrorHeapFull" value="在&apos;s项目堆中没有足够的空间" />
+    <String name="dataErrorInvalidDimensions" value="无效维数" />
+    <String name="dataErrorTooManyElements" value="元素过多" />
+    <String name="dataKeyName" value="键: " />
+    <String name="dataMnuHere" value="记录" help="记录当前工具的当前位置" />
+    <String name="dataMnuTeach" value="示教" help="示教一个坐标系" />
+    <String name="dataName" value="变量名称:" help="名称包含1到12个字符，可以用:&apos;_a..z0..9&apos;，以字母&apos;a..z&apos;开头" />
+    <String name="dataPrivate" value="私有类型" />
+    <String name="dataPublic" value="公共类型" />
+    <String name="dataType" value="类型 : " />
+    <String name="dbgMnuBreakpoints" value="断点" help="显示所有断点，删除一个，删除所有，添加" />
+    <String name="dbgMnuData" value="数据" help="显示选中指令的数据　" />
+    <String name="dbgMnuSet" value="-&gt;*" help="跳到选中的行，忽略所有的中间行" />
+    <String name="dbgMnuStepInto" value="{*}" help="进入:执行当前行,在下个可执行的行停止(在需要时可以打开结点或子程序)　" />
+    <String name="dbgMnuStepOver" value="{}*" help="跳过函数或缩进的指令　" />
+    <String name="editMnuComment" value=";" help="将选中的行设置为注释" />
+    <String name="editMnuCpy" value="复制" help="复制标记行到剪切板" />
+    <String name="editMnuCut" value="剪切" help="移动标记行到剪切板" />
+    <String name="editMnuDelInst" value="删除" help="删除标记行" />
+    <String name="editMnuPaste" value="粘贴" help="粘贴:在选择行之后复制剪切板内容" />
+    <String name="editMnuSaveRoutine" value="保存" help="保存应用" />
+    <String name="errAddInstruction" value="系统事件SIN-ADD.　" />
+    <String name="errAllAppliRunning" value="所有打开的应用都在运行．" />
+    <String name="errArrayRootNodeSelection" value="不可能选择一个数据根." />
+    <String name="errCannotAddParameter" value="项目运行时不能添加局部变量或参数" />
+    <String name="errCannotChangeCallInUse" value="无法更改一个使用中的程序调用 " />
+    <String name="errCannotChangeTypeOfInst" value="不能改变指令类型" />
+    <String name="errCannotDebugUnloadedPrj" value="不能调试关闭的库" />
+    <String name="errCannotDeleteLibData" value="不能删除库中的数据" />
+    <String name="errCannotKillTask" value="%s没有应答结束请求．您想要强制结束任务吗？" />
+    <String name="errCannotModifyLibData" value="不能修改库数据" />
+    <String name="errCannotRemoveLibrary" value="不能删除库" />
+    <String name="errCannotRemoveUserType" value="无法移除用户类型" />
+    <String name="errClpbrdCpy" value="系统事件CLP-CPY." />
+    <String name="errClpbrdPasteError" value="在剪切板中有错误的行:" />
+    <String name="errCompile" value="错误的行" />
+    <String name="errDbgInternal" value="系统事件" />
+    <String name="errDbgTimeout" value="执行单步停止(超时)" />
+    <String name="errEditData" value="不能编辑这种数据" />
+    <String name="errEditExternRoutine" value="不能编辑外部程序" />
+    <String name="errExportFile" value="不能导出文件" />
+    <String name="errLibraryRename" value="不能重命名库" />
+    <String name="errLocalArrayResize" value="不能调整局部数组的大小" />
+    <String name="errMemoryFull" value="内存已满" />
+    <String name="errNoAppliRunning" value="没有应用程序运行" />
+    <String name="errNotAnArray" value="不是一个数组" />
+    <String name="errParameterResize" value="不能通过值来传递数组(数组不能通过值传递，只能通过引用传递)" />
+    <String name="errProjectStopping" value="应用程序已经停止" />
+    <String name="errRenameStartStop" value="不能重命名start( )或stop( )" />
+    <String name="errRepInstruction" value="修改行" />
+    <String name="errStartStopParameter" value="start() 和 stop()程序不能有参数" />
+    <String name="errTitle" value="错误" />
+    <String name="errUnlinkedFrame" value="这个坐标系被连接到一个未加载的库中的坐标系" />
+    <String name="errUnlinkedPoint" value="这个点被连接到一个未加载的库中的坐标系" />
+    <String name="errUnlinkedTool" value="这个工具被连接到一个未加载的库中的工具" />
+    <String name="errorDataDel" value="不能删除数据" />
+    <String name="errorDataRename" value="不能重命名数据" />
+    <String name="errorParamDel" value="不能删除参数" />
+    <String name="insCommandNode" value="指令" help="" />
+    <String name="insErrorBuildRoutine" value="系统事件PRG-BLD" help="" />
+    <String name="insHistoryNode" value="历史" help="" />
+    <String name="insMnuCommands" value="VAL3" help="选择VAL3指令" />
+    <String name="insMnuGlobals" value="全局" help="选择全局变量" />
+    <String name="insMnuHistory" value="历史" help="从最近的输入中选择一行" />
+    <String name="insMnuIo" value="I/O" help="选择系统数据输入输出" />
+    <String name="insMnuLocals" value="局部" help="选择一个局部变量或当前程序中的一个参数" />
+    <String name="insMnuRoutines" value="程序" help="选择当前应用的中的一个程序" />
+    <String name="insnodeCommentTitle" value="备注　" help="" />
+    <String name="insnodeDeleteTitle" value="删除行" help="" />
+    <String name="insnodeInstructionsNode" value="指令" />
+    <String name="insnodeMnuInsertInstruction" value="插入" help="在选中的行后插入一行" />
+    <String name="insnodeMnuMarkInstruction" value="标记" help="标记选中的行" />
+    <String name="insnodeStepError" value="不能进入:任务没有停止" />
+    <String name="insnodeVariablesTitle" value="变量" help="" />
+    <String name="jogStepMnuToggle" value="步进" help="开启手动步进模式 开/关" />
+    <String name="jogApproMnuToggle" value="步进" help="开启手动步进模式 开/关" />
+    <String name="jogApproNotAllow" value="不允许步进一个关节位置" />
+    <String name="jogApproNotAllowTitle" value="步进" />
+    <String name="jogApproOnOff" value="趋近:" />
+    <String name="jogParamPageTitle" value="步进参数" help="" />
+    <String name="jogApproTitle" value=" 步进:" />
+    <String name="jogStepTitle" value="步进:" />
+    <String name="jogApproRx" value="Rx:" />
+    <String name="jogApproRy" value="Ry:" />
+    <String name="jogApproRz" value="Rz:" />
+    <String name="jogApproX" value="X : " />
+    <String name="jogApproY" value="Y : " />
+    <String name="jogApproZ" value="Z : " />
+    <String name="jogFrame" value="坐标系 : " />
+    <String name="jogJointTitle" value="关节" />
+    <String name="jogMnuParam" value="步进" help="输入步进参数" />
+    <String name="jogMnuMode" value="模式" help="选择点的移动模式" />
+    <String name="jogMnuNew" value="新建" help="创建一个点或关节点" />
+    <String name="jogMnuSelect" value="选择" help="选择当前的工具和坐标系　" />
+    <String name="jogModeAlign" value="对齐" />
+    <String name="jogModeJoint" value="关节" />
+    <String name="jogModeLine" value="直线" />
+    <String name="jogModeTitle" value="模式 : " />
+    <String name="jogPageTitle" value="点动控制界面" help="" />
+    <String name="jogPointTitle" value="点" />
+    <String name="jogSelFrameErr" value="不是一个坐标系!" />
+    <String name="jogSelFrameTitle" value="选择坐标系" help="选择坐标系然后按OK" />
+    <String name="jogSelToolErr" value="不是一个工具!" />
+    <String name="jogSelToolTitle" value="选择工具" help="选择工具然后按OK" />
+    <String name="jogTool" value="工具 : " />
+    <String name="jogStepOnOff" value="手动步进模式: " />
+    <String name="jogStepValue" value="手动步进值: " />
+    <String name="jogStepShortcuts" value="快捷键&lt; &gt;" />
+    <String name="joint" value="关节" />
+    <String name="libraryAddPageAliasTitle" value="标识符" help="" />
+    <String name="libraryAddPageTitle" value="添加一个库" help="" />
+    <String name="libraryAttPageChangePathMnu" value="更改" />
+    <String name="libraryAttPagePath" value="库 : " />
+    <String name="libraryAttPageTitle" value="属性" help="" />
+    <String name="libraryAttPageVal3Name" value="标识符 : " />
+    <String name="libraryAttPageAutoload" value="自动加载:" />
+    <String name="libraryAttPagePassword" value="密码: " />
+    <String name="libraryChangePathPageTitle" value="更改路径　" />
+    <String name="libraryErrorAdd" value="添加库时出错" />
+    <String name="libraryMnuAdd" value="添加" help="" />
+    <String name="libraryMnuDel" value="删除" help="" />
+    <String name="libraryMnuRename" value="改名" help="" />
+    <String name="libraryNodeName" value="库" help="" />
+    <String name="libraryProtected" value="%s是一个经过加密的库" />
+    <String name="libraryRemovePopup" value="%z将被从项目中删除%s" />
+    <String name="libraryRemoveTitle" value="删除库" />
+    <String name="managerChoice" value="打开一个应用程序" help="" />
+    <String name="managerErrorAppNotFound" value="没发现应用程序，已从自动加载列表中删除．" />
+    <String name="managerErrorAutoload" value="自动加载错误 : " />
+    <String name="managerErrorAutostart" value="自动启动错误 : " />
+    <String name="managerErrorRun" value="无法运行应用程序" />
+    <String name="managerMenuLoad" value="打开" help="选择一个应用程序并打开" />
+    <String name="managerMenuReload" value="重载" help="重新加载应用程序" />
+    <String name="managerMenuUnload" value="关闭" help="关闭选择的应用程序" />
+    <String name="managerName" value="应用程序管理器" help="用于编辑VAL3应用程序" />
+    <String name="managerSuccessAutoload" value="打开" />
+    <String name="mnuMoveJoint" value="移动" help="在手动模式下移动手臂到一个关节位置" />
+    <String name="mnuMovePoint" value="移动" help="在手动模式下运动手臂到一个点位置　" />
+    <String name="modified" value="修改" />
+    <String name="nodeErrorElementAlreadyExists" value="相同键的元素已存在." />
+    <String name="nodeErrorInvalidDataName" value="无效名称" />
+    <String name="nodeErrorInvalidKeyValue" value="键的长度必须在1到15个字符之间" />
+    <String name="nodeErrorParameterCreation" value="不能创建参数" />
+    <String name="nodeLoadedPrj" value="Val3应用程序" help="" />
+    <String name="nodeMnuAddElement" value="添加" help="添加一个新的元素" />
+    <String name="nodeMnuInsert" value="插入" help="在选中的元素后面插入一个新的元素" />
+    <String name="nodeMnuRename" value="改名" help="重命名数据或程序" />
+    <String name="nodeMnuResize" value="重设." help="重设数据大小." />
+    <String name="nodeMnuIoLinkEdit" value="编辑" help="编辑 IO 连接." />
+    <String name="nodeMnuLink" value="连接" help="连接 IOs" />
+    <String name="nodeNewDataTitle" value="新数据" help="" />
+    <String name="nodeNewParameterTitle" value="新参数" help="" />
+    <String name="nodeParameterByReference" value="随引用" />
+    <String name="nodeParameterByValue" value="随值" />
+    <String name="nodeParameterDimensions" value="维数 :" />
+    <String name="nodeParameterPassage" value="传递 : " />
+    <String name="nodeRenameDataTitle " value="新名称" help="" />
+    <String name="nodeResizeDataTitle " value="重设数据大小" help="" />
+    <String name="point" value="点" />
+    <String name="prjMnuTerminal" value="命令" help="命令行界面" />
+    <String name="projectDateTimeFormat" value="%Y %m %d %H:%M" /> 
+    <String name="projectDeleteArrayItemLastMsg" value="无法删除几何集合的最后一个元素" />
+    <String name="projectDeleteArrayItemPopup" value="将被从数组删除" />
+    <String name="projectDeleteArrayItemTitle" value="删除元素" />
+    <String name="projectDeleteDataPopup" value="%s将被从应用程序%s中删除" />
+    <String name="projectDeleteDataTitle" value="删除数据" />
+    <String name="projectDeletePopup" value="将被删除" />
+    <String name="projectDeleteTitle" value="删除项目" />
+    <String name="projectDeleteLogMsg" value="项目 %s 已删除." />
+    <String name="projectErrorConstruction" value="不能创建项目" />
+    <String name="projectErrorIncompleteDelete" value="应用程序数据没有完全删除" />
+    <String name="projectErrorSavingProject" value="保存项目时出错" />
+    <String name="projectErrorUnload" value="不能关闭．" />
+    <String name="projectGlobalData" value="全局数据" help="应用程序&apos;s中全局数据的管理" />
+    <String name="projectLoadAutoload" value="自动加载" />
+    <String name="projectLoadAutostart" value="自动启动" />
+    <String name="projectLoadManual" value="手动" />
+    <String name="projectLoadMnuMode" value="模式" help="选择应用程序&apos;s的加载模式" />
+    <String name="projectMnuSaveAs" value="导出" help="重命名选中的应用程序或导出到其它位置" />
+    <String name="projectNewMsg" value="警告:一个同名的应用程序将被删除．" />
+    <String name="projectNewTitle" value="新建应用程序" />
+    <String name="projectNodeConfig" value="参数" help="全局参数" />
+    <String name="projectNodeHeapSize" value="数据内存: " help="用于存储应用程序的全局数据的内存空间" />
+    <String name="projectNodeStackSize" value="运行时内存: " help="用于存储VAL3任务和子程序中的局部数据的空间" />
+    <String name="projectNodeUnits" value="单位: " help="在VAL3的应用中使用的单位" />
+    <String name="projectResizeArrayPopup" value="一些元素将丢失." />
+    <String name="projectResizeArrayTitle" value="重设数组大小" />
+    <String name="projectSaveasMsg" value="警告:这将覆盖另一个应用程序" />
+    <String name="projectSaveasTitle" value="导出" />
+    <String name="projectTemplate" value="模板: " />
+    <String name="projectUnloadPopup" value="在应用程序被关闭时保存修改" />
+    <String name="projectUnloadSaveWithoutRights" value="当前用户无权保存应用程序" />
+    <String name="projectUnloadTitle" value="关闭应用程序" />
+    <String name="projectWarningUnitsDiffer" value="项目单位与系统单位不一致" />
+    <String name="reloadAlsoLibraries" value="确定要加载此项目的所有库文件吗?" />
+    <String name="reloadLibrariesTitle" value="重新加载库" help="如果选择否,仅此项目的数据和程序才会重新载入.如果选择是,所有此项目使用的库的数据和程序都会被载入." />
+    <String name="reloadError" value="项目%s不能被重载" />
+    <String name="routineAttributExport" value="属性 : " />
+    <String name="routineDeletePopup" value="%z将被从%s项目中删除" />
+    <String name="routineDeleteTitle" value="删除程序" />
+    <String name="routineErrorAttribute" value="不能改变程序属性" />
+    <String name="routineErrorCreate" value="创建程序时出错" />
+    <String name="routineErrorDel" value="不能删除程序" />
+    <String name="routineLocalData" value="局部数据" help="列出程序的局部数据" />
+    <String name="routineMnuEdit" value="编辑" help="" />
+    <String name="routineMnuRef" value="引用" help="切换参数传递模式:通过值或通过引用" />
+    <String name="routineName" value="名称: " />
+    <String name="routineNewTitle" value="新程序名" help="" />
+    <String name="routineNode" value="程序" help="列出应用中的程序" />
+    <String name="routineParameters" value="参数" help="列出程序中调用的所有参数" />
+    <String name="routinePrivate" value="私有类型" />
+    <String name="routinePublic" value="公共类型" />
+    <String name="routineRenameTitle " value="新名称" help="" />
+    <String name="runAppError" value="一个应用程序已经运行．停止它才能运行另一个．" />
+    <String name="selectStart" value="运行程序" help="列出VAL3打开的所有应用程序" />
+    <String name="selectStop" value="停止程序" help="" />
+    <String name="sinRcDataAlreadyExists" value="数据的名称已经存在" />
+    <String name="sinRcDataBusy" value="数据已经在程序中使用" />
+    <String name="sinRcDataInvalidName" value="数据名称无效" />
+    <String name="sinRcDataInvalidSize" value="数组的索引必须是正值" />
+    <String name="sinRcDataNotAnArray" value="数据不是一个数组" />
+    <String name="sinRcDataNotFound" value="数据没有被找到" />
+    <String name="sinRcIdentifierAlreadyExists" value="标识符已经存在" />
+    <String name="sinRcIdentifierInvalidName" value="标识符名称无效" />
+    <String name="sinRcLibraryAlreadyExists" value="在项目中库已经存在" />
+    <String name="sinRcLibraryBusy" value="库已经在程序的其它位置被使用　" />
+    <String name="sinRcLibraryInvalidName" value="库名称无效" />
+    <String name="sinRcMemoryFull" value="内存已满" />
+    <String name="sinRcProjectAlreadyEnding" value="应用程序已经结束" />
+    <String name="sinRcProjectAlreadyExists" value="应用程序名称已经存在" />
+    <String name="sinRcProjectAlreadyRunning" value="程序已经运行" />
+    <String name="sinRcProjectBusy" value="应用程序正在运行" />
+    <String name="sinRcProjectCodeError" value="程序中有错误(查看事件记录)" />
+    <String name="sinRcProjectDataError" value="数据中有错误(查看事件记录)" />
+    <String name="sinRcProjectDefaultStackTooSmall" value="运行时内存太小(更改应用程序参数)" />
+    <String name="sinRcProjectFileError" value="不能创建文件目录" />
+    <String name="sinRcProjectFilemanagerNotFound" value="不能访问保存位置" />
+    <String name="sinRcProjectInconsistantResolvedSymbol" value="数据类型或程序头不适合库声明" />
+    <String name="sinRcProjectInvalidDestructor" value="在stop()程序中不允许使用参数" />
+    <String name="sinRcProjectInvalidMain" value="在start()程序中不允许使用参数" />
+    <String name="sinRcProjectInvalidName" value="应用程序名称无效" />
+    <String name="sinRcProjectInvalidProject" value="无效应用程序:检查call()中的程序参数或spwan指令" />
+    <String name="sinRcProjectInvalidTypeName" value="无效类型名" />
+    <String name="sinRcProjectLibraryError" value="无法加载库文件" />
+    <String name="sinRcProjectLocked" value="系统事件APP-LCK　" />
+    <String name="sinRcProjectNoDestructor" value="在程序中找不到stop()程序　" />
+    <String name="sinRcProjectNoMain" value="在程序中找不到start()程序" />
+    <String name="sinRcProjectTypeNameAlreadyUsed" value="类型名已被使用" />
+    <String name="sinRcProjectTypeProjectNotMatch" value="用于定义类型的项目内容与数据不匹配" />
+    <String name="sinRcProjectUnresolvedSymbol" value="在库中没有找到所有声明的数据和程序" />
+    <String name="sinRcProjectUsedAsStruct" value="项目在一个应用程序中作为类型使用" />
+    <String name="sinRcRoutineAlreadyExists" value="程序名称已经存在" />
+    <String name="sinRcRoutineBusy" value="程序已在另一个程序中被调用" />
+    <String name="sinRcRoutineInvalidName" value="程序名称无效" />
+    <String name="sinRcRoutineInvalidParamPosition" value="意外的参数" />
+    <String name="sinRcRoutineNameTooLong" value="程序名称太长" />
+    <String name="sinRcRoutineNotFound" value="程序未找到" />
+    <String name="sinRcTypeBusy" value="类型已被使用" />
+    <String name="srlRcProjectPoolInconsistentIoInfo" value="内部错误(IO数组损坏)" />
+    <String name="srlRcNoVAL3License" value="没有 VAL 3 许可证, 或演示模式已过期" />
+    <String name="startAppTitle" value="Start appli" help="启动应用程序" />
+    <String name="stopAppTitle" value="Stop appli" help="启动应用程序" />
+    <String name="stopApp" value="警告!应用程序将停止" />
+    <String name="teached" value="已示教" />
+    <String name="tskmanDebugTitle" value="调试" help="用于单步调试程序" />
+    <String name="tskmanErrorLockedTask" value="不能调试(任务被锁)" />
+    <String name="tskmanErrorRunningTask" value="不能调试(任务没有停止)" />
+    <String name="tskmanInfoCurrentCycletime" value="测量周期时间(毫秒)  " />
+    <String name="tskmanInfoMaxCycletime" value="极限周期时间(毫秒)" />
+    <String name="tskmanInfoNbOverrun" value="溢出 : " />
+    <String name="tskmanInfoWantedCycletime" value="指定周期时间(毫秒)" />
+    <String name="tskmanKillTaskPopup" value="将被结束 " />
+    <String name="tskmanKillTaskTitle" value="结束任务" />
+    <String name="tskmanMnuDebug" value="调试" help="中断&amp;并调试选中的任务" />
+    <String name="tskmanMnuInfo" value="信息" help="" />
+    <String name="tskmanMnuKill" value="结束" help="结束选中的任务" />
+    <String name="tskmanMnuResume" value="恢复" help="恢复选中的任务" />
+    <String name="tskmanMnuSuspend" value="中断" help="中断选中的任务" />
+    <String name="tskmanName" value="任务管理器" help="用于跟踪和调试已开始的VAL3任务" />
+    <String name="tskmanTitle" value="名称         状态       应用 优先级 错误 " />
+    <String name="userappTitle" value="应用界面" help="VAL3应用的人机界面" />
+    <String name="userTypeAddPageNameTitle" value="类型名称" help="" />
+    <String name="userTypeAddPageTitle" value="添加一个类型" help="" />
+    <String name="userTypeErrorAdd" value="添加类型错误" />
+    <String name="userTypeMnuAdd" value="添加" help="" />
+    <String name="userTypeMnuDel" value="删除" help="" />
+    <String name="userTypeNodeName" value="用户类型" help="" />
+    <String name="userTypeRemovePopup" value="%z将被从%s项目中删除" />
+    <String name="userTypeRemoveTitle" value="移除用户类型." />
+    <String name="warning" value="警告!" />
+    <String name="warningDataSize" value="创建这个数据可能需要一些时间" />
+    <String name="warningDetected" value="发现警告.查看事件记录" />
+    <String name="warningMotion" value="警告运动" />
+    <String name="warningMotionReset" value="你想重新设置运动吗?" />
+  </Resources>
+  <Resources name="SRL" >
+    <String name="appStarted" value="应用程序开始" />
+    <String name="appStopped" value="应用程序停止" />
+    <String name="cannotCreate" value="不能创建" />
+    <String name="errorFile" value="文件" />
+    <String name="errorLine" value="行" />
+    <String name="ioNotLinked" value="未连接" />
+    <String name="ioInvalidLink" value="无效链接" />
+    <String name="frameConveyor" value="传送带" />
+    <String name="frameConveyed" value="已传送" />
+    <String name="frameMobile" value="移动的" />
+    <String name="nameAlreadyUsed" value="名称已经存在" />
+    <String name="resetMotionWithStop" value="应用程序已经结束,未完成的运动已经被取消" />
+    <String name="runtimeErr000NoError" value="无运行时错误" />
+    <String name="runtimeErr010DivZero" value="无效数字计算(除数为零)" />
+    <String name="runtimeErr011Num" value="无效数字计算(无效值)" />
+    <String name="runtimeErr020IndOverflow" value="数组索引大于数组的尺寸" />
+    <String name="runtimeErr021IndUnderflow" value="数组索引为负值" />
+    <String name="runtimeErr025Invalidkey" value="指定了无效的键." />
+    <String name="runtimeErr029TaskInvalidName" value="无效任务名称" />
+    <String name="runtimeErr030TaskNotFound" value="任务不存在" />
+    <String name="runtimeErr031TaskNameAlreadyUsed" value="任务名称已经被使用" />
+    <String name="runtimeErr032TaskNbSyncReached" value="对于同步的任务只支持两个不同的周期.改变时间周期" />
+    <String name="runtimeErr033TaskSyncNbLineReached" value="一个VAL3同步任务无法执行太多指令行." />
+    <String name="runtimeErr040HeapOverflow" value="没有足够的数据内存.更改应用程序&apos;s的参数增加." />
+    <String name="runtimeErr041StackOverflow" value="没有足够的运行时内存.使用应用程序&apos;s的参数增加，然后重新启动这个应用程序." />
+    <String name="runtimeErr050DataAlreadyExists" value="名称已经被使用" />
+    <String name="runtimeErr060OperationTimeout" value="指令超时" />
+    <String name="runtimeErr061InternalError" value="VAL3编译器错误.请联系售后服务人员." />
+    <String name="runtimeErr070InvalidParameterValue" value="指令参数值无效.请参考VAL3参考手册." />
+    <String name="runtimeErr071LocalInvalidOperation" value="局部数据或程序参数随值不支持作为一个函数参数." />
+    <String name="runtimeErr080UseUnresolvedExtern" value="使用了未知的外部标记" />
+    <String name="runtimeErr081IncompatibleKinematic" value="连接的手臂数据无效 " />
+    <String name="runtimeErr082UseRefToUnreacheableExtern" value="使用了对未声明的外部标记的引用" />
+    <String name="runtimeErr090InvalidResumeOperation" value="在taskResume()指定的行中没有指令" />
+    <String name="runtimeErr100InvalidVel" value="在mdesc中字段&apos;vel&apos;是负值或太高." />
+    <String name="runtimeErr101InvalidAccel" value="在mdesc中字段&apos;accel&apos;是负值或太高." />
+    <String name="runtimeErr102InvalidDecel" value="在mdesc中字段&apos;dccel&apos;是负值或太高或低于字段&apos;vel&apos;的值." />
+    <String name="runtimeErr103InvalidTvel" value="在mdesc中字段&apos;tvel&apos;是负值或太高." />
+    <String name="runtimeErr104InvalidRvel" value="在mdesc中字段&apos;rvel&apos;是负值或太高." />
+    <String name="runtimeErr105InvalidDreach" value="在mdesc中字段&apos;reach&apos;是负值." />
+    <String name="runtimeErr106InvalidDleave" value="在mdesc中字段&apos;leave&apos;是负值. " />
+    <String name="runtimeErr122IoChannelInvalidOperation" value="不能向输入写入值." />
+    <String name="runtimeErr123IoChannelNotConnected" value="I/O没有连接到一个硬件输入输出" />
+    <String name="runtimeErr125IoChannelHwAccess" value="输入输出无响应" />
+    <String name="runtimeErr126IoChannelInvalidFormat" value="无效输入格式 (浮点型/整型/带符号/不带符号)" />
+    <String name="runtimeErr150MotionError" value="机器人在一个不可能的运动上停止(目标达不到，错误的手臂配置，或奇异点)" />
+    <String name="runtimeErr153MotionInternalError" value="不支持的运动命令." />
+    <String name="runtimeErr154MotionParameterError" value="无效运动命令:无效目标点或运动参数" />
+    <String name="runtimeErr160InvalidFlange" value="工具坐标(法兰)已经被修改." />
+    <String name="runtimeErr161InvalidWorld" value="坐标系的坐标(世界坐标)已经被修改．" />
+    <String name="runtimeErr162PointNotLinked" value="点没有连接到一个参考坐标系．请查看VAL3参考手册．" />
+    <String name="runtimeErr163FrameNotLinked" value="坐标系没有连接到一个参考坐标系．请查看VAL3参考手册．　" />
+    <String name="runtimeErr164ToolNotLinked" value="工具没有连接到一个参考工具．请查看VAL3参考手册．" />
+    <String name="runtimeErr165InvalidLink" value="不能连接一个全局坐标系，点，或工具到一个局部数据．" />
+    <String name="runtimeErr170InvalidMobileChain" value="无法将一个移动坐标系联接到另外一个移动坐标系" />
+    <String name="runtimeErr171FrameNotMobile" value="坐标系没有被声明为移动类型" />
+    <String name="runtimeErr200IpConnectionFailed" value="以太网连接失败．" />
+    <String name="runtimeErr250TrialTimeElapsed" value="试用时间已到．" />
+    <String name="runtimeErr270InvalidFilePath" value="无效文件路径" />
+    <String name="runtimeErr271CannotReadFile" value="无法读取文件" />
+    <String name="runtimeErr290InvalidTrajType" value="无效路径类型" />
+    <String name="runtimeErr301ExternalAxisPosNeeded" value="需要外部轴位置" />
+    <String name="runtimeErr999OtherSeeLogger" value="更多信息请见事件日志." />
+    <String name="runtimeErrDefaultMessage" value="对这个运行错误的诊断，请查看VAL3参考手册．" />
+    <String name="runtimeErrorMsg" value="VAL3运行时错误.　" />
+    <String name="stopMsg" value="未完成的运动命令已经被取消" />
+  </Resources>
+  <Resources name="SIN" >
+    <String name="alreadyExist" value="已经存在" />
+    <String name="alreadyExistAsGlobal" value="名称已经作为全局数据存在" />
+    <String name="ambiguousExpression" value="表达式不明确" />
+    <String name="argumentsNotAllowed" value="变量不允许" />
+    <String name="arrayOverflow" value="数组溢出" />
+    <String name="assignNotAllowedInNestedExpression" value="操作符&apos;=&apos;在嵌套表达式中不允许使用" />
+    <String name="compilationError" value="无法加载(察看错误文件)" />
+    <String name="configError" value="配置错误" />
+    <String name="data" value="数据" />
+    <String name="dataCorrupted" value="数据损坏(未知字段)" />
+    <String name="dataExpected" value="需要数据" />
+    <String name="differentTypes" value="事件包含不同的类型" />
+    <String name="doNotMatch" value="不匹配" />
+    <String name="duplicatedArrayItem" value="复制数组" />
+    <String name="duplicatedEnd" value="&apos;begin&apos;已经包含&apos;end&apos;符" />
+    <String name="duplicatedFile" value="复制文件" />
+    <String name="endOfLine" value="在行尾" />
+    <String name="error" value="错误" />
+    <String name="file" value="文件" />
+    <String name="fileCannotOpen" value="无效文件" />
+    <String name="fileNotFound" value="文件未找到" />
+    <String name="found" value="找到" />
+    <String name="functionUndefined" value="未定义函数" />
+    <String name="heapOverflow" value="数据内存溢出" />
+    <String name="indexNotAllowed" value="索引在上下文无效" />
+    <String name="indexRequired" value="需要数组索引" />
+    <String name="internalCompilerError" value="内部编译错误" />
+    <String name="invalidAccess" value="无效访问" />
+    <String name="invalidBinaryOperator" value="无效二进制运算符" />
+    <String name="invalidCasePosition" value="无效的case位置" />
+    <String name="invalidContainer" value="无效容器" />
+    <String name="invalidFieldName" value="无效结构字段名称" />
+    <String name="invalidFunctionType" value="这条指令没有返回预期数据类型" />
+    <String name="invalidHeapSize" value="无效数据内存大小" />
+    <String name="invalidKey" value="无效键或无效索引" />
+    <String name="invalidKeyValue" value="无效值" />
+    <String name="invalidLibrary" value="无效库或密码错误" />
+    <String name="invalidZipLibrary" value="%s : 无效的ZIP库" />
+    <String name="invalidLibraryIdent" value="无效库标识符" />
+    <String name="invalidName" value="无效名称" />
+    <String name="invalidOperator" value="无效操作符" />
+    <String name="invalidOperatorType" value="这个操作符没有返回预期数据类型" />
+    <String name="invalidParameterContainer" value="无效参数容器" />
+    <String name="invalidParameterDimensions" value="无效参数维数" />
+    <String name="invalidParameterType" value="无效参数类型" />
+    <String name="invalidParameterValue" value="无效参数值" />
+    <String name="invalidReference" value="无效循环引用" />
+    <String name="invalidRoutineCall" value="在call中出现无效参数" />
+    <String name="invalidSeparator" value="无效分割符" />
+    <String name="invalidSwitchStructure" value="switch 声明顺序无效, 无法在default后面使用case"/>
+    <String name="invalidType" value="无效类型" />
+    <String name="invalidUnaryOperator" value="无效一元操作符" />
+    <String name="invalidValue" value="无效值" />
+    <String name="libraryAlreadyUsed" value="界面已经被占用" />
+    <String name="line" value="行" />
+    <String name="lineCorrupt" value="行损坏" />
+    <String name="lineTooLong" value="行太长" />
+    <String name="linkDataCorrupted" value="连接数据 %s 被损坏" />
+    <String name="linkedDataNotFound" value="连接数据 %s 没找到或类型不匹配或索引溢出" />
+    <String name="memoryFull" value="系统内存已满" />
+    <String name="missing" value="缺少" />
+    <String name="missingAlias" value="缺少库标识符" />
+    <String name="missingAliasToken" value="缺少标识符标记" />
+    <String name="missingBegin" value="缺少关键词：&apos;begin&apos;" />
+    <String name="missingCloseBracket" value="缺少括弧&apos;]&apos;" />
+    <String name="missingCloseParenthesis" value="缺少括弧&apos;)&apos;" />
+    <String name="missingCloseStruct" value="缺少括弧&apos;}&apos;" />
+    <String name="missingCode" value="在程序中没发现VAL3代码" />
+    <String name="missingCondition" value="case丢失" />
+    <String name="missingDimensions" value="一个或许多维数丢失" />
+    <String name="missingEnd" value="缺少关键词：&apos;end&apos;" />
+    <String name="missingEqual" value="在&apos;for&apos;之后缺少&apos;=&apos;" />
+    <String name="missingHeadQuote" value="缺少初始字符\&quot;" />
+    <String name="missingIdentifiant" value="缺少标识符" />
+    <String name="missingKey" value="缺少键" />
+    <String name="missingLibraryName" value="缺少库名称" />
+    <String name="missingLvalue" value="需要可以被更改的对象" />
+    <String name="missingOpenParenthesis" value="缺少括弧&apos;(&apos;" />
+    <String name="missingOperator" value="缺少操作符" />
+    <String name="missingParameter" value="缺少参数" />
+    <String name="missingRoutine" value="缺少程序" />
+    <String name="missingSwitch" value="缺少&apos;switch&apos;" />
+    <String name="missingTest" value="需要测试条件.你的意思是&apos;==&apos;吗？" />
+    <String name="missingTo" value="需要&apos;to&apos;" />
+    <String name="missingTokenProc" value="缺少程序标记" />
+    <String name="missingTrailQuote" value="缺少结尾字符\&quot;" />
+    <String name="missingType" value="缺少类型" />
+    <String name="missingVal3" value="缺少VAL3表达式" />
+    <String name="nameTooLongError" value="名称太长" />
+    <String name="noEffect" value="代码行无效" />
+    <String name="noFunctionError" value="未知指令" />
+    <String name="noLocalDataAllowed" value="没有在上下文允许使用局部数据" />
+    <String name="noName" value="没有指定名称" />
+    <String name="noOpForType" value="无效或不支持的操作符" />
+    <String name="noProjectDefined" value="没有定义应用程序" />
+    <String name="noTypeMatchExpression" value="没有找到匹配表达式的类型" />
+    <String name="notAStruct" value="需要结构类型" />
+    <String name="oneDefaultCaseAllowed" value="只允许一个default case" />
+    <String name="prjCantSave" value="不能保存项目" />
+    <String name="required" value="需要" />
+    <String name="reservedWord" value="保留字" />
+    <String name="routineBusy" value="程序忙" />
+    <String name="routineNameUsedError" value="程序名称已经被使用" />
+    <String name="routineUndefined" value="未定义程序" />
+    <String name="runtimeError" value="运行时错误" />
+    <String name="runtimeErrorNbr" value="在数据初始化时运行时错误 %d" />
+    <String name="runtimeStackOverflow" value="运行时内存溢出" />
+    <String name="stepRequired" value="需要关键字&apos;Step&apos;" />
+    <String name="stringTooLong" value="字符串太长" />
+    <String name="syntaxError" value="语法错误" />
+    <String name="systemMemoryFull" value="内存已满" />
+    <String name="taskIdle" value="未激活" />
+    <String name="taskRunning" value="激活" />
+    <String name="taskStopped" value="已停止" />
+    <String name="taskTransition" value="转换" />
+    <String name="toMissing" value="缺少&apos;to&apos;" />
+    <String name="tooManyDimensions" value="太多维数" />
+    <String name="tooManyFields" value="等待&apos;}&apos;(对这个数据而言字段过多)" />
+    <String name="tooManyNestedExpressions" value="已达到嵌套表达式中最大的数量" />
+    <String name="tooManyParameters" value="过多参数" />
+    <String name="twoUnaryOp" value="两个连续的一元操作符(用括弧)" />
+    <String name="typeDoesNotMatch" value="此类型与switch不匹配" />
+    <String name="typeFieldDoesNotMatch" value="字段的类型不匹配" />
+    <String name="typeNotLinked" value="类型不支持连接" />
+    <String name="typeRoot" value="类型已经有了一个根 %s %s" />
+    <String name="typeUndefined" value="未定义类型" />
+    <String name="undefined" value="未定义" />
+    <String name="undefinedField" value="未定义结构字段" />
+    <String name="unexpectedCharacters" value="在标识符中有意外字符" />
+    <String name="unexpectedIdentifier" value="缺少或无效名称或关键字" />
+    <String name="unexpectedKey" value="在上下文中键或索引的使用无效" />
+    <String name="unexpectedReference" value="在上下文中引用&apos;&amp;&apos;的使用无效" />
+    <String name="unexpectedToken" value="在上下文中有无效关键字" />
+    <String name="unexpectedTrailingChars" value="意外的结尾字符" />
+    <String name="unlinkedBegin" value="&apos;begin&apos;缺少&apos;end&apos;" />
+    <String name="unlinkedBreak" value="&apos;break&apos;缺少&apos;case&apos;" />
+    <String name="unlinkedCase" value="&apos;case&apos;缺少&apos;break&apos;" />
+    <String name="unlinkedDo" value="&apos;do&apos;缺少&apos;until&apos;" />
+    <String name="unlinkedElse" value="&apos;else&apos;缺少&apos;endif&apos;" />
+    <String name="unlinkedElseIf" value="&apos;elseIf&apos; without &apos;endIf&apos;" />
+    <String name="unlinkedEnd" value="&apos;end&apos;缺少&apos;begin&apos;" />
+    <String name="unlinkedEndFor" value="&apos;endFor&apos;缺少&apos;for&apos;" />
+    <String name="unlinkedEndIf" value="&apos;endIf&apos;缺少&apos;if&apos;" />
+    <String name="unlinkedEndSwitch" value="&apos;endSwitch&apos;缺少&apos;switch&apos;" />
+    <String name="unlinkedEndWhile" value="&apos;endWhile&apos;缺少&apos;while&apos;" />
+    <String name="unlinkedFor" value="&apos;for&apos;缺少&apos;endFor&apos;" />
+    <String name="unlinkedIf" value="&apos;if&apos;缺少&apos;endIf&apos;" />
+    <String name="unlinkedSwitch" value="&apos;switch&apos;缺少&apos;endSwitch&apos;" />
+    <String name="unlinkedUntil" value="&apos;until&apos;缺少&apos;do&apos;" />
+    <String name="unlinkedWhile" value="&apos;while&apos;缺少&apos;endWhile&apos;" />
+    <String name="unresolvedExtSymbol" value="不可分辨的外部符号" />
+    <String name="unterminatedStringError" value="未终止的字符串" />
+  </Resources>
+  <Resources name="SCC" >
+    <String name="accessCurrentUserName" value="当前用户 : " help="拥有控制权限的当前用户名称" />
+    <String name="accessDefaultUserName" value="启动用户 : " help="重新启动后自动启用的用户(默认用户)" />
+    <String name="accessEditDefaultUserPageTitle" value="编辑" help="更改当前或启动用户类型." />
+    <String name="accessNodeTitle" value="访问控制" help="" />
+    <String name="accessPageInvalidPasswordMsg" value="无效密码" />
+    <String name="accessPagePasswordEdit" value="密码 : " help="新用户的登录密码" />
+    <String name="accessPageUserNameEdit" value="用户帐号 : " />
+    <String name="appGlobalStatusNoErrMsg" value="所有设备正在运行" />
+    <String name="appGlobalStatusTitle" value="错误" />
+    <String name="appNodeStartTcpPopup" value="现场总线板将被关闭以允许重新设置." />
+    <String name="applicomInfoPageTitle" value="信息" />
+    <String name="applicomInitTcpErrorMsg" value="现场总线卡板无法关闭" />
+    <String name="applicomInitTcpRebootMsg" value="您现在可以重新配置现场总线板，重启控制器重新开始现场总线通讯" />
+    <String name="applicomNoError" value="OK" />
+    <String name="applicomPortInfo" value="设备状态: " />
+    <String name="dateApril" value="四月" />
+    <String name="dateAugust" value="八月" />
+    <String name="dateAutomatic" value="自动:" />
+    <String name="dateDay" value="日 : " />
+    <String name="dateDecember" value="十二月" />
+    <String name="dateEditTitle" value="更新日期和时间" help="日期和时间设置页面" />
+    <String name="dateError" value="日期值错误." />
+    <String name="dateFebruary" value="二月" />
+    <String name="dateGmt" value="Gmt : " />
+    <String name="dateHour" value="时 : " />
+    <String name="dateJanuary" value="一月" />
+    <String name="dateJuly" value="七月" />
+    <String name="dateJune" value="六月" />
+    <String name="dateMarch" value="三月" />
+    <String name="dateMay" value="五月" />
+    <String name="dateMinute" value="分 : " />
+    <String name="dateMonth" value="月 : " />
+    <String name="dateMonthAbb0" value="一月" />
+    <String name="dateMonthAbb1" value="二月" />
+    <String name="dateMonthAbb2" value="三月" />
+    <String name="dateMonthAbb3" value="四月" />
+    <String name="dateMonthAbb4" value="五月" />
+    <String name="dateMonthAbb5" value="六月" />
+    <String name="dateMonthAbb6" value="七月" />
+    <String name="dateMonthAbb7" value="八月" />
+    <String name="dateMonthAbb8" value="九月" />
+    <String name="dateMonthAbb9" value="十月" />
+    <String name="dateMonthAbba" value="十一月" />
+    <String name="dateMonthAbbb" value="十二月" />
+    <String name="dateNovember" value="十一月" />
+    <String name="dateOctober" value="十月" />
+    <String name="dateSeptember" value="九月" />
+    <String name="dateServerError" value="无法连接时间服务器" />
+    <String name="dateServerIp" value="服务器 IP : " />
+    <String name="dateTimeFormat" value="%Y %m %d %H:%M:%S" />
+    <String name="dateYear" value="年 : " />
+    <String name="dioAnalogInputTitle" value="模拟量输入" help="" />
+    <String name="dioAnalogOutputTitle" value="模拟量输出" help="" />
+    <String name="dioDigitalInputTitle" value="数字量输入" help="" />
+    <String name="dioDigitalOutputTitle" value="数字量输出" help="" />
+    <String name="dioCtrlNode" value="控制器" help="" />
+    <String name="dioCtrlNodeExportMsgError" value="文件导出错误" />
+    <String name="dioCtrlNodeExportPopup" value="请插入软盘" />
+    <String name="dioCtrlNodeImportConfirmMsg" value="警告!单元设置(I/O,IP地址...)将会在下次系统重启后修改." />
+    <String name="dioCtrlNodeImportMsg" value="重新启动系统以更新系统设置" />
+    <String name="dioCtrlNodeImportMsgError" value="文件导入错误" />
+    <String name="dioPageError" value="不是一个IO!" />
+    <String name="dioPageTitle" value="请选择IO" help="" />
+    <String name="dioProgramTbuttonsAccessDenied" value="当前用户无权编辑(1) (2) (3)键的功能." />
+    <String name="dioRenameWarningTitle" value="警告" />
+    <String name="ioAccessDenied" value="当前用户无权更改输出设置" />
+    <String name="diskMemoryUnitsMegaBytes" value="Kb" />
+    <String name="systemNotReady" value="系统未准备好" />
+    <String name="systemNotRunning" value=" 系统不再运行" />
+    <String name="drive" value="驱动器" />
+    <String name="driveSimulated" value="[S]" />
+    <String name="driveErrSensor" value=" 编码器错误" />
+    <String name="driveNotConfigured" value=" 驱动器未配置" />
+    <String name="driveErrBusNotReady" value=" 无法找到驱动器" />
+    <String name="driveErrBusOverVoltage" value=" BusOverVoltage 总线电压过高" />
+    <String name="driveErrBusUnderVoltage" value=" BusUnderVoltage 总线电压过低" />
+    <String name="driveErrCurrentSensorNoise" value=" CurrentSensorNoise 当前编码器噪音" />
+    <String name="driveErrCurrentSensorOffset" value=" CurrentSensorOffset 当前编码器偏差" />
+    <String name="driveErrDspNotReady" value=" DspNotReady DSP芯片未准备好" />
+    <String name="driveErrHardwareFault" value=" HighPowerStillOn 强电仍导通" />
+    <String name="driveErrIpmFault" value=" IpmFault" />
+    <String name="driveErrNoCompensation" value=" NoValidCompensation 没有有效的错误补偿" />
+    <String name="driveErrOverSpeed" value=" OverSpeed 超速" />
+    <String name="driveErrOverTemperature" value=" DriveOverTemperature 驱动器温度过高" />
+    <String name="driveErrPllNotLocked" value=" CommunicationErrorPllNotLocked 通讯错误P11未锁定" />
+    <String name="driveErrPosError" value=" PositionError 位置错误" />
+    <String name="driveErrPosIncoherence" value=" PositionIncoherence 位置信息不连续" />
+    <String name="driveErrPowerBoard" value=" PowerBoardNotDefined 供电板未定义" />
+    <String name="driveErrSsiNotSynchState" value=" SsiIsNotInSynchronousState 传感器总线没有运行" />
+    <String name="driveErrWatchdog" value=" WatchdogOrOverrunOrVoltageSupervisor 看门狗/溢出/电压监管" />
+    <String name="driveInfoPageTitle" value="状态" />
+    <String name="driveStatusDisabled" value="关闭" />
+    <String name="driveStatusDisabling" value="关闭中" />
+    <String name="driveStatusEnabled" value="开启" />
+    <String name="driveStatusEnabling" value="开启中" />
+    <String name="driveStatusFault" value="错误" />
+    <String name="driveStatusWarning" value="警告" />
+    <String name="drivesNodeTitle" value="驱动器信息" help="" />
+    <String name="driveWarningDriveFoldback" value=" DriveFoldback 驱动器反馈" />
+    <String name="driveWarningLoggerFull" value=" FaultLogIsFull 错误日志已满" />
+    <String name="driveWarningMotorFoldback" value=" MotorFoldback 马达反馈" />
+    <String name="errHardwareError" value="串口出错" />
+    <String name="errInvalidName" value="无效名称" />
+    <String name="errNameAlreadyUsed" value="名称使用" />
+    <String name="errTitle" value="错误" />
+    <String name="fieldbusChangePortMsg" value="警告! 现场总线console 端口将在重启后改变." />
+    <String name="fieldbusPageTitle" value="现场总线console 端" help="" />
+    <String name="fieldbusRemotePort" value="现场总线console 端: " help="以太网 TCP 端口用于和现场总线console 工具通讯." />
+    <String name="fileExportPageDestination" value="目标 : " />
+    <String name="fileExportPageSource" value="目标位置 : " />
+    <String name="fileExportPageTitle" value="导出" help="" />
+    <String name="fileImportPageTitle" value="导入" help="" />
+    <String name="fileSelectLocation" value="位置: " help="文件夹或者当前文件所在位置" />
+    <String name="fileSelectName" value="名称: " />
+    <String name="fileSelectTitle" value="选择一个文件" help="" />
+    <String name="filemgrDeletePopupMsg" value="无法显示它的内容" />
+    <String name="filemgrDeletePopupTitle" value="清除FTP连接" />
+    <String name="filemgrFlash" value="磁盘" />
+    <String name="filemgrFloppy" value="软盘" />
+    <String name="filemgrNode" value="文件" help="" />
+    <String name="filemgrNoProject" value=" :未找到应用程序" />
+    <String name="filemgrProjectsBrowsingError" value="文件浏览时出错" />
+    <String name="filemgrTemplates" value="模板:  " />
+    <String name="frameErrorOx" value="Ox与原点靠的太近" />
+    <String name="frameErrorOxy" value="Oxy在原点和ox组成的线上" />
+    <String name="frameOrigin" value="原点:" help="所示教坐标系的原点" />
+    <String name="frameTeachMoveMsg" value="按下Move/Hold键进入选择位置" />
+    <String name="frameTeachOrigin" value="原点 : " help="移动原点,仅在X轴与Y轴无法在原点RPEI附近示教时使用" />
+    <String name="frameTeachOx" value="X轴 : " help="点在X轴方向,沿X轴正方向示教.如果当前使用的上偏移后的原点,则教点也必须使用偏移后的X轴." />
+    <String name="frameTeachOxy" value="Y轴 : " help="点在Y轴正方向,在XY平面上示教.如果当前使用的是偏移后的原点,则教点时也必须使用偏移后的Y轴." />
+    <String name="frameTitle" value="示教" help="" />
+    <String name="frameUndefined" value="未定义" />
+    <String name="freeDiskSpaceClearFailed" value="无法清除设备" />
+    <String name="freeDiskSpaceClearWarning" value="在这个设备上的所有应用程序将被清除" />
+    <String name="freeDiskSpaceWarningTitle" value="警告" />
+    <String name="ftpHostIp" value="IP 地址 : " />
+    <String name="ftpHostName" value="名称: " help="此用户名仅被用于显示在屏幕上." />
+    <String name="ftpLoginPassword" value="登录密码 : " />
+    <String name="ftpLoginUser" value="登录用户 : " />
+    <String name="ftpPath" value="路径: " help="指向FTP服务器上一个文件夹的路径" />
+    <String name="ftpPathExist" value="FTP路径已存在." />
+    <String name="ftpSettingsTitle" value="新建FTP连接" help="新建FTP连接" />
+    <String name="gatewayAddErrorDhcpMsg" value="无法在编辑DHCP客户端运行时的网关列表" />
+    <String name="gatewayAddErrorMsg" value="无效网关:无效的网关IP地址或子网,子网已经分配." />
+    <String name="gatewayAddPageDestination" value="目标: " />
+    <String name="gatewayAddPageGateway" value="网关: " />
+    <String name="gatewayAddPageTitle" value="新建" help="" />
+    <String name="gatewayEditErrorMsg" value="无效网关:无效的网关IP地址或子网,子网已经分配." />
+    <String name="gatewayEditPageTitle" value="编辑" help="" />
+    <String name="gatewayNodeName" value="网关" help="" />
+    <String name="gatewayRemoveQuestion" value="真的要删除此网关吗?" />
+    <String name="importApplicomFile" value="是否要导入modbus或者现场总线配置?" />
+    <String name="importApplicomFileReboot" value="重新启动系统使新的配置生效" />
+    <String name="invalidIpAddress" value="无效的IP地址." />
+    <String name="ioNodeTitle" value="输入/输出" help="" />
+    <String name="ipAddress" value="IP地址 : " />
+    <String name="ipAutomaticIp" value="自动获取IP地址 (DHCP) :" />
+    <String name="ipDhcpWarningMsg" value="当前操作将清除所有网关列表." />
+    <String name="ipDhcpWarningTitle" value="警告" />
+    <String name="ipMask" value="掩码 :  " help="网络掩码,常为255.255.0.0或255.0.0.0" />
+    <String name="ipRequesting" value="正在获取IP..." />
+    <String name="m_ipWaiting" value="等待中..." />
+    <String name="ipSettingsConfirmText" value="控制器IP地址将被立刻更改" />
+    <String name="ipSettingsConfirmTitle" value="更新IP设置" />
+    <String name="ipSettingsTitle" value="IP设置" help="" />
+    <String name="ipSettingsUpdateError" value="系统事件 SYS-IP : IP地址无法更新." />
+    <String name="jogCartesianPositionNode" value="笛卡尔位置" />
+    <String name="jogJointPositionNode" value="关节位置" help="" />
+    <String name="jogToolNode" value="工具" />
+    <String name="jointEdit" value="编辑关节" help="编辑关节" />
+    <String name="jointLatch" value="锁定位置" />
+    <String name="jointVelocity" value="关节速度" help="" />
+    <String name="language" value="语言 : " />
+    <String name="languageSettingsTitle" value="选择语言" help="" />
+<String name="limitsCannotChange" value="无法更改限位:仍有未完成的运动" />
+<String name="limitsCombination" value="联合" />
+    <String name="limitsEdit" value="编辑关节极限位置" help="" />
+    <String name="limitsError" value="极限值无效" />
+    <String name="limitsMaximum" value="最大值" />
+    <String name="limitsMinimum" value="最小值" />
+    <String name="limitsOutside" value="当前机器人位置超出新的极限位置" />
+<String name="limitsPolygon" value="多边形" />
+    <String name="location" value="位置 (" help="编辑位置" />
+    <String name="locationIn" value="坐标系内的位置" />
+    <String name="maxManuCartSpeed" value="最大手动笛卡尔速度: " help="编辑手动模式下机器人笛卡尔运动速度"/>
+    <String name="maxManuCartSpeedTitle" value="最大手动笛卡尔速度" help="编辑手动模式下机器人笛卡尔运动速度"/>
+    <String name="maxJntVel" value="最大手动关节速度" help=""/>
+    <String name="mdescAccel" value="加速度(%)   : " />
+    <String name="mdescDecel" value="减速度(%)   : " />
+    <String name="mdescVel"   value="速度  (%)   : " />
+    <String name="mdescBlend" value="混合        : " />
+    <String name="mdescRvel" value="角速度 (deg/s): " />
+	<String name="mdescBlendJoint" value="关节" />
+    <String name="mdescBlendOff" value="关闭" />
+    <String name="mdescBlendCartesian" value="笛卡尔" />
+    <String name="mdescDecelVelError" value="减速度必须&gt;=速度" />
+    <String name="mdescErrorTitle" value="mdesc错误" />
+    <String name="mdescSpeed" value="速度(%)     : " />
+    <String name="mdescSpeedUser" value="用户" />
+    <String name="mdescTitle" value="编辑mdesc" help="编辑运动标识符" />
+    <String name="mnuAppGLobalStatus" value="信息" help="获取错误设备列表" />
+    <String name="mnuAppNodeStartTcp" value="初始化" help="" />
+    <String name="mnuCrtlNodeLoad" value="导入." help="从软盘导入单元配置" />
+    <String name="mnuCrtlNodeSave" value="导出." help="将当前单元配置保存到软盘上" />
+    <String name="mnuDateEdit" value="编辑" help="更新系统日期和日间" />
+    <String name="mnuDateSync" value="同步" help="" />
+    <String name="mnuDioMode" value="模式" help="设置DIO逻辑模式:直接/反转" />
+    <String name="mnuIoDescription" value="描述." help="输入/输出的描述" />
+    <String name="mnuDioToggleOn" value="开启" help="打开DIO" />
+    <String name="mnuDioToggleOff" value="关闭" help="关闭DIO" />
+    <String name="mnuIoLock" value="锁定" help="锁定IO" />
+    <String name="mnuIoUnlock" value="解锁" help="解锁IO" />
+    <String name="mnuDriveInfo" value="信息" help="详细显示驱动器状态" />
+    <String name="mnuFileDelete" value="删除" help="删除所选文件或文件夹" />
+    <String name="mnuFileRename" value="改名" help="重命名所选文件或文件夹" />
+    <String name="mnuFilemgrDelete" value="删除" help="删除所选FTP连接" />
+    <String name="mnuFilemgrEdit" value="编辑" help="编辑所选FTP连接的参数" />
+    <String name="mnuFilemgrNew" value="Ftp" help="新建一个FTP连接" />
+    <String name="mnuFrameEdit" value="编辑" help="编辑所选坐标系坐标" />
+    <String name="mnuFrameHere" value="记录" help="把当前位置设为所选坐标系下的工具位置" />
+    <String name="mnuFrameMove" value="移动" help="移动到所选位置" />
+    <String name="mnuFreeDiskSpaceClear" value="清除" help="清除设备" />
+    <String name="mnuFreeDiskSpaceRefresh" value="刷新" help="" />
+    <String name="mnuGatewayAdd" value="新建" help="" />
+    <String name="mnuGatewayDel" value="删除" help="" />
+    <String name="mnuGatewayEdit" value="编辑" help="" />
+    <String name="mnuInformation" value="信息" help="获得设备状态" />
+    <String name="mnuIpEdit" value="编辑" help="更新控制器IP地址" />
+    <String name="mnuLanguageEdit" value="编辑" help="改变系统语言(需要重启控制器)" />
+<String name="mnuLimitsEdit" value="Edit" help="更改软件关节限位" />
+<String name="mnuLimitsRefresh" value="Refr" help="刷新关节限位的显示" />
+    <String name="mnuMaxManuCartSpeedEdit" value="编辑" help="更改最大手动迪卡尔速度(需要重启控制器)" />
+    <String name="mnuMdescAdvance" value="&gt;&gt; " help="设置所有运动参数" />
+    <String name="mnuMdescUnadvance" value="&lt;&lt; " help="设置主要运动参数" />
+    <String name="mnuMonitorSpeedEdit" value="编辑" help="更改显示速度" />
+    <String name="mnuRecorderInit" value="初始" help="" />
+    <String name="mnuRecorderStart" value="开始" help="" />
+    <String name="mnuRecorderStop" value="停止" help="" />
+    <String name="mnuRecorderStore" value="存储" help="" />
+    <String name="mnuRecorderClear" value="清除" help="清除所有记录文件" />
+    <String name="mnuRsiDisplayInfo" value="信息" help="显示RSI7位数码管的详细信息" />
+    <String name="mnuSafetyEdit" value="编辑" help="更改急停安全线路输出长度" />
+    <String name="mnuSafetyDefaultAck" value="确认" help="确认硬件错误" />
+    <String name="mnuSafetyDefaultInfo" value="信息" help="控制器检测到一个硬件错误：机器人安全级别降低" />
+    <String name="mnuSensorInfo" value="信息" help="" />
+    <String name="mnuSerialEdit" value="编辑" help="更改串口线参数" />
+    <String name="mnuSocketDel" value="删除" help="删除所选socket客户端或服务器端" />
+    <String name="mnuSocketNew" value="新建" help="新建一个socket客户端或服务器端" />
+    <String name="mnuSocketProperties" value="编辑" help="编辑选定的socket客户端或服务器端的属性" />
+    <String name="mnuSocketRename" value="改名" help="重命名socket客户端或服务器端" />
+    <String name="mnuSocketTest" value="测试" help="测试到socket服务器的连接" />
+    <String name="mnuUnitsEdit" value="编辑" help="设置长度单位 (mm/inch)" />
+    <String name="modeDirect" value="直接" />
+    <String name="modeInverted" value="反转" />
+    <String name="modeTitle" value="Dio逻辑模式" help="Dio逻辑模式" />
+    <String name="modeTxt1" value="当前的Dio逻辑模式是" />
+    <String name="modeTxt2" value=". 切换到模式" />
+    <String name="monitorSpeedTitle" value="显示速度" help="" />
+    <String name="nodeVersion" value="版本信息" help="" />
+    <String name="notAvailable" value="当前无可用信息" />
+    <String name="orientation" value="方向" help="" />
+    <String name="position" value="X Y Z : " />
+    <String name="powerCounter" value="上电时间 : " help="" />
+    <String name="recorderInfoPageDefaultPath" value="控制器" />
+    <String name="recorderInfoPageDescription" value="描述" />
+    <String name="recorderInfoPageFileName" value="记录名称" />
+    <String name="recorderInfoPageParamPath" value="配置位置: " />
+    <String name="recorderInfoPageRecordPath" value="记录位置: " />
+    <String name="recorderInfoPageTitle" value="信息" help="" />
+    <String name="recorderInitErrorMsg" value="记录配置读取错误" />
+    <String name="recorderInitParametersError" value="记录配置无效参数，请查看事件日志." />
+    <String name="recorderInitStoreFileError" value="记录存储文件无法访问" />
+    <String name="recorderInvalidParameters" value="记录无法开始，检查配置" />
+    <String name="recorderStartRecordNotCleared" value="内存中的记录将丢失." />
+    <String name="recorderStoreError" value="记录保存错误" />
+    <String name="recorderStorePageLocation" value="位置: " />
+    <String name="recorderStorePageMsg" value="选择位置保存记录" />
+    <String name="recorderClearConfirmationMsg" value="删除所有记录文件 " />
+    <String name="recorderClearError" value="清除时出错" />
+    <String name="recorderStorePageTitle" value="保存" help="" />
+    <String name="descriptionIoTitle" value="修改描述" help="" />
+    <String name="rsiArmPowered" value="手臂已经上电" />
+    <String name="rsiBrakesPowerSupplyNotActivated" value="刹车供电未激活(no 24V2): 触点 J104, 5-10开路, ARPS, RSI问题, 或ARPS和RSI连接问题" />
+    <String name="rsiBrakingCommandNotActivated" value="刹车命令未被电脑激活: RSI 板失效 ?" />
+    <String name="rsiDriveFault" value="伺服放大器故障：J112,3-4 DF触点开路.检查时间日志和控制面板" />
+    <String name="rsiEstop1OrderMemorised" value="E-Stop后手臂上电被取消" />
+    <String name="rsiEstop2OrderMemorised" value="ESTOP2命令已经存储，意外状态.RSI失效?" />
+    <String name="rsiFuseF2OutOfOrder" value="保险丝F2开路或J109-37无电压?" />
+    <String name="rsiLimitStopActivated" value="手臂限位停止激活:J101,5-12" />
+    <String name="rsiManualBrakeControlActivated" value="手动刹车控制激活" />
+    <String name="rsiManualBrakeControlChannel1" value="手动刹车控制通道1未闭合:触点BRS 4-8开路.RSI失效？" />
+    <String name="rsiManualBrakeControlChannel2" value="手动刹车控制通道2未闭合:触点BRS 9-13开路.RSI失效？" />
+    <String name="rsiManualBrakeControlSelected" value="手动刹车选择旋钮不在0位" />
+    <String name="rsiParkingNotActivated" value="手臂无法上电，deadman或支架未激活" />
+    <String name="rsiPowerSupplyProblem" value="RSI板电源问题：J104,1-6 或内部电源问题" />
+    <String name="rsiPowerSupplyNotActivated" value="刹车供电问题：触点J105,1-2开路，RSI问题" />
+    <String name="rsiPowerUpOrder1NotActivated" value="手臂无法上电" />
+    <String name="rsiPowerUpOrder2NotActivated" value="意外状态：电源命令信号不一致.RSI问题" />
+    <String name="rsiPowerUpSeq1NotActivated" value="电源链路1错误：PS1 继电器未激活.没有信号PS-ON1+" />
+    <String name="rsiPowerUpSeq2NotActivated" value="电源链路2错误：PS2 继电器未激活.没有信号PS-ON2+" />
+    <String name="rsiPowerUpSeq1NotEffective" value="PS1 继电器触点错误"/>
+    <String name="rsiPowerUpSeq2NotEffective" value="PS2 继电器触点错误"/>
+    <String name="rsiShortEnEffective" value="SHORTE-EN信号被RSI忽略.RSI问题?" />
+    <String name="rsiShortEnNotActivated" value="启动系统错误,SHORTE-EN命令未激活，ESTOP回路关闭.更多信息参见事件日志" />
+    <String name="rsiThermoSwitchOpen" value="再生温度开关开路 : contact J303, 3-4 开路, 或 J1303 和RSI之间接线问题" />
+    <String name="rsiUnknown" value="未知状态" />
+    <String name="rsiUserEmergencyStopA1Activated" value="用户急停A1激活" />
+    <String name="rsiUserEmergencyStopA2Activated" value="用户急停A2激活" />
+    <String name="rsiUserEmergencyStopB1Activated" value="用户急停B1激活" />
+    <String name="rsiUserEmergencyStopB2Activated" value="用户急停B2激活" />
+    <String name="rsiUserEmergencyStopDoor1Activated" value="用户急停UEN1/DOOR1激活" />
+    <String name="rsiUserEmergencyStopDoor2Activated" value="用户急停UEN2/DOOR2激活" />
+    <String name="rsiUserEmergencyStopMcp1Activated" value="示教盒急停1激活" />
+    <String name="rsiUserEmergencyStopMcp2Activated" value="示教盒急停2激活" />
+    <String name="rsiWatchdogOpen" value="starc看门狗错误.可能是rsi,starc问题或通讯问题" />
+    <String name="rsiWmsEmergencyStop1Activated" value="用户急停A1激活或WMS急停激活" />
+    <String name="rsiWmsEmergencyStop2Activated" value="用户急停A2激活或WMS急停激活" />
+    <String name="rxryrz" value="RxRyRz:" help="" />
+    <String name="safetyChainLength" value="E-Stop输出 : " help="E-Stop作用于ES out" />
+    <String name="safetyChainLengthTitle" value="安全回路输出选择" help="选择输出安全链的长度" />
+    <String name="safetyChainLong" value="包含USEN/Door" help="" />
+    <String name="safetyChainShort" value="不包含USEN/Door" help="" />
+    <String name="safetyDefaultInfo" value="控制器检测到一个硬件故障：机器人安全级别降低.修复故障信号并激活它解决硬件故障.然后确认故障并恢复机器人" help="" />
+    <String name="safetyDefaultNotVisibleInfo" value="关闭错误信号前的急停，允许它修复" help="" />
+    <String name="safetyNoDefault" value="没有故障" />
+    <String name="safetyDiagnostic" value="硬件安全故障: " />
+    <String name="sensor" value="编码器" />
+    <String name="sensorErrAlarm" value="编码器报警" />
+    <String name="sensorErrBusNotReady" value="无法连接到DSI板" />
+    <String name="sensorErrCrc" value="DSI &lt;-&gt; 编码器CRC错误?" />
+    <String name="sensorErrDsiResident" value="Error DSI-ResidentMode. DSI板没有正确启动,重新启动以修复." />
+    <String name="sensorErrFpgaNotToogle" value="Error DSI-FpgaNotToggle. DSI板上硬件失效,重新启动以修复." />
+    <String name="sensorErrHw" value="DSI &lt;-&gt; 编码器硬件故障" />
+    <String name="sensorErrNoOffset" value="编码器器无偏移" />
+    <String name="sensorErrNotConnected" value="编码器未连接" />
+    <String name="sensorErrNotEnabled" value="无法启动DSI板" />
+    <String name="sensorErrOverrun" value="DSI &lt;-&gt; 编码器overrun错误" />
+    <String name="sensorErrOverspeed" value="编码器overspeed" />
+    <String name="sensorFailed" value="失效" />
+    <String name="sensorInfoPageTitle" value="状态" />
+    <String name="sensorNodeTitle" value="编码器状态" help="" />
+    <String name="sensorWorking" value="工作中" />
+    <String name="serialBauds" value="波特率 : " />
+    <String name="serialByteSize" value="位数 : " />
+    <String name="serialCommunicationMode" value="模式 : " />
+    <String name="serialEndOfStringChar" value="字符串分隔符 : " />
+    <String name="serialEvenParity" value="偶" />
+    <String name="serialFlowControl" value="流控制 : " />
+    <String name="serialHardwareFlowControl" value="硬件" />
+    <String name="serialMnuToggle" value="触发" />
+    <String name="serialNoFlowControl" value="  无  " />
+    <String name="serialNoParity" value="  无  " />
+    <String name="serialNodeTitle" value="串口" help="" />
+    <String name="serialNumberStopBit" value="停止位数: " />
+    <String name="serialOddParity" value="奇" />
+    <String name="serialParity" value="奇偶性 : " />
+    <String name="serialPropertiesPageTitle" value="参数" help="" />
+    <String name="serialTimeout" value="超时(s) : " help="无超时为0" />
+    <String name="serialToggleMsg" value="确认吗?" />
+    <String name="serialToggleMsgTitle" value="COM2切换" />
+    <String name="soapChangePortMsg" value="警告! SRS 端口将在重启后被修改." />
+    <String name="soapPageTitle" value="SRS 端口" help="" />
+    <String name="soapPort" value="SRS端口: " help="用于与SRS客户端工具通讯的以太网TCP端口." />
+    <String name="socketCannotDeleteInUse" value="无法删除：socket已被使用" />
+    <String name="socketCannotEditInUse" value="当socket被使用时,此属性无法更改" />
+    <String name="socketClient" value="  客户端  " />
+    <String name="socketCreatePageTitle" value="新建" help="" />
+    <String name="socketCreateWarningMsg" value="=使用新socket前请卸载并重载所有当前应用程序" />
+    <String name="socketDelConfirmMsg" value="警告!socket连接将被删除." />
+    <String name="socketDeleteWarningMsg" value="删除前请卸载并重载所有当前应用程序." />
+    <String name="socketEndOfStringChar" value="字符串分隔符" />
+    <String name="socketNagle" value="Nagle : " help="优化TCP连接.当使用时, 减小网络负载; 当不使用时,反应时间减小." />
+    <String name="socketName" value="名称 : " help="socket连接的名称" />
+    <String name="socketNbClients" value="客户端数: " />
+    <String name="socketNodeName" value="Socket" help="socket客户端与服务器端列表" />
+<String name="socketCltNodeName" value="TCP 客户端" help="TCP socket客户端列表" />
+<String name="socketSrvNodeName" value="TCP 服务器" help="TCP socket服务器列表" />
+    <String name="socketUdpNodeName" value="UDP Sockets" help="UDP sockets列表" />
+    <String name="socketPingKoMsg" value="网络服务器设备不可用" />
+    <String name="socketPort" value="端口 : " help="socket的端口" />
+    <String name="socketPropertiesPageTitle" value="参数" help="socket连接参数编辑页面" />
+    <String name="socketRenamePageTitle" value="重命名" help="" />
+    <String name="socketReservedPortMsg" value="警告 ![0-1000]之间的端口为保留端口" />
+    <String name="socketServer" value="服务器" />
+    <String name="socketServerIp" value="服务器IP地址 : " help="socket服务器IP地址" />
+    <String name="socketUdpIp" value="IP address 过滤器: " help="socket发送和接收数据的IP地址" />
+    <String name="socketSystemPortMsg" value="警告! 一个系统TCP 服务器已使用这个端口. 更改它或使用控制器网络设置修改系统端口." />
+    <String name="socketTestKoMsg" value="无法用此指定地址连接服务器" />
+    <String name="socketTestOkMsg" value="成功连接到服务器" />
+    <String name="socketTimeout" value="网络超时 (s) : " help="无超时为0s" />
+    <String name="socketType" value="类型 : " />
+    <String name="socketUdp" value="UDP" />
+    <String name="teachError" value="当前位置超出关节 %z的极限位置" />
+    <String name="teachJointDefaultTitle" value="关节示教" help="" />
+    <String name="teachJointTitle" value="示教关节点" />
+    <String name="teachPointTitle" value="示教点" help="" />
+    <String name="telemaintenanceChangePortMsg" value="警告!必须使用新定义端口设置新远程维护端口" />
+    <String name="telemaintenancePageTitle" value="远程维护" help="" />
+    <String name="telemaintenanceRemotePort" value="远程维护端口 : " help="用来与SRS远程维护工具通信的以太网TCP端口." />
+    <String name="telnetChangePortMsg" value="警告! telnet端口将在重启后被更改." />
+    <String name="telnetPageTitle" value="Telnet" help="" />
+    <String name="telnetPort" value="telnet 端口: " help="以太网TCP端口，使用telnet协议通讯." />
+    <String name="units" value="单位 : " />
+    <String name="unitsRebootMsg" value="重新启动控制器以更新系统设置" />
+    <String name="unitsSettingsTitle" value="单位设定" help="" />
+    <String name="updateConfiguration" value="更改姿态: " help="如果设成forced(手动),刚点将会被示教.如果设成same(自动),点的设置将保持原状." />
+    <String name="vectorCoordinates" value="坐标(" help="" />
+    <String name="wmLocked" value="已锁定" />
+    <String name="wmMnuLock" value="锁定" help="锁定当前工作模式" />
+    <String name="wmMnuPwd" value="密码" help="更改当前工作模式密码" />
+    <String name="wmMnuUnlock" value="解锁" help="解锁当前工作模式" />
+    <String name="wmStatusNode" value="工作模式" />
+    <String name="wmUnlock" value="已解锁" />
+    <String name="multipleIoLock" value="你是否想在此节点锁定所有IO?" />
+    <String name="multipleIounlock" value="你是否想在此节点解锁所有IO?" />
+  </Resources>
+  <Resources name="CS" >
+    <String name="accessApplicationWrite" value="当前用户没有更改语言的权限." />
+    <String name="accessSafetyFaultAck" value="您的用户不允许您确认安全错误." />
+    <String name="accessSwapApplication" value="当前用户无权使用菜单键 " />
+    <String name="accessUserLoggedIn" value="新用户: ###" />
+    <String name="appIoEquipmentError" value="在现场总线中有设备错误" />
+    <String name="appIoNetworkError" value="在现场总线中有网络错误" />
+    <String name="armComment" value="手臂备注" />
+    <String name="armNotCalibrated" value="错误:手臂未校准 " />
+    <String name="armSerialNumber" value="手臂序列号" />
+    <String name="armVersion" value="手臂" />
+    <String name="axisLimitsFile" value="文件 : " />
+    <String name="bootArmCfCfxNotFound" value="没有发现arm.cf或arm.cfx文件" />
+    <String name="bootFileOnFd" value="从硬盘下载%s" />
+    <String name="bootFileOnUsb" value="从USB设备下载%s" />
+    <String name="bootLogOnUsb" value="从USB设备上加载log分区" />
+    <String name="bootSysOnUsb" value="从USB设备上加载sys分区" />
+    <String name="bootUsrOnUsb" value="从USB设备上加载usr分区" />
+    <String name="bootBuildSoftComponents" value="正在生成软件组件" />
+    <String name="bootLoadApp" value="正在加载工具包" />
+    <String name="calBadConfig" value="系统错误DRIVE-InvalidConfiguration无效配置轴%d" />
+    <String name="calCalibOffsetNotMatch" value="CAL-ZeroOffset DSI板和arm.cfx零位偏差不匹配，轴%d" />
+    <String name="calNoCalibOffset" value="轴%d的零位偏差从未被写入或无效" />
+    <String name="calCoderCommunicationError" value="CAL-CommError编码器串行通讯错误.轴%d校准丢失" />
+    <String name="calCoderLineBroken" value="编码器模拟量输入错误.轴%d校准丢失" />
+    <String name="calIllegalSequence" value="系统事件DAPS-IllegalSequence在轴%d" />
+    <String name="calInvalidPos" value="无效手臂校正数据:手臂配置文件arm.cfx丢失或无效." />
+    <String name="calLowBattery" value="校正电池电压过低." />
+    <String name="calMotionDetected" value="控制器上一次关闭后,马达位置已经改变.轴%d校正丢失" />
+    <String name="calNotInitialized" value="驱动器未初始化.轴%d校正丢失" />
+    <String name="calOverSpeed" value="OverSpeed错误.轴%d校正丢失" />
+    <String name="calOverflow" value="系统事件DAPS-Overflow在轴%d " />
+    <String name="calPowerDownFailure" value="在控制器关闭时位置没有被保存.轴%d校正丢失" />
+    <String name="calResolverLoss" value="无法读取马达的位置，轴%d校正丢失" />
+    <String name="calSensorInError" value="无法校正轴%d:编码器错误" />
+    <String name="calSensorOffsetNotMatch" value="DSI板和arm.cfx文件PhaseOffset不匹配，轴 %d " />
+    <String name="calNoSensorOffset" value="Phase offset从未被写入或无效，轴%d" />
+    <String name="calAxisMove" value="校准失败,因为轴在校准过程中移动了.轴 %d" />
+    <String name="calUnknowError" value="系统事件DRIVE-UnexpectedCalibrationError轴%d" />
+    <String name="cbiAppliRestart" value="事件丢失." />
+    <String name="cbiAppliStop" value="系统事件INTERFACE-Stopped  " />
+    <String name="cbiCannotLoadApplication" value="启动时以下的应用程序没有被打开: " />
+    <String name="cbiCannotStartApplication" value="启动时以下的应用程序无法运行: " />
+    <String name="cbiInterfaceError" value="系统界面代码错误" />
+    <String name="ceilingMounted" value="吊顶安装" />
+    <String name="celAccessWorkingMode" value="当前用户无权更改工作模式" />
+    <String name="cmdOutOfLimits" value="轴#%d超出范围" />
+    <String name="compliantMoveTooLong" value="Compliant运动太长" />
+    <String name="configVersion" value="配置版本" />
+    <String name="controllerComment" value="控制器备注" />
+    <String name="controllerSerialNumber" value="控制器序列号" />
+    <String name="copyright" value="  (c) Stäubli Faverges 2002-2012" />
+    <String name="dhcpNewLease" value="新自动IP : ###" />
+    <String name="driveNbr" value="驱动器#" />
+    <String name="enveloppeError" value="ROBOT-EnveloppeErr轴#运行范围错误" />
+    <String name="errorMsgConnexionRefused" value="设备没准备好." />
+    <String name="errorMsgDeviceError" value="设备有错误" />
+    <String name="errorMsgDeviceNotFound" value="设备未找到" />
+    <String name="errorMsgDeviceReadOnly" value="设备是只读的." />
+    <String name="errorMsgDeviceTimeout" value="设备超时" />
+    <String name="errorMsgDiskFull" value="磁盘已满" />
+    <String name="errorMsgDiskNotPresent" value="媒体不存在" />
+    <String name="errorMsgFileNotFound" value="文件未找到" />
+    <String name="errorMsgFtpAccessError" value="远程文件系统错误" />
+    <String name="errorMsgFieldbusBoardMissing" value="没有找到板卡：<%s>"/>
+    <String name="errorMsgFtpInvalidUser" value="无效FTP登陆" />
+    <String name="errorMsgFtpKernelError" value="内部错误:不能创建FTP客户端" />
+    <String name="errorMsgFtpParametersError" value="无效FTP路径" />
+    <String name="errorMsgFtpServerNotFound" value="FTP服务器没有在指定的IP地址上运行" />
+    <String name="errorMsgFtpStorageAllocationExceeded" value="远程磁盘已满" />
+    <String name="errorMsgFtpUnknownHost" value="不能访问指定的IP地址FTP服务器" />
+    <String name="errorMsgUnformated" value="设备不能格式化" />
+    <String name="errorMsgUnknownError" value="文件系统错误" />
+    <String name="errorMsgWhenStarting" value="启动时发生错误:" />
+    <String name="externAxisMoveDisabled" value="外部轴被禁用期间收到外部轴命令." />
+    <String name="errorMsgWriteProtected" value="设备被写保护" />
+    <String name="evtDapsVersion" value="DAPS板版本 " />
+    <String name="floorMounted" value="落地安装" />
+    <String name="gravity" value="重力(x y z) : " />
+    <String name="ht414CannotStop" value="在远程模式中应用程序不能被手动停止. " />
+    <String name="ht414DeadmanCoherency" value="MCP-Deadman错误:检查Deadman开关是否被按下." />
+    <String name="ht414ParkCoherency" value="MCP-Park示教盒放置错误:检查示教盒是否正确的放置在托架上" />
+    <String name="initMsg" value="正在初始化... " />
+    <String name="internalError" value="内部错误" />
+    <String name="internalErrorSaf" value="内部错误SAFETY-" />
+    <String name="internalPmAlimOkDown" value="手臂下电:内部电源错误(CS8:24V_2,CS8C：ARPS模块的ALIM_OK),需要重启恢复" />
+    <String name="internalPmSecteurOkDown" value="手臂下电:发现控制器关闭(SECTEUR_OK信号),需要重启恢复" />
+    <String name="isMissing" value="缺少" />
+    <String name="isUnknown" value="未知" />
+    <String name="keyWmButtonHasNoEffect" value="工作模式切换按钮无效" />
+    <String name="keyWmTestNotAllowed" value="测试模式不允许使用" />
+    <String name="keyWMActive" value="WMS无法使用" />
+    <String name="logFull" value="内部错误INTERFACE-EventLost :一些系统事件信息将丢失." />
+    <String name="logRestart" value="内部错误INTERFACE-EventLost结束" />
+    <String name="logSwapMsg" value="交换后重启日志记录功能" />
+    <String name="logRepaired" value="Log分区已修复" />
+    <String name="macAddress" value="Mac 地址 =" />
+    <String name="invalidMacAddress" value="网络错误: 无效的MAC地址." />
+    <String name="mcpConnected" value="连接到模拟MCP" />
+    <String name="mode" value="工作模式 : " />
+    <String name="modeInvalid" value="无效 " />
+    <String name="modeLocal" value="自动" />
+    <String name="modeManuFast" value="测试" />
+    <String name="modeManuSlow" value="手动模式" />
+    <String name="modeRemote" value="远程" />
+    <String name="motionAbAngleExceed180Deg" value="在圆弧的起点和中间点之间的角度超过180度." />
+    <String name="motionAbcTooClose" value="圆弧起点,中间点和结束点太近." />
+    <String name="motionAccError" value="mdesc中的加速度值无效" />
+    <String name="motionBcAngleExceed180Deg" value="在圆弧的中间点和终点之间的角度超过180度." />
+    <String name="motionBlendingError" value="在mdesc中出现无效混合值" />
+    <String name="motionBlendCartDiffKine" value="'笛卡尔混合无效:切换到{外部轴+手臂}和{仅外部轴}运动学." />
+    <String name="motionBlendJntTracking" value="tracking不支持'关节' " />
+    <String name="motionBlendOnCompliant" value="compliance不支持混合" />
+    <String name="motionBlendOnSpline" value="spline不支持blending" />
+    <String name="motionBlendOnTrajMove" value="trajMove不支持混合" />
+    <String name="motionCartBlendRotTooBig" value="笛卡尔混合旋转角度过大" />
+    <String name="motionDecError" value="在mdesc中出现无效减速度值" />
+    <String name="motionJogOutOfRange" value="不能移动手臂:轴%z到达软件极限位置. " />
+    <String name="motionNotReachable" value="不能完成运动:目标超出范围." />
+    <String name="motionOutOfRange" value="无法运动:目标超出软件轴限" />
+    <String name="motionPartMountingError" value="工件安装错误" />
+    <String name="motionSingularity" value="无法运动:在这种情况下无法通过奇异点" />
+    <String name="motionTwoRotationChoices" value="起始点和中间点方向更改，或中间点和结束点正好在180度上.移动方向未确定" />
+    <String name="motionVelAxisError" value="轴%d overspeed" />
+    <String name="motionVelError" value="mdesc中的速度值无效" />
+    <String name="notReachableConfig" value="(不兼容的手臂姿态)" />
+    <String name="notReachableLimits" value="(超出软件关节极限)" />
+    <String name="notReachableWorkspace" value="(超出手臂工作空间) " />
+    <String name="optionName" value="可选项:" />
+    <String name="powerDisabled" value="手臂下电过程结束" />
+    <String name="powerEnabled" value="手臂已上电" />
+    <String name="powerError" value="系统事件POWER-Error" />
+    <String name="powerHourCount" value="上电计时=" />
+    <String name="powerOff" value="手臂下电..." />
+    <String name="powerOffRequest" value="同时发生的手臂下电请求." />
+    <String name="powerOkError" value="系统事件POWER-PWR_OK-Error" />
+    <String name="powerOn" value="手臂上电中... " />
+    <String name="quickBoot" value="按下&apos;q&apos;进入快速引导模式" />
+    <String name="rcAccessDout" value="INTERFACE-Profile当前用户无权修改输出" />
+    <String name="rcAccessMonitorSpeed" value="当前用户无权修改显示速度." />
+    <String name="rcAccessProgramStop" value="当前用户无权终止运行中的应用程序. " />
+    <String name="rcAccessRemoteMovehold" value="当前用户无权在远程模式中使用move/hold. " />
+    <String name="rcAccessRemotePower" value="当前用户无权在远程模式中给手臂下电." />
+    <String name="rcAutoEnable" value="手臂无法上电:请将示教盒装到支架上." />
+    <String name="rcConnectionOk" value="连接运动结束." />
+    <String name="rcDofSelection" value="无效运动轴或方向" />
+    <String name="rcEstop" value="不能给手臂上电:在急停以后，示教盒必须被再次放置在托架上." />
+    <String name="rcEstopRemoteAck" value="手臂无法上电: 在一个急停后,急停确认信号 (在iomap.cf中配置) 必须激活" />
+    <String name="rcFastSpeedValidated" value="快速测试模式使能.使用显示速度键增加最大速度." />
+    <String name="rcLocalEnableError" value="手臂上电要求被拒绝:控制器工作模式是远程的或无效的." />
+    <String name="rcManuDoutEnable" value="无法写输出:请按住deadman激活." />
+    <String name="rcManuDoutMode" value="无法写输出:首先选择手动工作模式." />
+    <String name="rcManuEnable" value="手臂无法上电: 请按住deadman." />
+    <String name="rcManuFastRequested" value="远程快速请求被拒绝:控制器工作模式不是测试模式." />
+    <String name="rcManuMode" value="手动运动模式 : " />
+    <String name="rcManuSlow" value="点动运动仅在手动模式下可用：给手臂下电并切换到手动模式" />
+    <String name="rcManuValidationDeadman" value="不能给手臂上电:释放然后按住deadman使手臂可以接受上电请求." />
+    <String name="rcNotCalibrated" value="机器人没有被校准:只能使用关节点动模式." />
+    <String name="rcNotDisabled" value="不能给手臂上电:手臂正在下电过程中." />
+    <String name="rcNotEnabled" value="点动模式不能被选择:首先给手臂上电.  " />
+    <String name="rcNotInitialized" value="不能给手臂上电:控制器初始化未完成." />
+    <String name="rcPowerOff" value="不能给手臂上电:同时有下电请求." />
+    <String name="rcRemoteDisableError" value="远程手臂下电请求被拒绝:控制器工作模式是本地模式." />
+    <String name="rcRemoteEnableError" value="远程手臂上电请求被拒绝:首先切换到远程工作模式." />
+    <String name="rcSafetyDefaultNotAck" value="信号%s的故障修复没有在控制面板中确认." />
+    <String name="rcSafetyDefaultNotCleared" value="信号 %s上的故障需要被修正和测试." />
+    <String name="rcSelection" value="点动运动无效:请先选择手动模式" />
+    <String name="rcSettleTimeout" value="注意:在下电过程中手臂不能被及时停止." />
+    <String name="rcNoTargetDefined" value="目标没有定义" />
+    <String name="recorderCannotCloseData" value="记录器不能关闭数据" />
+    <String name="recorderCannotGetValue" value="记录停止,一个变量无法被读取" />
+    <String name="recorderCannotOpenData" value="记录器不能打开数据 " />
+    <String name="recorderInvalidFrequency" value="记录器配置错误：无效的频率" />
+    <String name="recorderMemFull" value="记录器停止：记录内存已满" />
+    <String name="recorderModifiedFrequency" value="记录器频率被取整 " />
+    <String name="recorderParamInvalidFrequency" value="记录器参数错误:无效频率" />
+    <String name="recorderParamInvalidDuration" value="记录器参数错误：持续时间无效" />
+    <String name="recorderParamRecorderNotFound" value="记录器参数错误: 记录器未找到" />
+    <String name="recorderParamVarNotInPool" value="记录器参数错误:记录器中变量###未知" />
+    <String name="recorderTimeout" value="记录器内部错误：超时 " />
+    <String name="robotAbscalNotEnabled" value="系统事件,不能校准轴%d" />
+    <String name="robotEnvelopeError" value="工作范围错误:轴#" />
+    <String name="robotLocked" value="机器人已锁定:" />
+    <String name="robotMessCplAxis" value="请在校正轴#Y前校正轴#X" />
+    <String name="robotMessFbkErr" value="轴#编码器错误" />
+    <String name="robotNotDisabled" value="无法校正机器人:手臂上电." />
+    <String name="robotName" value="机器人名" />
+    <String name="robotOverForce" value="overforce,轴 #" />
+    <String name="robotVelocityMax" value="ROBOT-OverVelocityMax,轴 #" />
+    <String name="safeBoot" value="按下&apos;s&apos;进入安全引导模式" />
+    <String name="safety24vFusRsi" value="内部电源错误(RSI板上的保险丝F2?)" />
+    <String name="safety24vFusUsbi" value="内部电源错误(USBI安全板上的保险丝F3?)" />
+    <String name="safetyBadWiring" value="急停信号%z漏接线 " />
+    <String name="safetyBrkRel" value="刹车释放按钮按下." />
+    <String name="safetyBrkSel" value="刹车选择旋钮没在(0)位." />
+    <String name="safetyDefaultAck" value="急停信号%z已被确认." />
+    <String name="safetyDefaultIntAck" value="急停信号 %z 已在集成商权限下被确认." />
+    <String name="safetyDefaultRepaired" value="急停信号%z 已被修复." />
+    <String name="safetyDefaultWriteError" value="保存安全错误列表时发生错误." />
+    <String name="safetyDf" value="驱动器错误SAFETY-DriveFault.  " />
+    <String name="safetyDisablingOff" value="侦测到结束:" />
+    <String name="safetyDisablingOn" value="侦测到:" />
+    <String name="safetyDoor" value="SAFETY-急停通道门打开(door open)" />
+    <String name="safetyLsw" value="关节电气限位开关激活." />
+    <String name="safetyModeError" value="无效工作模式" />
+    <String name="safetyNoSignals" value="系统事件SAFETY-NoSignal." />
+    <String name="safetyNotInitialized" value="系统事件ROBOT-SafetyInit." />
+    <String name="safetyPhasing" value="相位信号已使能" />
+    <String name="safetyPowerRefused" value="无法给手臂上电 : " />
+    <String name="safetyRemoteEs" value="远程急停激活" />
+    <String name="safetyShortr" value="系统事件SAFETY-ShortrOpen. " />
+    <String name="safetyShutdown" value="手臂下电: " />
+    <String name="safetySoftwareError" value="系统事件ROBOT-Safety." />
+    <String name="safetyThermoOpened" value="系统事件SAFETY-ThermoOpened." />
+    <String name="safetyTpes" value="示教盒急停激活" />
+    <String name="safetyTransient" value="系统事件SAFETY-Transient." />
+    <String name="safetyUen" value="deadman被释放或急停回路手动模式开路(User EN)." />
+    <String name="safetyUes1_2" value="SAFETY-UES12单元急停通道打开" />
+    <String name="safetyUes3_4" value="SAFETY-UES34单元急停通道打开 " />
+    <String name="safetyUnknown" value="系统事件SAFETY-Unknown." />
+    <String name="safetyUnstable" value="系统事件SAFETY-UnstableSignal. " />
+    <String name="safetyWdg" value="系统事件SAFETY-Watchdog." />
+    <String name="safetyWorkingMode" value="SAFETY-WorkingMode工作模式改变." />
+    <String name="safetyEstopSoft" value="系统事件SAFETY-EstopSoft" />
+    <String name="sinSaveProject" value="项目%s 已保存." />
+    <String name="sntpFailure" value="系统时间与###服务器的同步失败 " />
+    <String name="sntpSuccess" value="系统时间成功地与###服务器同步" />
+    <String name="standardBoot" value="按下&apos;b&apos;进入标准引导模式" />
+    <String name="starcNewFwErr" value="在升级Starc软件时出错,请联系Stäubli售后服务人员." />
+    <String name="starcNewFwInf" value="新Starc软件" />
+    <String name="starcNewFwRebInf" value="Starc软件更新,请重启控制器" />
+    <String name="startLogMsg" value="日志开始" />
+    <String name="timeBeforeStdBoot" value="进入标准引导模式所需的时间: " />
+    <String name="systemEvent" value="系统事件 " />
+    <String name="tmCbtLogMsg" value="控制器温度: %f°C" />
+    <String name="tmCbtReadError" value="系统事件RSI-NoTemperature.无法读到RSI板上的温度." />
+    <String name="tmCbtThresholdMax" value="系统事件RSI-TemperatureLimit.达到温度极限,RSI板的运行会不稳定." />
+    <String name="tmCbtThresholdMin" value="系统事件RSI-TemperatureLow.RSI板上温度不正常." />
+    <String name="tmCpuLogMsg" value="处理器温度: %f°C" />
+    <String name="tmCpuReadError" value="系统事件CPU-NoTemperature.无法读到CPU板上的温度." />
+    <String name="tmCpuThresholdMax" value="系统事件CPU-TemperatureLimit.达到温度极限,CPU板的运行会不稳定." />
+    <String name="tmCpuThresholdMin" value="系统事件CPU-TemperatureLow.CPU板温度不正常." />												" />
+    <String name="trackedTargetVelTooBig" value="目标速度太高" />
+    <String name="trackingInternalError" value="内部跟踪错误" />
+    <String name="trackingIterationsFailed" value="跟踪方案失败" />
+    <String name="trackingSecuLimit" value="跟踪停止: " />
+    <String name="trackingSecuPos" value="位置超出轴###的范围." />
+    <String name="trackingSecuJntVel" value="已达到轴 ###的速度限制." />
+    <String name="trackingSecuCartVel" value="达到笛卡尔速度限制." />
+    <String name="trackingSecuAbsStop" value="运动停止,但坐标系移动,无法跟踪." />
+    <String name="badTrackingSequence" value="错误的的跟踪顺序" />
+    <String name="trackingSeqNoTrackOn" value=" 需要TrackOn" />
+    <String name="trackingSeqNoTrackOff" value=" 需要TrackOff" />
+    <String name="trackingSeqFrameDiffer" value=" 未预见的移动坐标系." />
+    <String name="trajContinuityError" value="机器人没有在路径开始位置" />
+    <String name="usbDeviceNotSupported" value="不支持对USB设备通讯的协议.CS8驱动器支持RBC, UFI和SCSI USB 1.0协议" />
+    <String name="wallMounted" value="墙壁安装" />
+    <String name="stepMoveIndicator" value="步进" />
+    <String name="connectionMoveIndicator" value="连接" />
+    <String name="refMoveIndicator" value="参考" />
+    <String name="ptcOilExchangerOn" value="换热器中的油变热-无异常情况" />
+    <String name="ptcOilExchangerOff" value="换热器中的油变冷" />
+    <String name="encoderModule" value="编码器轴%d未提供位置，因为 " />
+    <String name="encoderReasonEncoder" value="编码器内部错误&apos;amplitude信号&apos; or &apos;位置值&apos;. (请检查编码器)." />
+    <String name="harnesssModule" value="harness不允许DSI和编码器轴%d 的通讯，因为" />
+    <String name="harnesssReasonHwError" value="dsi没有收到编码器的enDat应答. (请检查harness和编码器)." />
+    <String name="harnesssReasonCrc" value="dsi从编码器数据接收到一个无效的checksum . (请检查 harness)." />
+    <String name="harnesssReasonOverrun" value="dsi在超时前未收到编码器应答. (请检查harness和编码器)." />
+    <String name="harnesssReasonNotConnected" value="编码器未连接到dsi板. (请检查harness和dsi保险丝)." />
+    <String name="dsiModule" value="dsi板无法提供编码器位置信息，%d因为" />
+    <String name="dsiReasonEnDatDisable" value="(或更多) 其他编码器错误，dsi板为安全原因不激活这个轴. (请先修复其他编码器错误)." />
+    <String name="dsiReasonOverspeed" value="编码器速度到达极限." />
+    <String name="dsiReasonFpgaNotToogle" value="板载 dsp-fpga 通讯失败. (请联系史陶比尔售后服务)." />
+    <String name="dsiReasonResident" value="闪存内没有dsp固件 (或 CS8 没有要求 dsi 从内存切换到固件)." />
+    <String name="driveModuleSynchro" value="驱动轴%d 刚进入" />
+    <String name="drvReasonFault" value="&apos;错误&apos; 状态，无法给马达上电，原因将在下一个异步信息给出..." />
+    <String name="drvReasonWarning" value="&apos;警告&apos; 状态， 如果您继续这个请求将会发生一个驱动器错误." />
+    <String name="driveModuleAsynchro" value="驱动轴 %d 给马达上电，因为 " />
+    <String name="driveReasonNoFault" value="没有错误." />
+    <String name="driveReasonDspNotReady" value="驱动器软件dsp 没有准备好. (请升级您的软件)." />
+    <String name="driveReasonPowerBoardNotDefined" value="驱动器软件未认出驱动器跳线配置.(请检查跳线或更新您的软件)." />
+    <String name="driveReasonBusOverVoltage" value="驱动器总线Over Voltage. (运动发生器大多能量, 或再生电阻失效)." />
+    <String name="driveReasonImpFault" value="驱动器 IGBT 无法在不损坏的情况下产生所需的电流. (可能是IGBT 温度太高, IGBT无法产生这样的一个电流, 或 IGBT 已损坏)." />
+    <String name="driveReasonOverTemperatur" value="drive表面温度超限. (请检查风扇和通风)." />
+    <String name="driveReasonWatchdog" value="驱动器软件看门狗发生. (请更新您的软件)." />
+    <String name="driveReasonPllNotLocked" value="驱动器软件无法将它的内部时钟(10kHz or 20kHz)与starc总线构成同步(检查starc板与软件更新)." />
+    <String name="driveReasonNotSynchro" value="编码器总线(from direct link)不同步. (检查starc编码器总线)." />
+    <String name="driveReasonPositionError" value="dsi未向驱动器提供位置信息. (检查dsi )." />
+    <String name="driveReasonPositionIncoherence" value="dsi提供的位置信息与先前位置信息不在同一四分之一周期内. (请检查驱动器参数配置或编码器失效)." />
+    <String name="driveReasonNoCompensation" value="更改参数后控制器未发送 'config' 命令. (检查为什么控制器在启动时被阻断)." />
+    <String name="driveReasonCurrentSensorOffset" value="自动校正发现驱动器电流传感器失效.(请更换驱动器)." />
+    <String name="driveReasonCurrentSensorNoise" value="自动校正发现驱动器噪音传感器失效.(请更换驱动器). (请更换驱动器或检查 EMC 噪音)." />
+    <String name="driveReasonOverspeed" value="dsi提供的两个位置之间的不同比控制器规定的超速限制大.(请检查驱动器参数配置)." />
+    <String name="driveReasonUnderVoltage" value="驱动器无法为马达提供足够电能. (检查RPS和电源线)." />
+    <String name="driveReasonDriveFoldback" value="驱动器需要限制电流以避免过多热量的损坏. (或者控制器需要额外的加速度, 或者马达性能差, 或者手臂碰到障碍)." />
+    <String name="driveReasonMotorFoldback" value="温度模型信号马达过热." />
+    <String name="driveReasonHardwareFault" value="驱动器硬件错误. (请更换驱动器)." />
+    <String name="driveReasonLogFull" value="驱动器日志已满. (第一个信息用于诊断已足够)." />
+    <String name="starcModule" value="Starc板不能执行命令%s 为轴 %d 因为 " />
+    <String name="starcReasonBusNotSynchro" value="starc总线不同步 (请检查Starc和DSI &amp;DRIVE的连接)" />
+    <String name="starcEncoderGeneralError" value="无法从编码器得到绝对位置(请见编码器状态)." />
+    <String name="starcEncoderOffsetNotWrite" value="零位偏移量没有写入到编码器或者是无效的(需要校正手臂确定零位偏移?)" />
+    <String name="starcEncoderNotInitialized" value="编码器未初始化(检查为何初始化失败)" />
+    <String name="starcEncoderUnknownCoder" value="编码器参考未知(更换编码器)" />
+    <String name="starcEncoderDatumNotNull" value="编码器数据不为空" />
+    <String name="starcEncoderOffsetDuplicated" value="编码器偏移量已复制" />
+    <String name="starcEncoderWriteInEncoderFails" value="编码器写操作失败 (更换编码器)" />
+    <String name="starcEncoderInvalidAxis" value="编码器轴编号无效 (检查软件版本和配置文件)" />
+    <String name="starcFormatDsiFails" value="dsi闪存格式化失败 (更换DSI板)" />
+    <String name="starcErrorNotDetailed" value="starc错误无详细信息 (status=%d)" />
+    <String name="starcBusDriveModule" value="Starc总线无法与驱动器通讯，因为" />
+    <String name="starcBusDsiModule" value="Starc总线无法与编码器通讯，因为 " />
+    <String name="starcBusReasonBusNotSynchro" value="总线不同步[ASYNCHRO evt]. (请检查Starc-设备连接和设备电源)." />
+    <String name="starcBusReasonAxisNotSynchro" value="轴 %d总线不同步[SYNCHRO bit]. (请检查Starc-设备连接和设备电源)." />
+    <String name="starcBusReasonBusOverrun" value="发生一个溢出. (请升级您的软件)." />
+    <String name="starcBusReasonBusChecksumError" value="发生一个checksum错误. (请检查Starc-设备连接和设备电源)." />
+    <String name="starcBusReasonBusRingBroken" value="总线回路被破坏. (请检查Starc-设备连接和设备电源)." />
+    <String name="starcBoardModule" value="Starc板停止处理，因为" />
+    <String name="starcHwbReasonCannotEnableBusNotSynchro" value="starc总线必须同步，使能轴%d. (请首先检查为什么没有同步)." />
+    <String name="starcHwbReasonSensorIllegalSequence" value="dsi提供的轴%d的位置与先前位置不在同一四分之一刻度内. (请检查编码器)." />
+    <String name="starcEvtModule" value="Starc事件日志无法发送消息到控制器，因为" />
+    <String name="starcEvtReasonLoggerFull" value="Starc事件日志已满" />
+    <String name="starcSafetyRebootMsg" value=" 控制器需要重启" />
+    <String name="starcSvoModule" value="Starc SVO模块停止处理轴%d 因为" />
+    <String name="starcSvoReasonReadFbk" value="驱动器轴 %d 进入失能状态，因为编码器发生错误. (更多细节，检查编码器状态)." />
+    <String name="starcSvoReasonParamNotDefined" value="驱动轴%d 无法进入使能状态，因为控制器没有发送伺服参数. (检查控制器是否发送参数和tuning." />
+    <String name="starcSvoReasonDriveHasDisabled" value="驱动器轴 %d 切换到失能状态." />
+    <String name="starcSvoReasonDriveTimeOutEnabling" value="控制器请求后驱动轴%d 无法成功到达使能状态." />
+    <String name="starcSvoReasonDriveTimeOutDisabling" value="控制器请求后驱动轴%d 无法成功到达失能状态." />
+    <String name="starcSvoReasonEnveloppeError" value="轴 %d 位置的命令与反馈的差异比控制器发送的极限大." />
+    <String name="starcSvoReasonDriveNotDisabled" value="控制器请求切换驱动轴 %d 到使能状态，当它没有失能时." />
+    <String name="starcSvoReasonSvoOverspeed" value="速度轴%d比控制器发送的极限大." />
+    <String name="starcModuleStarcDsp1" value="STARC PCI通讯失败，因为" />
+    <String name="starcBusReasonCS8NotToggle" value="starc相同的toggle位接收到来自CPU的两个连续帧 ." />
+    <String name="starcModuleStarcDsp2" value="Starc板无法与设备通讯，因为" />
+    <String name="starcBusReasonDsp1NotToggle" value="Dsp1没有toggle. (请重启系统或更换Starc板)." />
+    <String name="starcBusReasonBusesNotSynchro" value="驱动器和编码器总线没有同时有相同的轴位. (请重启系统)." />
+    <String name="starcBusReasonDirectLinkNotSynchro" value="编码器和驱动器之间的direct link没有同步. (请重启系统)." />
+    <String name="starcModuleStarcLog" value="starc事件日志无法从轴%d得到信息，因为" />
+    <String name="starcBusReasonLogReadNbEvent" value="无法从设备读到数据数量." />
+    <String name="starcBusReasonLogReadEvent" value="设备没有发送所有预期的数据." />
+    <String name="starcBusReasonLogAnswerError" value="设备出错." />
+    <String name="starcBusReasonLogAnswerLen" value="无法从设备读取数据." />
+    <String name="starcBusReasonLogSendCmd" value="无法与设备通讯." />
+    <String name="cs8InitEvtModule" value="控制器初始化被阻断，所以" />
+    <String name="cs8InitReasonDsiNoOffset" value="dsi 没有从控制器接收到轴 %d的OFFPOS命令. (请先修正当前错误)." />
+    <String name="cs8InitReasonNotEnable" value="dsi没有从控制器接收到轴 %d的DEVSEL命令. (请先修正当前错误)." />
+    <String name="calibrationModule" value="因为starc命令，轴%d的校正失败 " />
+    <String name="calibrationReasonGetAbsPos" value="GET_ABS_POS 失败." />
+    <String name="calibrationReasonSetAbsPos" value="SET_ABS_POS 失败." />
+    <String name="calibrationReasonGetCalOffset" value="GET_CAL_OFF 失败." />
+    <String name="calibrationReasonSetCalOffset" value="SET_CAL_OFF 失败." />
+    <String name="calibrationReasonGetSensorOffset" value="GET_SEN_OFF 失败." />
+    <String name="calibrationReasonSetSensorOffset" value="SET_SEN_OFF 失败." />
+    <String name="calibrationReasonGetScale" value="GET_SCALE 失败." />
+    <String name="calibrationReasonRestoreAbsPos" value="RESTORE_ABS_POS 失败." />
+    <String name="unknownEvent" value="接收到一个未知事件(id=%d)" />
+    <String name="codesysLoadError" value="正在构建CoDeSys IO 驱动 : " />
+    <String name="codesysDirectoryAbsent" value="无法创建目录" />
+    <String name="codesysFileAbsent" value="缺少或无效的文件" />
+    <String name="codesysLoadModuleFails" value="无法加载模块" />
+    <String name="codesysStartModuleFails" value="无法启动模块" />
+    <String name="codesysEndModuleFails" value="无法终止模块" />
+    <String name="codesysIoInvalidIecType" value="在 XML 文件中找到一个无效 IEC 类型 (不是 BOOL, BYTE, WORD, DWORD, SINT, USINT, INT, UINT, DINT, UDINT, REAL) 为" />
+    <String name="codesysIoInvalidDirection" value="在 XML 文件中找到一个无效方向 (不是'I' 或'Q') 为" />
+    <String name="codesysIoInvalidDirectionBis" value="在 XML 文件从字段 'Type' and 'Addresse' 找到不同方向，为" />
+    <String name="codesysIoInvalidAddressStart" value="在 XML 文件中找到一个无效地址 (无法从 '%'开始) ，为" />
+    <String name="codesysIoInvalidAddressSize" value="在 XML 文件中找到一个无效地址 (不是 'X', 'B', 'W' 或 'D') 为" />
+    <String name="codesysIoInvalidAddress" value="在 XML 文件中找到一个无效地址  (不是一个数值)， 为" />
+    <String name="codesysIoInvalidOffset" value="在 XML 文件中找到一个无效偏移量 (不符合IEC 类型)， 为" />
+    <String name="codesysNoMatchForXmlData" value="找到一个XML格式的IO描述文件， 但不在 CODESYS 运行时中，为" />
+    <String name="codesysNoMatchForPlcData" value="在CODESYS 运行时中找到一个IO描述，但没有在一个XML文件中，为" />
+    <String name="codesysNoMatchForType" value="找到一个XML文件和CODESYS运行时不对应的类型，为" />
+    <String name="codesysNoMatchForDirection" value="找到一个XML文件和CODESYS运行时不对应的方向，为" />
+    <String name="codesysNoMatchForOffset" value="找到一个XML文件和CODESYS运行时不对应的偏移量，为" />
+    <String name="codesysNameFoundTwice" value="找到IO的名称已被使用" />
+    <String name="codesysFeatureOnlyOnTarget" value="CoDeSys 特性只在真正的目标上可用" />
+    <String name="codesysNewPlcHasDifferentMap" value="下载的PLC程序和启动时使用的XML配置IO maping不同." />
+    <String name="codesysDenyToChangePlcState" value="拒绝使能PLC， 因为IO maping无效." />
+    <String name="bootTroubleMsg" value="构建平台时发生不连贯的构建错误 : " />
+    <String name="bootTroubleFirmwareVersionInvalide" value="Starc 固件版本无效: " />
+	
+	<String name="brBackupStarting" value="开始备份系统..." />
+	<String name="brRestoreStarting" value="从存档中恢复..." />
+	<String name="brUpdateStarting" value="升级系统..." />
+	<String name="brBackupSuccess" value="系统备份成功完成." />
+	<String name="brRestoreSuccess" value="成功从存档恢复." />
+	<String name="brRestoreShallReboot" value="请重启控制器以完成系统恢复." />
+	<String name="brUpdateShallReboot" value="请重启控制器以完成系统升级." />
+	<String name="brBackupFailed" value="备份操作失败(%s)." />
+	<String name="brRestoreFailed" value="恢复操作失败(%s)." />
+	<String name="brUpdateFailed" value="系统升级失败(%s)." />
+	<String name="brInvalidArchive" value="无效存档(%s)." />
+	<String name="brInvalidPath" value="无效路径 (%s)." />
+	<String name="brWriteError" value="文件系统写入错误 (%s)." />
+	<String name="brBackupInvalidContentSpecification" value="无法备份指定的项目 (%s)." />
+	<String name="brRestoreInvalidContentSpecification" value="无法恢复指定的项目 (%s)." />
+  </Resources>
+  <Resources name="CBI" >
+    <String name="mainMenuTitle" value="主菜单" help="用&apos;Top&apos;键可以直接登陆主菜单" />
+    <String name="infoBarString4" value="信息" />
+    <String name="helpTitle" value="帮助" help="" />
+    <String name="cancelMenu" value="退出" help="退出当前页并取消所有的改变" />
+    <String name="noMenu" value="否" help="" />
+    <String name="noForAllMenu" value="N2A" help="所有均No" />
+    <String name="offMenu" value="Off" />
+    <String name="okMenu" value="OK" help="退出当前页并确认改变的内容" />
+    <String name="onMenu" value="On" />
+    <String name="quitMenu" value="退出" help="" />
+    <String name="yesMenu" value="是" help="" />
+    <String name="yesForAllMenu" value="Y2A" help="所有均是" />
+    <String name="accessDeniedText" value="当前用户无权完成此操作" />
+    <String name="popupTitle" value="信息" help="" />
+    <String name="defaultHelpText" value="当前没有可用帮助." />
+    <String name="currentPasswordString" value="当前密码" help="" />
+    <String name="wrongPasswordText" value="密码错误" />
+    <String name="newPasswordOneString" value="新密码" help="" />
+    <String name="newPasswordTwoString" value="请再次输入密码" help="" />
+    <String name="newPasswordErrorText" value="新密码设置错误" />
+    <String name="newPasswordTitle" value="请输入密码" help="" />
+  </Resources>
+  <Resources name="V3C" >
+    <String name="applicationNotInCell" value="机器内未找到该应用程序" />
+    <String name="applicationNotFound" value="应用程序不存在" />
+    <String name="compilerVersion" value="检查VAL3版本" />
+    <String name="error" value="错误" />
+    <String name="help1" value="  Usage: VAL3Check -RCell_Path -SVersionPath -VVAL3_Path -kKinematics [-d] [-q] [-lLanguage] [-E&quot;format&quot;] applications_path" />
+    <String name="help2" value="    -Sversion_Path          : VAL3 版本的安装路径." />     
+    <String name="help3" value="    -Rcell_Path             : 单元的根目录" />
+    <String name="help4" value="    -kKinematics            : A：6轴手臂, S：4轴手臂" />
+    <String name="help5" value="    -VVAL3_Path             : VAL3模拟器的安装路径， 对应单元的VAL3版本" />
+    <String name="help6" value="    -q                      : 安静模式" />
+    <String name="help7" value="    -d                      : 显示VAL3信息. (详细模式)" />
+    <String name="help8" value="    -lLanguage              : E:english, F:francais, S:espanol, I:italian, G:deutsch" />
+    <String name="help9" value="                              C:chinese, K:korean, J:japanese, T:turkish" />
+    <String name="help10" value="   -Eerror format          : 更改错误输出格式" /> 
+    <String name="help11" value="                                 %f=file name, %l=line number,%e=error/warning %m= message" />
+    <String name="help12" value="   Example: VAL3Check.exe -Rc:\MyCells\Cell_1 -kA -V&quot;c:\Program Files\Staubli\CS8\s6.5.5&quot; c:\MyCells\Cell_1\usr\usrapp\MyApp" />
+    <String name="internalError" value="VAL3检查器内部错误" />
+    <String name="loadLanguageDefinitionError" value="无法加载VAL3引用文件(val3.cfx)" />
+    <String name="resourceError" value="语言资源文件未找到" />
+    <String name="val3Version" value="VAL3版本" />
+    <String name="warning" value="警告" />
+    <String name="rootPath" value="编译器根目录:" />
+  </Resources>
+  <Resources name="WSC">
+    <String name="mountNode" value="安装节点'%z'到'%z'上" />
+    <String name="errorAddNode" value="无法添加'%z' 到系统. 检查是否已存在" />
+    <String name="errorTypeNode" value=" 节点'%z'的未知类型 '%z'" />
+    <String name="errorPathNode" value="无法为节点'%z'分析路径'%z' : 文件管理器无效或未授权" />
+    <String name="errorRootNode" value="警告: 节点'%z': 根目录'%z' 不存在" />
+    <String name="errorFileMgr" value="文件管理器内部错误: 未知代码" />
+    <String name="errorFMUsr" value="内部错误: 无法找到 &apos;Usr&apos; 文件管理器" />
+    <String name="errorFMDisk" value="内部错误:无法找到 &apos;Disk&apos; 文件管理器" />
+    <String name="addonFound" value="addon已找到" />
+    <String name="internalError" value="内部错误: #%d" />
+  </Resources>
+</ResourcesList>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="resetnum" access="private" >
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1" >
+      <Parameter name="x_nNum1" type="num" use="value" xsi:type="element" dimensions="1" />
+    </Parameters>
+    <Code><![CDATA[begin
+  //  //  while size(pCreatTest)>x_nNum1
+  //  //    $ddel(pCreatTest,size(pCreatTest)-1)
+  //  //  endWhile
+  //  //  while size(pCreatTest)<x_nNum1
+  //  //    $dins(pCreatTest,size(pCreatTest))
+  //  //  endWhile
+  //  if x_nNum1>0
+  //    while size(cad:pCad)>x_nNum1
+  //      $ddel(cad:pCad,size(cad:pCad)-1)
+  //      //$ddel(jJointRx,size(jJointRx)-1)
+  //    endWhile
+  //    while size(cad:jJointRx)>x_nNum1
+  //      //$ddel(cad:pCad,size(cad:pCad)-1)
+  //      $ddel(cad:jJointRx,size(cad:jJointRx)-1)
+  //    endWhile
+  //    while size(cad:jJointRx)<x_nNum1
+  //      //$dins(cad:pCad,size(cad:pCad))
+  //      $dins(cad:jJointRx,size(cad:jJointRx))
+  //    endWhile
+  //    while size(cad:pCad)<x_nNum1
+  //      $dins(cad:pCad,size(cad:pCad))
+  //      //$dins(jJointRx,size(jJointRx))
+  //    endWhile
+  //  else
+  //    popUpMsg("点数应大于0")
+  //  endIf
+end]]></Code>
+  </Program>
+</Programs>

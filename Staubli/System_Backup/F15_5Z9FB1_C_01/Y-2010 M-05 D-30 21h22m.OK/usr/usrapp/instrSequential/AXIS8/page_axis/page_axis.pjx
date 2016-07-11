@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://www.staubli.com/robotics/VAL3/Project/3">
+  <Parameters version="s7.2.1" stackSize="5000" millimeterUnit="true" />
+  <Programs>
+    <Program file="alreadyExist.pgx" />
+    <Program file="buildList.pgx" />
+    <Program file="listAdd.pgx" />
+    <Program file="loadPage.pgx" />
+    <Program file="main.pgx" />
+    <Program file="onBackSpace.pgx" />
+    <Program file="onDefault.pgx" />
+    <Program file="onEnterEvent.pgx" />
+    <Program file="onExit.pgx" />
+    <Program file="onF1Event.pgx" />
+    <Program file="onF2Event.pgx" />
+    <Program file="onF3Event.pgx" />
+    <Program file="onF4Event.pgx" />
+    <Program file="onF5Event.pgx" />
+    <Program file="onF6Event.pgx" />
+    <Program file="onF7Event.pgx" />
+    <Program file="onF8Event.pgx" />
+    <Program file="onStart.pgx" />
+    <Program file="refresh.pgx" />
+    <Program file="refreshDynamic.pgx" />
+    <Program file="refreshStatic.pgx" />
+    <Program file="showExist.pgx" />
+  </Programs>
+  <Database>
+    <Data file="page_axis.dtx" />
+  </Database>
+  <Libraries>
+    <Library alias="page" path="Disk://kernel/template/page/page.pjx" />
+    <Library alias="use" path="Disk://kernel/userPage/userPage.pjx" />
+    <Library alias="language" path="Disk://kernel/language/language.pjx" />
+    <Library alias="axis" path="Disk://instrSequential/AXIS8/AXIS8.pjx" />
+    <Library alias="TcpStrRec" path="Disk://TcpStrRec/TcpStrRec.pjx" />
+  </Libraries>
+</Project>

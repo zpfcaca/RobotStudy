@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="WipeCacheRoom2" access="private" >
+    <Locals>
+      <Local name="nNum" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  for nNum=500 to 999
+    sString[nNum]=""
+    pfrmCad[nNum].trsf={0,0,0,0,0,0}
+  endFor
+
+end]]></Code>
+  </Program>
+</Programs>

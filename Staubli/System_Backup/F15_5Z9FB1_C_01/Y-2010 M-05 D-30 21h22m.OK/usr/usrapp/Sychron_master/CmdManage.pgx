@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="CmdManage" access="private" >
+    <Code><![CDATA[begin
+  while true
+    //add data received into buffer
+    if ststu==true and CmdTotal<20
+      CmdBuffer[nWritePt]=datar
+      CmdTotal=CmdTotal+1
+      nWritePt=nWritePt+1
+      if nWritePt>=20
+        nWritePt=0
+      endIf
+      //HERE BELOW IS HIGH PRIORITY OF HOMING ROBOT
+      datar=""
+      ststu=false
+    endIf
+    delay(0)
+  endWhile
+end]]></Code>
+  </Program>
+</Programs>

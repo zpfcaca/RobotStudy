@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="listempty" access="public">
+    <Locals>
+      <Local name="lI" type="num" xsi:type="array" size="1" />
+      <Local name="lLen" type="num" xsi:type="array" size="1" />
+      <Local name="lRun" type="string" xsi:type="array" size="5" />
+      <Local name="lRuni" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // Staubli Copyright 2003 06 20
+  //
+  lLen=size(sItems)-1
+  for lI=0 to lLen
+    if lI>0
+      $ddel(sItems,0)
+      $ddel(bReadWrite,0)
+    endIf
+  endFor
+  sItems=""
+  //
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

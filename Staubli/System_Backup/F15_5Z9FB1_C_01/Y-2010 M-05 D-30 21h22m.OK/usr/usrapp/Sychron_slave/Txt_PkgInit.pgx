@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="Txt_PkgInit" access="private" >
+    <Code><![CDATA[begin
+  n_sTxt=0
+  call Txt_initData()
+  call TxtReadRoom1()
+  if nTxtTotal>1
+    call TxtReadRoom2()
+  endIf
+  bTxtPrSv=true
+  sScrPts="OK"
+  call hmi_refreshmain()
+end]]></Code>
+  </Program>
+</Programs>

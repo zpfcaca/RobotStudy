@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="buildList">
+    <Locals>
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+      <Local name="l_sName" type="string" xsi:type="array" size="1" />
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_tTool" type="tool" xsi:type="array" size="1" />
+      <Local name="l_sString" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // INIT the list
+  l_sString=""
+  call use:stringCopy(l_sString,sList)
+  //
+  // Build the list
+  //
+  // get the GUN
+  call tcp:getTool(l_tTool,nIndexTool)
+  // show the gun
+  call tcp:getName(l_sName,nIndexTool)
+  call language:message(l_sMessage,21)
+  l_sName=l_sMessage+"> "+l_sName
+  // create the list
+  call listAdd(l_sName)
+  call listAdd("coord  X > "+toString(".2",l_tTool.trsf.x))
+  call listAdd("coord  Y > "+toString(".2",l_tTool.trsf.y))
+  call listAdd("coord  Z > "+toString(".2",l_tTool.trsf.z))
+  call listAdd("coord RX > "+toString(".2",l_tTool.trsf.rx))
+  call listAdd("coord RY > "+toString(".2",l_tTool.trsf.ry))
+  call listAdd("coord RZ > "+toString(".2",l_tTool.trsf.rz))
+  // TCP ON OFF
+  call language:message(l_sMessage,123)
+  call use:strfill(l_sMessage,9,l_sMessage)
+  call listAdd(l_sMessage+"> ON ")
+  call listAdd(l_sMessage+"> OFF")  
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

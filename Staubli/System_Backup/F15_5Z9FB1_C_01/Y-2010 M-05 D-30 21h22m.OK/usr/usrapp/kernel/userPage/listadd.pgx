@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="listadd" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItems" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //---------------------------------
+  // insert x_sItems into the list
+  //---------------------------------
+  //
+  // x_sItems:      Items to add
+  //
+  //---------------------------------
+  // Staubli copyright 2005
+  //                By toneage
+  //[Public]-------------------------
+  //
+  //
+  for i=0 to (size(x_sItems)-1)
+    if (size(sItems)!=1 or sItems!="") and x_sItems[i]!=""
+      $dins(sItems,size(sItems))
+      $dins(bReadWrite,size(bReadWrite))
+    endIf
+    if x_sItems[i]!=""
+      sItems[size(sItems)-1]=x_sItems[i]
+      // for default the RW is true
+      bReadWrite[size(bReadWrite)-1]=true
+    endIf
+  endFor
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

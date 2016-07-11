@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="getMenu" access="public">
+    <Description><![CDATA[set the function button using the menu string]]></Description>
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sMenu" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_bUseMenu" type="bool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // STAUBLI Application
+  // set the x_bUseMenu using the Menu
+  // array string
+  //
+  for i=0 to (size(x_bUseMenu)-1)
+    x_bUseMenu[i]=false
+    if (size(x_sMenu)-1)>=i
+      if x_sMenu[i]!=""
+        // active the button
+        x_bUseMenu[i]=true
+      endIf
+    endIf
+  endFor
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

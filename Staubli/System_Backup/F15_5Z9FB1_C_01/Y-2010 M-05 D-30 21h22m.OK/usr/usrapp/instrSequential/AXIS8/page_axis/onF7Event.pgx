@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF7Event">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_bSave" type="bool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sNew" type="string" xsi:type="array" size="1" />
+      <Local name="l_bUndo" type="bool" xsi:type="array" size="1" />
+      <Local name="l_nJogVelocity" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[
+begin
+   // look if the bButton is enable
+  if bButton[6]
+    //
+    //  insert a new entry, it's use a FIFO politic
+    //
+//    call alreadyExist(l_sNew,l_bUndo)
+//    if !l_bUndo and l_sNew!=""
+//      call axis:new(l_sNew,nIndex+1)
+//      nSelected=nIndex+1
+//      call buildList()
+//      call refreshStatic()
+//      // save it
+//      x_bSave=true
+//    endIf
+    if aioGet(MbAI_b8MotorPow)==1 
+      //8轴移动速度
+      
+      l_nJogVelocity=2
+      /////
+      aioSet(MbAO_aJogVelo8,l_nJogVelocity)
+      aioSet(MbAO_bMoveDir,1)
+      aioSet(MbAO_b8Axis,1)
+      call use:timerDialog("8轴正向移动...",0)
+    else
+      
+      if aioGet(MbAI_b8MotorPow)==0
+        call use:timerDialog("8轴未上电",1)
+        return
+      endIf
+    endIf
+  endIf
+end            
+      ]]></Code>
+  </Program>
+</Programs>

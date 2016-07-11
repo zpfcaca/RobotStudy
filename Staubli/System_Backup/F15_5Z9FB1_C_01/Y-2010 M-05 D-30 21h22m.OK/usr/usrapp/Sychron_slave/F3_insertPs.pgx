@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F3_insertPs" access="public" >
+    <Locals>
+      <Local name="l_nDbg" type="num" xsi:type="array" size="1" />
+      <Local name="j" type="num" xsi:type="array" size="1" />
+      <Local name="k" type="num" xsi:type="array" size="1" />
+      <Local name="l_n" type="num" xsi:type="array" size="1" />
+      <Local name="l_bTemp" type="bool" xsi:type="array" size="1" />
+      <Local name="l_trsf" type="trsf" xsi:type="array" size="1" />
+      <Local name="l_jTemp1" type="joint" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //  //  call resetnum(nTest*(size(pTest)-1)+1)
+  //  //  delay(0.2)
+  //  //  for nDbg=0 to size(pTest)-2
+  //  //    for nIONum=0 to nTest-1
+  //  //      pCreatTest[nTest*nDbg+nIONum].trsf=interpolateL(pTest[nDbg].trsf,pTest[nDbg+1].trsf,nIONum/nTest)
+  //  //
+  //  //    endFor
+  //  //  endFor
+  //  //
+  //  //  pCreatTest[nTest*(size(pTest)-1)].trsf=pTest[size(pTest)-1].trsf
+  //  call resetnum(nPointnum)
+  //  call partNum()
+  //  delay(0.2)
+  //  //jConfig=herej()
+  //  //  for l_nDbg=0 to nPointnum-1
+  //  //    cad:pCad[l_nDbg].trsf=interpolateC(pCircle[0].trsf,pCircle[1].trsf,pCircle[2].trsf,l_nDbg/(nPointnum-1))
+  //  //    //MoveTo.trsf=position(cad:pCad[l_nDbg],FrmDraw)
+  //  //    //l_bTemp=pointToJoint(tTool,jConfig,MoveTo,cad:jJointRx[l_nDbg])
+  //  //  endFor
+  //  l_n=0
+  //  trsf_test={0,0,0,0,0,0}
+  //  for j=0 to size(nPartNum)-1
+  //    for k=0 to nPartNum[j]-1
+  //      ptest.trsf=interpolateC(pCircle[2*j].trsf,pCircle[2*j+1].trsf,pCircle[2*j+2].trsf,k/(nPartNum[j]-1))
+  //      //cad:pCad[l_n+k].trsf=interpolateC(pCircle[2*j].trsf,pCircle[2*j+1].trsf,pCircle[2*j+2].trsf,k/(nPartNum[j]-1))
+  //      cad:pCad[l_n+k].trsf=position(ptest,FrmDraw)
+  //      //////////test
+  //      MoveTo.trsf=cad:pCad[l_n+k].trsf
+  //      //坐标转换测试标记点。
+  //      l_bTemp=pointToJoint(tTool,jConfig,MoveTo,cad:jJointRx[l_n+k])
+  //      if l_n+k>0
+  //        if abs(cad:pCad[l_n+k].trsf.x-cad:pCad[l_n+k-1].trsf.x)>trsf_test.x
+  //          trsf_test.x=abs(cad:pCad[l_n+k].trsf.x-cad:pCad[l_n+k-1].trsf.x)
+  //        endIf
+  //        if abs(cad:pCad[l_n+k].trsf.y-cad:pCad[l_n+k-1].trsf.y)>trsf_test.y
+  //          trsf_test.y=abs(cad:pCad[l_n+k].trsf.y-cad:pCad[l_n+k-1].trsf.y)
+  //        endIf
+  //        if abs(cad:pCad[l_n+k].trsf.z-cad:pCad[l_n+k-1].trsf.z)>trsf_test.z
+  //          trsf_test.z=abs(cad:pCad[l_n+k].trsf.z-cad:pCad[l_n+k-1].trsf.z)
+  //        endIf
+  //        if abs(cad:pCad[l_n+k].trsf.rx-cad:pCad[l_n+k-1].trsf.rx)>trsf_test.rx
+  //          trsf_test.rx=abs(cad:pCad[l_n+k].trsf.rx-cad:pCad[l_n+k-1].trsf.rx)
+  //        endIf
+  //        if abs(cad:pCad[l_n+k].trsf.ry-cad:pCad[l_n+k-1].trsf.ry)>trsf_test.ry
+  //          trsf_test.x=abs(cad:pCad[l_n+k].trsf.x-cad:pCad[l_n+k-1].trsf.x)
+  //        endIf
+  //        if abs(cad:pCad[l_n+k].trsf.rz-cad:pCad[l_n+k-1].trsf.rz)>trsf_test.rz
+  //          trsf_test.rz=abs(cad:pCad[l_n+k].trsf.rz-cad:pCad[l_n+k-1].trsf.rz)
+  //        endIf
+  //      endIf
+  //      /////////
+  //    endFor
+  //    l_n=l_n+nPartNum[j]
+  //  endFor
+  //  cad:libSave()
+  //  /////
+  //  //  MoveTo.trsf=trsf_test
+  //  //  l_bTemp=pointToJoint(tTool,jConfig,MoveTo,jTest)
+  //  //////
+  //  popUpMsg("OK")
+end]]></Code>
+  </Program>
+</Programs>

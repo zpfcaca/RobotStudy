@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF8Event">
+    <Locals>
+      <Local name="l_nSpeedScale" type="num" xsi:type="array" size="1" />
+      <Local name="l_nJogVelocity" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // look if the bButton is enable
+  if bButton[7]
+    // increase the move
+    
+    ////    io:direction_pos=true
+    ////    wait(getKey()==-1)
+    ////    io:direction_pos=false
+    
+    //    if ! isPowered()
+    //       call use:timerDialog("请给手臂上电",1)
+    //      return
+    //    endIf
+    
+    
+//    if aioGet(io:MbAI_b8MotorPow)==1 
+//      //8轴移动速度
+//      
+//      l_nJogVelocity=100
+//      /////
+//      aioSet(io:MbAO_aJogVelo8,l_nJogVelocity)
+//      aioSet(io:MbAO_bMoveDir,1)
+//      aioSet(io:MbAO_b8Axis,1)
+//      call use:timerDialog("8轴正向移动...",0)
+//    else
+//      
+//      if aioGet(io:MbAI_b8MotorPow)==0
+//        call use:timerDialog("8轴未上电",1)
+//        return
+//      endIf
+//    endIf
+    
+    //
+  endIf
+end]]></Code>
+  </Program>
+</Programs>

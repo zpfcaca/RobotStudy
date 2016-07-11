@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="buildList">
+    <Locals>
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+      <Local name="l_sEvent" type="string" xsi:type="array" size="1" />
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_sString" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[
+begin
+  // INIT the list
+  l_sString=""
+  call use:stringCopy(l_sString,sList)
+  // Build the list
+  call axis:getSize(l_nSize)
+  // check the list empty
+  call axis:get(l_sEvent,0)
+  if l_sEvent!=""
+    for i=0 to (l_nSize-1)
+      call axis:get(l_sEvent,i)
+      if l_sEvent!=""
+        call listAdd(toString("2",i+1)+" "+l_sEvent)
+      endIf
+    endFor
+  endIf
+ 
+end            
+      ]]></Code>
+  </Program>
+</Programs>

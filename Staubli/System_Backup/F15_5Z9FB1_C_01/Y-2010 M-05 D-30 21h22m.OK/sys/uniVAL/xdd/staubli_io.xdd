@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ISO15745ProfileContainer xmlns="http://www.ethernet-powerlink.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ethernet-powerlink.org Powerlink_Main.xsd">
+  <ISO15745Profile>
+    <ProfileHeader>
+      <ProfileIdentification>EPL_Device_Profile</ProfileIdentification>
+      <ProfileRevision>1</ProfileRevision>
+      <ProfileName />
+      <ProfileSource />
+      <ProfileClassID>Device</ProfileClassID>
+      <ISO15745Reference>
+        <ISO15745Part>4</ISO15745Part>
+        <ISO15745Edition>1</ISO15745Edition>
+        <ProfileTechnology>Powerlink</ProfileTechnology>
+      </ISO15745Reference>
+    </ProfileHeader>
+    <ProfileBody fileCreationDate="2010-11-08" fileModificationDate="2013-06-28" fileCreator="Stäubli" fileName="staubli_io.xdd" fileVersion="2.0" xsi:type="ProfileBody_Device_Powerlink">
+      <DeviceIdentity>
+        <vendorName>Stäubli</vendorName>
+        <vendorID>0xFFFF0003</vendorID>
+        <deviceFamily>
+          <label lang="en" />
+          <description lang="en" />
+        </deviceFamily>
+        <productName>staubli_io</productName>
+        <productID></productID>
+        <orderNumber />
+      </DeviceIdentity>
+      <DeviceFunction>
+        <capabilities>
+          <characteristicsList>
+            <characteristic>
+              <characteristicName>
+                <label lang="en" />
+              </characteristicName>
+              <characteristicContent>
+                <label lang="en" />
+              </characteristicContent>
+            </characteristic>
+          </characteristicsList>
+        </capabilities>
+      </DeviceFunction>
+      <!-- PLACE FOR applicationProcess -->
+    </ProfileBody>
+  </ISO15745Profile>
+  <ISO15745Profile>
+    <ProfileHeader>
+      <ProfileIdentification>EPL comm net profile</ProfileIdentification>
+      <ProfileRevision>1</ProfileRevision>
+      <ProfileName />
+      <ProfileSource />
+      <ProfileClassID>CommunicationNetwork</ProfileClassID>
+      <ISO15745Reference>
+        <ISO15745Part>4</ISO15745Part>
+        <ISO15745Edition>1</ISO15745Edition>
+        <ProfileTechnology>Powerlink</ProfileTechnology>
+      </ISO15745Reference>
+    </ProfileHeader>
+    <ProfileBody fileCreationDate="2010-11-08" fileModificationDate="2013-06-28" fileCreator="Stäubli" fileName="staubli_io.xdd" fileVersion="2.0" xsi:type="ProfileBody_CommunicationNetwork_Powerlink">
+      <ApplicationLayers>
+        <identity>
+          <vendorID>0xFFFF0003</vendorID>
+          <productID></productID>
+        </identity>
+        <DataTypeList>
+          <defType dataType="0001">
+            <Boolean />
+          </defType>
+          <defType dataType="0002">
+            <Integer8 />
+          </defType>
+          <defType dataType="0003">
+            <Integer16 />
+          </defType>
+          <defType dataType="0004">
+            <Integer32 />
+          </defType>
+          <defType dataType="0005">
+            <Unsigned8 />
+          </defType>
+          <defType dataType="0006">
+            <Unsigned16 />
+          </defType>
+          <defType dataType="0007">
+            <Unsigned32 />
+          </defType>
+          <defType dataType="0008">
+            <Real32 />
+          </defType>
+          <defType dataType="0009">
+            <Visible_String />
+          </defType>
+          <defType dataType="0010">
+            <Integer24 />
+          </defType>
+          <defType dataType="0011">
+            <Real64 />
+          </defType>
+          <defType dataType="0012">
+            <Integer40 />
+          </defType>
+          <defType dataType="0013">
+            <Integer48 />
+          </defType>
+          <defType dataType="0014">
+            <Integer56 />
+          </defType>
+          <defType dataType="0015">
+            <Integer64 />
+          </defType>
+          <defType dataType="000A">
+            <Octet_String />
+          </defType>
+          <defType dataType="000B">
+            <Unicode_String />
+          </defType>
+          <defType dataType="000C">
+            <Time_of_Day />
+          </defType>
+          <defType dataType="000D">
+            <Time_Diff />
+          </defType>
+          <defType dataType="000F">
+            <Domain />
+          </defType>
+          <defType dataType="0016">
+            <Unsigned24 />
+          </defType>
+          <defType dataType="0018">
+            <Unsigned40 />
+          </defType>
+          <defType dataType="0019">
+            <Unsigned48 />
+          </defType>
+          <defType dataType="001A">
+            <Unsigned56 />
+          </defType>
+          <defType dataType="001B">
+            <Unsigned64 />
+          </defType>
+          <defType dataType="0401">
+            <MAC_ADDRESS />
+          </defType>
+          <defType dataType="0402">
+            <IP_ADDRESS />
+          </defType>
+          <defType dataType="0403">
+            <NETTIME />
+          </defType>
+        </DataTypeList>
+        <ObjectList>
+          <Object accessType="const" dataType="0007" defaultValue="0x0000000" index="1000" name="NMT_DeviceType_U32" objectType="7" />
+          <Object accessType="ro" dataType="0005" defaultValue="0" index="1001" name="ERR_ErrorRegister_U8" objectType="7" />
+          <Object accessType="rw" dataType="0007" defaultValue="1000" index="1006" name="NMT_CycleLen_U32" objectType="7" />
+          <Object index="1018" name="NMT_IdentityObject_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x4" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="const" dataType="0007" defaultValue="0x44" name="VendorId_U32" objectType="7" subIndex="01" />
+            <SubObject accessType="const" dataType="0007" defaultValue="0x1" name="ProductCode_U32" objectType="7" subIndex="02" />
+            <SubObject accessType="const" dataType="0007" defaultValue="0x0" name="RevisionNo_U32" objectType="7" subIndex="03" />
+            <SubObject accessType="const" dataType="0007" name="SerialNo_U32" objectType="7" subIndex="04" />
+          </Object>
+          <Object index="1020" name="CFM_VerifyConfiguration_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x2" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="0" name="ConfDate_U32" objectType="7" subIndex="01" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="0" name="ConfTime_U32" objectType="7" subIndex="02" />
+          </Object>
+          <Object index="1030" name="NMT_InterfaceGroup_0h_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x9" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="ro" dataType="0006" defaultValue="1" name="InterfaceIndex_U16" objectType="7" subIndex="01" />
+            <SubObject accessType="const" dataType="0009" defaultValue="EPL Cn Interface" name="InterfaceDescription_VSTR" objectType="7" subIndex="02" />
+            <SubObject accessType="const" dataType="0005" defaultValue="0x6" name="InterfaceType_U8" objectType="7" subIndex="03" />
+            <SubObject accessType="const" dataType="0006" defaultValue="1518" name="InterfaceMtu_U16" objectType="7" subIndex="04" />
+            <SubObject accessType="const" dataType="000A" name="InterfacePhysAddress_OSTR" objectType="7" subIndex="05" />
+            <SubObject accessType="ro" dataType="0009" defaultValue="eplcn0" name="InterfaceName_VSTR" objectType="7" subIndex="06" />
+            <SubObject accessType="ro" dataType="0005" defaultValue="1" name="InterfaceOperStatus_U8" objectType="7" subIndex="07" />
+            <SubObject accessType="rw" dataType="0005" defaultValue="1" name="InterfaceAdminState_U8" objectType="7" subIndex="08" />
+            <SubObject accessType="rw" dataType="0001" defaultValue="true" name="Valid_BOOL" objectType="7" subIndex="09" />
+          </Object>
+          <Object index="10F3" name="Diagnosis History" objectType="9">
+            <!--*-GENERATED BEGIN- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*-->
+            <SubObject accessType="ro" dataType="0005" defaultValue="254" name="numOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="ro" dataType="0005" defaultValue="250" name="Maximum Messages" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0005" defaultValue="0" name="Newest Message" objectType="7" subIndex="02" />
+            <SubObject accessType="rw" dataType="0005" defaultValue="0" name="Newest Acknoleged Message" objectType="7" subIndex="03" />
+            <SubObject accessType="ro" dataType="0001" defaultValue="false" name="New Messages Available" objectType="7" PDOmapping="TPDO" subIndex="04" />
+            <SubObject accessType="rw" dataType="0006" defaultValue="0" name="Flags" objectType="7" subIndex="05" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="06" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="07" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="08" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="09" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="0A" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="0B" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="0C" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="0D" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="0E" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="0F" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="10" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="11" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="12" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="13" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="14" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="15" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="16" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="17" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="18" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="19" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="1A" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="1B" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="1C" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="1D" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="1E" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="1F" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="20" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="21" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="22" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="23" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="24" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="25" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="26" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="27" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="28" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="29" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="2A" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="2B" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="2C" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="2D" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="2E" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="2F" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="30" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="31" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="32" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="33" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="34" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="35" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="36" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="37" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="38" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="39" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="3A" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="3B" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="3C" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="3D" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="3E" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="3F" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="40" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="41" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="42" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="43" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="44" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="45" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="46" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="47" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="48" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="49" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="4A" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="4B" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="4C" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="4D" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="4E" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="4F" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="50" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="51" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="52" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="53" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="54" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="55" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="56" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="57" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="58" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="59" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="5A" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="5B" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="5C" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="5D" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="5E" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="5F" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="60" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="61" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="62" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="63" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="64" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="65" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="66" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="67" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="68" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="69" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="6A" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="6B" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="6C" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="6D" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="6E" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="6F" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="70" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="71" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="72" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="73" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="74" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="75" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="76" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="77" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="78" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="79" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="7A" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="7B" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="7C" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="7D" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="7E" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="7F" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="80" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="81" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="82" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="83" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="84" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="85" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="86" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="87" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="88" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="89" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="8A" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="8B" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="8C" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="8D" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="8E" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="8F" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="90" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="91" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="92" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="93" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="94" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="95" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="96" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="97" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="98" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="99" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="9A" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="9B" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="9C" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="9D" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="9E" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="9F" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="A0" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="A1" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="A2" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="A3" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="A4" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="A5" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="A6" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="A7" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="A8" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="A9" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="AA" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="AB" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="AC" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="AD" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="AE" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="AF" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="B0" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="B1" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="B2" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="B3" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="B4" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="B5" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="B6" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="B7" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="B8" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="B9" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="BA" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="BB" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="BC" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="BD" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="BE" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="BF" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="C0" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="C1" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="C2" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="C3" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="C4" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="C5" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="C6" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="C7" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="C8" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="C9" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="CA" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="CB" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="CC" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="CD" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="CE" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="CF" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="D0" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="D1" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="D2" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="D3" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="D4" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="D5" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="D6" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="D7" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="D8" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="D9" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="DA" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="DB" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="DC" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="DD" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="DE" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="DF" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="E0" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="E1" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="E2" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="E3" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="E4" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="E5" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="E6" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="E7" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="E8" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="E9" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="EA" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="EB" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="EC" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="ED" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="EE" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="EF" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="F0" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="F1" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="F2" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="F3" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="F4" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="F5" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="F6" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="F7" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="F8" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="F9" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="FA" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="FB" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="FC" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="FD" />
+            <SubObject accessType="ro" dataType="000A" defaultValue="0" name="Diagnosis message" objectType="7" subIndex="FE" />
+            <!--*-GENERATED END- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*-->
+          </Object>
+          <Object index="1101" name="DIA_NMTTelegrCount_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="8" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="ro" dataType="0007" name="IsochrCyc_U32" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0007" name="IsochrRx_U32" objectType="7" subIndex="02" />
+            <SubObject accessType="ro" dataType="0007" name="IsochrTx_U32" objectType="7" subIndex="03" />
+            <SubObject accessType="ro" dataType="0007" name="AsyncRx_U32" objectType="7" subIndex="04" />
+            <SubObject accessType="ro" dataType="0007" name="AsyncTx_U32" objectType="7" subIndex="05" />
+            <SubObject accessType="ro" dataType="0007" name="SdoRx_U32" objectType="7" subIndex="06" />
+            <SubObject accessType="ro" dataType="0007" name="SdoTx_U32" objectType="7" subIndex="07" />
+            <SubObject accessType="ro" dataType="0007" name="Status_U32" objectType="7" subIndex="08" />
+          </Object>
+          <Object index="1102" name="DIA_ERRStatistics_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="7" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="ro" dataType="0007" name="HistoryEntryWrite_U32" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0007" name="EmergencyQueueWrite_U32" objectType="7" subIndex="02" />
+            <SubObject accessType="ro" dataType="0007" name="EmergencyQueueOverflow_U32" objectType="7" subIndex="03" />
+            <SubObject accessType="ro" dataType="0007" name="StatusEntryChanged_U32" objectType="7" subIndex="04" />
+            <SubObject accessType="ro" dataType="0007" name="StaticErrorBitFieldChanged_U32" objectType="7" subIndex="05" />
+            <SubObject accessType="ro" dataType="0007" name="ExceptionResetEdgePos_U32" objectType="7" subIndex="06" />
+            <SubObject accessType="ro" dataType="0007" name="ExceptionNewEdge_U32" objectType="7" subIndex="07" />
+          </Object>
+          <Object accessType="rw" dataType="0007" defaultValue="30000" highLimit="0xFFFFFFFF" index="1300" lowLimit="00000000" name="SDO_SequLayerTimeout_U32" objectType="7" />
+          <Object index="1400" name="PDO_RxCommParam_00h_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x2" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="ro" dataType="0005" defaultValue="0" name="NodeID_U8" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0005" defaultValue="0x10" name="MappingVersion_U8" objectType="7" subIndex="02" />
+          </Object>
+          <Object index="1800" name="PDO_TxCommParam_00h_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x2" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="ro" dataType="0005" defaultValue="0" name="NodeID_U8" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0005" defaultValue="0" name="MappingVersion_U8" objectType="7" subIndex="02" />
+          </Object>
+          <Object index="1C0A" name="DLL_CNCollision_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x3" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="0" name="CumulativeCnt_U32" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0007" defaultValue="0" name="ThresholdCnt_U32" objectType="7" subIndex="02" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="15" name="Threshold_U32" objectType="7" subIndex="03" />
+          </Object>
+          <Object index="1C0B" name="DLL_CNLossSoC_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x3" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="0" name="CumulativeCnt_U32" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0007" defaultValue="0" name="ThresholdCnt_U32" objectType="7" subIndex="02" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="15" name="Threshold_U32" objectType="7" subIndex="03" />
+          </Object>
+          <Object index="1C0C" name="DLL_CNLossSoA_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x3" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="0" name="CumulativeCnt_U32" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0007" defaultValue="0" name="ThresholdCnt_U32" objectType="7" subIndex="02" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="15" name="Threshold_U32" objectType="7" subIndex="03" />
+          </Object>
+          <Object index="1C0D" name="DLL_CNLossPReq_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x3" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="0" name="CumulativeCnt_U32" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0007" defaultValue="0" name="ThresholdCnt_U32" objectType="7" subIndex="02" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="15" name="Threshold_U32" objectType="7" subIndex="03" />
+          </Object>
+          <!--
+                              <Object index="1C0E" name="DLL_CNSoCJitter_REC" objectType="9">
+                                <SubObject accessType="const" dataType="0005" defaultValue="0x3" name="NumberOfEntries" objectType="7" subIndex="00" />
+                                <SubObject accessType="rw" dataType="0007" defaultValue="0" name="CumulativeCnt_U32" objectType="7" subIndex="01" />
+                                <SubObject accessType="ro" dataType="0007" defaultValue="0" name="ThresholdCnt_U32" objectType="7" subIndex="02" />
+                                <SubObject accessType="rw" dataType="0007" defaultValue="15" name="Threshold_U32" objectType="7" subIndex="03" />
+                              </Object>
+                              -->
+          <Object index="1C0F" name="DLL_CNCRCError_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x3" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="0" name="CumulativeCnt_U32" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0007" defaultValue="0" name="ThresholdCnt_U32" objectType="7" subIndex="02" />
+            <SubObject accessType="rw" dataType="0007" defaultValue="15" name="Threshold_U32" objectType="7" subIndex="03" />
+          </Object>
+          <Object accessType="rw" dataType="0007" defaultValue="2000" index="1C13" name="DLL_CNSoCJitterRange_U32" objectType="7" />
+          <Object accessType="rw" dataType="0007" defaultValue="100000" index="1C14" name="DLL_CNLossOfSocTolerance_U32" objectType="7" />
+          <Object index="1E40" name="NWL_IpAddrTable_0h_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x5" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="ro" dataType="0006" defaultValue="1" name="IfIndex_U16" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0402" defaultValue="192.168.100.1" name="Addr_IPAD" objectType="7" subIndex="02" />
+            <SubObject accessType="ro" dataType="0402" defaultValue="255.255.255.0" name="NetMask_IPAD" objectType="7" subIndex="03" />
+            <SubObject accessType="ro" dataType="0006" defaultValue="0" name="ReasmMaxSize_U16" objectType="7" subIndex="04" />
+            <SubObject accessType="rw" dataType="0402" defaultValue="192.168.100.254" name="DefaultGateway_IPAD" objectType="7" subIndex="05" />
+          </Object>
+          <Object index="1E4A" name="NWL_IpGroup_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x3" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="ro" dataType="0001" defaultValue="false" name="Forwarding_BOOL" objectType="7" subIndex="01" />
+            <SubObject accessType="rw" dataType="0006" defaultValue="0x40" name="DefaultTTL_U16" objectType="7" subIndex="02" />
+            <SubObject accessType="ro" dataType="0007" defaultValue="0" name="ForwardDatagrams_U32" objectType="7" subIndex="03" />
+          </Object>
+          <Object accessType="const" dataType="0007" defaultValue="0x000000A7" index="1F82" name="NMT_FeatureFlags_U32" objectType="7" />
+          <Object accessType="const" dataType="0005" defaultValue="0x20" index="1F83" name="NMT_EPLVersion_U8" objectType="7" />
+          <Object accessType="ro" dataType="0005" defaultValue="0x1c" index="1F8C" name="NMT_CurrNMTState_U8" objectType="7" />
+          <Object index="1F93" name="NMT_EPLNodeID_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x2" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="ro" dataType="0005" defaultValue="0x1" name="NodeID_U8" objectType="7" subIndex="01" />
+            <SubObject accessType="ro" dataType="0001" defaultValue="true" name="NodeIDByHW_BOOL" objectType="7" subIndex="02" />
+          </Object>
+          <Object index="1F98" name="NMT_CycleTiming_REC" objectType="9">
+            <SubObject accessType="const" dataType="0005" defaultValue="0x9" name="NumberOfEntries" objectType="7" subIndex="00" />
+            <SubObject accessType="const" dataType="0006" defaultValue="1490" name="IsochrTxMaxPayload_U16" objectType="7" subIndex="01" />
+            <SubObject accessType="const" dataType="0006" defaultValue="1490" name="IsochrRxMaxPayload_U16" objectType="7" subIndex="02" />
+            <SubObject accessType="const" dataType="0007" defaultValue="2000" name="PResMaxLatency_U32" objectType="7" subIndex="03" />
+            <SubObject accessType="rw" dataType="0006" defaultValue="1490" name="PReqActPayloadLimit_U16" objectType="7" subIndex="04" />
+            <SubObject accessType="rw" dataType="0006" defaultValue="1490" name="PResActPayloadLimit_U16" objectType="7" subIndex="05" />
+            <SubObject accessType="const" dataType="0007" defaultValue="2000" name="ASndMaxLatency_U32" objectType="7" subIndex="06" />
+            <SubObject accessType="rw" dataType="0005" defaultValue="0" name="MultiplCycleCnt_U8" objectType="7" subIndex="07" />
+            <SubObject accessType="rw" dataType="0006" defaultValue="1500" name="AsyncMTU_U16" objectType="7" subIndex="08" />
+            <SubObject accessType="rw" dataType="0006" defaultValue="2" name="Prescaler_U16" objectType="7" subIndex="09" />
+          </Object>
+          <Object accessType="rw" dataType="0007" defaultValue="5000000" index="1F99" name="NMT_CNBasicEthernetTimeout_U32" objectType="7" />
+          <Object accessType="rw" dataType="0009" index="1F9A" name="NMT_HostName_VSTR" objectType="7" />
+          <Object accessType="rw" dataType="0005" defaultValue="0xff" index="1F9E" name="NMT_ResetCmd_U8" objectType="7" />
+          <!--*-GENERATED BEGIN- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*-->
+          <!-- PLACE FOR IO OBJECT -->
+          <!--****************************** Command ******************************-->
+          <Object index="1600" name="PDO_RxMappParam_00h_AU64" objectType="8">
+            <SubObject accessType="ro" dataType="0005" defaultValue="0" name="NumberOfEntries" objectType="7" subIndex="00" />
+          </Object>
+          <!--****************************** Feedback ******************************-->
+          <Object index="1A00" name="PDO_TxMappParam_00h_AU64" objectType="8">
+            <SubObject accessType="ro" dataType="0005" defaultValue="0" name="NumberOfEntries" objectType="7" subIndex="00" />
+          </Object>
+          <!--*-GENERATED END- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*-->
+        </ObjectList>
+      </ApplicationLayers>
+      <TransportLayers></TransportLayers>
+      <NetworkManagement>
+        <GeneralFeatures NMTNodeIDByHW="true" DLLFeatureMN="false" NMTBootTimeNotActive="8000000" NMTCycleTimeMax="1000000" NMTCycleTimeMin="200" NMTErrorEntries="32" NWLIPSupport="true" SDOCmdReadAllByIndex="false" SDOCmdReadByName="false" SDOCmdWriteAllByIndex="false" SDOCmdWriteByName="false" SDOCmdWriteMultParam="false" SDOMaxConnections="5" SDOMaxParallelConnections="5" SDOServer="true" PDORPDOChannels="1" />
+        <CNFeatures DLLCNFeatureMultiplex="false" NMTCNSoC2PReq="0" />
+        <Diagnostic></Diagnostic>
+      </NetworkManagement>
+    </ProfileBody>
+  </ISO15745Profile>
+</ISO15745ProfileContainer>

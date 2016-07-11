@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="insertInstr">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItem" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_nNum" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // TODO
+  call use:setSizeList(14,0,10,11)
+  call use:setView(false)
+  call use:listcreate("Select")
+  // insert the action on Point
+
+  call use:listupdate(0)
+  // SELECT THE ITEM
+  x_sItem=""
+  do
+    i=getKey()
+    l_nNum=0
+    call use:listevent(i,l_nNum,x_sItem)
+    delay(0)
+  until i==255 or i==270
+  //
+ 
+  // NOT GOOD
+  x_sItem=""
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

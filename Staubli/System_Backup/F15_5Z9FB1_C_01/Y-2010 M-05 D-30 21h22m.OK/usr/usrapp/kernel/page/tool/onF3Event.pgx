@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF3Event">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_bSave" type="bool" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_bYes" type="bool" xsi:type="array" size="1" />
+      <Local name="l_sButton" type="string" xsi:type="array" size="2" />
+    </Locals>
+    <Code><![CDATA[begin
+  // look if the bButton is enable
+  if bButton[2]
+    //
+    if nIndexTool==0
+      call language:message(l_sMessage,125)
+      // get the yes_no button
+      call language:getYesNo(l_sButton)
+      // ask the question 
+      call use:yes_no(l_sMessage,l_sButton,l_bYes)
+      if l_bYes
+        call tcp:here()
+        call language:message(l_sMessage,121)
+        popUpMsg(l_sMessage)
+        logMsg("[VALlaser] INTERFACE:Take the reference point")
+        x_bSave=true
+      endIf
+    endIf
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

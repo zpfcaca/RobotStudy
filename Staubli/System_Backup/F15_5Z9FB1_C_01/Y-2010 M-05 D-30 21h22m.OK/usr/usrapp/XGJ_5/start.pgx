@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="start" access="public">
+    <Code><![CDATA[
+begin
+ 
+  // Set the blending to Cartesian Mode
+  mdJointBlend.blend=Cartesian
+  mdLineBlend[0].blend=Cartesian
+ 
+  // move home slowly
+  movej(jtPark,tool1,mdJointBlend)
+  waitEndMove()
+ 
+  movej(ptRoutingPath[0],tool1,mdJointBlend)
+  movej(ptRoutingPath[1],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[2],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[3],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[4],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[5],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[6],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[7],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[8],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[9],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[10],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[11],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[12],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[13],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[14],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[15],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[16],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[17],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[18],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[19],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[20],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[21],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[22],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[23],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[24],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[25],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[26],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[27],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[28],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[29],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[30],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[31],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[32],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[33],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[34],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[35],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[36],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[37],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[38],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[39],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[40],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[41],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[42],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[43],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[44],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[45],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[46],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[47],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[48],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[49],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[50],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[51],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[52],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[53],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[54],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[55],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[56],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[57],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[58],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[59],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[60],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[61],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[62],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[63],tool1,mdLineBlend[0])
+  movej(ptRoutingPath[64],tool1,mdLineBlend[0])
+ 
+  // return home
+  movej(jtPark,tool1,mdJointBlend)
+  waitEndMove()
+ 
+end
+      ]]></Code>
+  </Program>
+</Programs>

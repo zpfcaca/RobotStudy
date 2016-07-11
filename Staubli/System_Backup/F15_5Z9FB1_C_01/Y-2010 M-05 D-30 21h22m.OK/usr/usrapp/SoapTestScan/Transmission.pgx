@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="Transmission">
+    <Code><![CDATA[begin
+  nTranC[0]=shere[0].trsf.x
+  nTranC[1]=shere[0].trsf.y
+  nTranC[2]=shere[0].trsf.z
+  nTranC[3]=shere[0].trsf.rx
+  nTranC[4]=shere[0].trsf.ry
+  nTranC[5]=shere[0].trsf.rz
+
+  toBinary(nTranC,6,"8.0b",nByteOut)
+  sioSet(sSocketout,nByteOut)
+  //l_sString=toString(".3",nTranC[0])+","+toString(".3",nTranC[1])+","+toString(".3",nTranC[2])+","
+  //l_sString=l_sString+toString(".3",nTranC[3])+","+toString(".3",nTranC[4])+","+toString(".3",nTranC[5])
+  //sSocketout=l_sString
+end]]></Code>
+  </Program>
+</Programs>

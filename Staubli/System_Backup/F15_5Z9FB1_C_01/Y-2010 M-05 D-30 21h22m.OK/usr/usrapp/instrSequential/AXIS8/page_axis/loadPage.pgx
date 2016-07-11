@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="loadPage">
+    <Description><![CDATA[load the next page]]></Description>
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sPage" type="string" xsi:type="element" />
+      <Parameter name="x_sItems" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[
+begin
+  // look if the page libload is correct
+  i=page:libLoad(x_sPage)
+  //logMsg("[VALPLAST] INTERFACE:PAGE LIBLOAD "+x_sPage+" result "+toString("",i))
+  if i!=0
+    popUpMsg("Loading page "+x_sPage+" error CODE "+toString("",i))
+  else
+    // copy all the field from x_sItems to the next page
+    call use:stringCopy(x_sItems,page:sItems)
+    call page:main()
+    // to give back
+    call use:stringCopy(page:sItems,x_sItems)
+  endIf
+end
+            
+      ]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="start">
+    <Code><![CDATA[begin
+  //*******************************************
+  //Name: TestSoap
+  //Function: test soap function
+  //2012.05.28
+  //y.ye@staubli.com
+  //说明：这个作为一个库，被TestSoap调用
+  //通过全局变量来与上位机进行交互
+  //全局变量必须设定为public
+  //*******************************************
+end]]></Code>
+  </Program>
+</Programs>

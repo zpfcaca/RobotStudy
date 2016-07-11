@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onRun" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItem" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nValue" type="num" xsi:type="array" size="1" />
+      <Local name="l_nVelocity" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // convert to a num
+  if aioGet(io:MbAI_bBackHome)!=1
+    popUpMsg("7轴未回零位，请先执行回零操作！")
+    return
+  endIf
+  if !isPowered()
+    popUpMsg("请给手臂上电")
+    return
+  endIf
+  bAxisMove=true
+  aioSet(io:MbAO_b7Axis,1)
+  aioSet(io:MbAO_bMoveToPos,0)
+  toNum(x_sItem,l_nValue,true)
+  // NB the robot will no STOP
+//  aioSet(io:MbAI_bAxis7Reac,0)
+  delay(0.5)
+  l_nVelocity=speedScale()
+  l_nVelocity=700*l_nVelocity/100
+  l_nVelocity=round(l_nVelocity)
+  l_nValue=round(l_nValue)
+  aioSet(io:MbAO_aMovePosL,0)
+  aioSet(io:MbAO_aMovePosH,2.554265*l_nValue)
+  aioSet(io:MbAO_aMoveDis,1)
+  aioSet(io:MbAO_aVelocity,l_nVelocity)
+  aioSet(io:MbAO_bMoveToPos,1)
+  delay(0.5)
+  wait(aioGet(io:MbAI_bAxis7Reac)==0)
+  wait(aioGet(io:MbAI_bAxis7Reac)==1)
+  aioSet(io:MbAO_bMoveToPos,0)
+  aioSet(io:MbAO_aMoveDis,0)
+  aioSet(io:MbAO_b7Axis,0)
+  logMsg("6")
+  bAxisMove=false
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF1Event">
+    <Locals>
+      <Local name="l_nJogVelocity" type="num" xsi:type="array" size="1" />
+      <Local name="l_nSpeedScale" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin 
+  // look if the bButton is enable
+  if bButton[0]
+    // decrease the move
+    
+    
+    ////    io:direction_neg=true
+    ////    wait(getKey()==-1)
+    ////    io:direction_neg=false
+
+    
+//    if ! isPowered()
+//       call use:timerDialog("请给手臂上电",1)
+//      return
+//    endIf
+
+    if aioGet(MbAI_bMotorPowe)==1 
+      ////7轴负向移动速度
+      l_nJogVelocity=100
+      ////
+      aioSet(MbAO_aJogVelo,l_nJogVelocity)
+      aioSet(MbAO_bMoveDirM,1)
+      aioSet(MbAO_b7Axis,1)
+      call use:timerDialog("7轴负向移动...",0)
+    else
+      if aioGet(MbAI_bMotorPowe)==0
+        call use:timerDialog("7轴未上电",1)
+        return
+      endIf
+    endIf
+    
+    
+  endIf
+  //
+
+end
+]]></Code>
+  </Program>
+</Programs>

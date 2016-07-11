@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onBackSpace">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_tTool" type="tool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Code><![CDATA[begin
+  //
+  // NB sEvent is the selected
+  // element in the LIST
+  //
+  if nIndex==0
+    call editTool(x_tTool.trsf)
+    call tcp:setTool(x_tTool,nIndexTool)
+    logMsg("[VALlaser] INTERFACE:Change value of the tool :"+toString("",nIndexTool))
+  endIf
+  //
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

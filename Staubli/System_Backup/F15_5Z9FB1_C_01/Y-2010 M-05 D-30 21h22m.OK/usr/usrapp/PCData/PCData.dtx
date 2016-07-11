@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Data/2">
+  <Datas>
+    <Data name="mNomSpeed" access="private" xsi:type="array" type="mdesc" size="1" />
+    <Data name="fFrame" access="public" xsi:type="array" type="frame" size="1">
+      <Value key="0" fatherId="world[0]" />
+    </Data>
+    <Data name="nNum" access="public" xsi:type="array" type="num" size="2" />
+    <Data name="pPos" access="public" xsi:type="array" type="pointRx" size="2">
+      <Value key="0" fatherId="world[0]" />
+      <Value key="1" fatherId="world[0]" />
+    </Data>
+    <Data name="sString" access="public" xsi:type="array" type="string" size="1" />
+    <Data name="trTrsf" access="public" xsi:type="array" type="trsf" size="2" />
+    <Data name="tTool" access="public" xsi:type="array" type="tool" size="2">
+      <Value key="0" fatherId="flange[0]" ioLink="valve1" />
+      <Value key="1" fatherId="flange[0]" ioLink="valve1" />
+    </Data>
+    <Data name="jJ" access="public" xsi:type="array" type="jointRx" size="2" />
+    <Data name="bBool" access="public" xsi:type="array" type="bool" size="1" />
+  </Datas>
+</Database>

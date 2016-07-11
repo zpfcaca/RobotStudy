@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="main" access="public">
+    <Locals>
+      <Local name="l_bExit" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // INIT
+  //call onStart()
+  // LOOP UNTIL Exit
+ 
+  call refreshStatic()
+  do
+    // call the refresh
+    call refresh()
+    // take the key
+    nKey=getKey()
+    switch nKey
+      case 271
+        // select AXIS7
+        call onF1Event()
+      break
+      case 272
+        // select AXIS8
+        call onF2Event()
+      break
+      case 273
+        // 
+        call onF3Event()
+      break
+      case 274
+        call onF4Event()
+      break
+      case 275
+        // 
+        call onF5Event()
+      break
+      case 276
+        // 
+        call onF6Event()
+      break
+      case 277
+        // 
+        call onF7Event()
+      break
+      case 278
+        // 
+        call onF8Event(l_bExit)
+      break
+      case 270
+        call onEnterEvent()
+      break
+    endSwitch
+    // release the resource
+    delay(0)
+  until nKey==255
+  // on Exit
+  //call onExit()
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

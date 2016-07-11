@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="pFrmCadToJoint" access="private" >
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1" >
+      <Parameter name="x_pTemp" type="pointRx" use="value" xsi:type="element" dimensions="1" />
+      <Parameter name="x_jTemp" type="joint" use="reference" xsi:type="array" dimensions="1" />
+    </Parameters>
+    <Locals>
+      <Local name="l_ni" type="num" xsi:type="array" size="1" />
+      <Local name="l_bTemp" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  ////  if strCmd=="RBINIT"
+  //
+  ////  endIf
+  //    l_bTemp=pointToJoint(tTool,jConfig,x_pPtemp,x_jTemp)
+  //  if l_bTemp==false
+  //    //    io:socket="(RBERRO)"
+  //    popUpMsg("wrong point position!!!")
+  //  endIf
+end]]></Code>
+  </Program>
+</Programs>

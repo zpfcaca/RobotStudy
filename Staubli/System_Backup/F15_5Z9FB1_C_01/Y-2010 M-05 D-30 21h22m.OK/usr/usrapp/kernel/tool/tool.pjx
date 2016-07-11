@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://www.staubli.com/robotics/VAL3/Project/3">
+  <Parameters version="s7.2.1" stackSize="5000" millimeterUnit="true" />
+  <Programs>
+    <Program file="checkPoint.pgx" />
+    <Program file="compose.pgx" />
+    <Program file="delete.pgx" />
+    <Program file="getAction.pgx" />
+    <Program file="getName.pgx" />
+    <Program file="getSize.pgx" />
+    <Program file="getTool.pgx" />
+    <Program file="goToPoint.pgx" />
+    <Program file="here.pgx" />
+    <Program file="new.pgx" />
+    <Program file="save.pgx" />
+    <Program file="setAction.pgx" />
+    <Program file="setName.pgx" />
+    <Program file="setTool.pgx" />
+  </Programs>
+  <Database>
+    <Data file="tool.dtx" />
+  </Database>
+  <Libraries>
+    <Library alias="io" path="Disk://io/io.pjx" />
+    <Library alias="saveTool" path="Disk://saveTool/saveTool.pjx" />
+    <Library alias="use" path="Disk://kernel/userPage/userPage.pjx" />
+  </Libraries>
+</Project>

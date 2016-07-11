@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="divideString">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sMsg" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_nLine" type="num" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sCopyMsg" type="string" xsi:type="array" size="1" />
+      <Local name="l_nLength" type="num" xsi:type="array" size="1" />
+      <Local name="l_sSwap" type="string" xsi:type="array" size="1" />
+      <Local name="l_nFlag" type="num" xsi:type="array" size="1" />
+      <Local name="l_nTotalFlag" type="num" xsi:type="array" size="1" />
+      <Local name="l_sCR" type="string" xsi:type="array" size="1" />
+      <Local name="l_nPosCR" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  //  using:
+  // x_sMessage->  the message you want print to video
+  // x_nLine->     the number of the line that will be use
+  //
+  //
+  // CARRIAGE RETURN
+  l_sCR="#"
+  x_nLine=0
+  //length of a line for a message
+  l_nLength=38
+  // copy the msg
+  l_sCopyMsg=x_sMsg
+  // first case
+  call findPos(l_sCopyMsg,l_sCR,l_nPosCR)
+  if (getDisplayLen(l_sCopyMsg)>l_nLength-1) or (l_nPosCR!=-1)
+    // compose the message
+    do
+      l_sSwap=l_sCopyMsg
+      // set the x_sMsg
+      if size(x_sMsg)-1<x_nLine
+        $dins(x_sMsg,x_nLine)
+      endIf
+      call findPos(l_sCopyMsg,l_sCR,l_nPosCR)
+      //
+      if (getDisplayLen(l_sCopyMsg)>l_nLength-1 or (l_nPosCR!=-1)) and x_nLine<8
+        // divide the string
+        l_nTotalFlag=0
+        call findPos(l_sCopyMsg,l_sCR,l_nPosCR)
+        //
+        // divide the string
+        //
+        if l_nPosCR!=-1 and l_nPosCR<l_nLength
+          // CARRIAGE RETURN
+          call leftPos(l_sCopyMsg,l_nPosCR,l_sSwap)
+          //l_sSwap=left(l_sCopyMsg,l_nPosCR)
+          call rightPos(l_sCopyMsg,getDisplayLen(l_sCopyMsg)-(l_nPosCR)-1,l_sCopyMsg)
+          //l_sCopyMsg=right(l_sCopyMsg,len(l_sCopyMsg)-(l_nPosCR)-1)
+          if getDisplayLen(l_sSwap)==0
+            l_sSwap=" "
+          endIf
+        else
+          //
+          // search for the space then return
+          //
+          do
+            call findPos(l_sSwap," ",l_nFlag)
+            //l_nFlag=find(l_sSwap," ")
+            if l_nFlag!=-1 and l_nFlag<=l_nLength
+              //l_sSwap=right(l_sSwap,len(l_sSwap)-l_nFlag-1)
+              call rightPos(l_sSwap,getDisplayLen(l_sSwap)-l_nFlag-1,l_sSwap)
+              l_nTotalFlag=l_nTotalFlag+l_nFlag+1
+            else
+              if l_nTotalFlag==0 and (l_nFlag==-1 or l_nFlag>l_nLength)
+                l_nFlag=-1
+                l_nTotalFlag=38
+              endIf
+            endIf
+          until l_nTotalFlag>=l_nLength+2 or l_nFlag==-1
+          // NORMAL
+          if l_nTotalFlag==0
+            // FULL LINE
+            call leftPos(l_sCopyMsg,l_nLength,l_sSwap)
+            //l_sSwap=left(l_sCopyMsg,l_nLength)
+            //l_sCopyMsg=right(l_sCopyMsg,len(l_sCopyMsg)-l_nLength)
+            call rightPos(l_sCopyMsg,getDisplayLen(l_sCopyMsg)-l_nLength,l_sCopyMsg)
+          else
+            // DIVIDE IT
+            call leftPos(l_sCopyMsg,l_nTotalFlag-l_nFlag-2,l_sSwap)
+            //l_sSwap=left(l_sCopyMsg,l_nTotalFlag-l_nFlag-2)
+            //l_sCopyMsg=right(l_sCopyMsg,len(l_sCopyMsg)-(l_nTotalFlag-l_nFlag-1))
+            call rightPos(l_sCopyMsg,getDisplayLen(l_sCopyMsg)-(l_nTotalFlag-l_nFlag-1),l_sCopyMsg)
+          endIf
+        endIf
+        // set the string
+        x_sMsg[x_nLine]=l_sSwap
+        x_nLine=x_nLine+1
+      else
+        // limit the string
+        call rightPos(l_sSwap,l_nLength,x_sMsg[x_nLine])
+        //x_sMsg[x_nLine]=right(l_sSwap,l_nLength)
+        l_sSwap=""
+      endIf
+    until l_sSwap==""
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

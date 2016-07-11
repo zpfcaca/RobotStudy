@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="sychronMove" access="public" >
+    <Locals>
+      <Local name="l_bTemp" type="bool" xsi:type="array" size="1" />
+      <Local name="l_nCount" type="num" xsi:type="array" size="1" />
+      <Local name="l_jTemp1" type="joint" xsi:type="array" size="1" />
+      <Local name="l_nTime" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  if bTxtPrSv==false
+    popUpMsg("请首先对点位文件初始化（按F3“PoIn”）")
+  endIf
+  call FC_InitMotion()
+  l_nCount=0
+  n_Roate=0
+  nCycleTotal=200
+  ////判断机械手什么时间停止
+  n_NextCount=0
+  ////单程点数
+  nNextTotal=9450
+  ////补发脉冲数
+  nPulseTotal=5
+  ////第六轴绝对角度
+  nAxisSix=0
+  bNextStep=false
+
+  bSetIO=true
+  //
+  nsumtime=clock()
+  //////替换
+  do
+    if pfrmCad[l_nCount].trsf!={0,0,0,0,0,0}
+      /////运动部分/////
+      l_nTime=clock()
+      MoveTo.trsf=pfrmCad[l_nCount].trsf
+      l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+      l_jTemp1.j6=nAxisSix
+      $movejSync(l_jTemp1)
+
+      if nPulse[l_nCount]==1
+        fOut0=true
+        fOut0=false
+      endIf
+
+      ///////判断什么时间停止
+      n_NextCount=n_NextCount+1
+      if n_NextCount==2*nNextTotal
+        n_NextCount=0
+      endIf
+      if n_NextCount==nNextTotal
+        nPulseCount=0
+        while (nPulseCount<nPulseTotal)
+          nPulseCount=nPulseCount+1
+          fOut0=true
+          fOut0=false
+          delay(0)
+        endWhile
+        while bNextStep==false
+          //fOut0=true
+          //fOut0=false
+          delay(0)
+        endWhile
+      endIf
+
+
+      //      delay(0)
+      /////运动部分/////
+      pfrmCad[l_nCount].trsf={0,0,0,0,0,0}
+      nPulse=0
+
+      if l_nCount==510
+        bTxt1=true
+      endIf
+      if l_nCount==1010
+        bTxt2=true
+      endIf
+      if l_nCount==10
+        bTxt3=true
+      endIf
+    endIf
+    if l_nCount==1499
+      l_nCount=0
+    else
+      l_nCount=l_nCount+1
+    endIf
+    ////    delay(0)
+    l_nTime=clock()-l_nTime
+    if l_nTime>nTime
+      nTime=l_nTime
+      nTestNum=l_nCount
+    endIf
+    delay(0)
+    bNextStep=false
+  until pfrmCad[l_nCount].trsf=={0,0,0,0,0,0}
+
+  do
+
+    if l_nCount>0 and l_nCount<500
+      l_nCount=500
+    endIf
+
+    if 500<l_nCount and l_nCount<1000
+      l_nCount=1000
+    endIf
+
+    if 1000<l_nCount and l_nCount<1500
+      l_nCount=0
+    endIf
+
+    ////补发脉冲数
+    nPulseCount=0
+    while (nPulseCount<nPulseTotal)
+      nPulseCount=nPulseCount+1
+      fOut0=true
+      fOut0=false
+      delay(0)
+    endWhile
+    /////运动暂停
+    while (bNextStep==false)
+      //fOut0=true
+      //fOut0=false
+      delay(0)
+    endWhile
+    bNextStep=false
+
+
+    do
+      if pfrmCad[l_nCount].trsf!={0,0,0,0,0,0}
+        /////运动部分/////
+        l_nTime=clock()
+        MoveTo.trsf=pfrmCad[l_nCount].trsf
+        l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+        l_jTemp1.j6=nAxisSix
+        $movejSync(l_jTemp1)
+
+        if nPulse[l_nCount]==1
+          fOut0=true
+          fOut0=false
+        endIf
+
+
+        ///////判断什么时间停止
+        n_NextCount=n_NextCount+1
+        if n_NextCount==2*nNextTotal
+          n_NextCount=0
+        endIf
+        if n_NextCount==nNextTotal
+
+          nPulseCount=0
+          while (nPulseCount<nPulseTotal)
+            nPulseCount=nPulseCount+1
+            fOut0=true
+            fOut0=false
+            delay(0)
+          endWhile
+          while bNextStep==false
+            // fOut0=true
+            // fOut0=false
+            delay(0)
+          endWhile
+        endIf
+
+
+        //      delay(0)
+        /////运动部分/////
+        pfrmCad[l_nCount].trsf={0,0,0,0,0,0}
+        nPulse=0
+
+        if l_nCount==510
+          bTxt1=true
+        endIf
+        if l_nCount==1010
+          bTxt2=true
+        endIf
+        if l_nCount==10
+          bTxt3=true
+        endIf
+      endIf
+      if l_nCount==1499
+        l_nCount=0
+      else
+        l_nCount=l_nCount+1
+      endIf
+      ////    delay(0)
+      l_nTime=clock()-l_nTime
+      if l_nTime>nTime
+        nTime=l_nTime
+        nTestNum=l_nCount
+      endIf
+      delay(0)
+      bNextStep=false
+    until pfrmCad[l_nCount].trsf=={0,0,0,0,0,0}
+
+    n_Roate=n_Roate+1
+  until n_Roate==nCycleTotal-1
+
+  delay(1)
+  bTxt1=false
+  bTxt2=false
+  bTxt3=false
+  while size(sString)>1
+    $ddel(sString,size(sString)-1)
+  endWhile
+  while size(pfrmCad)>1
+    $ddel(pfrmCad,size(pfrmCad)-1)
+  endWhile
+  while size(nPulse)>1
+    $ddel(nPulse,size(nPulse)-1)
+  endWhile
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///王工缓冲传点原稿
+  //  wait(bTest[0]==false and bTest[1]==false)
+  //  call FC_InitMotion()
+  //  l_nCount=0
+  //  bSetIO=true
+  //  //
+  //  nsumtime=clock()
+  //  do
+  //    if bTest[0]==false
+  //      for l_nCount=0 to size(cad:pCad1)-1
+  //        //
+  //        if cad:pCad1[l_nCount].trsf!={0,0,0,0,0,0}
+  //          l_nTime=clock()
+  //          //
+  //          MoveTo.trsf=cad:pCad1[l_nCount].trsf
+  //          l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+  //          $movejSync(l_jTemp1)
+  //          //$movejSync(cad:jJointRx[l_nCount])
+  //          l_nTime=clock()-l_nTime
+  //          if l_nTime>nTime
+  //            nTime=l_nTime
+  //            nTestNum=l_nCount
+  //          endIf
+  //          delay(0)
+  //          cad:pCad1[l_nCount].trsf={0,0,0,0,0,0}
+  //        endIf
+  //      endFor
+  //      bTest[0]=true
+  //    elseIf bTest[1]==false
+  //      for l_nCount=0 to size(cad:pCad2)-1
+  //        //
+  //        if cad:pCad2[l_nCount].trsf!={0,0,0,0,0,0}
+  //          l_nTime=clock()
+  //          //
+  //          MoveTo.trsf=cad:pCad2[l_nCount].trsf
+  //          l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+  //          $movejSync(l_jTemp1)
+  //          //$movejSync(cad:jJointRx[l_nCount])
+  //          l_nTime=clock()-l_nTime
+  //          if l_nTime>nTime
+  //            nTime=l_nTime
+  //            nTestNum=l_nCount
+  //          endIf
+  //          delay(0)
+  //          cad:pCad2[l_nCount].trsf={0,0,0,0,0,0}
+  //        endIf
+  //      endFor
+  //      bTest[1]=true
+  //    endIf
+  //
+  //  until (bTest[0]==true and bTest[1]==true and cad:pCad1.trsf=={0,0,0,0,0,0} and cad:pCad2.trsf=={0,0,0,0,0,0})
+  ///////////////////////////////////////////////////////////////////////////////////////
+  bSetIO=false
+  //io:socket="(RBSTOP)"
+  call FC_EndMotion()
+  TcpStrRec:nFeedback=54
+  nsumtime=clock()-nsumtime
+  bTxtPrSv=false
+  sScrPts="NotReady"
+  n_sTxt=0
+  call hmi_refreshmain()
+  //popUpMsg("move end!")
+  //  nScrPts=l_nCount
+  //  call hmi_refreshmain()
+  bTest=true
+end]]></Code>
+  </Program>
+</Programs>

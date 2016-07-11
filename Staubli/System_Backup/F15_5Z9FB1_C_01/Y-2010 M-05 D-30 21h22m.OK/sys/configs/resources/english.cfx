@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourcesList>
+  <Resources name="CHW" >
+    <String name="bootInitFieldbus" value="Initializing Fieldbus &amp; Modbus" />
+    <String name="bootFieldbusUpdate" value="Fieldbus board firmware should be updated, Please WAIT" />
+    <String name="bootFieldbusReboot" value="Fieldbus board has been updated, please REBOOT" />
+    <String name="bootInitDrives" value="Initializing Drives" />
+    <String name="bootCheckStarc" value="Checking STARC firmware, please wait... " />
+    <String name="bootStarkReboot" value="STARC board updated, please REBOOT" />
+    <String name="bootStarkDone" value="Done" />
+    <String name="bootStarkOk" value="Ok" />
+    <String name="bootMcpUpdate" value="MCP Firmware will be updated:" />
+    <String name="bootPressAnyKey" value="Press any key to start update..." />
+    <String name="bootWaitBeforeRestart1" value="Wait %s until the backlight" />
+    <String name="bootWaitBeforeRestart2" value="remains off, before restarting." />
+    <String name="cpuFpgaUpdateWait" value="Updating CPU fpga, please wait... &#13;&#10;" />
+    <String name="cpuFpgaUpdateSuccess" value="CPU fpga updated &#13;&#10; Please REBOOT" />
+    <String name="cpuFpgaUpdateFailed" value="CPU fpga update failed &#13;&#10;" />
+    <String name="licenseNoDemo" value="Option %z cannot be used in demo mode" />
+    <String name="licenseInvalid" value="The password specified for option %z is invalid" />
+  </Resources>
+  <Resources name="CDS" >
+    <String name="applicationName" value="CoDeSys Application" help="CoDeSys Application" />
+    <String name="statusNodeName" value="Status : " />
+    <String name="statusRun" value="Running" />
+    <String name="statusStopBp" value="Stopped (breakpoint)" />
+    <String name="statusStopError" value="Stopped (error)" />
+    <String name="statusStopSrv" value="Stopped (normal)" />
+    <String name="statusStopWd" value="Stopped (watchdog)" />
+    <String name="treeName" value="CoDeSys" help="" />
+  </Resources>
+  <Resources name="PLC" >
+    <String name="applicationName" value="Programmable Logic Control (PLC)" help="Utility to edit PLC programs, properties and states" />
+    <String name="cycleAllowedNode" value="Specified cycle time (ms):" help="Cycle time specified in the PLC development environment" />
+    <String name="cycleCurrentNode" value="Measured cycle time (ms): " help="Last measured cycle time" />
+    <String name="cycleMaxNode" value="Worst case cycle time (ms): " help="Highest measured cycle time since the start of the PLC" />
+    <String name="error" value="PLC error: " />
+    <String name="errorBadDirection" value=" output expected" />
+    <String name="errorEmptyMap" value="no shared I/O with CS8" />
+    <String name="errorIoNotFound" value=" not found" />
+    <String name="errorMemory" value=" memory full" />
+    <String name="errorRead" value=" read error" />
+    <String name="errorSramNotEnoughtPlace" value="Sram does not have enough space for retained variables" />
+    <String name="errorSramNotAvailable" value="No Sram available for retain variables" />
+    <String name="errorSramCorrupted" value="Sram is corrupted, impossible to recover retain variables" />
+    <String name="errorType" value=" unexpected type" />
+    <String name="errorWrite" value=" write error" />
+    <String name="overrunLogMsg" value="PLC Overrun" />
+    <String name="overrunNode" value="Overrun: " help="" />
+    <String name="startLogMsg" value="PLC %name started" />
+    <String name="statusPaused" value=" stopped" />
+    <String name="statusRunning" value=" running" />
+    <String name="stopLogMsg" value="PLC %name stopped" />
+    <String name="tcpChannelNode" value="Ethernet TCP port:" help="Ethernet TCP port to communicate with the PLC development environment" />
+    <String name="trialTimeElapsed" value="PLC demo time is over" />
+    <String name="runFlag" value="PLC" />
+    <String name="overrunFlag" value="OVR" />
+  </Resources>
+  <Resources name="SCA" >
+    <String name="calibAdjustmentAll" value="Adjustment on all axes" />
+    <String name="calibAdjustmentOne" value="Adjustment on axis #" />
+    <String name="calibAskForExportArmParam" value="Insert a floppy to backup arm calibration data." />
+    <String name="calibAskForExportCellParam" value="Insert a floppy to backup reference positions for calibration." />
+    <String name="calibAxis" value="Axis %d" />
+    <String name="calibCurrentPosition" value="Cur. Joint" />
+    <String name="calibEnabled" value="Arm power is set." />
+    <String name="calibEnumCellRef1" value="Cal Ref1" />
+    <String name="calibEnumCellRef2" value="Cal Ref2" />
+    <String name="calibEnumFactoryMark" value="Factory Mark" />
+    <String name="calibEnumReferencePosition" value="Reference Position : " />
+    <String name="calibEnumUserMark" value="User Marks" />
+    <String name="calibEnumZeroMark" value="Zero" />
+    <String name="calibFirstBootMsg" value="To calibrate robot for the first time, place the robot close to the marks and press Rec." />
+    <String name="buildErrorBootMsg" value="An error occured during boot. Robot is not operational. See logger for more details." />
+    <String name="calibGotoAllAxisMsg" value="Press Move/Hold to go to selected reference position" />
+    <String name="calibGotoOneAxisMsg" value="Press Move/Hold to go to the reference position on the selected axis" />
+    <String name="calibHereAllAxisWarning" value="Warning ! Reference position will be modified." />
+    <String name="calibHereOneAxisWarning" value="Warning ! Reference position will be modified on selected axis." />
+    <String name="calibImportConfirmMsg" value="Warning! Arm calibration will be modified after next reboot." />
+    <String name="calibImportMsg" value="You need to reboot the controller to activate the new arm configuration" />
+    <String name="calibInfoPageTitle" value="Sensor Status" />
+    <String name="calibMnuAxisGoto" value="Move" help="Move to reference position of the selected axis" />
+    <String name="calibMnuAxisHere" value="Here" help="Assign the current arm position to the reference position of the selected axis." />
+    <String name="calibMnuAxisPositionRecovery" value="Rec." help="Position recovery on selected axis" />
+    <String name="calibMnuAxisPositionSet" value="Adj." help="Adjustment on selected axis" />
+    <String name="calibMnuGoto" value="Move" help="Move to the selected reference position" />
+    <String name="calibMnuHere" value="Here" help="Assign the current arm position to the reference position of all axis." />
+    <String name="calibMnuInfo" value="Info" help="Display sensor status" />
+    <String name="calibMnuJointEdit" value="Edit" help="Edit coordinates of the reference position" />
+    <String name="calibMnuLoad" value="Imp." help="Import an arm configuration from floppy" />
+    <String name="calibMnuPositionRecovery" value="Rec." help="Position recovery on all axis, after a lost of connection controller-arm. Axis must be on the marks (within a couple of degrees)." />
+    <String name="calibMnuPositionSet" value="Adj." help="Adjustment on all axis, after a motor change or a crash. The current position of each axis will become its origin (zero). The highest accuracy is necessary." />
+    <String name="calibMnuSave" value="Exp." help="Save arm configuration on floppy" />
+    <String name="calibPrecArmChangedQuestion" value="The controller data does not match the arm data. Do you want to copy the arm data into the controller (new arm attached to the controller, or new sensor with preconfigured phase offset)?" />
+    <String name="calibPrecDisablePowerMsg" value="To validate the new arm calibration, arm power will be disabled." />
+    <String name="calibPrecDsiChangedQuestion" value="Do you want to copy the controller data into the arm (new DSI board)?" />
+    <String name="calibPrecFatalErrorMsg" value="The arm data does not match the contents of the controller&apos;s arm.cfx file. The cause of the problem must be found to recover the correct arm calibration." />
+    <String name="calibPrecMsg" value="Caution, robot position will be recovered. The arm must be close to the reference position." />
+    <String name="calibPrecRecoveryProcedureErrorMsg" value="If a new motor with preconfigured sensor was installed, just adjust the zero offset of the axis (&apos;Adj&apos; menu). If you are not sure that the motor sensor offset is correct, the procedure to adjust the sensor offset must be done." />
+    <String name="calibPrecSensorChangedQuestion" value="Have you changed a sensor or a motor?" />
+    <String name="calibPrecTitle" value="Robot position recovery" />
+    <String name="calibPsetDisablePowerMsg" value="To validate the new arm calibration, arm power will be disabled." />
+    <String name="calibPsetMsg" value="Caution, axis will be adjusted. The arm must be EXACTLY on the reference position." />
+    <String name="calibPsetTitle" value="Axis adjustment" />
+    <String name="calibRecoveryAll" value="Position recovery on all axes" />
+    <String name="calibRecoveryOne" value="Position recovery on axis #" />
+    <String name="calibReference" value="Reference" />
+    <String name="calibReferenceModified" value=" modified" />
+    <String name="calibReferencePosition" value="Ref. Pos." />
+    <String name="calibReferenceTeached" value=" taught" />
+    <String name="calibResultExportError" value="Error during export" />
+    <String name="calibResultImportError" value="Error during import" />
+    <String name="calibResultPositionRecoveryKo" value="Position recovery error" />
+    <String name="calibResultPositionSetKo" value="Position set error" />
+    <String name="calibTitle" value="Calibration" help="Maintenance utility to recover or adjust the arm position." />
+    <String name="controlPanelApp" value="Control panel" help="Utility to access the current robot state" />
+    <String name="ctrlPanelCbtTemp" value="Cabinet Temperature : " help="" />
+    <String name="ctrlPanelCom2Type" value="COM2: " />
+    <String name="ctrlPanelControllerNode" value="Controller" help="Controller settings" />
+    <String name="ctrlPanelControllerParametersNetworkNode" value="Network" help="" />
+    <String name="ctrlPanelControllerParametersNode" value="Controller configuration" help="" />
+    <String name="ctrlPanelControllerStatusNode" value="Controller status" help="" />
+    <String name="ctrlPanelDate" value="Date&amp;Time : " />
+    <String name="ctrlPanelFreeDiskSpace" value="Free Disk Space : " />
+    <String name="ctrlPanelFreeMemory" value="Free Memory : " />
+    <String name="ctrlPanelFreeSramSpace" value="Free Sram Space : " />
+    <String name="ctrlPanelIp" value="IP address : " />
+    <String name="ctrlPanelIpConnector1" value="J204 IP address : " />
+    <String name="ctrlPanelIpConnector2" value="J205 IP address : " />
+    <String name="ctrlPanelLanguage" value="Language : " help="" />
+    <String name="ctrlPanelMacAddr" value="MacAdress : " />
+    <String name="ctrlPanelMaxManuCartSpeed" value="Max manual Cartesian speed : " help="Edit maximum manual cartesian speed"/>
+    <String name="crtlPanelMnuStatusExport" value="Exp." help="Export controller status to the log file"/>
+    <String name="crtlPanelMnuConfigBackup" value="Bkup" help="Backup complete controller from flash disk to USB / FTP"/>
+    <String name="ctrlPanelMonitorSpeed" value="Monitor speed : " />
+    <String name="ctrlPanelRecorder" value="Recorder" />
+    <String name="ctrlPanelRemotePort" value="Telemaintenance port: " help="Ethernet TCP port to communicate with the SRS Telemaintenance tool" />
+    <String name="ctrlPanelRobotNode" value="Arm position" help="Display of the current position" />
+    <String name="ctrlPanelRsiDisplay" value="RSI 7 Segment Display Unit : " />
+    <String name="crtlPanelStatusExportMsg" value="System status has been exported to logger file" />
+    <String name="ctrlPanelUnits" value="Units : " />
+    <String name="errTitle" value="Error" />
+    <String name="warningTitle" value="Warning" />
+    <String name="errorAppMnuSave" value="Exp." help="Export the log file on floppy" />
+    <String name="errorAppResultExportError" value="Error during save" />
+    <String name="errorAppTitle" value="Events logger" help="Utility to track system events and states" />
+    <String name="limitsArmEditTitle" value="Arm Limits" help="" />
+    <String name="limitsCellEditTitle" value="Cell Limits" help="" />
+	<String name="limitsExternAxesEditTitle" value="External Limits" help="" />
+    <String name="logExportPopup" value="Please insert floppy" />
+    <String name="loginMnuLock" value="Def." help="Switch to the default (starting) profile." />
+    <String name="loginappCurrentUserName" value="Current profile : " help="Name of the current profile for interface access control." />
+    <String name="loginappIntegratorMsg" value="Only trained personnel may work on a system with reduced safety." />
+    <String name="loginappInvalidDefaultUserMsg" value="The starting profile cannot be found. There will be no interface access limitations." />
+    <String name="loginappInvalidPasswordMsg" value="Invalid password" />
+    <String name="loginappNewUserName" value="Profile : " />
+    <String name="loginappPassword" value="Password : " help="Login password for the new profile" />
+    <String name="loginappTitle" value="Profile selection" help="Page to select a new login or start profile." />
+    <String name="portdioAppTitle" value="Inputs/ouputs" help="Display and activation of system inputs/outputs" />
+  </Resources>
+  <Resources name="EP" >
+    <String name="autoloadCancelled" value="Autoload of VAL3 applications cancelled (unrecoverable system error at boot time)" />
+    <String name="bptPageMnuAdd" value="Put" help="Put a breakpoint on current instruction" />
+    <String name="bptPageMnuDel" value="Del." help="Delete the selected breakpoint" />
+    <String name="bptPageMnuDelAll" value="All" help="Delete all breakpoints" />
+    <String name="bptPageTitle" value="Breakpoints" help="List of application&apos;s breakpoints" />
+    <String name="cannotEditArrayNode" value="Cannot edit array node" />
+    <String name="cannotEditInputData" value="Cannot edit the value of an input data" />
+    <String name="cannotEditFlange" value="Cannot edit Flange" />
+    <String name="cannotEditWorld" value="Cannot edit World" />
+    <String name="cannotMoveArrayNode" value="Cannot move on array node" />
+    <String name="cannotMoveToJoint" value="Cannot move to this joint type" />
+    <String name="cannotMoveToPoint" value="Cannot move to this point type" />
+    <String name="cannotTeachArrayNode" value="Cannot teach array node" />
+    <String name="cannotTeachThisJoint" value="Cannot teach this joint type" />
+    <String name="cannotTeachThisPoint" value="Cannot teach this point type" />
+    <String name="cellDelFrameMsg" value="First delete frames and points attached to this frame." />
+    <String name="cellDelFrameTitle" value="Delete Frame" />
+    <String name="cellDelToolMsg" value="First delete tools attached to this tool." />
+    <String name="cellDelToolTitle" value="Delete tool" />
+    <String name="cellEditCloseDelay" value="Ctime  : " help="Time delay (second) to close the tool" />
+    <String name="cellEditDioName" value="Dio name: " help="Name of the digital output to action the tool" />
+    <String name="cellEditOpenDelay" value="Otime  : " help="Time delay (second) to open the tool" />
+    <String name="cellEditToolTitle" value="Edit tool" help="Edit tool parameters" />
+    <String name="cfgmanagerMenuDel" value="Del." help="" />
+    <String name="cfgmanagerMenuNew" value="New" help="" />
+    <String name="cfgmanagerMenuSave" value="Save" help="Save the application" />
+    <String name="dataAddElementTitle" value="New key" help="Add a new element" />
+    <String name="dataAttributExport" value="Attribut :" />
+    <String name="dataContainer" value="Container :" />
+    <String name="dataContainerArray" value="Array" />
+    <String name="dataContainerElement" value="Element" />
+    <String name="dataContainerList" value="Collection" />
+    <String name="dataDim" value="Dim%d elements nb : " help="Dimension size" />
+    <String name="dataErrorCreation" value="Cannot create data" />
+    <String name="dataErrorHeapFull" value="Not enough place in project&apos;s heap." />
+    <String name="dataErrorInvalidDimensions" value="Size of initial dimensions cannot be null" />
+    <String name="dataErrorTooManyElements" value="Arrays cannot contain more than 9999 elements" />
+    <String name="dataKeyName" value="Key: " />
+    <String name="dataMnuHere" value="Here" help="Record the current position of the current tool" />
+    <String name="dataMnuTeach" value="Teach" help="Teach a frame" />
+    <String name="dataName" value="Name : " help="Name with 1 to 12 characters using: &apos;_a..z0..9&apos;, starting with a letter &apos;a..z&apos;." />
+    <String name="dataPrivate" value="Private" />
+    <String name="dataPublic" value="Public" />
+    <String name="dataType" value="Type :" />
+    <String name="dbgMnuBreakpoints" value="Bpts" help="Show all breakpoints, del one, del all, add" />
+    <String name="dbgMnuData" value="Data" help="Display the data of the selected instruction" />
+    <String name="dbgMnuSet" value="-&gt;*" help="Go to to the selected line, ignoring all intermediate lines" />
+    <String name="dbgMnuStepInto" value="{*}" help="Step into: execute current line and stop at next executable line (node or sub-program will be opened if needed)" />
+    <String name="dbgMnuStepOver" value="{}*" help="Step over the function or the collapsed instruction" />
+    <String name="editMnuComment" value=";" help="Set selected line as comment" />
+    <String name="editMnuCpy" value="Copy" help="Copy marked lines in clipboard" />
+    <String name="editMnuCut" value="Cut" help="Move marked lines into clipboard" />
+    <String name="editMnuDelInst" value="Del" help="Delete marked lines" />
+    <String name="editMnuPaste" value="Pas." help="Paste: copy clipboard content after selected line" />
+    <String name="editMnuSaveRoutine" value="Save" help="Save the application" />
+    <String name="errAddInstruction" value="System event SIN-ADD." />
+    <String name="errAllAppliRunning" value="All open applications are already running." />
+    <String name="errArrayRootNodeSelection" value="Selection of a data root is not possible." />
+    <String name="errCannotAddParameter" value="Cannot add local or parameter when project is running" />
+    <String name="errCannotChangeCallInUse" value="Cannot change a program call while it is being used" />
+    <String name="errCannotChangeTypeOfInst" value="Cannot change type of instruction." />
+    <String name="errCannotDebugUnloadedPrj" value="Cannot debug closed library" />
+    <String name="errCannotDeleteLibData" value="Cannot delete a library data" />
+    <String name="errCannotKillTask" value="%s does not answer the kill request. Do you want to force the killing ?" />
+    <String name="errCannotModifyLibData" value="Cannot modify a library data" />
+    <String name="errCannotRemoveLibrary" value="Cannot remove library" />
+    <String name="errCannotRemoveUserType" value="Cannot remove user type" />
+    <String name="errClpbrdCpy" value="System event CLP-CPY." />
+    <String name="errClpbrdPasteError" value="Incorrect line in clipboard:" />
+    <String name="errCompile" value="Incorrect line" />
+    <String name="errDbgInternal" value="System event" />
+    <String name="errDbgTimeout" value="Execution step stopped (timeout)" />
+    <String name="errEditData" value="Cannot edit this kind of data" />
+    <String name="errEditExternRoutine" value="Cannot edit extern progam" />
+    <String name="errExportFile" value="Cannot export the file(s) " />
+    <String name="errLibraryRename" value="cannot rename library" />
+    <String name="errLocalArrayResize" value="Cannot resize a local array." />
+    <String name="errMemoryFull" value="Memory full" />
+    <String name="errNoAppliRunning" value="No application running." />
+    <String name="errNotAnArray" value="Not an array." />
+    <String name="errParameterResize" value="Cannot pass array by value (an array cannot be passed by value, only by reference)" />
+    <String name="errProjectStopping" value="Application is already stopping" />
+    <String name="errRenameStartStop" value="Cannot rename start( ) or stop( )" />
+    <String name="errRepInstruction" value="Modify line" />
+    <String name="errStartStopParameter" value="start() and stop() programs cannot have parameters." />
+    <String name="errTitle" value="Error" />
+    <String name="errUnlinkedFrame" value="This frame is linked to a frame of an unloaded library" />
+    <String name="errUnlinkedPoint" value="This point is linked to a frame of an unloaded library" />
+    <String name="errUnlinkedTool" value="This tool is linked to a tool of an unloaded library" />
+    <String name="errorDataDel" value="Cannot delete data" />
+    <String name="errorDataRename" value="cannot rename data" />
+    <String name="errorParamDel" value="cannot delete parameter" />
+    <String name="insCommandNode" value="Instructions" help="" />
+    <String name="insErrorBuildRoutine" value="System event PRG-BLD" help="" />
+    <String name="insHistoryNode" value="History" help="" />
+    <String name="insMnuCommands" value="VAL3" help="Select a VAL3 instruction" />
+    <String name="insMnuGlobals" value="Glo." help="Select a global data" />
+    <String name="insMnuHistory" value="His." help="Select a line from last ones entered" />
+    <String name="insMnuIo" value="I/O" help="Select a system digital input/output" />
+    <String name="insMnuLocals" value="Loc." help="Select a local variable or a parameter of the current program" />
+    <String name="insMnuRoutines" value="Prg." help="Select a program of the current application" />
+    <String name="insnodeCommentTitle" value="Comment" help="" />
+    <String name="insnodeDeleteTitle" value="Delete line" help="" />
+    <String name="insnodeInstructionsNode" value="Instructions" />
+    <String name="insnodeMnuInsertInstruction" value="Ins." help="Insert a line after the selected line" />
+    <String name="insnodeMnuMarkInstruction" value="Mark" help="Mark the selected line" />
+    <String name="insnodeStepError" value="Cannot step: task not stopped." />
+    <String name="insnodeVariablesTitle" value="Variables" help="" />
+    <String name="jogStepMnuToggle" value="Step" help="Toggle jog step mode on/off" />
+    <String name="jogApproMnuToggle" value="App." help="Toggle jog approach mode on/off" />
+    <String name="jogApproNotAllow" value="Approach on joint position is not allowed" />
+    <String name="jogApproNotAllowTitle" value="Approach" />
+    <String name="jogApproOnOff" value="Appro:" />
+    <String name="jogParamPageTitle" value="Jog parameters" help="" />
+    <String name="jogApproTitle" value="Appro:" />
+    <String name="jogStepTitle" value="Step:" />
+    <String name="jogApproRx" value="Rx:" />
+    <String name="jogApproRy" value="Ry:" />
+    <String name="jogApproRz" value="Rz:" />
+    <String name="jogApproX" value="on X:" />
+    <String name="jogApproY" value="on Y:" />
+    <String name="jogApproZ" value="on Z:" />
+    <String name="jogFrame" value="Frame:" />
+    <String name="jogJointTitle" value="Joint" />
+    <String name="jogMnuParam" value="Par." help="Modify the jog parameters" />
+    <String name="jogMnuMode" value="Mode" help="Select the move mode for point" />
+    <String name="jogMnuNew" value="New" help="Create a point or a joint" />
+    <String name="jogMnuSelect" value="Sel." help="Select the current jog tool and frame" />
+    <String name="jogModeAlign" value="ALIGN" />
+    <String name="jogModeJoint" value="JOINT" />
+    <String name="jogModeLine" value="LINE" />
+    <String name="jogModeTitle" value="Mode:" />
+    <String name="jogPageTitle" value="Jog Interface" help="Jog Interface" />
+    <String name="jogPointTitle" value="Point" />
+    <String name="jogSelFrameErr" value="Not a frame !" />
+    <String name="jogSelFrameTitle" value="Select Frame" help="Select the frame and press OK menu" />
+    <String name="jogSelToolErr" value="Not a tool !" />
+    <String name="jogSelToolTitle" value="Select Tool" help="Select the tool and press OK menu" />
+    <String name="jogTool" value="Tool:" />
+    <String name="jogStepOnOff" value="Step mode: " />
+    <String name="jogStepValue" value="Step value: " />
+    <String name="jogStepShortcuts" value="Shortcuts keys &lt; &gt;" />
+    <String name="joint" value="Joint " />
+    <String name="libraryAddPageAliasTitle" value="Identifier" help="" />
+    <String name="libraryAddPageTitle" value="Add a library" help="" />
+    <String name="libraryAttPageChangePathMnu" value="Chg." />
+    <String name="libraryAttPagePath" value="Library : " />
+    <String name="libraryAttPageTitle" value="Attribut" help="" />
+    <String name="libraryAttPageVal3Name" value="Identifier : " />
+    <String name="libraryAttPageAutoload" value="Autoload : " />
+    <String name="libraryAttPagePassword" value="Password : " />
+    <String name="libraryChangePathPageTitle" value="Change path" />
+    <String name="libraryErrorAdd" value="Error while adding library." />
+    <String name="libraryMnuAdd" value="Add" help="" />
+    <String name="libraryMnuDel" value="Del." help="" />
+    <String name="libraryMnuRename" value="Ren." help="" />
+    <String name="libraryNodeName" value="Libraries" help="" />
+    <String name="libraryProtected" value="%s is an encrypted library" />
+    <String name="libraryRemovePopup" value="%z will be removed from project %s" />
+    <String name="libraryRemoveTitle" value="Remove library" />
+    <String name="managerChoice" value="Open an application" help="" />
+    <String name="managerErrorAppNotFound" value="application not found, removed from autoload list." />
+    <String name="managerErrorAutoload" value="Autoload error:" />
+    <String name="managerErrorAutostart" value="Autostart error:" />
+    <String name="managerErrorRun" value="Cannot run application" />
+    <String name="managerMenuLoad" value="Open" help="Select an application to open" />
+    <String name="managerMenuReload" value="Rld." help="Reload the application" />
+    <String name="managerMenuUnload" value="Clo." help="Close the selected application" />
+    <String name="managerName" value="Application manager" help="Utility to edit VAL3 applications" />
+    <String name="managerSuccessAutoload" value="open." />
+    <String name="mnuMoveJoint" value="Move" help="Move to a joint position in manual mode." />
+    <String name="mnuMovePoint" value="Move" help="Move to a point position in Manual Mode" />
+    <String name="modified" value=" modified" />
+    <String name="nodeErrorElementAlreadyExists" value="An element with the same key already exists." />
+    <String name="nodeErrorInvalidDataName" value="Invalid name." />
+    <String name="nodeErrorInvalidKeyValue" value="A key must have between 1 and 15 characters" />
+    <String name="nodeErrorParameterCreation" value="Cannot create parameter" />
+    <String name="nodeLoadedPrj" value="Val3 applications" help="" />
+    <String name="nodeMnuAddElement" value="Add." help="Add a new element." />
+    <String name="nodeMnuInsert" value="Ins." help="Insert a new element after the selected element." />
+    <String name="nodeMnuRename" value="Ren." help="Rename data or program." />
+    <String name="nodeMnuResize" value="Res." help="Resize data." />
+    <String name="nodeMnuIoLinkEdit" value="Edit" help="Edit IO link." />
+    <String name="nodeMnuLink" value="Link" help="Link IOs" />
+    <String name="nodeNewDataTitle" value="New data" help="" />
+    <String name="nodeNewParameterTitle" value="New parameter" help="" />
+    <String name="nodeParameterByReference" value="by reference" />
+    <String name="nodeParameterByValue" value="by value" />
+    <String name="nodeParameterDimensions" value="Dimensions :" />
+    <String name="nodeParameterPassage" value="Passing :" />
+    <String name="nodeRenameDataTitle " value="New name" help="" />
+    <String name="nodeResizeDataTitle " value="Resize data" help="" />
+    <String name="point" value="Point " />
+    <String name="prjMnuTerminal" value="Cmd." help="Command line interface" />
+    <String name="projectDateTimeFormat" value="%d %m, %Y %H:%M" /> 
+    <String name="projectDeleteArrayItemLastMsg" value="Removing last element of a geometric collection is impossible" />
+    <String name="projectDeleteArrayItemPopup" value=" will be removed of the array." />
+    <String name="projectDeleteArrayItemTitle" value="Delete element" />
+    <String name="projectDeleteDataPopup" value="%s will be removed from application %s" />
+    <String name="projectDeleteDataTitle" value="Delete data" />
+    <String name="projectDeletePopup" value=" will be deleted." />
+    <String name="projectDeleteTitle" value="Delete project" />
+    <String name="projectDeleteLogMsg" value="Project %s deleted." />
+    <String name="projectErrorConstruction" value="cannot create project" />
+    <String name="projectErrorIncompleteDelete" value="Incomplete deletion of application data." />
+    <String name="projectErrorSavingProject" value="Error while saving project." />
+    <String name="projectErrorUnload" value="Cannot close." />
+    <String name="projectGlobalData" value="Global data" help="Management of the application&apos;s global data" />
+    <String name="projectLoadAutoload" value="Autoload" />
+    <String name="projectLoadAutostart" value="Autostart" />
+    <String name="projectLoadManual" value="Manual" />
+    <String name="projectLoadMnuMode" value="Mode" help="Select the application&apos;s startup open mode" />
+    <String name="projectMnuSaveAs" value="Exp." help="Rename selected application or export it to another location" />
+    <String name="projectNewMsg" value="Caution: an application with the same name will be deleted." />
+    <String name="projectNewTitle" value="New application" />
+    <String name="projectNodeConfig" value="Parameters" help="Global parameters for the application" />
+    <String name="projectNodeHeapSize" value="Data memory: " help="Memory space (bytes) used to store application&apos;s global data" />
+    <String name="projectNodeStackSize" value="Runtime memory: " help=" Available memory (bytes) used to store the local data of VAL3 tasks, and the sub-program call context." />
+    <String name="projectNodeUnits" value="Units: " help="Units used in the VAL3 structures of the application" />
+    <String name="projectResizeArrayPopup" value="Some elements will be lost." />
+    <String name="projectResizeArrayTitle" value="Resize array" />
+    <String name="projectSaveasMsg" value="Caution: this will overwrite another application." />
+    <String name="projectSaveasTitle" value="Export" />
+    <String name="projectTemplate" value="Template : " />
+    <String name="projectUnloadPopup" value="Save changes on application to close" />
+    <String name="projectUnloadSaveWithoutRights" value="Your profile does not allow you to save applications" />
+    <String name="projectUnloadTitle" value="Close application" />
+    <String name="projectWarningUnitsDiffer" value="Project units differ from system units." />
+    <String name="reloadAlsoLibraries" value="Do you also want to reload all libraries used by project ?" />
+    <String name="reloadLibrariesTitle" value="Reload libraries" help="If No, only the data and programs of the project are reloaded. If Yes, the data and programs of all libraries used by this project will also be reloaded" />
+    <String name="reloadError" value="Project %s could not be reloaded" />
+    <String name="routineAttributExport" value="Attribute : " />
+    <String name="routineDeletePopup" value="%z will be removed from project %s" />
+    <String name="routineDeleteTitle" value="Delete program" />
+    <String name="routineErrorAttribute" value="Cannot change routine attributes" />
+    <String name="routineErrorCreate" value="Error while creating program." />
+    <String name="routineErrorDel" value="Cannot delete routine" />
+    <String name="routineLocalData" value="Local data" help="List of the program&apos;s local data" />
+    <String name="routineMnuEdit" value="Edit" help="" />
+    <String name="routineMnuRef" value="Ref&amp;" help="Switch parameter passing mode: by value or by reference" />
+    <String name="routineName" value="Name : " />
+    <String name="routineNewTitle" value="Name of new program" help="" />
+    <String name="routineNode" value="Programs" help="List of application&apos;s programs" />
+    <String name="routineParameters" value="Parameters" help="List of the program&apos;s call parameters" />
+    <String name="routinePrivate" value="Private" />
+    <String name="routinePublic" value="Public" />
+    <String name="routineRenameTitle " value="New name" help="" />
+    <String name="runAppError" value="An application is already running. Stop it to start another one." />
+    <String name="selectStart" value="Run application" help="List of VAL3 open applications" />
+    <String name="selectStop" value="Stop application" help="" />
+    <String name="sinRcDataAlreadyExists" value="data with same name already exists" />
+    <String name="sinRcDataBusy" value="data is used elsewhere in a program" />
+    <String name="sinRcDataInvalidName" value="data name is invalid" />
+    <String name="sinRcDataInvalidSize" value="index of array item must be positive" />
+    <String name="sinRcDataNotAnArray" value="data is not an array" />
+    <String name="sinRcDataNotFound" value="data was not found" />
+    <String name="sinRcIdentifierAlreadyExists" value="identifier already exists" />
+    <String name="sinRcIdentifierInvalidName" value="identifier name is invalid" />
+    <String name="sinRcLibraryAlreadyExists" value="library already exists in project" />
+    <String name="sinRcLibraryBusy" value="library is used elsewhere in a program" />
+    <String name="sinRcLibraryInvalidName" value="library name is invalid" />
+    <String name="sinRcMemoryFull" value="memory full" />
+    <String name="sinRcProjectAlreadyEnding" value="application is already ending" />
+    <String name="sinRcProjectAlreadyExists" value="application with the same name already exists" />
+    <String name="sinRcProjectAlreadyRunning" value="Application already running." />
+    <String name="sinRcProjectBusy" value="application is running" />
+    <String name="sinRcProjectCodeError" value="error in a program (see event logger)" />
+    <String name="sinRcProjectDataError" value="error in datas (see event logger)" />
+    <String name="sinRcProjectDefaultStackTooSmall" value="runtime memory is too small (change application parameters)" />
+    <String name="sinRcProjectFileError" value="cannot create directory or file" />
+    <String name="sinRcProjectFilemanagerNotFound" value="Cannot access save location." />
+    <String name="sinRcProjectInconsistantResolvedSymbol" value="data type or program header does not fit library declaration" />
+    <String name="sinRcProjectInvalidDestructor" value="parameter is not allowed in stop() program" />
+    <String name="sinRcProjectInvalidMain" value="parameter is not allowed in start() program" />
+    <String name="sinRcProjectInvalidName" value="application name is invalid" />
+    <String name="sinRcProjectInvalidProject" value="Invalid application: check program parameters in call() or spawn instructions." />
+    <String name="sinRcProjectInvalidTypeName" value="Invalid type name" />
+    <String name="sinRcProjectLibraryError" value="cannot load library" />
+    <String name="sinRcProjectLocked" value="System event APP-LCK" />
+    <String name="sinRcProjectNoDestructor" value="stop() program not found in application" />
+    <String name="sinRcProjectNoMain" value="start() program not found in application" />
+    <String name="sinRcProjectTypeNameAlreadyUsed" value="type name already used" />
+    <String name="sinRcProjectTypeProjectNotMatch" value="the content of the project used to define the type does not match the data" />
+    <String name="sinRcProjectUnresolvedSymbol" value="all the declared data and program were not found in the library" />
+    <String name="sinRcProjectUsedAsStruct" value="project is being used to define a type in an application" />
+    <String name="sinRcRoutineAlreadyExists" value="program with the same name already exists" />
+    <String name="sinRcRoutineBusy" value="program is called elsewhere in an another program" />
+    <String name="sinRcRoutineInvalidName" value="program name is invalid" />
+    <String name="sinRcRoutineInvalidParamPosition" value="unexpected parameter" />
+    <String name="sinRcRoutineNameTooLong" value="program name is too long" />
+    <String name="sinRcRoutineNotFound" value="program was not found" />
+    <String name="sinRcTypeBusy" value="type is being used" />
+    <String name="srlRcProjectPoolInconsistentIoInfo" value="internal error (corrupted io array)" />
+    <String name="srlRcNoVAL3License" value="No VAL 3 license, or demonstration period has expired" />
+    <String name="startAppTitle" value="Start appli" help="Start appli" />
+    <String name="stopAppTitle" value="Stop appli" help="Start appli" />
+    <String name="stopApp" value="Caution ! The application will be stopped." />
+    <String name="teached" value=" taught" />
+    <String name="tskmanDebugTitle" value="Debug" help="Utility to execute step by step a VAL3 program" />
+    <String name="tskmanErrorLockedTask" value="Cannot debug (locked task)." />
+    <String name="tskmanErrorRunningTask" value="Cannot debug (task not stopped)." />
+    <String name="tskmanInfoCurrentCycletime" value="Measured cycle time (ms) : " />
+    <String name="tskmanInfoMaxCycletime" value="Worst case cycle time (ms) : " />
+    <String name="tskmanInfoNbOverrun" value="Overrun : " />
+    <String name="tskmanInfoWantedCycletime" value="Specified cycle time (ms): " />
+    <String name="tskmanKillTaskPopup" value=" will be killed." />
+    <String name="tskmanKillTaskTitle" value="Kill task" />
+    <String name="tskmanMnuDebug" value="Dbg." help="Suspend &amp; debug selected task" />
+    <String name="tskmanMnuInfo" value="Info" help="" />
+    <String name="tskmanMnuKill" value="Kill" help="Kill the selected task" />
+    <String name="tskmanMnuResume" value="Rsm." help="Resume the selected task" />
+    <String name="tskmanMnuSuspend" value="Sus." help="Suspend the selected task" />
+    <String name="tskmanName" value="Task manager" help="Utility to track &amp; debug the started VAL3 tasks" />
+    <String name="tskmanTitle" value="Name         State      Appli    Pri Err" />
+    <String name="userappTitle" value="Application interface" help="Man-machine interface utility for VAL3 applications" />
+    <String name="userTypeAddPageNameTitle" value="Type name" help="" />
+    <String name="userTypeAddPageTitle" value="Add a type" help="" />
+    <String name="userTypeErrorAdd" value="Error while adding type." />
+    <String name="userTypeMnuAdd" value="Add." help="" />
+    <String name="userTypeMnuDel" value="Del." help="" />
+    <String name="userTypeNodeName" value="User types" help="" />
+    <String name="userTypeRemovePopup" value="%z will be removed from project %s" />
+    <String name="userTypeRemoveTitle" value="Remove user type." />
+    <String name="warning" value="Warning!" />
+    <String name="warningDataSize" value="The creation of this data may take some time" />
+    <String name="warningDetected" value=" warning detected. See event logger" />
+    <String name="warningMotion" value="Warning Motion" />
+    <String name="warningMotionReset" value="Do you want to reset motion ?" />
+  </Resources>
+  <Resources name="SRL" >
+    <String name="appStarted" value="application started" />
+    <String name="appStopped" value="application stopped" />
+    <String name="cannotCreate" value="Cannot create " />
+    <String name="errorFile" value="File" />
+    <String name="errorLine" value="line" />
+    <String name="ioNotLinked" value="unlinked" />
+    <String name="ioInvalidLink" value="invalid link" />
+    <String name="frameConveyor" value="conveyor" />
+    <String name="frameConveyed" value="conveyed" />
+    <String name="frameMobile" value="mobile" />
+    <String name="nameAlreadyUsed" value="name already used in the application." />
+    <String name="resetMotionWithStop" value="Application has ended, pending motion was cancelled" />
+    <String name="runtimeErr000NoError" value="No runtime error" />
+    <String name="runtimeErr010DivZero" value="Invalid numeric computation (division by zero)" />
+    <String name="runtimeErr011Num" value="Invalid numeric computation (invalid value)" />
+    <String name="runtimeErr020IndOverflow" value="Access to an array with index larger than the array&apos;s size." />
+    <String name="runtimeErr021IndUnderflow" value="Access to an array with negative index." />
+    <String name="runtimeErr025Invalidkey" value="Invalid key specified." />
+    <String name="runtimeErr029TaskInvalidName" value="Invalid task name." />
+    <String name="runtimeErr030TaskNotFound" value="Task does not exist." />
+    <String name="runtimeErr031TaskNameAlreadyUsed" value="Task name already used." />
+    <String name="runtimeErr032TaskNbSyncReached" value="Only two different periods for synchronous tasks are supported. Change scheduling period." />
+    <String name="runtimeErr033TaskSyncNbLineReached" value="Too many lines will be executed in a synchronous VAL3 task." />
+    <String name="runtimeErr040HeapOverflow" value="Not enough data memory. Increase it using the application&apos;s parameters." />
+    <String name="runtimeErr041StackOverflow" value="Not enough runtime memory. Increase it using the application&apos;s parameters, then restart application." />
+    <String name="runtimeErr050DataAlreadyExists" value="Name already used." />
+    <String name="runtimeErr060OperationTimeout" value="Instruction timeout" />
+    <String name="runtimeErr061InternalError" value="VAL3 interpreter error. Please, contact after sale service." />
+    <String name="runtimeErr070InvalidParameterValue" value="Invalid value for an instruction parameter. Consult VAL3 reference manual." />
+    <String name="runtimeErr071LocalInvalidOperation" value="Local data or parameter passed by value not supported as function parameter." />
+    <String name="runtimeErr080UseUnresolvedExtern" value="Use of unresolved external symbol" />
+    <String name="runtimeErr081IncompatibleKinematic" value="Invalid data for the connected arm" />
+    <String name="runtimeErr082UseRefToUnreacheableExtern" value="Use of reference to undeclared external symbol" />
+    <String name="runtimeErr090InvalidResumeOperation" value="No instruction at line specified by taskResume()" />
+    <String name="runtimeErr100InvalidVel" value="&apos;vel&apos; field in mdesc is negative or too high." />
+    <String name="runtimeErr101InvalidAccel" value="&apos;accel&apos; field in mdesc is negative or too high." />
+    <String name="runtimeErr102InvalidDecel" value="&apos;decel&apos; field in mdesc is negative, too high, or lower than &apos;vel&apos; field" />
+    <String name="runtimeErr103InvalidTvel" value="&apos;tvel&apos; field in mdesc is negative or too high." />
+    <String name="runtimeErr104InvalidRvel" value="&apos;rvel&apos; field in mdesc is negative or too high." />
+    <String name="runtimeErr105InvalidDreach" value="&apos;reach&apos; field in mdesc is negative." />
+    <String name="runtimeErr106InvalidDleave" value="&apos;leave&apos; field in mdesc is negative." />
+    <String name="runtimeErr122IoChannelInvalidOperation" value="Cannot write to an input" />
+    <String name="runtimeErr123IoChannelNotConnected" value="IO not linked to a hardware input-output." />
+    <String name="runtimeErr125IoChannelHwAccess" value="No answer from input-output." />
+    <String name="runtimeErr126IoChannelInvalidFormat" value="Invalid input-output format (float/integer/signed/unsigned)" />
+    <String name="runtimeErr150MotionError" value="Robot stopped on a previous impossible movement (target out of reach, incorrect arm configuration, or singularity)" />
+    <String name="runtimeErr153MotionInternalError" value="Unsupported movement command." />
+    <String name="runtimeErr154MotionParameterError" value="Invalid movement command: invalid destination point or mdesc." />
+    <String name="runtimeErr160InvalidFlange" value="The coordinates of tool &lt;flange&gt; have been modified" />
+    <String name="runtimeErr161InvalidWorld" value="The coordinates of frame &lt;world&gt; have been modified" />
+    <String name="runtimeErr162PointNotLinked" value="Point not linked to a reference frame. See VAL3 reference manual." />
+    <String name="runtimeErr163FrameNotLinked" value="Frame not linked to a reference frame. See VAL3 reference manual." />
+    <String name="runtimeErr164ToolNotLinked" value="Tool not linked to a reference tool. See VAL3 reference manual." />
+    <String name="runtimeErr165InvalidLink" value="Cannot link a global frame, point or tool to a local data." />
+    <String name="runtimeErr170InvalidMobileChain" value="Cannot link a mobile frame to another mobile frame" />
+    <String name="runtimeErr171FrameNotMobile" value="Frame was not declared mobile" />
+    <String name="runtimeErr200IpConnectionFailed" value="Ethernet connection failed." />
+    <String name="runtimeErr250TrialTimeElapsed" value="Trial Time Elapsed" />
+    <String name="runtimeErr270InvalidFilePath" value="Invalid file path" />
+    <String name="runtimeErr271CannotReadFile" value="Cannot read file" />
+    <String name="runtimeErr290InvalidTrajType" value="Invalid trajectory type" />
+    <String name="runtimeErr301ExternalAxisPosNeeded" value="External axis position needed" />
+    <String name="runtimeErr999OtherSeeLogger" value="See events logger for more information." />
+    <String name="runtimeErrDefaultMessage" value="Please read the VAL3 reference manual for a diagnostic of this runtime error." />
+    <String name="runtimeErrorMsg" value="VAL3 runtime error. " />
+    <String name="stopMsg" value="Pending movement commands have been canceled" />
+  </Resources>
+  <Resources name="SIN" >
+    <String name="alreadyExist" value="already exists" />
+    <String name="alreadyExistAsGlobal" value="name already exists as global data" />
+    <String name="ambiguousExpression" value="Ambiguous expression" />
+    <String name="argumentsNotAllowed" value="Arguments are not allowed." />
+    <String name="arrayOverflow" value="array overflow" />
+    <String name="assignNotAllowedInNestedExpression" value="Operator &apos;=&apos; is not allowed in a nested expression" />
+    <String name="compilationError" value="cannot load (see errors file)" />
+    <String name="configError" value="Configuration error" />
+    <String name="data" value="data" />
+    <String name="dataCorrupted" value="corrupted data (unknown field)" />
+    <String name="dataExpected" value="data expected" />
+    <String name="differentTypes" value="case contains different types" />
+    <String name="doNotMatch" value="does not match" />
+    <String name="duplicatedArrayItem" value="duplicated array item" />
+    <String name="duplicatedEnd" value="&apos;begin&apos; has already an &apos;end&apos;" />
+    <String name="duplicatedFile" value="duplicated file" />
+    <String name="endOfLine" value="At end of line" />
+    <String name="error" value="Error" />
+    <String name="file" value="file" />
+    <String name="fileCannotOpen" value="invalid file" />
+    <String name="fileNotFound" value="file not found" />
+    <String name="found" value="found" />
+    <String name="functionUndefined" value="undefined function" />
+    <String name="heapOverflow" value="Data memory overflow" />
+    <String name="indexNotAllowed" value="index not valid in context" />
+    <String name="indexRequired" value="array index required" />
+    <String name="internalCompilerError" value="internal compiler error" />
+    <String name="invalidAccess" value="invalid access" />
+    <String name="invalidBinaryOperator" value="Invalid binary operator for these types" />
+    <String name="invalidCasePosition" value="Invalid case position" />
+    <String name="invalidContainer" value="invalid container" />
+    <String name="invalidFieldName" value="invalid structure field name" />
+    <String name="invalidFunctionType" value="this instruction does not return the expected data type" />
+    <String name="invalidHeapSize" value="invalid data memory size" />
+    <String name="invalidKey" value="invalid key or index" />
+    <String name="invalidKeyValue" value="invalid value" />
+    <String name="invalidLibrary" value="invalid library or wrong password" />
+    <String name="invalidZipLibrary" value="%s : invalid ZIP library" />
+    <String name="invalidLibraryIdent" value="Invalid library identifier" />
+    <String name="invalidName" value="invalid name" />
+    <String name="invalidOperator" value="invalid operator" />
+    <String name="invalidOperatorType" value="This operator does not return the expected data type" />
+    <String name="invalidParameterContainer" value="invalid parameter container" />
+    <String name="invalidParameterDimensions" value="invalid parameter dimensions" />
+    <String name="invalidParameterType" value="Invalid parameter type" />
+    <String name="invalidParameterValue" value="invalid parameter value" />
+    <String name="invalidReference" value="invalid circular reference" />
+    <String name="invalidRoutineCall" value="Invalid parameter in call" />
+    <String name="invalidSeparator" value="invalid separator" />
+    <String name="invalidSwitchStructure" value="invalid sequence in switch statement, cannot use case after default"/>
+    <String name="invalidType" value="invalid type" />
+    <String name="invalidUnaryOperator" value="invalid unary operator for this type" />
+    <String name="invalidValue" value="invalid value" />
+    <String name="libraryAlreadyUsed" value="Interface already used by alias " />
+    <String name="line" value="line" />
+    <String name="lineCorrupt" value="Line corrupted" />
+    <String name="lineTooLong" value="line too long" />
+    <String name="linkDataCorrupted" value="Linked data %s is corrupted" />
+    <String name="linkedDataNotFound" value="Linked data %s not found or type mismatch or index overflow" />
+    <String name="memoryFull" value="system memory full" />
+    <String name="missing" value="missing" />
+    <String name="missingAlias" value="missing library identifier" />
+    <String name="missingAliasToken" value="token &lt;identifier&gt; missing" />
+    <String name="missingBegin" value="Missing keyword : &apos;begin&apos;" />
+    <String name="missingCloseBracket" value="missing parenthesis &apos;]&apos;" />
+    <String name="missingCloseParenthesis" value="missing parenthesis &apos;)&apos;" />
+    <String name="missingCloseStruct" value="missing parenthesis &apos;}&apos;" />
+    <String name="missingCode" value="No VAL3 code found in program" />
+    <String name="missingCondition" value="case is missing condition" />
+    <String name="missingDimensions" value="one or many dimensions are missing" />
+    <String name="missingEnd" value="Missing keyword: &apos;end&apos;" />
+    <String name="missingEqual" value="missing &apos;=&apos; after &apos;for&apos;" />
+    <String name="missingHeadQuote" value="initial string character \&quot; is missing" />
+    <String name="missingIdentifiant" value="missing identifier" />
+    <String name="missingKey" value="missing key" />
+    <String name="missingLibraryName" value="missing library name" />
+    <String name="missingLvalue" value="modifiable object required" />
+    <String name="missingOpenParenthesis" value="missing parenthesis &apos;(&apos;" />
+    <String name="missingOperator" value="missing operator" />
+    <String name="missingParameter" value="missing parameter" />
+    <String name="missingRoutine" value="missing program" />
+    <String name="missingSwitch" value="&apos;switch&apos; missing" />
+    <String name="missingTest" value="test condition expected. Did you mean &apos;==&apos; ?" />
+    <String name="missingTo" value="&apos;to&apos; expected" />
+    <String name="missingTokenProc" value="Missing &apos;procedure&apos; token" />
+    <String name="missingTrailQuote" value="trailing string character \&quot; is missing" />
+    <String name="missingType" value="missing type" />
+    <String name="missingVal3" value="missing VAL3 expression" />
+    <String name="nameTooLongError" value="name too long" />
+    <String name="noEffect" value="code line has no effect." />
+    <String name="noFunctionError" value="unknown instruction" />
+    <String name="noLocalDataAllowed" value="No local data are allowed in this context !!" />
+    <String name="noName" value="no specified name after" />
+    <String name="noOpForType" value="invalid or unsupported operator for these data types" />
+    <String name="noProjectDefined" value="no application defined" />
+    <String name="noTypeMatchExpression" value="no type found that matches expression " />
+    <String name="notAStruct" value="struct type required" />
+    <String name="oneDefaultCaseAllowed" value="only one default case is allowed" />
+    <String name="prjCantSave" value="cannot save project" />
+    <String name="required" value="required" />
+    <String name="reservedWord" value="reserved word : " />
+    <String name="routineBusy" value="Program busy" />
+    <String name="routineNameUsedError" value="program name already used" />
+    <String name="routineUndefined" value="undefined program" />
+    <String name="runtimeError" value="Runtime error" />
+    <String name="runtimeErrorNbr" value="Runtime error %d during data initialization" />
+    <String name="runtimeStackOverflow" value="Runtime memory overflow" />
+    <String name="stepRequired" value="&apos;Step&apos; keyword required" />
+    <String name="stringTooLong" value="string too long" />
+    <String name="syntaxError" value="syntax error" />
+    <String name="systemMemoryFull" value="memory full" />
+    <String name="taskIdle" value="INACTIVE" />
+    <String name="taskRunning" value="ACTIVE" />
+    <String name="taskStopped" value="STOPPED" />
+    <String name="taskTransition" value="TRANSITION" />
+    <String name="toMissing" value="&apos;to&apos; missing" />
+    <String name="tooManyDimensions" value="Too many dimensions" />
+    <String name="tooManyFields" value="&apos;}&apos; expected (too many fields for this data type)" />
+    <String name="tooManyNestedExpressions" value="The maximum number of nested expressions is reached" />
+    <String name="tooManyParameters" value="too many parameters" />
+    <String name="twoUnaryOp" value="two successive unary operators (use parenthesis)" />
+    <String name="typeDoesNotMatch" value="case type does not work match switch type" />
+    <String name="typeFieldDoesNotMatch" value="field's type does not match" />
+    <String name="typeNotLinked" value="Type does not support link" />
+    <String name="typeRoot" value="Type %s has already a root:%s" />
+    <String name="typeUndefined" value="type undefined" />
+    <String name="undefined" value="undefined" />
+    <String name="undefinedField" value="struct field undefined" />
+    <String name="unexpectedCharacters" value="unexpected chars in identifier " />
+    <String name="unexpectedIdentifier" value="missing or invalid name or keyword" />
+    <String name="unexpectedKey" value="use of key or index invalid in that context" />
+    <String name="unexpectedReference" value="use of reference &apos;&amp;&apos; invalid in that context" />
+    <String name="unexpectedToken" value="invalid keyword in that context" />
+    <String name="unexpectedTrailingChars" value="unexpected trailing characters" />
+    <String name="unlinkedBegin" value="&apos;begin&apos; without &apos;end&apos;" />
+    <String name="unlinkedBreak" value="&apos;break&apos; without &apos;case&apos;" />
+    <String name="unlinkedCase" value="&apos;case&apos; without &apos;break&apos;" />
+    <String name="unlinkedDo" value="&apos;do&apos; without &apos;until&apos;" />
+    <String name="unlinkedElse" value="&apos;else&apos; without &apos;endIf&apos;" />
+    <String name="unlinkedElseIf" value="&apos;elseIf&apos; without &apos;endIf&apos;" />
+    <String name="unlinkedEnd" value="&apos;end&apos; without &apos;begin&apos;" />
+    <String name="unlinkedEndFor" value="&apos;endFor&apos; without &apos;for&apos;" />
+    <String name="unlinkedEndIf" value="&apos;endIf&apos; without &apos;if&apos;" />
+    <String name="unlinkedEndSwitch" value="&apos;endSwitch&apos; without &apos;switch&apos;" />
+    <String name="unlinkedEndWhile" value="&apos;endWhile&apos; without &apos;while&apos;" />
+    <String name="unlinkedFor" value="&apos;for&apos; without &apos;endFor&apos;" />
+    <String name="unlinkedIf" value="&apos;if&apos; without &apos;endIf&apos;" />
+    <String name="unlinkedSwitch" value="&apos;switch&apos; without &apos;endSwitch&apos;" />
+    <String name="unlinkedUntil" value="&apos;until&apos; without &apos;do&apos;" />
+    <String name="unlinkedWhile" value="&apos;while&apos; without &apos;endWhile&apos;" />
+    <String name="unresolvedExtSymbol" value="Unresolved external symbol" />
+    <String name="unterminatedStringError" value="unterminated string" />
+  </Resources>
+  <Resources name="SCC" >
+    <String name="accessCurrentUserName" value="Current profile : " help="Name of the current profile for interface access control." />
+    <String name="accessDefaultUserName" value="Starting profile : " help="Selected profile after reboot." />
+    <String name="accessEditDefaultUserPageTitle" value="Edit" help="Change current or starting profiles." />
+    <String name="accessNodeTitle" value="Access control" help="" />
+    <String name="accessPageInvalidPasswordMsg" value="Invalid password" />
+    <String name="accessPagePasswordEdit" value="Password : " help="Login password for the new profile." />
+    <String name="accessPageUserNameEdit" value="Profile : " />
+    <String name="appGlobalStatusNoErrMsg" value="All devices are running" />
+    <String name="appGlobalStatusTitle" value="Error" />
+    <String name="appNodeStartTcpPopup" value="Fieldbus board(s) will be shutdown to allow reconfiguration." />
+    <String name="applicomInfoPageTitle" value="Information" />
+    <String name="applicomInitTcpErrorMsg" value="The fielbus board(s) could not be shutdown" />
+    <String name="applicomInitTcpRebootMsg" value="You can now reconfigure you fieldbus board(s). Then reboot the controller to restart fieldbus communication." />
+    <String name="applicomNoError" value="OK" />
+    <String name="applicomPortInfo" value="Device status : " />
+    <String name="dateApril" value="April" />
+    <String name="dateAugust" value="August" />
+    <String name="dateAutomatic" value="Automatic : " />
+    <String name="dateDay" value="Day    : " />
+    <String name="dateDecember" value="December" />
+    <String name="dateEditTitle" value="Update date and time" help="Page to update date and time" />
+    <String name="dateError" value="Day value is incorrect." />
+    <String name="dateFebruary" value="February" />
+    <String name="dateGmt" value="Gmt : " />
+    <String name="dateHour" value="Hour   : " />
+    <String name="dateJanuary" value="January" />
+    <String name="dateJuly" value="July" />
+    <String name="dateJune" value="June" />
+    <String name="dateMarch" value="March" />
+    <String name="dateMay" value="May" />
+    <String name="dateMinute" value="Minute : " />
+    <String name="dateMonth" value="Month  : " />
+    <String name="dateMonthAbb0" value="Jan." />
+    <String name="dateMonthAbb1" value="Feb." />
+    <String name="dateMonthAbb2" value="Mar." />
+    <String name="dateMonthAbb3" value="Apr." />
+    <String name="dateMonthAbb4" value="May" />
+    <String name="dateMonthAbb5" value="June" />
+    <String name="dateMonthAbb6" value="July" />
+    <String name="dateMonthAbb7" value="Aug." />
+    <String name="dateMonthAbb8" value="Sep." />
+    <String name="dateMonthAbb9" value="Oct." />
+    <String name="dateMonthAbba" value="Nov." />
+    <String name="dateMonthAbbb" value="Dec." />
+    <String name="dateNovember" value="November" />
+    <String name="dateOctober" value="October" />
+    <String name="dateSeptember" value="September" />
+    <String name="dateServerError" value="Cannot reach time server" />
+    <String name="dateServerIp" value="Server IP : " />
+    <String name="dateTimeFormat" value="%d %m %Y, %H:%M:%S" />
+    <String name="dateYear" value="Year   : " />
+    <String name="dioAnalogInputTitle" value="Ainputs" help="" />
+    <String name="dioAnalogOutputTitle" value="Aoutputs" help="" />
+    <String name="dioDigitalInputTitle" value="Dinputs" help="" />
+    <String name="dioDigitalOutputTitle" value="Doutputs" help="" />
+    <String name="dioCtrlNode" value="Controller" help="" />
+    <String name="dioCtrlNodeExportMsgError" value="Error during export" />
+    <String name="dioCtrlNodeExportPopup" value="Please insert Floppy" />
+    <String name="dioCtrlNodeImportConfirmMsg" value="Warning! The cell configuration (I/O, IP address...) will be modified after next reboot." />
+    <String name="dioCtrlNodeImportMsg" value="Reboot now to update system cell configuration" />
+    <String name="dioCtrlNodeImportMsgError" value="Error during import" />
+    <String name="dioPageError" value="Not a IO!" />
+    <String name="dioPageTitle" value="Select IO" help="" />
+    <String name="dioProgramTbuttonsAccessDenied" value="Your profile does not allow you to program the (1) (2) (3) keys." />
+    <String name="dioRenameWarningTitle" value="Warning" />
+    <String name="ioAccessDenied" value="Your profile does not allow you to modify outputs." />
+    <String name="diskMemoryUnitsMegaBytes" value=" Kb" />
+    <String name="systemNotReady" value=" System is not ready" />
+    <String name="systemNotRunning" value=" System is no longer running" />
+    <String name="drive" value="Drive" />
+    <String name="driveSimulated" value="[S]" />
+    <String name="driveErrSensor" value=" Sensor error" />
+    <String name="driveNotConfigured" value=" drive not configured" />
+    <String name="driveErrBusNotReady" value=" drive not reachable" />
+    <String name="driveErrBusOverVoltage" value=" BusOverVoltage" />
+    <String name="driveErrBusUnderVoltage" value=" BusUnderVoltage" />
+    <String name="driveErrCurrentSensorNoise" value=" CurrentSensorNoise" />
+    <String name="driveErrCurrentSensorOffset" value=" CurrentSensorOffset" />
+    <String name="driveErrDspNotReady" value=" DspNotReady" />
+    <String name="driveErrHardwareFault" value=" HighPowerStillOn" />
+    <String name="driveErrIpmFault" value=" IpmFault" />
+    <String name="driveErrNoCompensation" value=" NoValidCompensation" />
+    <String name="driveErrOverSpeed" value=" OverSpeed" />
+    <String name="driveErrOverTemperature" value=" DriveOverTemperature" />
+    <String name="driveErrPllNotLocked" value=" CommunicationErrorPllNotLocked" />
+    <String name="driveErrPosError" value=" PositionError" />
+    <String name="driveErrPosIncoherence" value=" PositionIncoherence" />
+    <String name="driveErrPowerBoard" value=" PowerBoardNotDefined" />
+    <String name="driveErrSsiNotSynchState" value=" SsiIsNotInSynchronousState" />
+    <String name="driveErrWatchdog" value=" WatchdogOrOverrunOrVoltageSupervisor" />
+    <String name="driveInfoPageTitle" value="Status" />
+    <String name="driveStatusDisabled" value="Disabled" />
+    <String name="driveStatusDisabling" value="Disabling" />
+    <String name="driveStatusEnabled" value="Enable" />
+    <String name="driveStatusEnabling" value="Enabling" />
+    <String name="driveStatusFault" value="Error" />
+    <String name="driveStatusWarning" value="Warning" />
+    <String name="drivesNodeTitle" value="Drives Information" help="" />
+    <String name="driveWarningDriveFoldback" value=" DriveFoldback" />
+    <String name="driveWarningLoggerFull" value=" FaultLogIsFull" />
+    <String name="driveWarningMotorFoldback" value=" MotorFoldback" />
+    <String name="errHardwareError" value="Serial Port Error" />
+    <String name="errInvalidName" value="Invalid Name" />
+    <String name="errNameAlreadyUsed" value="Name already used." />
+    <String name="errTitle" value="Error" />
+    <String name="fieldbusChangePortMsg" value="Warning! The fieldbus console port will be modified with the next reboot." />
+    <String name="fieldbusPageTitle" value="Fieldbus console port" help="" />
+    <String name="fieldbusRemotePort" value="Fieldbus console port: " help="Ethernet TCP port to communicate with the fieldbus console tool." />
+    <String name="fileExportPageDestination" value="Destination : " />
+    <String name="fileExportPageSource" value="Source : " />
+    <String name="fileExportPageTitle" value="Export" help="" />
+    <String name="fileImportPageTitle" value="Import" help="" />
+    <String name="fileSelectLocation" value="Location: " help="Folder or support for the file" />
+    <String name="fileSelectName" value="Name: " />
+    <String name="fileSelectTitle" value="Select a file" help="" />
+    <String name="filemgrDeletePopupMsg" value=" and its content won&apos;t be displayed any more." />
+    <String name="filemgrDeletePopupTitle" value="Remove FTP connection" />
+    <String name="filemgrFlash" value="Disk" />
+    <String name="filemgrFloppy" value="Floppy" />
+    <String name="filemgrNode" value="Files" help="" />
+    <String name="filemgrNoProject" value=" : no application found" />
+    <String name="filemgrProjectsBrowsingError" value="Error during browsing" />
+    <String name="filemgrTemplates" value="Templates" />
+    <String name="frameErrorOx" value="Ox too near to Origin." />
+    <String name="frameErrorOxy" value="Oxy is in line with points Origin and Ox." />
+    <String name="frameOrigin" value="Origin:" help="Origin of the frame being taught" />
+    <String name="frameTeachMoveMsg" value="Press Move/Hold to go to the selected location" />
+    <String name="frameTeachOrigin" value="Origin:" help="Shifted origin, to be used only when axis X and Y points cannot be taught next to the Origin point RPEI" />
+    <String name="frameTeachOx" value="Axis X:" help="Point to teach on axis X, in the positive direction. If shifted origin O is used, Axis X must be on the shifted axis X." />
+    <String name="frameTeachOxy" value="Axis Y:" help="Point to teach on plan XY, in the positive direction of Y. If shifted origin O is used, Axis Y must be on the shifted plan XY." />
+    <String name="frameTitle" value=" teaching" help="" />
+    <String name="frameUndefined" value=" undefined" />
+    <String name="freeDiskSpaceClearFailed" value="Impossible to clear device" />
+    <String name="freeDiskSpaceClearWarning" value="All applications contained in this device will be erased" />
+    <String name="freeDiskSpaceWarningTitle" value="Warning" />
+    <String name="ftpHostIp" value="IP address: " />
+    <String name="ftpHostName" value="Name: " help="This name is only used for display" />
+    <String name="ftpLoginPassword" value="Login password: " />
+    <String name="ftpLoginUser" value="Login user: " />
+    <String name="ftpPath" value="Path: " help="Path to a folder of the FTP server" />
+    <String name="ftpPathExist" value="FTP path already used." />
+    <String name="ftpSettingsTitle" value="New FTP connection" help="New FTP connection" />
+    <String name="gatewayAddErrorDhcpMsg" value="You cannot edit gateway list while DHCP client is running" />
+    <String name="gatewayAddErrorMsg" value="Invalid gateway: invalid IP of the gateway or subnet, subnet already handled" />
+    <String name="gatewayAddPageDestination" value="Destination : " />
+    <String name="gatewayAddPageGateway" value="Gateway : " />
+    <String name="gatewayAddPageTitle" value="New" help="" />
+    <String name="gatewayEditErrorMsg" value="Invalid gateway: invalid IP of the gateway or subnet, subnet already handled" />
+    <String name="gatewayEditPageTitle" value="Edit" help="" />
+    <String name="gatewayNodeName" value="Gateways" help="" />
+    <String name="gatewayRemoveQuestion" value="Are you sure you want to remove this gateway ?" />
+    <String name="importApplicomFile" value="Import modbus or fieldbus configuration ?" />
+    <String name="importApplicomFileReboot" value="Reboot to use new configuration" />
+    <String name="invalidIpAddress" value="Invalid IP address." />
+    <String name="ioNodeTitle" value="I/O" help="" />
+    <String name="ipAddress" value="Address: " />
+    <String name="ipAutomaticIp" value="Automatic Ip (DHCP): " />
+    <String name="ipDhcpWarningMsg" value="This action will clear your gateway list." />
+    <String name="ipDhcpWarningTitle" value="Warning" />
+    <String name="ipMask" value="Mask: " help="Network mask, usually 255.255.0.0 or 255.0.0.0" />
+    <String name="ipRequesting" value="requesting..." />
+    <String name="m_ipWaiting" value="waiting..." />
+    <String name="ipSettingsConfirmText" value="The controller IP address will be changed immediatly." />
+    <String name="ipSettingsConfirmTitle" value="Update IP settings" />
+    <String name="ipSettingsTitle" value="IP settings" help="" />
+    <String name="ipSettingsUpdateError" value="System event SYS-IP: IP address could not be updated." />
+    <String name="jogCartesianPositionNode" value="Cartesian position" />
+    <String name="jogJointPositionNode" value="Joint position" help="" />
+    <String name="jogToolNode" value="Tool" />
+    <String name="jointEdit" value="Edit joint" help="Edit joint" />
+    <String name="jointLatch" value="Latched position" />
+    <String name="jointVelocity" value="Joint velocity" help="" />
+    <String name="language" value="Language : " />
+    <String name="languageSettingsTitle" value="Language Selection" help="" />
+    <String name="limitsCannotChange" value="Cannot change limits: movements are still pending" />
+    <String name="limitsCombination" value="Combination" />
+    <String name="limitsEdit" value="Edit joint limits" help="" />
+    <String name="limitsError" value="Invalid Values on " />
+    <String name="limitsMaximum" value="max" />
+    <String name="limitsMinimum" value="min" />
+    <String name="limitsOutside" value="Current robot position is outside new limits" />
+    <String name="limitsPolygon" value="Polygon" />
+    <String name="location" value="Location (" help="Edit location" />
+    <String name="locationIn" value="Location in frame " />
+    <String name="maxManuCartSpeed" value="Max manual Cartesian speed : " help="Edit maximum manual Cartesian speed"/>
+    <String name="maxManuCartSpeedTitle" value="Max manual Cartesian speed" help="Edit maximum manual Cartesian speed"/>
+    <String name="maxJntVel" value="Max manual joint velocity" help=""/>
+    <String name="mdescAccel" value="Accel (%)   : " />
+    <String name="mdescDecel" value="Decel (%)   : " />
+    <String name="mdescVel" value="Vel  (%)    : " />
+    <String name="mdescBlend" value="Blend       :   " />
+    <String name="mdescRvel" value="Rvel (deg/s): " />
+    <String name="mdescBlendJoint" value="Joint" />
+    <String name="mdescBlendOff" value="Off" />
+    <String name="mdescBlendCartesian" value="Cartesian" />
+    <String name="mdescDecelVelError" value="Decel must be &gt;= Vel" />
+    <String name="mdescErrorTitle" value="mdesc error" />
+    <String name="mdescSpeed" value="Speed (%)   : " />
+    <String name="mdescSpeedUser" value="USER" />
+    <String name="mdescTitle" value="Edit mdesc" help="Edit motion descriptor" />
+    <String name="mnuAppGLobalStatus" value="Info" help="Get list of devices in error" />
+    <String name="mnuAppNodeStartTcp" value="Init" help="" />
+    <String name="mnuCrtlNodeLoad" value="Imp." help="Import a cell configuration from floppy" />
+    <String name="mnuCrtlNodeSave" value="Exp." help="Save the cell configuration on floppy" />
+    <String name="mnuDateEdit" value="Edit" help="Update system date and time" />
+    <String name="mnuDateSync" value="Sync" help="" />
+    <String name="mnuDioMode" value="Mode" help="Toggle the dio logic : direct / inversed" />
+    <String name="mnuIoDescription" value="Des." help="Description of the input/output" />
+    <String name="mnuDioToggleOn" value="On" help="Switch on dio" />
+    <String name="mnuDioToggleOff" value="Off" help="Switch off dio" />
+    <String name="mnuIoLock" value="Lock" help="Lock in/out" />
+    <String name="mnuIoUnlock" value="Unl." help="Unlock in/out" />
+    <String name="mnuDriveInfo" value="Info" help="Display detailed status of drive" />
+    <String name="mnuFileDelete" value="Del." help="Delete the selected file or folder" />
+    <String name="mnuFileRename" value="Ren." help="Rename the selected file or folder" />
+    <String name="mnuFilemgrDelete" value="Del." help="Delete the selected FTP connection" />
+    <String name="mnuFilemgrEdit" value="Edit" help="Edit the parameters of the selected FTP connection" />
+    <String name="mnuFilemgrNew" value="Ftp" help="Create a new FTP connection" />
+    <String name="mnuFrameEdit" value="Edit" help="Edit the selected frame coordinates" />
+    <String name="mnuFrameHere" value="Here" help="Set the selected frame with the current position of the current tool" />
+    <String name="mnuFrameMove" value="Move" help="Move to the selected location" />
+    <String name="mnuFreeDiskSpaceClear" value="Clear" help="Clear device" />
+    <String name="mnuFreeDiskSpaceRefresh" value="Refr" help="" />
+    <String name="mnuGatewayAdd" value="New" help="" />
+    <String name="mnuGatewayDel" value="Del." help="" />
+    <String name="mnuGatewayEdit" value="Edit" help="" />
+    <String name="mnuInformation" value="Info" help="Get device status" />
+    <String name="mnuIpEdit" value="Edit" help="Update the controller IP address" />
+    <String name="mnuLanguageEdit" value="Edit" help="Change language (requires reboot)" />
+    <String name="mnuLimitsEdit" value="Edit" help="Change software joint limits" />
+	<String name="mnuLimitsRefresh" value="Refr" help="Refresh joint limits display" />
+    <String name="mnuMaxManuCartSpeedEdit" value="Edit" help="Change maximum manual cartesian speed (requires reboot)" />
+    <String name="mnuMdescAdvance" value=" &gt;&gt; " help="Edit complete mdesc parameters" />
+    <String name="mnuMdescUnadvance" value=" &lt;&lt; " help="Edit mdesc main parameters" />
+    <String name="mnuMonitorSpeedEdit" value="Edit" help="Change monitor speed" />
+    <String name="mnuRecorderInit" value="Init" help="" />
+    <String name="mnuRecorderStart" value="start" help="" />
+    <String name="mnuRecorderStop" value="stop" help="" />
+    <String name="mnuRecorderStore" value="stor" help="" />
+    <String name="mnuRecorderClear" value="clr." help="Clear all the record files" />
+    <String name="mnuRsiDisplayInfo" value="Info" help="Display detailed status of the Rsi 7 segment display" />
+    <String name="mnuSafetyEdit" value="Edit" help="change emergency stop chain output length" />
+    <String name="mnuSafetyDefaultAck" value="Ack." help="Acknowledge hardware fault" />
+    <String name="mnuSafetyDefaultInfo" value="Info" help="A hardware fault was detected by the controller: robot safety level is reduced" />
+    <String name="mnuSensorInfo" value="Info" help="" />
+    <String name="mnuSerialEdit" value="Edit" help="Change serial line parameters" />
+    <String name="mnuSocketDel" value="Del." help="Delete the selected socket client or server" />
+    <String name="mnuSocketNew" value="New." help="Create a new socket client or server" />
+    <String name="mnuSocketProperties" value="Edit" help="Edit the properties of the selected socket client or server." />
+    <String name="mnuSocketRename" value="Ren." help="Rename the socket client or server connection" />
+    <String name="mnuSocketTest" value="Test" help="Test the connection to the socket server" />
+    <String name="mnuUnitsEdit" value="Edit" help="Change length unit (mm/inch)" />
+    <String name="modeDirect" value="direct" />
+    <String name="modeInverted" value="inverted" />
+    <String name="modeTitle" value="Dio logic mode" help="Dio logic mode" />
+    <String name="modeTxt1" value="Current dio logic mode is " />
+    <String name="modeTxt2" value=". Switch to mode " />
+    <String name="monitorSpeedTitle" value="Monitor speed" help="" />
+    <String name="nodeVersion" value="Versions" help="" />
+    <String name="notAvailable" value="Info not available" />
+    <String name="orientation" value="Orientation (" help="" />
+    <String name="position" value="X Y Z :" />
+    <String name="powerCounter" value="Arm time " help="" />
+    <String name="recorderInfoPageDefaultPath" value="Controller" />
+    <String name="recorderInfoPageDescription" value="Description : " />
+    <String name="recorderInfoPageFileName" value="Record name : " />
+    <String name="recorderInfoPageParamPath" value="Config location: " />
+    <String name="recorderInfoPageRecordPath" value="Record location: " />
+    <String name="recorderInfoPageTitle" value="Information" help="" />
+    <String name="recorderInitErrorMsg" value="Record configuration read error" />
+    <String name="recorderInitParametersError" value="Invalid parameters in record configuration. Check events logger." />
+    <String name="recorderInitStoreFileError" value="Record storage file is not accessible" />
+    <String name="recorderInvalidParameters" value="Record could not start: check configuration" />
+    <String name="recorderStartRecordNotCleared" value="The record in memory will be lost." />
+    <String name="recorderStoreError" value="Record save error" />
+    <String name="recorderStorePageLocation" value="Location : " />
+    <String name="recorderStorePageMsg" value="Choose location to save recording" />
+    <String name="recorderClearConfirmationMsg" value="Delete all record files in " />
+    <String name="recorderClearError" value="Error during clear" />
+    <String name="recorderStorePageTitle" value="Store" help="" />
+    <String name="descriptionIoTitle" value="Modify description" help="Modify description" />
+    <String name="rsiArmPowered" value="Arm is powered" />
+    <String name="rsiBrakesPowerSupplyNotActivated" value="Power supply to the brakes not activated (no 24V2): Contact J104, 5-10 are open, problem ARPS, RSI, or in between ARPS and RSI" />
+    <String name="rsiBrakingCommandNotActivated" value="Braking command not activated by the computer: RSI board defect ?" />
+    <String name="rsiDriveFault" value="Amplifier fault: DF contact open in J112, 3-4. The control pannel or system history gives the drive in fault and details the failure." />
+    <String name="rsiEstop1OrderMemorised" value="Arm power is disabled, after E-Stop." />
+    <String name="rsiEstop2OrderMemorised" value="ESTOP2 command memorized: unexpected state. RSI defect ?" />
+    <String name="rsiFuseF2OutOfOrder" value="Fuse F2 open or no voltage in J109-37" />
+    <String name="rsiLimitStopActivated" value="Limit stop activated in the arm: J101, 5-12" />
+    <String name="rsiManualBrakeControlActivated" value="Manual brake control activated" />
+    <String name="rsiManualBrakeControlChannel1" value="Manual brake control channel 1 not closed: contacts BRS 4-8 are open. RSI defect ?" />
+    <String name="rsiManualBrakeControlChannel2" value="Manual brake control channel 2 not closed: contacts BRS 9-13 are open. RSI defect ?" />
+    <String name="rsiManualBrakeControlSelected" value="Manual brake select switch not in position 0" />
+    <String name="rsiParkingNotActivated" value="Arm power is disabled, deadman or Parking not activated." />
+    <String name="rsiPowerSupplyProblem" value="RSI board power supply problem: J104, 1-6 or internal power supply issue" />
+    <String name="rsiPowerSupplyNotActivated" value="Brake power supply problem: contacts J105, 1-2 are open, RPS problem." />
+    <String name="rsiPowerUpOrder1NotActivated" value="Arm power is disabled." />
+    <String name="rsiPowerUpOrder2NotActivated" value="Unexpected state: power command signals are inconsistant. RSI problem ?" />
+    <String name="rsiPowerUpSeq1NotActivated" value="Error in power chain 1: PS1 relay not activated. No signal PS-ON1+." />
+    <String name="rsiPowerUpSeq2NotActivated" value="Error in power chain 2: PS2 relay not activated. No signal PS-ON2+" />
+    <String name="rsiPowerUpSeq1NotEffective" value="PS1 relay contacts fault" />
+    <String name="rsiPowerUpSeq2NotEffective" value="PS2 relay contacts fault" />
+    <String name="rsiShortEnEffective" value="SHORTE-EN signal is ignored by the RSI board. RSI problem ?" />
+    <String name="rsiShortEnNotActivated" value="System error on start up, SHORTE-EN command not activated, ESTOP circuit shut down. The system history gives more information on the default." />
+    <String name="rsiThermoSwitchOpen" value="Regeneration thermoSwitch open : contact J303, 3-4 are open, or cabling problem between J1303 and RSI" />
+    <String name="rsiUnknown" value="Unknow Status" />
+    <String name="rsiUserEmergencyStopA1Activated" value="User Emergency stop A1 activated" />
+    <String name="rsiUserEmergencyStopA2Activated" value="User Emergency stop A2 activated" />
+    <String name="rsiUserEmergencyStopB1Activated" value="User Emergency stop B1 activated" />
+    <String name="rsiUserEmergencyStopB2Activated" value="User Emergency stop B2 activated" />
+    <String name="rsiUserEmergencyStopDoor1Activated" value="User Emergency stop UEN1/DOOR1 activated" />
+    <String name="rsiUserEmergencyStopDoor2Activated" value="User Emergency stop UEN2/DOOR2 activated" />
+    <String name="rsiUserEmergencyStopMcp1Activated" value="MCP Emergency stop 1 activated" />
+    <String name="rsiUserEmergencyStopMcp2Activated" value="MCP Emergency stop 2 activated" />
+    <String name="rsiWatchdogOpen" value="Starc Watchdog error. Problem RSI, Starc, or between Starc and RSI." />
+    <String name="rsiWmsEmergencyStop1Activated" value="User Emergency stop A1 activated or WMS emergency stop activated" />
+    <String name="rsiWmsEmergencyStop2Activated" value="User Emergency stop A2 activated or WMS emergency stop activated" />
+    <String name="rxryrz" value="RxRyRz:" help="" />
+    <String name="safetyChainLength" value="E-Stop out : " help="Which e-stops effect ES out." />
+    <String name="safetyChainLengthTitle" value="E-Stop out selection" help="Select length of the safety chain out" />
+    <String name="safetyChainLong" value="including USEN/Door" />
+    <String name="safetyChainShort" value="Without USEN/Door" />
+    <String name="safetyDefaultInfo" value="A hardware fault was detected by the controller: robot safety level is reduced. Repair the faulty signal and active it to show that the hardware fault is solved. Then acknowledge the fault to resume robot operation" help="" />
+    <String name="safetyDefaultNotVisibleInfo" value="Close estop prior to the faulty signal to allow its repair" help="" />
+    <String name="safetyNoDefault" value="No fault" />
+    <String name="safetyDiagnostic" value="Hardware Safety Fault: " />
+    <String name="sensor" value="Sensor" />
+    <String name="sensorErrAlarm" value="Sensor alarm" />
+    <String name="sensorErrBusNotReady" value="DSI board not reachable" />
+    <String name="sensorErrCrc" value="DSI &lt;-&gt; sensor crc error" />
+    <String name="sensorErrDsiResident" value="Error DSI-ResidentMode. DSI board did not boot correctly. Reboot to recover." />
+    <String name="sensorErrFpgaNotToogle" value="Error DSI-FpgaNotToggle. Hardware failure on DSI board. Reboot to recover." />
+    <String name="sensorErrHw" value="DSI &lt;-&gt; sensor hardware error" />
+    <String name="sensorErrNoOffset" value="No sensor offset" />
+    <String name="sensorErrNotConnected" value="Sensor not connected" />
+    <String name="sensorErrNotEnabled" value="DSI board not enabled" />
+    <String name="sensorErrOverrun" value="DSI &lt;-&gt; sensor overrun error" />
+    <String name="sensorErrOverspeed" value="Sensor overspeed" />
+    <String name="sensorFailed" value="Failed" />
+    <String name="sensorInfoPageTitle" value="Status" />
+    <String name="sensorNodeTitle" value="Sensors status" help="" />
+    <String name="sensorWorking" value="working" />
+    <String name="serialBauds" value="Baud rate: " />
+    <String name="serialByteSize" value="Number of bits: " />
+    <String name="serialCommunicationMode" value="Mode : " />
+    <String name="serialEndOfStringChar" value="String delimiter: " />
+    <String name="serialEvenParity" value="even" />
+    <String name="serialFlowControl" value="Flow Control: " />
+    <String name="serialHardwareFlowControl" value="Hardware" />
+    <String name="serialMnuToggle" value="Tog." />
+    <String name="serialNoFlowControl" value="None" />
+    <String name="serialNoParity" value="none" />
+    <String name="serialNodeTitle" value="Serial" help="" />
+    <String name="serialNumberStopBit" value="Nb of Stop Bits: " />
+    <String name="serialOddParity" value="odd" />
+    <String name="serialParity" value="Parity: " />
+    <String name="serialPropertiesPageTitle" value="Parameters" help="" />
+    <String name="serialTimeout" value="Time Out (s): " help="0 for no timeout" />
+    <String name="serialToggleMsg" value="Are you sure ?" />
+    <String name="serialToggleMsgTitle" value="COM2 Switching" />
+    <String name="soapChangePortMsg" value="Warning! The SRS port will be modified with the next reboot." />
+    <String name="soapPageTitle" value="SRS port" help="" />
+    <String name="soapPort" value="SRS port: " help="Ethernet TCP port to communicate with the SRS clients tools." />
+    <String name="socketCannotDeleteInUse" value="Cannot delete : the socket is being used." />
+    <String name="socketCannotEditInUse" value="This property can not be changed while the socket is being used." />
+    <String name="socketClient" value="Client" />
+    <String name="socketCreatePageTitle" value="New" help="" />
+    <String name="socketCreateWarningMsg" value="Please unload and reload ALL current applications to use new socket" />
+    <String name="socketDelConfirmMsg" value="Warning! The socket connection will be deleted." />
+    <String name="socketDeleteWarningMsg" value="Please unload and reload ALL current applications to delete" />
+    <String name="socketEndOfStringChar" value="String delimiter: " />
+    <String name="socketNagle" value="Nagle : " help="Optimization for TCP communication. When enabled, network load is reduced; when disabled, response time is reduced." />
+    <String name="socketName" value="Name : " help="Name of the socket connection" />
+    <String name="socketNbClients" value="Number of clients: " />
+    <String name="socketNodeName" value="Socket" help="List of socket clients and servers" />
+    <String name="socketCltNodeName" value="TCP Clients" help="List of TCP socket clients" />
+    <String name="socketSrvNodeName" value="TCP Servers" help="List of TCP socket servers" />
+    <String name="socketUdpNodeName" value="UDP Sockets" help="List of UDP sockets" />
+    <String name="socketPingKoMsg" value="Server device not reachable on the network" />
+    <String name="socketPort" value="Port : " help="Connection port for the socket" />
+    <String name="socketPropertiesPageTitle" value="Parameters" help="Page to edit socket connection parameters" />
+    <String name="socketRenamePageTitle" value="Rename" help="" />
+    <String name="socketReservedPortMsg" value="Warning! The port belongs to the reserved range [0 - 1000]" />
+    <String name="socketServer" value="Server" />
+    <String name="socketServerIp" value="Server address : " help="IP adress of the socket server" />
+    <String name="socketUdpIp" value="IP address filter : " help="IP address of the socket that it will send data to and accept data from" />
+    <String name="socketSystemPortMsg" value="Warning! A system TCP server is already using this port. Change it or modify system ports using the controller network settings." />
+    <String name="socketTestKoMsg" value="Unable to connect to socket server on the specified address" />
+    <String name="socketTestOkMsg" value="Connection to server OK" />
+    <String name="socketTimeout" value="Time  Out (s) : " help="0 for no timeout" />
+    <String name="socketType" value="Type : " />
+    <String name="socketUdp" value="UDP" />
+    <String name="teachError" value="The current position is out of the limits for joint %z." />
+    <String name="teachJointDefaultTitle" value="Joint teaching" help="" />
+    <String name="teachJointTitle" value="Teaching " />
+    <String name="teachPointTitle" value="Teaching " help="" />
+    <String name="telemaintenanceChangePortMsg" value="Warning! New telemaintenance connections must be done using the newly defined port." />
+    <String name="telemaintenancePageTitle" value="Telemaintenance" help="" />
+    <String name="telemaintenanceRemotePort" value="Telemaintenance port: " help="Ethernet TCP port to communicate with the SRS Telemaintenance tool." />
+    <String name="telnetChangePortMsg" value="Warning! The telnet port will be modified with the next reboot." />
+    <String name="telnetPageTitle" value="Telnet" help="" />
+    <String name="telnetPort" value="Telnet port: " help="Ethernet TCP port to communicate with the telnet protocol." />
+    <String name="units" value="Units : " />
+    <String name="unitsRebootMsg" value="Reboot now to update system configuration" />
+    <String name="unitsSettingsTitle" value="Units Setting" help="" />
+    <String name="updateConfiguration" value="Change Configuration: " help="If set to forced, the point configuration will be taught. If set to same, the point configuration will be &apos;same&apos;." />
+    <String name="vectorCoordinates" value="Coordinates (" help="" />
+    <String name="wmLocked" value="locked" />
+    <String name="wmMnuLock" value="Lock" help="Lock current working mode" />
+    <String name="wmMnuPwd" value="Pwd." help="Change working mode password" />
+    <String name="wmMnuUnlock" value="Unl." help="Unlock working mode" />
+    <String name="wmStatusNode" value="Working mode " />
+    <String name="wmUnlock" value="unlocked" />
+    <String name="multipleIoLock" value="Do you want to LOCK all ios in this node ?" />
+    <String name="multipleIounlock" value="Do you want to UNLOCK all ios in this node ?" />
+  </Resources>
+  <Resources name="CS" >
+    <String name="accessApplicationWrite" value="Your profile does not allow you to change language." />
+    <String name="accessSafetyFaultAck" value="Your profile does not allow you to acknowledge safety fault." />
+    <String name="accessSwapApplication" value="Your profile does not allow you to use the Menu key." />
+    <String name="accessUserLoggedIn" value="New profile : ###" />
+    <String name="appIoEquipmentError" value="Equipment error on fieldbus" />
+    <String name="appIoNetworkError" value="Network error on fieldbus" />
+    <String name="armComment" value="Arm Comment" />
+    <String name="armNotCalibrated" value=" missing : arm is not calibrated" />
+    <String name="armSerialNumber" value="Arm serial number" />
+    <String name="armVersion" value="Arm" />
+    <String name="axisLimitsFile" value="(file : " />
+    <String name="bootArmCfCfxNotFound" value="No arm.cf or arm.cfx found" />
+    <String name="bootFileOnFd" value="%s loaded from flashdisk" />
+    <String name="bootFileOnUsb" value="%s loaded from usb device" />
+    <String name="bootLogOnUsb" value="Log partition mounted on usb device" />
+    <String name="bootSysOnUsb" value="Sys partition mounted on usb device" />
+    <String name="bootUsrOnUsb" value="Usr partition mounted on usb device" />
+    <String name="bootBuildSoftComponents" value="Building Software Components" />
+    <String name="bootLoadApp" value="Loading Utilities" />
+    <String name="calBadConfig" value="System event DRIVE-InvalidConfiguration axis %d" />
+    <String name="calCalibOffsetNotMatch" value="DSI board and arm.cfx zero offsets do not match, axis %d" />
+    <String name="calNoCalibOffset" value="Zero offset has never been written or is invalid, axis %d" />
+    <String name="calCoderCommunicationError" value="Encoder serial communication error. Calibration lost axis %d" />
+    <String name="calCoderLineBroken" value="Encoder analog input error. Calibration lost axis %d" />
+    <String name="calIllegalSequence" value="System event DAPS-IllegalSequence on axis %d" />
+    <String name="calInvalidPos" value="Invalid arm calibration data: arm configuration file arm.cf is missing or invalid." />
+    <String name="calLowBattery" value="Calibration battery low voltage." />
+    <String name="calMotionDetected" value="Motor position has changed since last controller shutdown. Calibration lost axis %d" />
+    <String name="calNotInitialized" value="Drive is not initialized. Calibration lost axis %d" />
+    <String name="calOverSpeed" value="Over speed error. Calibration lost axis %d" />
+    <String name="calOverflow" value="System event DAPS-Overflow on axis %d" />
+    <String name="calPowerDownFailure" value="Position was not saved at controller shutdown. Calibration lost axis %d" />
+    <String name="calResolverLoss" value="Not able to read the motor position. Calibration lost on axis %d" />
+    <String name="calSensorInError" value="Cannot calibrate axis %d: sensor in error." />
+    <String name="calSensorOffsetNotMatch" value="DSI board and arm.cfx phase offsets do not match for axis %d" />
+    <String name="calNoSensorOffset" value="Phase offset has never been written or is invalid, axis %d" />
+    <String name="calAxisMove" value="Calibration failed because axis has moved during calibration process axis %d" />
+    <String name="calUnknowError" value="System event DRIVE-UnexpectedCalibrationError axis %d" />
+    <String name="cbiAppliRestart" value=" events lost." />
+    <String name="cbiAppliStop" value="System event INTERFACE-Stopped  (" />
+    <String name="cbiCannotLoadApplication" value="The following application could not be opened at boot:" />
+    <String name="cbiCannotStartApplication" value="The following application could not be run at boot:" />
+    <String name="cbiInterfaceError" value="Error in system interface code" />
+    <String name="ceilingMounted" value="ceiling" />
+    <String name="celAccessWorkingMode" value="Your profile does not allow you to change the working mode." />
+    <String name="cmdOutOfLimits" value="Out of range axis #%d" />
+    <String name="compliantMoveTooLong" value="Compliant Move too long" />
+    <String name="configVersion" value="Configuration Version" />
+    <String name="controllerComment" value="Controller Comment" />
+    <String name="controllerSerialNumber" value="Machine Number" />
+    <String name="copyright" value="     (c) Stäubli Faverges 2002-2012" />
+    <String name="dhcpNewLease" value="New automatic IP : ###" />
+    <String name="driveNbr" value="drive #" />
+    <String name="enveloppeError" value="Envelop error axis #" />
+    <String name="errorMsgConnexionRefused" value="Device is not ready" />
+    <String name="errorMsgDeviceError" value="Device is in error" />
+    <String name="errorMsgDeviceNotFound" value="Device not found" />
+    <String name="errorMsgDeviceReadOnly" value="Device is read only." />
+    <String name="errorMsgDeviceTimeout" value="Device timeout" />
+    <String name="errorMsgDiskFull" value="Disk is full" />
+    <String name="errorMsgDiskNotPresent" value="Media is not present" />
+    <String name="errorMsgFileNotFound" value="File not found" />
+    <String name="errorMsgFtpAccessError" value="Remote file system error" />
+    <String name="errorMsgFieldbusBoardMissing" value="No board found for &lt;%s&gt;" />
+    <String name="errorMsgFtpInvalidUser" value="Invalid Ftp login" />
+    <String name="errorMsgFtpKernelError" value="Internal error: not able to create Ftp client" />
+    <String name="errorMsgFtpParametersError" value="Invalid Ftp path" />
+    <String name="errorMsgFtpServerNotFound" value="No FTP Server running at the specified IP address." />
+    <String name="errorMsgFtpStorageAllocationExceeded" value="Remote disk is full" />
+    <String name="errorMsgFtpUnknownHost" value="Cannot reach specified IP address of the FTP Server" />
+    <String name="errorMsgUnformated" value="Device is not formatted" />
+    <String name="errorMsgUnknownError" value="File system error" />
+    <String name="errorMsgWhenStarting" value="Error when starting:" />
+    <String name="externAxisMoveDisabled" value="Cannot move external axis while it is disabled." />
+    <String name="errorMsgWriteProtected" value="Device is write protected" />
+    <String name="evtDapsVersion" value="DAPS board version " />
+    <String name="floorMounted" value="floor" />
+    <String name="gravity" value="Gravity (x y z):" />
+    <String name="ht414CannotStop" value="Applications can not be stopped manually in remote mode" />
+    <String name="ht414DeadmanCoherency" value="Deadman error: check that the deadman switch is pressed." />
+    <String name="ht414ParkCoherency" value="Teach pendant parking error: check that the pendant is correctly parked in the cradle." />
+    <String name="initMsg" value="Initialization in progress ..." />
+    <String name="internalError" value="Internal error " />
+    <String name="internalErrorSaf" value="Internal error SAFETY-" />
+    <String name="internalPmAlimOkDown" value="Arm power shutdown: internal power error (CS8: 24V_2, CS8C: ALIM_OK in ARPS module). Reboot is needed to recover." />
+    <String name="internalPmSecteurOkDown" value="Arm power shutdown: controller power supply shutdown detected (SECTEUR_OK signal). Reboot is needed to recover." />
+    <String name="isMissing" value=" is missing" />
+    <String name="isUnknown" value=" is unknown" />
+    <String name="keyWmButtonHasNoEffect" value="Working mode button has no effect" />
+    <String name="keyWmTestNotAllowed" value="Test mode is not allowed" />
+    <String name="keyWMActive" value="Use of WMS is not allowed" />
+    <String name="logFull" value="Internal error INTERFACE-EventLost : some system event messages will be lost." />
+    <String name="logRestart" value="End of internal error INTERFACE-EventLost." />
+    <String name="logSwapMsg" value="Log restarted after swap" />
+    <String name="logRepaired" value="Log partition has been repaired" />
+    <String name="macAddress" value="Mac Address = " />
+    <String name="invalidMacAddress" value="Network error: invalid MAC address." />
+    <String name="mcpConnected" value="Simulated MCP connected" />
+    <String name="mode" value="Working mode:" />
+    <String name="modeInvalid" value="invalid." />
+    <String name="modeLocal" value="automatic." />
+    <String name="modeManuFast" value="test." />
+    <String name="modeManuSlow" value="manual." />
+    <String name="modeRemote" value="remote." />
+    <String name="motionAbAngleExceed180Deg" value="Angle between circle start and intermediate points exceeds 180 deg." />
+    <String name="motionAbcTooClose" value="Circle start, intermediate and end points are too close." />
+    <String name="motionAccError" value="Invalid accel value in mdesc" />
+    <String name="motionBcAngleExceed180Deg" value="Angle between circle intermediate and end points exceeds 180 deg." />
+    <String name="motionBlendingError" value="Invalid blending in mdesc" />
+    <String name="motionBlendCartDiffKine" value="'Cartesian' blending is not possible when switching between {external axes+arm} and {arm only} kinematics." />
+    <String name="motionBlendJntTracking" value="'joint' blending is not supported with tracking" />
+    <String name="motionBlendOnCompliant" value="blending is not supported with compliance" />
+    <String name="motionBlendOnSpline" value="blending is not supported with splines" />
+    <String name="motionBlendOnTrajMove" value="blending is not supported with trajMove" />
+    <String name="motionCartBlendRotTooBig" value="Cart blending rotation angle too big" />
+    <String name="motionDecError" value="Invalid decel value in mdesc" />
+    <String name="motionJogOutOfRange" value="Cannot jog arm: a software limit has been reached on axis %z." />
+    <String name="motionNotReachable" value="Cannot complete move: destination is out of reach." />
+    <String name="motionOutOfRange" value="Cannot move: destination is out of software axis limits" />
+    <String name="motionPartMountingError" value="Part mounting error" />
+    <String name="motionSingularity" value="Cannot move: cannot cross singularity in this case." />
+    <String name="motionTwoRotationChoices" value="Orientation change between start and intermediate, or intermediate and end points is exactly 180°: direction of move is undetermined." />
+    <String name="motionVelAxisError" value="Overspeed command on axis %d" />
+    <String name="motionVelError" value="Invalid vel value in mdesc" />
+    <String name="notReachableConfig" value="(incompatible arm configuration)" />
+    <String name="notReachableLimits" value="(out of software joint limits)" />
+    <String name="notReachableWorkspace" value="(out of arm workspace)" />
+    <String name="optionName" value="Option : " />
+    <String name="powerDisabled" value="End of arm power shutdown phase." />
+    <String name="powerEnabled" value="Arm power settled." />
+    <String name="powerError" value="system event POWER-Error" />
+    <String name="powerHourCount" value="Power hour count = " />
+    <String name="powerOff" value="Arm power shutdown..." />
+    <String name="powerOffRequest" value="simultaneous arm power shutdown request." />
+    <String name="powerOkError" value="system event POWER-PWR_OK-Error" />
+    <String name="powerOn" value="Settling arm power..." />
+    <String name="quickBoot" value="Press &apos;q&apos; for quick boot" />
+    <String name="rcAccessDout" value="Your profile does not allow you to modify outputs." />
+    <String name="rcAccessMonitorSpeed" value="Your profile does not allow you to change monitor speed" />
+    <String name="rcAccessProgramStop" value="Your profile does not allow you to stop the running application." />
+    <String name="rcAccessRemoteMovehold" value="Your profile does not allow you to use move/hold in remote mode." />
+    <String name="rcAccessRemotePower" value="Your profile does not allow you to disable power in remote mode." />
+    <String name="rcAutoEnable" value="Cannot apply arm power: park the pendant on the cradle." />
+    <String name="rcConnectionOk" value="End of connection move." />
+    <String name="rcDofSelection" value="Invalid move axis or direction" />
+    <String name="rcEstop" value="Cannot apply arm power: after an emergency stop, the teach pendant must be parked again." />
+    <String name="rcEstopRemoteAck" value="Cannot apply arm power: after an emergency stop, eStop acknowledge signal (as configured in iomap.cf) must be validated." />
+    <String name="rcFastSpeedValidated" value="Fast test mode enabled. Use monitor speed keys to increase maximum speed." />
+    <String name="rcLocalEnableError" value="Arm power enable request refused: cabinet working mode is remote or invalid." />
+    <String name="rcManuDoutEnable" value="Cannot write to output: press and hold the deadman switch to enable." />
+    <String name="rcManuDoutMode" value="Output write impossible: first select manual working mode." />
+    <String name="rcManuEnable" value="Cannot apply arm power: press and hold the deadman switch." />
+    <String name="rcManuFastRequested" value="Remote fast speed request refused: cabinet working mode is not test." />
+    <String name="rcManuMode" value="Manual motion mode:" />
+    <String name="rcManuSlow" value="Turn off arm power or switch to manual mode . Jogging is not possible in this mode" />
+    <String name="rcManuValidationDeadman" value="Cannot apply arm power: release &amp; press deadman to enable arm power request." />
+    <String name="rcNotCalibrated" value="The robot is not calibrated: only joint jog move is possible." />
+    <String name="rcNotDisabled" value="Cannot apply arm power: arm power is still in disabling phase." />
+    <String name="rcNotEnabled" value="Jog mode cannot be selected: first enable arm power." />
+    <String name="rcNotInitialized" value="Cannot apply arm power: cabinet not yet initialized." />
+    <String name="rcPowerOff" value="Cannot apply arm power: simultaneous power off request." />
+    <String name="rcRemoteDisableError" value="Remote arm power disable request refused: cabinet working mode is local." />
+    <String name="rcRemoteEnableError" value="Remote arm power request refused: first switch to remote working mode." />
+    <String name="rcSafetyDefaultNotAck" value="correction of fault on signal %s has not been acknowledged on control panel." />
+    <String name="rcSafetyDefaultNotCleared" value="fault on signal %s needs to be corrected and tested." />
+    <String name="rcSelection" value="Jog move impossible: first select a jog mode." />
+    <String name="rcSettleTimeout" value="Attention: the arm could not be stopped in time during power disabling phase." />
+    <String name="rcNoTargetDefined" value="No target defined" />
+    <String name="recorderCannotCloseData" value="Recorder cannot close data" />
+    <String name="recorderCannotGetValue" value="Record stopped: a variable could not be read" />
+    <String name="recorderCannotOpenData" value="Recorder cannot open data" />
+    <String name="recorderInvalidFrequency" value="Recorder configuration error : invalid frequency" />
+    <String name="recorderMemFull" value="Record stopped: record memory is full" />
+    <String name="recorderModifiedFrequency" value="Recorder frequency was rounded" />
+    <String name="recorderParamInvalidFrequency" value="Recorder configuration error : invalid frequency" />
+    <String name="recorderParamInvalidDuration" value="Recorder parameters error : invalid duration" />
+    <String name="recorderParamRecorderNotFound" value="Recorder parameters error : recorder not found" />
+    <String name="recorderParamVarNotInPool" value="Recorder configuration error : recorder variable ### not known" />
+    <String name="recorderTimeout" value="Recorder internal error: timeout" />
+    <String name="robotAbscalNotEnabled" value="System event Calibration disabled on axis %d" />
+    <String name="robotEnvelopeError" value="Envelop error: axis #" />
+    <String name="robotLocked" value="Robot locked : " />
+    <String name="robotMessCplAxis" value="Please, calibrate axis #X before axis #Y" />
+    <String name="robotMessFbkErr" value="Position sensor error on axis #" />
+    <String name="robotNotDisabled" value="Cannot calibrate robot: arm power is on." />
+    <String name="robotName" value="Robot name" />
+    <String name="robotOverForce" value="ROBOT-OverForce Over force: axis #" />
+    <String name="robotVelocityMax" value="ROBOT-OverVelocityMax axis" />
+    <String name="safeBoot" value="Press &apos;s&apos; for safe boot" />
+    <String name="safety24vFusRsi" value="internal power error (fuse F2 on RSI board ?)" />
+    <String name="safety24vFusUsbi" value="internal power error (fuse F3 on USBI safety board ?)" />
+    <String name="safetyBadWiring" value="Emergency stop chain miss wired for signal %z" />
+    <String name="safetyBrkRel" value="brake release button pressed." />
+    <String name="safetyBrkSel" value="brake select switch turned from normal (0) position." />
+    <String name="safetyDefaultAck" value="Emergency signal %z has been acknowledged." />
+    <String name="safetyDefaultIntAck" value="Emergency signal %z has been acknowledged with integrator privileges." />
+    <String name="safetyDefaultRepaired" value="Emergency signal %z has been repaired." />
+    <String name="safetyDefaultWriteError" value="Error while saving safety fault list." />
+    <String name="safetyDf" value="drive error SAFETY-DriveFault." />
+    <String name="safetyDisablingOff" value="Detected end of: " />
+    <String name="safetyDisablingOn" value="Detected: " />
+    <String name="safetyDoor" value="emergency stop chain DOOR open (door open)." />
+    <String name="safetyLsw" value="joint limit electrical switch activated." />
+    <String name="safetyModeError" value="invalid working mode." />
+    <String name="safetyNoSignals" value="system event SAFETY-NoSignal." />
+    <String name="safetyNotInitialized" value="system event ROBOT-SafetyInit." />
+    <String name="safetyPhasing" value="phasing signal is enabled" />
+    <String name="safetyPowerRefused" value="Cannot settle arm power: " />
+    <String name="safetyRemoteEs" value="remote emergency stop activated" />
+    <String name="safetyShortr" value="system event SAFETY-ShortrOpen. " />
+    <String name="safetyShutdown" value="Arm power shutdown: " />
+    <String name="safetySoftwareError" value="system event ROBOT-Safety." />
+    <String name="safetyThermoOpened" value="system event SAFETY-ThermoOpened." />
+    <String name="safetyTpes" value="teach pendant emergency stop activated." />
+    <String name="safetyTransient" value="system event SAFETY-Transient." />
+    <String name="safetyUen" value="deadman switch released or emergency stop chain for manual mode open (User EN)." />
+    <String name="safetyUes1_2" value="cell emergency stop chain open " />
+    <String name="safetyUes3_4" value="cell emergency stop chain open " />
+    <String name="safetyUnknown" value="system event SAFETY-Unknown." />
+    <String name="safetyUnstable" value="system event SAFETY-UnstableSignal." />
+    <String name="safetyWdg" value="system event SAFETY-Watchdog." />
+    <String name="safetyWorkingMode" value="working mode change." />
+    <String name="safetyEstopSoft" value="system event SAFETY-EstopSoft" />
+    <String name="sinSaveProject" value="Project %s saved." />
+    <String name="sntpFailure" value="System time synchronization has failed with ### server" />
+    <String name="sntpSuccess" value="System time successfully synchronized with ### server" />
+    <String name="standardBoot" value="Press &apos;b&apos; for standard Boot" />
+    <String name="starcNewFwErr" value="Error during Starc software update, Please contact Stäubli SAV" />
+    <String name="starcNewFwInf" value="New Starc software" />
+    <String name="starcNewFwRebInf" value="Starc software update, Please reboot the controller" />
+    <String name="startLogMsg" value="Logger started" />
+    <String name="timeBeforeStdBoot" value=" Time before standard boot: " />
+    <String name="systemEvent" value="System event " />
+    <String name="tmCbtLogMsg" value="Controller temperature: %f°C" />
+    <String name="tmCbtReadError" value="system event RSI-NoTemperature. Temperature cannot be read on RSI board." />
+    <String name="tmCbtThresholdMax" value="system event RSI-TemperatureLimit. Temperature limit is reached, behaviour of RSI board is uncertain." />
+    <String name="tmCbtThresholdMin" value="system event RSI-TemperatureLow. Unexpectedtemperature on RSI board." />
+    <String name="tmCpuLogMsg" value="CPU temperature: %f°C" />
+    <String name="tmCpuReadError" value="system event CPU-NoTemperature. Temperature cannot be read on CPU board." />
+    <String name="tmCpuThresholdMax" value="system event CPU-TemperatureLimit. Temperature limit is reached, behaviour of CPU board is uncertain." />
+    <String name="tmCpuThresholdMin" value="system event CPU-TemperatureLow. Unexpected temperature on CPU board." />
+    <String name="trackedTargetVelTooBig" value="Target velocity is too high" />
+    <String name="trackingInternalError" value="Motion internal tracking error" />
+    <String name="trackingIterationsFailed" value="Tracking solutions failed" />
+    <String name="trackingSecuLimit" value="Tracking stopped: " />
+    <String name="trackingSecuPos" value="position going out of range on axis ###." />
+    <String name="trackingSecuJntVel" value="velocity limit reached on axis ###." />
+    <String name="trackingSecuCartVel" value="cartesian velocity limit reached." />
+    <String name="trackingSecuAbsStop" value="The motion was stopped but the frame has moved. Cannot track it." />
+    <String name="badTrackingSequence" value="Incorrect tracking sequence." />
+    <String name="trackingSeqNoTrackOn" value=" TrackOn needed" />
+    <String name="trackingSeqNoTrackOff" value=" TrackOff needed" />
+    <String name="trackingSeqFrameDiffer" value=" Unexpected moving frame." />
+    <String name="trajContinuityError" value="Robot not at trajectory start position" />
+    <String name="usbDeviceNotSupported" value="The communication protocol for this USB device is not supported. The CS8 driver supports the RBC, UFI and SCSI USB 1.0 protocols." />
+    <String name="wallMounted" value="wall" />
+    <String name="stepMoveIndicator" value="Step" />
+    <String name="connectionMoveIndicator" value="Conn." />
+    <String name="refMoveIndicator" value="Ref." />
+    <String name="ptcOilExchangerOn" value="Oil in exchanger is warm - Normal situation" />
+    <String name="ptcOilExchangerOff" value=""Oil in exchanger is cold" />
+
+    <String name="encoderModule" value="The encoder axis %d provides no position because " />
+    <String name="encoderReasonEncoder" value="encoder is in internal error &apos;Signal amplitude&apos; or &apos;Position value&apos;. (Please check encoder)." />
+
+    <String name="harnesssModule" value="The harness could not allow communication between dsi and encoder axis %d because " />
+    <String name="harnesssReasonHwError" value="dsi received no enDat answer from encoder. (Please check harness and encoder)." />
+    <String name="harnesssReasonCrc" value="dsi detected an invalid checksum from sensor data. (Please check harness)." />
+    <String name="harnesssReasonOverrun" value="dsi received no answer from encoder before time out. (Please check harness and encoder)." />
+    <String name="harnesssReasonNotConnected" value="encoder is not connected to dsi board. (Please check harness and dsi fuse)." />
+
+    <String name="dsiModule" value="The dsi board could not provide position for encoder axis %d because " />
+    <String name="dsiReasonEnDatDisable" value="(or more) other encoder is in error and dsi board decided not to enable this axis for safety reason. (Please correct all other encoder fault first)." />
+    <String name="dsiReasonOverspeed" value="the encoder speed reached its limit." />
+    <String name="dsiReasonFpgaNotToogle" value="on board dsp-fpga communication failed. (Please contact Staubli after sales service)." />
+    <String name="dsiReasonResident" value="dsp firmware is not present on flash (or CS8 does not request dsi to switch from resident to firmware)." />
+
+    <String name="driveModuleSynchro" value="The drive axis %d just goes in " />
+    <String name="drvReasonFault" value="&apos;Fault&apos; state and could not power motor. Reasons will follow in next asynchronous message..." />
+    <String name="drvReasonWarning" value="&apos;Warning&apos; state and if you continue such sollicitation a Drive Fault will occur." />
+
+    <String name="driveModuleAsynchro" value="Drive axis %d could not power motor because " />
+    <String name="driveReasonNoFault" value="No Fault." />
+    <String name="driveReasonDspNotReady" value="drive software dsp is not ready. (Please update your software)." />
+    <String name="driveReasonPowerBoardNotDefined" value="drive software does not recognize drive jumper configuration. (Please check jumper or update your software)." />
+    <String name="driveReasonBusOverVoltage" value="drive bus is Over Voltage. (Either your mouvement generates too many energy, either the dissipation resistance is out of order)." />
+    <String name="driveReasonImpFault" value="drive IGBT can not generate requested current without damage. (Either the IGBT temperature is too high, the IGBT can not deliver such a current, or IGBT is already destroyed)." />
+    <String name="driveReasonOverTemperatur" value="drive skin temperature excessive. (Please check fans and ventilation)." />
+    <String name="driveReasonWatchdog" value="drive software watchdog occured. (Please update your software)." />
+    <String name="driveReasonPllNotLocked" value="drive software could not synchronize its internal clock (10kHz or 20kHz) with the starc bus Frame Synchro. (Check starc bus and software update)." />
+    <String name="driveReasonNotSynchro" value="the sensor bus (from direct link) is not synchronous. (Check starc sensor bus)." />
+    <String name="driveReasonPositionError" value="the dsi provides no position to the drive. (Check why dsi is in error )." />
+    <String name="driveReasonPositionIncoherence" value="the position provided by dsi is not in the same quarter than previous position. (Please check drive parameter configuration or sensor failure)." />
+    <String name="driveReasonNoCompensation" value="the controller did not send 'config' command after changing parameters. (Check why controller was interrupted during its init)." />
+    <String name="driveReasonCurrentSensorOffset" value="autocalibration detects that drive current sensor if out of order. (Please change the drive)." />
+    <String name="driveReasonCurrentSensorNoise" value="autocalibration detects that drive noise sensor if out of order. (Please change the drive or check EMC noise)." />
+    <String name="driveReasonOverspeed" value="the difference between two positions provided by dsi is larger than overspeed threshold defined by controller. (Please check drive parameter configuration)." />
+    <String name="driveReasonUnderVoltage" value="the drive is not able to provide enough power to the motor. (Check RPS and power cables)." />
+    <String name="driveReasonDriveFoldback" value="the drive has to limit the current to avoid dammage by excessive heat. (Either controller wants excessive acceleration, or motor has poor performance, or arm is pushing on an obstacle)." />
+    <String name="driveReasonMotorFoldback" value="the temperature model signals that motor is too hot." />
+    <String name="driveReasonHardwareFault" value="the drive is in hardware fault. (Please change the drive)." />
+    <String name="driveReasonLogFull" value="the drive logger is full. (Firsts events should be enough for diagnostic)." />
+
+    <String name="starcModule" value="The Starc board could not process command %s for axis %d because " />
+    <String name="starcReasonBusNotSynchro" value="starc Bus is not synchronous (Please check link between Starc board and DSI &amp; DRIVE)" />
+    <String name="starcEncoderGeneralError" value="unable to get absolute position from encoder (Please see encoder status)." />
+    <String name="starcEncoderOffsetNotWrite" value="zero offset has never been written in encoder or is invalid (Need to calibrate the arm to determine zero offset ?)" />
+    <String name="starcEncoderNotInitialized" value="encoder is not initialized (check why initialisation stopped before)" />
+    <String name="starcEncoderUnknownCoder" value="encoder reference is unknown (change encoder)" />
+    <String name="starcEncoderDatumNotNull" value="encoder datum is not null" />
+    <String name="starcEncoderOffsetDuplicated" value="encoder offset is duplicated" />
+    <String name="starcEncoderWriteInEncoderFails" value="encoder write operation fails (change encoder)" />
+    <String name="starcEncoderInvalidAxis" value="encoder axis number is not valid (check your software version and configuration file)" />
+    <String name="starcFormatDsiFails" value="formatting of dsi flash failed (change DSI board)" />
+    <String name="starcErrorNotDetailed" value="starc Error Not Detailed (status=%d)" />
+
+    <String name="starcBusDriveModule" value="The Starc bus could not communicate with drive because " />
+    <String name="starcBusDsiModule" value="The Starc bus could not communicate with sensor because " />
+    <String name="starcBusReasonBusNotSynchro" value="the bus is not synchronous [ASYNCHRO evt]. (Please check Starc-Device link and power on device)." />
+    <String name="starcBusReasonAxisNotSynchro" value="the bus for axis %d is not synchronous [SYNCHRO bit]. (Please check Starc-Device link and power on device)." />
+    <String name="starcBusReasonBusOverrun" value="an overrun occured. (Please update your software)." />
+    <String name="starcBusReasonBusChecksumError" value="a checksum error occured. (Please check Starc-Device link and power on device)." />
+    <String name="starcBusReasonBusRingBroken" value="the bus is RingBroken. (Please check Starc-Device link and power on device)." />
+
+    <String name="starcBoardModule" value="The Starc board stopped processing because " />
+    <String name="starcHwbReasonCannotEnableBusNotSynchro" value="starc bus should be synchronous to enable the drive axis %d. (Please check first why bus is not synchronous)." />
+    <String name="starcHwbReasonSensorIllegalSequence" value="the position axis %d provided by dsi is not in the same quarter than previous position. (Please check sensor)." />
+
+    <String name="starcEvtModule" value="The Starc event logger could not send messages to controller because " />
+    <String name="starcEvtReasonLoggerFull" value="The Starc event logger is full" />
+	
+    <String name="starcSafetyRebootMsg" value=". A controller reboot is needed" />
+
+    <String name="starcSvoModule" value="The Starc SVO module stopped processing for axis %d because " />
+    <String name="starcSvoReasonReadFbk" value="drive axis %d goes in disable state since sensor is in error. (Check sensor status for details)." />
+    <String name="starcSvoReasonParamNotDefined" value="drive axis %d can not go in enabling state since controller did not send servo parameters. (Check if controller send param and tuning." />
+    <String name="starcSvoReasonDriveHasDisabled" value="drive axis %d switched to disable state." />
+    <String name="starcSvoReasonDriveTimeOutEnabling" value="drive axis %d did not succeed to go in enable state after controller request." />
+    <String name="starcSvoReasonDriveTimeOutDisabling" value="drive axis %d did not succeed to go in disable state after controller request." />
+    <String name="starcSvoReasonEnveloppeError" value="difference between command and feedback axis %d position is larger than threshold sent by controller." />
+    <String name="starcSvoReasonDriveNotDisabled" value="controller requested to switch drive axis %d to enable state while it is not disable yet." />
+    <String name="starcSvoReasonSvoOverspeed" value="speed axis %d is larger than threshold sent by controller." />
+
+    <String name="starcModuleStarcDsp1" value="The STARC PCI communication failed because " />
+    <String name="starcBusReasonCS8NotToggle" value="starc received two consecutive frames from CPU with same toggle bit." />
+
+    <String name="starcModuleStarcDsp2" value="The Starc board could not communicate with device because " />
+    <String name="starcBusReasonDsp1NotToggle" value="the Dsp1 did not toggle. (Please reboot system or change starc board)." />
+    <String name="starcBusReasonBusesNotSynchro" value="the drive and sensor buses do not have same axis bit at same time. (Please reboot system)." />
+    <String name="starcBusReasonDirectLinkNotSynchro" value="the direct link between sensor and drive bus is not synchronous. (Please reboot system)." />
+
+    <String name="starcModuleStarcLog" value="The starc event logger fails to get info from axis %d because " />
+    <String name="starcBusReasonLogReadNbEvent" value="could not read nbr of data from device." />
+    <String name="starcBusReasonLogReadEvent" value="device did not send all expected data." />
+    <String name="starcBusReasonLogAnswerError" value="device is in error." />
+    <String name="starcBusReasonLogAnswerLen" value="could not read data from device." />
+    <String name="starcBusReasonLogSendCmd" value="could not communicate with device." />
+
+    <String name="cs8InitEvtModule" value="The controller initialization was interrupted and so " />
+    <String name="cs8InitReasonDsiNoOffset" value="dsi did not receive from controller the OFFPOS command for axis %d . (Please correct previous error before)." />
+    <String name="cs8InitReasonNotEnable" value="dsi did not receive from controller the DEVSEL command for axis %d. (Please correct previous error before)." />
+
+    <String name="calibrationModule" value="The calibration fails for axis %d because starc command " />
+    <String name="calibrationReasonGetAbsPos" value="GET_ABS_POS failed." />
+    <String name="calibrationReasonSetAbsPos" value="SET_ABS_POS failed." />
+    <String name="calibrationReasonGetCalOffset" value="GET_CAL_OFF failed." />
+    <String name="calibrationReasonSetCalOffset" value="SET_CAL_OFF failed." />
+    <String name="calibrationReasonGetSensorOffset" value="GET_SEN_OFF failed." />
+    <String name="calibrationReasonSetSensorOffset" value="SET_SEN_OFF failed." />
+    <String name="calibrationReasonGetScale" value="GET_SCALE failed." />
+    <String name="calibrationReasonRestoreAbsPos" value="RESTORE_ABS_POS failed." />
+
+    <String name="unknownEvent" value="received an unkown event (id=%d)" />
+
+    <String name="codesysLoadError" value="While building CoDeSys IO Driver : " />
+    <String name="codesysDirectoryAbsent" value="Cannot create directory" />
+    <String name="codesysFileAbsent" value="Absent or invalid file" />
+    <String name="codesysLoadModuleFails" value="Cannot load module" />
+    <String name="codesysStartModuleFails" value="Cannot start module" />
+    <String name="codesysEndModuleFails" value="Cannot end module" />
+    <String name="codesysIoInvalidIecType" value="Found in XML file an invalid IEC TYPE (neither BOOL, BYTE, WORD, DWORD, SINT, USINT, INT, UINT, DINT, UDINT, nor REAL) for" />
+    <String name="codesysIoInvalidDirection" value="Found in XML file an invalid DIRECTION (neither 'I' nor 'Q') for" />
+    <String name="codesysIoInvalidDirectionBis" value="Found in XML file different direction from fields 'Type' and 'Addresse' for" />
+    <String name="codesysIoInvalidAddressStart" value="Found in XML file an invalid ADDRESS (do not start with '%') for" />
+    <String name="codesysIoInvalidAddressSize" value="Found in XML file an invalid ADDRESS (neither 'X', 'B', 'W' nor 'D') for" />
+    <String name="codesysIoInvalidAddress" value="Found in XML file an invalid ADDRESS (not a numeric value) for" />
+    <String name="codesysIoInvalidOffset" value="Found in XML file an invalid OFFSET (not match with IEC TYPE) for" />
+    <String name="codesysNoMatchForXmlData" value="Found an IO description in XML file but not in CODESYS runtime for" />
+    <String name="codesysNoMatchForPlcData" value="Found an IO description in CODESYS runtime but not in XML file for" />
+    <String name="codesysNoMatchForType" value="Found a TYPE that does not match between XML file and CODESYS runtime for" />
+    <String name="codesysNoMatchForDirection" value="Found a DIRECTION that does not match between XML file and CODESYS runtime for" />
+    <String name="codesysNoMatchForOffset" value="Found an OFFSET that does not match between XML file and CODESYS runtime for" />
+    <String name="codesysNameFoundTwice" value="Found IO with name already  used" />
+    <String name="codesysFeatureOnlyOnTarget" value="CoDeSys feature is only available on real target" />
+    <String name="codesysNewPlcHasDifferentMap" value="Downloaded PLC automaton has a different IO maping than the XML config file used at boot time." />
+    <String name="codesysDenyToChangePlcState" value="Refuse to enable PLC because IO maping is not valid." />
+
+    <String name="bootTroubleMsg" value="Build error because found incoherency while building Platform : " />
+    <String name="bootTroubleFirmwareVersionInvalide" value="Starc Firmware version is not valid : " />
+
+    <String name="brBackupStarting" value="Starting system backup..." />
+    <String name="brRestoreStarting" value="Restoring contents from archive..." />
+    <String name="brUpdateStarting" value="Updating system..." />
+    <String name="brBackupSuccess" value="System backup successfully completed." />
+    <String name="brRestoreSuccess" value="Archive contents successfully restored." />
+    <String name="brRestoreShallReboot" value="Please reboot controller to complete system restoration." />
+    <String name="brUpdateShallReboot" value="Please reboot controller to complete system update." />
+    <String name="brBackupFailed" value="Backup operation failed (%s)." />
+    <String name="brRestoreFailed" value="Restore operation failed (%s)." />
+    <String name="brUpdateFailed" value="System update failed (%s)." />
+    <String name="brInvalidArchive" value="Archive is invalid (%s)." />
+    <String name="brInvalidPath" value="Path is invalid (%s)." />
+    <String name="brWriteError" value="Error while writing to filesystem (%s)." />
+    <String name="brBackupInvalidContentSpecification" value="Unable to backup specified items (%s)." />
+    <String name="brRestoreInvalidContentSpecification" value="Unable to restore specified items (%s)." />
+  </Resources>
+  <Resources name="CBI" >
+    <String name="mainMenuTitle" value="Main menu" help="Main menu with direct access using the &apos;Top&apos; key" />
+    <String name="infoBarString4" value="Info" />
+    <String name="helpTitle" value="Help" help="" />
+    <String name="cancelMenu" value="Esc" help="Quit current page cancelling all changes" />
+    <String name="noMenu" value="No" help="" />
+    <String name="noForAllMenu" value="N2A" help="No to all" />
+    <String name="offMenu" value="Off" />
+    <String name="okMenu" value="Ok" help="Quit the current page validating the changes" />
+    <String name="onMenu" value="On" />
+    <String name="quitMenu" value="Quit" help="" />
+    <String name="yesMenu" value="Yes" help="" />
+    <String name="yesForAllMenu" value="Y2A" help="Yes to all" />
+    <String name="accessDeniedText" value="Your profile does not allow this action" />
+    <String name="popupTitle" value="Message" help="" />
+    <String name="defaultHelpText" value="No help available." />
+    <String name="currentPasswordString" value="Current password" help="" />
+    <String name="wrongPasswordText" value="Incorrect password" />
+    <String name="newPasswordOneString" value="New password" help="" />
+    <String name="newPasswordTwoString" value="Enter password again" help="" />
+    <String name="newPasswordErrorText" value="Error in new password" />
+    <String name="newPasswordTitle" value="Enter the password" help="" />
+  </Resources>
+  <Resources name="V3C" >
+    <String name="applicationNotInCell" value="Application not found in cell" />
+    <String name="applicationNotFound" value="Application not found" />
+    <String name="compilerVersion" value="VAL3Check version" />
+    <String name="error" value="error(s)" />
+    <String name="help1" value="  Usage: VAL3Check -RCell_Path -SVersionPath -VVAL3_Path -kKinematics [-d] [-q] [-lLanguage] [-E&quot;format&quot;] applications_path" />
+    <String name="help2" value="    -Sversion_Path          : Setup path of the VAL3 version." />     
+    <String name="help3" value="    -Rcell_Path             : Root path of the cell" />
+    <String name="help4" value="    -kKinematics            : A for anthropomorphic arm, S for Scara Arm" />
+    <String name="help5" value="    -VVAL3_Path             : Setup path of the VAL3 emulator that match the VAL3 version of the cell" />
+    <String name="help6" value="    -q                      : Quiet mode" />
+    <String name="help7" value="    -d                      : Display information concerning VAL3, Nodes. (verbose mode)" />
+    <String name="help8" value="    -lLanguage              : E:english, F:francais, S:espanol, I:italian, G:deutsch" />
+    <String name="help9" value="                              C:chinese, K:korean, J:japanese, T:turkish" />
+    <String name="help10" value="   -Eerror format          : Change errors output format" /> 
+    <String name="help11" value="                                 %f=file name, %l=line number,%e=error/warning %m= message" />
+    <String name="help12" value="   Example: VAL3Check.exe -Rc:\MyCells\Cell_1 -kA -V&quot;c:\Program Files\Staubli\CS8\s6.5.5&quot; c:\MyCells\Cell_1\usr\usrapp\MyApp" />
+    <String name="internalError" value="VAL3 checker internal error" />
+    <String name="loadLanguageDefinitionError" value="cannot load VAL3 reference file (val3.cfx)" />
+    <String name="resourceError" value="language resources file cannot be found" />
+    <String name="val3Version" value="VAL3 version" />
+    <String name="warning" value="warning(s)" />
+    <String name="rootPath" value="Compiler root path:" />
+  </Resources>
+  <Resources name="WSC">
+    <String name="mountNode" value="mount node '%z' on '%z'" />
+    <String name="errorAddNode" value="Cannot add node '%z' in system. Check if not already exist" />
+    <String name="errorTypeNode" value="Unknown type '%z' for node '%z'" />
+    <String name="errorPathNode" value="Cannot resolve path '%z' for node '%z': file manager is invalid or not allowed" />
+    <String name="errorRootNode" value="warning: node '%z': root path '%z' not exist" />
+    <String name="errorFileMgr" value="Internal error in File manager: Unknown code" />
+    <String name="errorFMUsr" value="Internal Error: Cannot found 'Usr' file manager" />
+    <String name="errorFMDisk" value="Internal Error: Cannot found 'Disk' file manager" />
+    <String name="addonFound" value="addon found" />
+    <String name="internalError" value="internal error: #%d" />
+  </Resources>
+</ResourcesList>

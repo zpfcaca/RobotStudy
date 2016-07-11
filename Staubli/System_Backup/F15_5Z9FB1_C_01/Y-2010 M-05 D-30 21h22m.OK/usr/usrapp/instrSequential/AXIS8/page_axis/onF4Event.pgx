@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF4Event">
+    <Code><![CDATA[begin
+  // look if the bButton is enable
+  if bButton[3]
+    // go to home
+    
+    
+    ////    io:home=true
+    ////    delay(0.5)
+    ////    io:home=false
+//    
+//    if aioGet(io:MbAI_b8MotorPow)==1 and isPowered()
+//      
+//      call use:timerDialog("Back To Home...",1)
+//      aioSet(io:MbAO_bAxis7Home,1)
+//      aioSet(io:MbAO_b8Axis,1)
+//      delay(0.5)
+//      wait(aioGet(io:MbAI_b8HomeDone)==0 or isKeyPressed(255))
+//    
+//      if isKeyPressed(255)
+//        aioSet(io:MbAO_bStopMotor,1)
+//        delay(0.5)
+//        aioSet(io:MbAO_bStopMotor,0)
+//      endIf
+//      aioSet(io:MbAO_b8Axis,0)
+//    else
+//      if aioGet(io:MbAI_b8MotorPow)==0
+//        call use:timerDialog("8轴未上电",1)
+//      endIf
+//      if ! isPowered()
+//        call use:timerDialog("请给手臂上电",1)
+//      endIf
+//      
+//    endIf
+    
+    //
+  endIf
+end]]></Code>
+  </Program>
+</Programs>

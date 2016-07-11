@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="setMenu" access="public">
+    <Description><![CDATA[Show the]]></Description>
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sMenuName" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_bShowName" type="bool" xsi:type="element" />
+      <Parameter name="x_nY" type="num" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // usage
+  // menuname"choice1,choise2,..choise7,choice8"
+  //
+  // the page will start from the y- line
+  //
+  //
+  if size(x_sMenuName)<10
+    for i=0 to (size(x_sMenuName)-1)
+      if x_sMenuName[i]!="" and x_sMenuName[i]!=" "
+        if x_bShowName==false
+          call typeMenu(i+1,"F"+toString("1",i+1))
+        else
+          call typeMenu(i+1,x_sMenuName[i])
+        endIf
+        if x_nY!=-1
+          call type(0,i+x_nY,("F"+(toString("1",i+1)+" "+x_sMenuName[i])))
+        endIf
+      endIf
+    endFor
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

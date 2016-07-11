@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="sychronMove" access="public" >
+    <Locals>
+      <Local name="l_bTemp" type="bool" xsi:type="array" size="1" />
+      <Local name="l_nCount" type="num" xsi:type="array" size="1" />
+      <Local name="l_jTemp1" type="joint" xsi:type="array" size="1" />
+      <Local name="l_nTime" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //  //this task is synchronous moving
+  //  //  MoveTo.trsf=cad:pCad[0].trsf
+  //  //  l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+  //  //  movej(l_jTemp1,tTool,mNomSpeed)
+  //  //  waitEndMove()
+  //  //  jConfig=herej()
+  //  call FC_InitMotion()
+  //  l_nCount=0
+  //  bSetIO=true
+  //  //
+  //  nsumtime=clock()
+  //  for l_nCount=0 to size(cad:pCad)-1
+  //    //
+  //    l_nTime=clock()
+  //    //
+  //    MoveTo.trsf=cad:pCad[l_nCount].trsf
+  //    l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+  //    $movejSync(l_jTemp1)
+  //    //$movejSync(cad:jJointRx[l_nCount])
+  //    l_nTime=clock()-l_nTime
+  //    if l_nTime>nTime
+  //      nTime=l_nTime
+  //      nTestNum=l_nCount
+  //    endIf
+  //    delay(0)
+  //  endFor
+  //  //
+  //  bSetIO=false
+  //  //io:socket="(RBSTOP)"
+  //  call FC_EndMotion()
+  //  nsumtime=clock()-nsumtime
+  //  popUpMsg("move end!")
+  //  bTest=true
+end]]></Code>
+  </Program>
+</Programs>

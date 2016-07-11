@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="stringCopy" access="public">
+    <Description><![CDATA[Copy all the value from the x_sCopy to x_sPaste]]></Description>
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sCopy" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_sPaste" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // Copy all the value from the first element to the second one
+  //
+  // redim the Paste String ARRAY
+  //
+  l_nSize=size(x_sPaste)
+  if size(x_sCopy)>size(x_sPaste)
+    for i=l_nSize to (size(x_sCopy)-1)
+      $dins(x_sPaste,i)
+    endFor
+  else
+    if size(x_sCopy)<size(x_sPaste)
+      for i=size(x_sCopy) to l_nSize-1
+        $ddel(x_sPaste,size(x_sCopy))
+      endFor
+    endIf
+  endIf
+  // COPY ALL THE FIELD
+  for i=0 to (size(x_sCopy)-1)
+    x_sPaste[i]=x_sCopy[i]
+  endFor
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

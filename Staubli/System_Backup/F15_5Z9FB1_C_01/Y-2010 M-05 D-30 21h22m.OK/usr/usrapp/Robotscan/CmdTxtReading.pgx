@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="CmdTxtReading" access="private" >
+    <Code><![CDATA[begin
+  while true
+    if nTxtTotal>2
+      if bTxt1==true
+        call WipeCacheRoom1()
+        delay(0)
+
+        call TxtReadRoom1()
+      else
+      endIf
+      if bTxt2==true
+        call WipeCacheRoom2()
+        delay(0)
+
+        call TxtReadRoom2()
+      else
+      endIf
+      if bTxt3==true
+        call WipeCacheRoom3()
+        delay(0)
+
+        call TxtReadRoom3()
+      else
+      endIf
+      delay(0)
+    else
+    endIf
+  endWhile
+
+end]]></Code>
+  </Program>
+</Programs>

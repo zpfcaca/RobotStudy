@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F5_start" access="public" >
+    <Code><![CDATA[begin
+  //start Synchronous move
+  if bTxtPrSv==false
+    //    popUpMsg("请首先对点位文件初始化（按F3-PoIn）")
+    TcpStrRec:nFeedback=532
+  else
+
+    socket="(RBSTAT)"
+    delay(0.01)
+    nTime=0
+    nTestNum=0
+    if taskStatus("SychMove")==-1
+      taskCreateSync "SychMove",0.004,bRes,sychronMove()
+      //taskCreateSync "SychMove",0.008,bRes,sychronRealM()
+    else
+      popUpMsg("Task is already running")
+    endIf
+  endIf
+  //call sychronMove()
+end]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="getVelocity" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItem" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_nVelocity" type="num" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  call getSize(l_nSize)
+  for i=0 to l_nSize
+    call get(l_sItem,i)
+    if l_sItem==x_sItem
+      x_nVelocity=nVelocity[i]
+      return
+      //go back
+    endIf
+  endFor
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="refreshStatic">
+    <Locals>
+      <Local name="l_sMenu" type="string" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_sMotorStatus" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  cls()
+  //
+  // set the view of the page..
+  //
+  // SET THE PAGE NUMBER 
+  use:nPage=110
+  // load the menu page
+  
+  l_sMessage=" -,test,复位,,,, +,"
+  
+  // define the menu
+  call use:stringToArray(l_sMessage,sMenu)
+  call use:setMenu(sMenu,true,3)
+  call use:getMenu(sMenu,bButton)
+  //
+  // CREATE THE LIST
+  //
+  // define your list size for default
+  call use:setSizeList(21,0,17,10)
+  // set small nParView
+  call use:setView(false)
+  //
+  call use:listcreate("AXIS8 ")
+  //
+  call use:listadd(sList)
+  //
+  // refresh the cursor
+  // select the last item
+  call use:selectNewField(nSelected,nIndex,nView)
+
+  
+  if aioGet(MbAI_b8MotorErr)==1
+    l_sMotorStatus=l_sMotorStatus+" 马达错误"
+  else
+    l_sMotorStatus=l_sMotorStatus+" 马达正常"
+  endIf
+  
+  call use:type(0,1,l_sMotorStatus)
+  
+end
+]]></Code>
+  </Program>
+</Programs>

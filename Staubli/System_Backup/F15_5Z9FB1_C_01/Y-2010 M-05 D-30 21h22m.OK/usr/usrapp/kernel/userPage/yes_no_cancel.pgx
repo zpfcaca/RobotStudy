@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="yes_no_cancel" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sMessage" type="string" xsi:type="element" />
+      <Parameter name="x_sYesNo" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_bResult" type="bool" xsi:type="array" use="reference" />
+      <Parameter name="x_bCancel" type="bool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_sButton" type="string" xsi:type="array" size="3" />
+    </Locals>
+    <Code><![CDATA[begin
+  // INIT
+  x_bCancel=false
+  l_sButton[0]=x_sYesNo
+  l_sButton[1]=x_sYesNo[1]
+  l_sButton[2]="Esc"
+  // write a yes no cancel question dialog
+  call questionDialog(x_sMessage,l_sButton,i)
+  // press F8 or enter
+  if i==1 or i==0
+    x_bResult=true
+  else
+    // press escape or F6
+    if i==-1 or i==3
+      x_bCancel=true
+    endIf
+    // press F7-no
+    x_bResult=false
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

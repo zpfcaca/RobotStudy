@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F4_stop" access="private" >
+    <Code><![CDATA[begin
+  //stop Synchronous move
+
+
+  bTxt1=false
+  bTxt2=false
+  bTxt3=false
+
+  bSychronOn=false
+  socket="(RBSTOP)"
+  wait(bRb2Stop==true)
+  if taskStatus("SychMove")!=-1
+    taskKill("SychMove")
+    call FC_EndMotion()
+    wait(taskStatus("SychMove")==-1)
+
+    //popUpMsg("Sychron stoped")
+  endIf
+  delay(0.5)
+  while size(sString)>1
+    $ddel(sString,size(sString)-1)
+  endWhile
+  while size(pfrmCad)>1
+    $ddel(pfrmCad,size(pfrmCad)-1)
+  endWhile
+  while size(nPulse)>1
+    $ddel(nPulse,size(nPulse)-1)
+  endWhile
+  TcpStrRec:nFeedback=55
+  bTxtPrSv=false
+  sScrPts="NotReady"
+  n_sTxt=0
+  call hmi_refreshmain()
+end]]></Code>
+  </Program>
+</Programs>

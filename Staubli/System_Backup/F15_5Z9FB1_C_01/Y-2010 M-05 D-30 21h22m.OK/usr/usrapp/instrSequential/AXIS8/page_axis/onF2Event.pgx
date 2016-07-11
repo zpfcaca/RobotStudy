@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF2Event" access="public">
+    <Locals>
+      <Local name="l_nSave" type="num" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_bYes" type="bool" xsi:type="array" size="1" />
+      <Local name="l_sButton" type="string" xsi:type="array" size="2" />
+      <Local name="l_nVelocity" type="num" xsi:type="array" size="1" />
+      <Local name="l_nS8" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // look if the bButton is enable
+  if bButton[1]
+    // save the current position
+    
+    ////    io:record=true
+    ////    delay(0.5)
+    ////    io:record=false
+    ////    call axis:setValue(aioGet(io:currentPulse),nIndex)
+    
+//    if aioGet(io:MbAI_b8MotorPow)==1 and aioGet(io:MbAI_b8BackHome)==1
+//      l_sMessage="是否要记录当前位置"
+//      call language:getYesNo(l_sButton)
+//      call use:yes_no(l_sMessage,l_sButton,l_bYes)
+//      if l_bYes
+//        aioSet(io:MbAO_bRecordPos,1)
+//        aioSet(io:MbAO_b8Axis,1)
+//        delay(0.5)
+//        aioSet(io:MbAO_bRecordPos,0)
+//        aioSet(io:MbAO_b8Axis,0)
+//        call axis:setValue(aioGet(io:MbAI_a8CurPosL),nIndex,aioGet(io:MbAI_a8CurPosH))
+//        l_nSave=axis:libSave()
+//        if l_nSave==0
+//          call use:timerDialog("当前位置记录成功",1)
+//        else
+//          call use:timerDialog("当前位置记录不成功",1)
+//        endIf
+//      endIf
+//    else
+//      if aioGet(io:MbAI_b8BackHome)==0
+//        call use:timerDialog("8轴未回零位",1)
+//        return
+//      endIf
+//      if aioGet(io:MbAI_b8MotorPow)==0
+//        call use:timerDialog("8轴未上电",1)
+//        return
+//      endIf
+//    endIf
+  aioSet(MbAO_aMoveDis,0)
+  aioSet(MbAO_bMovePos8,0)
+  aioSet(MbAO_b8Axis,1)
+
+  
+
+  l_nVelocity=TcpStrRec:nV8
+  /////关键点！！！！！  
+  //aioSet(io:MbAO_aMovePosL8,l_nValue)
+  l_nS8=TcpStrRec:nS8
+  aioSet(MbAO_aMovePosH8,l_nS8)
+  aioSet(MbAO_aVelocity8,l_nVelocity)
+  aioSet(MbAO_bMovePos8,1)
+  delay(0.5)
+  wait(aioGet(MbAI_bAxis8Reac)==0)
+  wait(aioGet(MbAI_bAxis8Reac)==1 or isKeyPressed(255))
+  if isKeyPressed(255)
+    //if !cycleStatus:bCycle and !cycleStatus:bSimulation
+      if aioGet(MbAO_bStopMotor)==1
+        aioSet(MbAO_bStopMotor,0)
+        delay(0.2)
+        aioSet(MbAO_bStopMotor,1)
+        delay(0.2)
+      else
+        aioSet(MbAO_bStopMotor,1)
+        delay(0.4)
+        aioSet(MbAO_bStopMotor,0)
+      endIf
+    //endIf
+  endIf
+  aioSet(MbAO_bMovePos8,0)
+  aioSet(MbAO_b8Axis,0)
+  // aioSet(io:MbAI_bAxis7Reac,0)
+popUpMsg("motor is reached")
+    //
+  endIf
+end]]></Code>
+  </Program>
+</Programs>

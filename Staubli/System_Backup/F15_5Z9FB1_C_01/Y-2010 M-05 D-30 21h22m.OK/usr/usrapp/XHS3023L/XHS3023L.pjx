@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://www.staubli.com/robotics/VAL3/Project/3" >
+  <Parameters version="s7.7.2" stackSize="5000" millimeterUnit="true" />
+  <Programs>
+    <Program file="loadNextOne.pgx" />
+    <Program file="start.pgx" />
+    <Program file="stop.pgx" />
+  </Programs>
+  <Database>
+    <Data file="XHS3023L.dtx" />
+  </Database>
+  <Libraries>
+    <Library alias="prog" path=".//XHS3023L1/XHS3023L1.pjx" autoload="true" password="" />
+    <Library alias="prog_swap" path=".//XHS3023L1/XHS3023L1.pjx" autoload="true" password="" />
+  </Libraries>
+  <Types>
+  </Types>
+</Project>

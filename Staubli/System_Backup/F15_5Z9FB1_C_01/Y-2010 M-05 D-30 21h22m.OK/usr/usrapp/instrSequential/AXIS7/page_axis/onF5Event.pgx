@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF5Event">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_bSave" type="bool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sName" type="string" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_bYes" type="bool" xsi:type="array" size="1" />
+      <Local name="l_sButton" type="string" xsi:type="array" size="2" />
+    </Locals>
+    <Code><![CDATA[begin
+
+  // look if the bButton is enable
+
+  if bButton[4]
+
+    //
+
+    // the simulation is disable when the cycle is active
+
+//    if ! isPowered()
+
+//      call use:timerDialog("请给手臂上电",1)
+
+//      return
+
+//    endIf
+
+    
+
+    //if !cycleStatus:bCycle
+
+////12.13//////////////      l_sMessage="是否要移动到所选位置"
+//////////////////
+//////////////////      call language:getYesNo(l_sButton)
+//////////////////
+//////////////////      call use:yes_no(l_sMessage,l_sButton,l_bYes)
+//////////////////
+/////12.13/////////////      if l_bYes
+
+        
+///////////////////////////////////bingo!/////////////////////
+        call axis:get(l_sName,nIndex)
+//          l_sName="PStart"
+///////////////////////////////////bingo!/////////////////////
+        logMsg("[KERNEL] INTERFACE:Simulation of the: "+"AXIS "+l_sName)
+
+        call use:timerDialog("AXIS  MOVING...",0)
+
+        call axis:onRun(l_sName)
+       
+
+        call use:nullKey(nKey)
+
+        //
+
+        use:bUseRefresh=true
+
+//////12.13//////////      endIf
+
+      
+
+    //endIf
+
+  endIf
+
+end        
+
+
+
+
+
+
+
+]]></Code>
+  </Program>
+</Programs>

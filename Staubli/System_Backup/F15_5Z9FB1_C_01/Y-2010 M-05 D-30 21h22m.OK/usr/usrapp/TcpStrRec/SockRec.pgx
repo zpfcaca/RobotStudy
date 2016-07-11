@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="SockRec" access="public" >
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1" >
+      <Parameter name="StrDatRec" type="string" use="reference" xsi:type="array" dimensions="1" />
+      <Parameter name="stat" type="bool" use="reference" xsi:type="array" dimensions="1" />
+    </Parameters>
+    <Locals>
+      <Local name="FdataR" type="bool" xsi:type="array" size="1" />
+      <Local name="CharaS" type="num" xsi:type="array" size="1" />
+      <Local name="DataR" type="num" xsi:type="array" size="1" />
+      <Local name="SckStat" type="num" xsi:type="array" size="1" />
+      <Local name="Step1" type="string" xsi:type="array" size="1" />
+      <Local name="Strdata" type="string" xsi:type="array" size="1" />
+      <Local name="Strrec" type="string" xsi:type="array" size="1" />
+      <Local name="Scrdata1" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //This program is being used to recieve the TCP data
+  //Parameter description: StrDatRec--> data to be recieved in string type
+  //                       stat----> bool value to tell the end of data recieving
+  //Program can call this subroutine to recieve the data from tcp socket
+  //In control panel , io:socket need be pre-defined
+  // port 1000 , timeout :0 delimitier :1 TCP client name : socket
+  sioLink(sock,socket)
+  while true
+    DataR=DataR+1
+    CharaS=sioGet(sock,SckStat)
+    Strrec=chr(SckStat)
+    if Strrec=="("
+      FdataR=true
+    endIf
+    if Strrec==")"
+      FdataR=false
+    endIf
+    if FdataR==true
+      Strdata=Strdata+Strrec
+    else
+      Scrdata1=Strdata
+      if Scrdata1!=""
+        StrDatRec=Scrdata1+")"
+        stat=true
+      else
+        StrDatRec=""
+      endIf
+      Strdata=""
+    endIf
+    delay(0)
+  endWhile
+end]]></Code>
+  </Program>
+</Programs>

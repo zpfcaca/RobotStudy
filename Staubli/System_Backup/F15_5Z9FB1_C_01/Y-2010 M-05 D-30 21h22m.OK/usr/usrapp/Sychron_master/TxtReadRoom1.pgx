@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="TxtReadRoom1" access="private" >
+    <Locals>
+      <Local name="l_n" type="num" xsi:type="array" size="1" />
+      <Local name="l_ntest" type="num" xsi:type="array" size="1" />
+      <Local name="sTxtfile" type="string" xsi:type="array" size="1" />
+      <Local name="l_str" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  bTxt1=false
+  delay(0.01)
+  l_str=toString("1",n_sTxt)
+  sTxtfile="path"+l_str+".txt"
+  l_ntest=$fileOpen(sTxtfile,"r")
+  for l_n=0 to 499
+    $fileGet(l_ntest,sString[l_n],1)
+    if sString[l_n]!=""
+      call stringtopoint(sString[l_n],l_n)
+    else
+    endIf
+  endFor
+  delay(0.01)
+
+  call hmi_refreshmain()
+
+  if n_sTxt==nTxtTotal-1
+    n_sTxt=0
+  else
+    n_sTxt=n_sTxt+1
+  endIf
+
+  $fileClose(l_ntest)
+end]]></Code>
+  </Program>
+</Programs>

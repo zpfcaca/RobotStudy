@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="Txt_initData" access="private" >
+    <Code><![CDATA[begin
+  while size(sString)>1
+    $ddel(sString,size(sString)-1)
+  endWhile
+  while size(pfrmCad)>1
+    $ddel(pfrmCad,size(pfrmCad)-1)
+  endWhile
+  sString[0]=""
+  pfrmCad[0].trsf={0,0,0,0,0,0}
+  for l_nInit=1 to 1499
+    $dins(sString,l_nInit)
+    $dins(pfrmCad,l_nInit)
+  endFor
+end]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Sercos3>
+  <DeviceName />
+  <Trace>0</Trace>
+  <SignedScaleFactor>true</SignedScaleFactor>
+  <SercosAddresses>
+    <SubDevice index="0"  SercosAddress="1" />
+    <SubDevice index="1"  SercosAddress="2" />
+    <SubDevice index="2"  SercosAddress="3" />
+    <SubDevice index="3"  SercosAddress="4" />
+    <SubDevice index="4"  SercosAddress="5" />
+    <SubDevice index="5"  SercosAddress="6" />
+    <SubDevice index="6"  SercosAddress="7" />
+    <SubDevice index="7"  SercosAddress="8" />
+  </SercosAddresses>
+  <IO>
+    <EnableIO>false</EnableIO>
+    <Modules>
+      <Module name="SystemIO" typeCode="3" >
+        <IOFunctionGroup type="din" idn="S-0-1503.1.x" >
+          <IO name="HPE1" offsetInFunctionGroup="0" />
+          <IO name="HPE2" offsetInFunctionGroup="1" />
+          <IO name="UEN1_DOOR1" offsetInFunctionGroup="2" />
+          <IO name="UEN2_DOOR2" offsetInFunctionGroup="3" />
+          <IO name="BRS1" offsetInFunctionGroup="4" />
+          <IO name="BRS2" offsetInFunctionGroup="5" />
+          <IO name="LSW1" offsetInFunctionGroup="6" />
+          <IO name="DF" offsetInFunctionGroup="7" />
+          <IO name="SHORTR1_FAULT" offsetInFunctionGroup="8" />
+          <IO name="BRK_SEL" offsetInFunctionGroup="9" />
+          <IO name="BRK_REL" offsetInFunctionGroup="10" />
+          <IO name="24V_FUS_FAULT" offsetInFunctionGroup="11" />
+          <IO name="WDG1" offsetInFunctionGroup="12" />
+          <IO name="CHGMOD1" offsetInFunctionGroup="13" />
+          <IO name="MANU" offsetInFunctionGroup="14" />
+          <IO name="COMP" offsetInFunctionGroup="15" />
+          <IO name="PARK1" offsetInFunctionGroup="16" />
+          <IO name="BUS_ON1" offsetInFunctionGroup="17" />
+          <IO name="BUS_ON2" offsetInFunctionGroup="18" />
+          <IO name="VALID" offsetInFunctionGroup="19" />
+          <IO name="MCPES1" offsetInFunctionGroup="20" />
+          <IO name="MCPES2" offsetInFunctionGroup="21" />
+          <IO name="UESA1" offsetInFunctionGroup="22" />
+          <IO name="UESA2" offsetInFunctionGroup="23" />
+          <IO name="UESB1" offsetInFunctionGroup="24" />
+          <IO name="UESB2" offsetInFunctionGroup="25" />
+          <IO name="BRK_REL_EN" offsetInFunctionGroup="26" />
+          <IO name="PWR_OK" offsetInFunctionGroup="27" />
+          <IO name="ALIM_OK" offsetInFunctionGroup="28" />
+          <IO name="ESTOP1_MEM" offsetInFunctionGroup="29" />
+          <IO name="ESTOP2_MEM" offsetInFunctionGroup="30" />
+          <IO name="HPE1_DELAY" offsetInFunctionGroup="31" />
+          <IO name="HPE2_DELAY" offsetInFunctionGroup="32" />
+          <IO name="PHASING" offsetInFunctionGroup="33" />
+          <IO name="SCR1" offsetInFunctionGroup="34" />
+          <IO name="SCR2" offsetInFunctionGroup="35" />
+          <IO name="LSW2" offsetInFunctionGroup="36" />
+          <IO name="SHORTR2_FAULT" offsetInFunctionGroup="37" />
+          <IO name="WDG2" offsetInFunctionGroup="38" />
+          <IO name="WMSES1" offsetInFunctionGroup="39" />
+          <IO name="WMSES2" offsetInFunctionGroup="40" />
+          <IO name="COMPL1" offsetInFunctionGroup="41" />
+          <IO name="COMPR1" offsetInFunctionGroup="42" />
+          <IO name="MANUS1" offsetInFunctionGroup="43" />
+          <IO name="MANUF1" offsetInFunctionGroup="44" />
+        </IOFunctionGroup>
+      </Module>
+      <Module name="UserIO" typeCode="5" >
+        <IOFunctionGroup type="din" idn="S-0-1503.2.x" >
+          <IO name="usrIn0" offsetInFunctionGroup="0" />
+          <IO name="usrIn1" offsetInFunctionGroup="1" />
+        </IOFunctionGroup>
+        <IOFunctionGroup type="dout" idn="S-0-1502.2.x" >
+          <IO name="valve1" offsetInFunctionGroup="0" />
+          <IO name="valve2" offsetInFunctionGroup="1" />
+        </IOFunctionGroup>
+      </Module>
+      <Module name="RsiIO" typeCode="6" >
+        <IOFunctionGroup type="ain" idn="S-0-1505.3.x" >
+          <IO name="CBT_TEMP" offsetInFunctionGroup="0" />
+        </IOFunctionGroup>
+      </Module>
+      <Module name="CpuIO" typeCode="8" >
+        <IOFunctionGroup type="ain" idn="S-0-1505.4.x" >
+          <IO name="CPU_TEMP" offsetInFunctionGroup="0" />
+        </IOFunctionGroup>
+      </Module>
+      <Module name="TeachIO" typeCode="9" >
+        <IOFunctionGroup type="din" idn="S-0-1503.5.x" >
+          <IO name="DEADMAN2" offsetInFunctionGroup="0" />
+          <IO name="CHGMOD2" offsetInFunctionGroup="1" />
+          <IO name="COMPL2" offsetInFunctionGroup="2" />
+          <IO name="COMPR2" offsetInFunctionGroup="3" />
+          <IO name="MANUF2" offsetInFunctionGroup="4" />
+          <IO name="MANUS2" offsetInFunctionGroup="5" />
+          <IO name="POWER_EN" offsetInFunctionGroup="6" />
+          <IO name="PARK2" offsetInFunctionGroup="7" />
+        </IOFunctionGroup>
+      </Module>
+      <Module name="PtcFaultIO" typeCode="10" >
+        <IOFunctionGroup type="din" idn="S-0-1503.6.x" >
+          <IO name="MOTOR_1_3_5" offsetInFunctionGroup="0" />
+          <IO name="MOTOR_2_4_6" offsetInFunctionGroup="1" />
+          <IO name="CASTING" offsetInFunctionGroup="2" />
+          <IO name="DSI_BOARD" offsetInFunctionGroup="3" />
+          <IO name="GLOBAL_PTC" offsetInFunctionGroup="4" />
+        </IOFunctionGroup>
+      </Module>
+      <Module name="FastIO" typeCode="11" >
+        <IOFunctionGroup type="din" idn="S-0-1503.7.x" >
+          <IO name="fIn0" offsetInFunctionGroup="0" />
+          <IO name="fIn1" offsetInFunctionGroup="1" />
+          <IO name="SECTEUR_OK" offsetInFunctionGroup="2" />
+        </IOFunctionGroup>
+        <IOFunctionGroup type="dout" idn="S-0-1502.7.x" >
+          <IO name="fOut0" offsetInFunctionGroup="0" />
+        </IOFunctionGroup>
+      </Module>
+    </Modules>
+  </IO>
+  <IpConfig>
+    <ipAddress />
+    <ipMask />
+    <ipGateway />
+  </IpConfig>
+</Sercos3>

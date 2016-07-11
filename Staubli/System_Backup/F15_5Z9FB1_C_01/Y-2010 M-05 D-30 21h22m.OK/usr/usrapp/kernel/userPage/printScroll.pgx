@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="printScroll">
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="lX" type="num" xsi:type="array" size="1" />
+      <Local name="lY" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // put the scroll
+  //
+  if size(sItems)>nBottomY
+    // find the percentage
+    //windows style
+    //i=(size(sItems)-nBottomY+1)/(nFirst+1)
+    // nokia style
+    i=(size(sItems))/(nFirst+nView+1)
+    lX=nTopX+nBottomX+1
+    lY=roundUp((nBottomY)/i+nTopY)
+    for i=nTopY+1 to nBottomY
+      gotoxy(lX,i)
+      if i==lY
+        //
+        put("■")
+        //
+      else
+        put("│")
+      endIf
+    endFor
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

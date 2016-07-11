@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="insertDialog" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sMsg" type="string" xsi:type="element" />
+      <Parameter name="x_nItem" type="num" xsi:type="array" use="reference" />
+      <Parameter name="x_nMin" type="num" xsi:type="element" />
+      <Parameter name="x_nMax" type="num" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nStartLine" type="num" xsi:type="array" size="1" />
+      <Local name="l_nLine" type="num" xsi:type="array" size="1" />
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_nPX" type="num" xsi:type="array" size="1" />
+      <Local name="l_nPY" type="num" xsi:type="array" size="1" />
+      <Local name="l_sItem" type="string" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_sString" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // modify the x_sItem, using a min max range
+  //
+  if watch(bShowDialog==false,2)==false
+    bShowDialog=false
+    logMsg("error dialog resoursing")
+    return
+  else
+    setMutex(bShowDialog)
+    // clear the line
+    call clear(0,13)
+    // look for the comma
+    if round(x_nItem)!=x_nItem
+      l_sItem=toString(".2",x_nItem)
+    else
+      l_sItem=toString("",x_nItem)
+    endIf
+    // print the line
+    call stringCopy(x_sMsg+">"+l_sItem,sMessage)
+    // divide the sentence
+    call divideString(sMessage,l_nLine)
+    l_nStartLine=round(5-l_nLine/2)
+    // Start LINE
+    call type(0,l_nStartLine-2,"┌──────────────────────────────────────┐")
+    call type(0,l_nStartLine-1,"│                                      │")
+    // write the message
+    for i=0 to l_nLine
+      //call type(,"                                      ")
+      l_sMessage=sMessage[i]
+      call typeCenter(i+l_nStartLine,l_sMessage,38,false)
+      call type(0,l_nStartLine+i,"│"+l_sMessage+"│")
+    endFor
+    // end LINE
+    call type(0,l_nStartLine+l_nLine+1,"│                                      │")
+    call type(0,l_nStartLine+l_nLine+2,"└──────────────────────────────────────┘")
+    l_nPX=find(l_sMessage,">")+2
+    l_nPY=l_nStartLine+l_nLine
+    // change the value
+    l_sString=""
+    call changeValue(x_nItem,x_nMin,x_nMax,l_nPX,l_nPY,l_sString)
+    //
+    bShowDialog=false
+    bUseRefresh=true
+    //
+    delay(0)
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

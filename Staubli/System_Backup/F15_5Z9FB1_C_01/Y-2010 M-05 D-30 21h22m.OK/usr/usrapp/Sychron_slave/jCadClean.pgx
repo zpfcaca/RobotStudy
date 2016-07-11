@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="jCadClean" access="private" >
+    <Locals>
+      <Local name="l_ni" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //  nTotalPoints=size(jCad)
+  //  if nTotalPoints<=1
+  //    //          //no point
+  //    //          io:socket="(RBINIT)"
+  //  else
+  //    //delete points
+  //    for l_ni=nTotalPoints to 2 step -1
+  //      $ddel(jCad,nTotalPoints-1)
+  //      nTotalPoints=nTotalPoints-1
+  //      nScrPts=nTotalPoints
+  //      call hmi_refreshmain()
+  //    endFor
+  //    wait(nTotalPoints==1)
+  //    //          io:socket="(RBINIT)"
+  //  endIf
+end]]></Code>
+  </Program>
+</Programs>

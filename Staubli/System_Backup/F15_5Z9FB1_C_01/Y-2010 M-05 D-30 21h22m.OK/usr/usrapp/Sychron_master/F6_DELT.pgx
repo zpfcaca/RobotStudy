@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F6_DELT" access="private" >
+    <Code><![CDATA[begin
+  while size(sString)>1
+    $ddel(sString,size(sString)-1)
+  endWhile
+  while size(pfrmCad)>1
+    $ddel(pfrmCad,size(pfrmCad)-1)
+  endWhile
+  while size(nPulse)>1
+    $ddel(nPulse,size(nPulse)-1)
+  endWhile
+  n_sTxt=0
+  sScrPts="NotReady"
+  call hmi_refreshmain()
+  popUpMsg("数据已清空,可以关机")
+
+end]]></Code>
+  </Program>
+</Programs>

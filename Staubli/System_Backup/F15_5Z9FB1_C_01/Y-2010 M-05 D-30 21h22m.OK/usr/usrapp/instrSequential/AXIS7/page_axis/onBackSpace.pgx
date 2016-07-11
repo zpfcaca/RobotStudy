@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onBackSpace">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_bSave" type="bool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sName" type="string" xsi:type="array" size="1" />
+      <Local name="l_nX" type="num" xsi:type="array" size="1" />
+      <Local name="l_nY" type="num" xsi:type="array" size="1" />
+      <Local name="l_sNewName" type="string" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_bFound" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[
+begin
+  //
+  // NB sEvent is the selected 
+  // element in the LIST
+  // 
+  // enter the name of the preset
+  //
+  //if global:mode>0 
+    call axis:get(l_sName,nIndex)
+    // change the name
+    if l_sName!=""
+      l_nX=40-use:nBottomX+find(sEvent,l_sName)-1
+      l_nY=nView+1
+      // read the new name string
+      l_sNewName=l_sName
+      call use:read(l_nX,l_nY,l_sNewName,10,false)
+      if l_sName!=l_sNewName and l_sNewName!=""
+        call axis:find(l_sNewName,l_bFound) 
+        if l_bFound
+          call language:message(l_sMessage,-2)
+        else
+          call axis:set(l_sNewName,nIndex)
+          x_bSave=true
+          call buildList()
+        endIf
+      endIf
+    endIf
+  //endIf
+end        
+      ]]></Code>
+  </Program>
+</Programs>

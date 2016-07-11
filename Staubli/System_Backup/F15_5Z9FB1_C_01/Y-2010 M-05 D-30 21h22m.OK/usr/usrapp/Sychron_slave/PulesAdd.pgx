@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="PulesAdd" access="public" >
+    <Locals>
+      <Local name="l_nPulse" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  for l_nPulse=0 to 99 step 1
+    delay(0.02)
+    fOut0=true
+    fOut0=false
+
+  endFor
+
+end]]></Code>
+  </Program>
+</Programs>

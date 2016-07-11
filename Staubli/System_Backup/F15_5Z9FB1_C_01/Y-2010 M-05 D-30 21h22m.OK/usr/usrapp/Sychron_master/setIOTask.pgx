@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="setIOTask" access="private" >
+    <Locals>
+      <Local name="l_pHere" type="point" xsi:type="array" size="1" />
+      <Local name="l_pPrev" type="point" xsi:type="array" size="1" />
+      <Local name="l_nNum" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  l_pPrev=here(tTool,FrmDraw)
+  l_nNum=0
+  while true
+    if bSetIO==true
+      l_pHere=here(tTool,FrmDraw)
+      if distance(l_pPrev,l_pHere)>=1
+        //        io:fOut0=false
+        //        delay(0)
+        //        io:fOut0=true
+        l_pPrev=l_pHere
+        l_nNum=l_nNum+1
+        nIONum=l_nNum
+        //        gotoxy(35,11)
+        //        put(nIONum)
+      endIf
+    endIf
+    gotoxy(35,11)
+    put(nTime)
+    delay(0.1)
+  endWhile
+end]]></Code>
+  </Program>
+</Programs>

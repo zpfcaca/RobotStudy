@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="start" access="public" >
+    <Code><![CDATA[begin
+  setFrame(frm_ori,frm_x,frm_y,FrmDraw)
+  call FC_InitData()
+  call initCmdBuf()
+  //call stringinit()
+  //  waitEndMove()
+
+
+  //movej(jHome,tTool,mSlow)
+  //waitEndMove()
+  if taskStatus("tcprec")==-1
+    taskCreate "tcprec",90,TcpStrRec:SockRec(datar,ststu)
+  endIf
+  if taskStatus("CmdManage")==-1
+    taskCreate "CmdManage",88,CmdManage()
+  endIf
+  if taskStatus("CmdDeal")==-1
+    taskCreate "CmdDeal",89,CmdDeal()
+  endIf
+  if taskStatus("nId")==-1
+    taskCreate "nId",87,setIOTask()
+  endIf
+  if taskStatus("CmdTxtReading")==-1
+    taskCreate "CmdTxtReading",85,CmdTxtReading()
+  endIf
+  if taskStatus("CtrlLine")==-1
+    taskCreate "CtrlLine",80,CtrlLine()
+  endIf
+  //    if taskStatus("HMI")==-1
+  //    taskCreate "HMI",90,HMI()
+  //    endIf
+  //
+  call HMI()
+  //call stringinit()
+end]]></Code>
+  </Program>
+</Programs>

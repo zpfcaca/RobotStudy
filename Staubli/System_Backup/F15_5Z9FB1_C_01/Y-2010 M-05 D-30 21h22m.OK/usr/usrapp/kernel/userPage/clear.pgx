@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="clear" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="pX" type="num" xsi:type="element" />
+      <Parameter name="pY" type="num" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="lLen" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //---------------------------------
+  //      C L E A R   L I N E
+  //---------------------------------
+  // Erase a pY line from the column
+  // pX to end
+  //
+  //
+  call typeLen(pX,pY," ",40-pX)
+  gotoxy(pX,pY)
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

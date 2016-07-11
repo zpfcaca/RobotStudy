@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="midPos" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItem" type="string" xsi:type="element" />
+      <Parameter name="x_nLenght" type="num" xsi:type="element" />
+      <Parameter name="x_nPos" type="num" xsi:type="element" />
+      <Parameter name="x_sResult" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sLeft" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // LEFT SIDE
+  call leftPos(x_sItem,x_nLenght+x_nPos,l_sLeft)
+  // update
+  x_sResult=l_sLeft
+  // RIGHT SIDE
+  call rightPos(l_sLeft,x_nLenght,x_sResult)
+  // OK ....
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

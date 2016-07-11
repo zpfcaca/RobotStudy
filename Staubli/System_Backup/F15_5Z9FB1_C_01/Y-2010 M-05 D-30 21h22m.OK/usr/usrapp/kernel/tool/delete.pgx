@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="delete" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_nIndexGun" type="num" xsi:type="element" />
+    </Parameters>
+    <Code><![CDATA[begin
+  $ddel(saveTool:gun,x_nIndexGun)
+  $ddel(saveTool:name,x_nIndexGun)
+  $ddel(saveTool:sActionOFF,x_nIndexGun)
+  $ddel(saveTool:sActionON,x_nIndexGun)
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="F6_testmove" access="private" >
+    <Locals>
+      <Local name="l_ni" type="num" xsi:type="array" size="1" />
+      <Local name="l_bTemp" type="bool" xsi:type="array" size="1" />
+      <Local name="l_jTemp1" type="joint" xsi:type="array" size="1" />
+      <Local name="l_nCount" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //call FC_InitMotion()
+  if bTxtPrSv==false
+    popUpMsg("请首先对点位文件初始化（按F3-PoIn）")
+  else
+    pointToJoint(tTool,jConfig,pfrmCad[0],jConfig)
+    MoveTo.trsf=pfrmCad[0].trsf
+    l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+    movej(l_jTemp1,tTool,mNomSpeed)
+    l_nCount=0
+    do
+      if pfrmCad[l_nCount].trsf!={0,0,0,0,0,0}
+        /////运动部分/////
+        MoveTo.trsf=pfrmCad[l_nCount].trsf
+        l_bTemp=pointToJoint(tTool,jConfig,MoveTo,l_jTemp1)
+        movej(l_jTemp1,tTool,mNomSpeed)
+        delay(0)
+        /////运动部分/////
+        pfrmCad[l_nCount].trsf={0,0,0,0,0,0}
+        if l_nCount==600
+          bTxt1=true
+        endIf
+        if l_nCount==1100
+          bTxt2=true
+        endIf
+        if l_nCount==100
+          bTxt3=true
+        endIf
+      endIf
+      if l_nCount==1499
+        l_nCount=0
+      else
+        l_nCount=l_nCount+1
+      endIf
+      delay(0)
+    until pfrmCad[l_nCount].trsf=={0,0,0,0,0,0}
+    bTxtPrSv=false
+  endIf
+  sScrPts="NotReady"
+  call hmi_refreshmain()
+  //
+  //
+  waitEndMove()
+  popUpMsg("test over")
+  //call FC_EndMotion()
+end]]></Code>
+  </Program>
+</Programs>

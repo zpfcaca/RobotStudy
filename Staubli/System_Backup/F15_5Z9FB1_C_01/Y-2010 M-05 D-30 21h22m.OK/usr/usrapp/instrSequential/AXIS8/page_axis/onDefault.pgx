@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onDefault">
+    <Code><![CDATA[begin
+  aioSet(MbAO_bAxis7Home,0)
+  aioSet(MbAO_bResetErr,0)
+  
+end]]></Code>
+  </Program>
+</Programs>

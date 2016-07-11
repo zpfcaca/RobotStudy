@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://www.staubli.com/robotics/VAL3/Project/3">
+  <Parameters version="s7.2.1" stackSize="5000" millimeterUnit="true" />
+  <Programs>
+    <Program file="getLanguage.pgx" />
+    <Program file="getYesNo.pgx" />
+    <Program file="message.pgx" />
+    <Program file="page.pgx" />
+    <Program file="setLanguage.pgx" />
+  </Programs>
+  <Database>
+    <Data file="language.dtx" />
+  </Database>
+  <Libraries>
+    <Library alias="language" path="Disk://kernel/language/english/english.pjx" />
+  </Libraries>
+</Project>

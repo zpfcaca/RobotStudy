@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="CmdTxtReading" access="private" >
+    <Code><![CDATA[begin
+  call Txt_initData()
+  call txt_PkgInit()
+  ////  waitEndMove()
+  nCycleTotal=200
+  while true
+    //if n_sTxt<nTxtTotal and nTxtTotal>2
+    if n_Roate<nCycleTotal and nTxtTotal>2
+      if bTxt1==true
+        call TxtReadRoom1()
+      else
+      endIf
+      if bTxt2==true
+        call TxtReadRoom2()
+      else
+      endIf
+      if bTxt3==true
+        call TxtReadRoom3()
+      else
+      endIf
+    else
+    endIf
+    //    nScrPts=n_sTxt
+    //    call hmi_refreshmain()
+    delay(0)
+  endWhile
+end]]></Code>
+  </Program>
+</Programs>

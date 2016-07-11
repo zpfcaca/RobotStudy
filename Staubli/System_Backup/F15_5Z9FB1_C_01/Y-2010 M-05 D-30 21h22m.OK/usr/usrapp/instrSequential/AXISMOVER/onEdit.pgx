@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onEdit" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItem" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nX" type="num" xsi:type="array" size="1" />
+      <Local name="l_nY" type="num" xsi:type="array" size="1" />
+      <Local name="l_nDelay" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // convert to a num
+  toNum(x_sItem,l_nDelay,true)
+  // change the field
+  call use:insertDialog("Distance [mm] ",l_nDelay,-0.01,2680.01)
+  // give back
+  if l_nDelay>=0
+    l_nDelay=round(l_nDelay)
+    x_sItem="AXISMOVER "+toString("",l_nDelay)
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

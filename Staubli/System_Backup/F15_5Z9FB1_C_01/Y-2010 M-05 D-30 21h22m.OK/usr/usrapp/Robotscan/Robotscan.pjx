@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://www.staubli.com/robotics/VAL3/Project/3" >
+  <Parameters version="s7.7.2" stackSize="5000" millimeterUnit="true" />
+  <Programs>
+    <Program file="CmdTxtReading.pgx" />
+    <Program file="PositionTrigger.pgx" />
+    <Program file="RobotMotion.pgx" />
+    <Program file="Transmission.pgx" />
+    <Program file="TxtReadRoom1.pgx" />
+    <Program file="TxtReadRoom2.pgx" />
+    <Program file="TxtReadRoom3.pgx" />
+    <Program file="Txt_initData.pgx" />
+    <Program file="WipeCacheRoom1.pgx" />
+    <Program file="WipeCacheRoom2.pgx" />
+    <Program file="WipeCacheRoom3.pgx" />
+    <Program file="initdata.pgx" />
+    <Program file="start.pgx" />
+    <Program file="stop.pgx" />
+    <Program file="stringtopoint.pgx" />
+    <Program file="txt_PkgInit.pgx" />
+  </Programs>
+  <Database>
+    <Data file="Robotscan.dtx" />
+  </Database>
+  <Libraries>
+  </Libraries>
+  <Types>
+  </Types>
+</Project>

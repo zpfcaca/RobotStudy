@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF6Event">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_tTrsf" type="trsf" xsi:type="element" />
+      <Parameter name="x_bSave" type="bool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_sName" type="string" xsi:type="array" size="1" />
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // look if the bButton is enable
+  if bButton[5]
+    //
+    // DUPLICATE
+    //
+    call language:message(l_sMessage,126)
+    call tcp:getName(l_sName,nIndexTool)
+    popUpMsg(l_sMessage+l_sName)
+    call tcp:new(x_tTrsf)
+    call tcp:getSize(l_nSize)
+    nIndexTool=l_nSize-1
+    // refresh and modify the name
+    call buildList()
+    call refreshStatic()
+    nIndex=0
+    call editTool(x_tTrsf)
+    logMsg("[VALlaser] INTERFACE:Insert new tool at index: "+toString("",l_nSize))
+    x_bSave=true
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

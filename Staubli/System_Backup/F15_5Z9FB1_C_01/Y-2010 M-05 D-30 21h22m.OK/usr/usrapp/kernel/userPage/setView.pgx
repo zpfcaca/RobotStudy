@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="setView" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_bLarge" type="bool" xsi:type="element" />
+    </Parameters>
+    <Code><![CDATA[begin
+  // look if to enlarge the screen
+  if x_bLarge
+    nTopX[1]=nTopX
+    nTopX=0
+    nBottomX[1]=nBottomX
+    nBottomX=38
+  else
+    nTopX=nTopX[1]
+    nBottomX=nBottomX[1]
+  endIf
+  bUseRefresh=true
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

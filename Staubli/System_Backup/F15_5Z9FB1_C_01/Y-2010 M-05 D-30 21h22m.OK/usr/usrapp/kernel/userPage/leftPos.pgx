@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="leftPos" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItem" type="string" xsi:type="element" />
+      <Parameter name="x_nLength" type="num" xsi:type="element" />
+      <Parameter name="x_sResult" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_nLength" type="num" xsi:type="array" size="1" />
+      <Local name="l_sItem" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  l_sItem=x_sItem
+  //
+  if len(l_sItem)!=getDisplayLen(l_sItem) and x_nLength>0
+    for i=0 to len(x_sItem)-1
+      l_nLength=l_nLength+getDisplayLen(left(l_sItem,1))
+      l_sItem=right(l_sItem,len(l_sItem)-1)
+      if l_nLength==x_nLength
+        x_sResult=left(x_sItem,i+1)
+        return
+      else
+        if l_nLength>x_nLength
+          x_sResult=left(x_sItem,i)
+          return
+        endIf
+      endIf
+    endFor
+    // else
+  endIf
+  x_sResult=left(x_sItem,max(x_nLength,0))
+  // endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

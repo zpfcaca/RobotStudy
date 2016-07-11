@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="hmi_keyinmain" access="private" >
+    <Locals>
+      <Local name="l_nKeyIn" type="num" xsi:type="array" size="1" />
+      <Local name="l_nDbg" type="num" xsi:type="array" size="1" />
+      <Local name="l_ni" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //main page interface
+  //clear message buffer
+  cls()
+  gotoxy(2,5)
+  put("请输入txt文档总包数。如需修改，选择F7重新进行初始化")
+  get(nTxtTotal)
+  putln(nTxtTotal)
+  sScrPts="NotReady"
+  do
+    l_nKeyIn=getKey()
+    switch l_nKeyIn
+      case 271
+        //delete points
+      break
+      case 272
+        // go to jCad[1] position
+        call F2_gohome()
+      break
+      case 273
+        call Txt_PkgInit()
+      break
+      case 274
+        //         call Txt_PkgInit()
+        call F4_DELT()
+      break
+      case 275
+        call testMove()
+      break
+      case 276
+        call F6_testmove()
+      break
+      case 277
+        call hmi_keyinmain()
+        //        call F7_testmove()
+      break
+      case 278
+        //below is to confirm quit or not
+        cls()
+        gotoxy(2,5)
+        put("Are you sure to quit ? 'Y' or ESC")
+        l_nKeyIn=get()
+        if l_nKeyIn==121
+          l_nKeyIn=278
+        else
+          l_nKeyIn=0
+        endIf
+      break
+    endSwitch
+    //refresh hmi screen
+    call hmi_refreshmain()
+    //monitor production task ,if working mode in remote , start it automatically
+  until (l_nKeyIn==278)
+  //until ESC key is pushed
+  //quite tasks and exit running staus
+  //cls()
+  //goto next page
+end]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="getAction" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sInstruction" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_bType" type="bool" xsi:type="element" />
+      <Parameter name="x_nIndex" type="num" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sInstruction" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // get the instruction and fill as an array
+  if x_nIndex>=0
+    if x_bType
+      // take gun ON
+      l_sInstruction=saveTool:sActionON[x_nIndex]
+    else
+      // take gun OFF
+      l_sInstruction=saveTool:sActionOFF[x_nIndex]
+    endIf
+    // make it to three element
+    if l_sInstruction==""
+      l_sInstruction=",,"
+    endIf
+    call use:stringToArray(l_sInstruction,x_sInstruction)
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

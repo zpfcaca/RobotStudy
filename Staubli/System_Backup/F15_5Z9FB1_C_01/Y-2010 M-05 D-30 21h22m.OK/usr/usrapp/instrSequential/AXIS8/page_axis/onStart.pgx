@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onStart">
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // logMsg
+  logMsg("[VALPLAST] INTERFACE:PAGE...")
+  // reset the Key pressure
+  call use:nullKey(nKey)
+  // define the list
+  call buildList()
+  // build the page
+  call refreshStatic()
+  // define the list
+end
+            
+      ]]></Code>
+  </Program>
+</Programs>

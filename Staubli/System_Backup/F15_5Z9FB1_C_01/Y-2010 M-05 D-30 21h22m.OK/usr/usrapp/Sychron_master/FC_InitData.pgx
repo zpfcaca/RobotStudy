@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="FC_InitData" access="private" >
+    <Code><![CDATA[begin
+  //initial data
+  cls()
+  userPage()
+  bRb2Start=false
+  bRb2Stop=true
+  bRb2Ready=false
+  bSychronOn=false
+  bRb2Home=false
+  bRb2InitOk=false
+  bTxt1=false
+  bTxt2=false
+  bTxt3=false
+  call initCmdBuf()
+end]]></Code>
+  </Program>
+</Programs>

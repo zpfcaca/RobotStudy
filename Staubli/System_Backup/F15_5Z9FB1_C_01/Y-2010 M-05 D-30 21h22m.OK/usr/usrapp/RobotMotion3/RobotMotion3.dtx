@@ -1,0 +1,1644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Data/2">
+  <Datas>
+    <Data name="bSignal" access="private" xsi:type="array" type="bool" size="1" />
+    <Data name="bTxt1" access="private" xsi:type="array" type="bool" size="1" />
+    <Data name="bTxt2" access="private" xsi:type="array" type="bool" size="1" />
+    <Data name="bTxt3" access="private" xsi:type="array" type="bool" size="1" />
+    <Data name="btrig" access="private" xsi:type="array" type="bool" size="1" />
+    <Data name="fout" access="public" xsi:type="array" type="dio" size="1">
+      <Value key="0" link="fOut0" />
+    </Data>
+    <Data name="FrmDraw" access="public" xsi:type="array" type="frame" size="1">
+      <Value key="0" x="1000" y="-100" fatherId="world[0]" />
+    </Data>
+    <Data name="mNomSpeed" access="private" xsi:type="array" type="mdesc" size="1" />
+    <Data name="l_nInit" access="private" xsi:type="array" type="num" size="1">
+      <Value key="0" value="1500" />
+    </Data>
+    <Data name="nNumTotal" access="private" xsi:type="array" type="num" size="1">
+      <Value key="0" value="799" />
+    </Data>
+    <Data name="nNumrecord" access="private" xsi:type="array" type="num" size="1" />
+    <Data name="nTxtTotal" access="private" xsi:type="array" type="num" size="1">
+      <Value key="0" value="2" />
+    </Data>
+    <Data name="n_sTxt" access="private" xsi:type="array" type="num" size="1" />
+    <Data name="ndelay" access="private" xsi:type="array" type="num" size="1">
+      <Value key="0" value="258.323" />
+    </Data>
+    <Data name="nnnn" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="ntime" access="private" xsi:type="array" type="num" size="1">
+      <Value key="0" value="459.89" />
+    </Data>
+    <Data name="pfrmCad" access="private" xsi:type="array" type="pointRx" size="1500">
+      <Value key="0" x="16.915" y="-25.265" z="273.2" rx="-177" ry="0.5" rz="-161.069" fatherId="FrmDraw[0]" />
+      <Value key="1" x="15.593" y="-24.767" z="273.202" rx="-177" ry="0.459" rz="-162.61" fatherId="FrmDraw[0]" />
+      <Value key="2" x="14.003" y="-24.227" z="273.204" rx="-177" ry="0.41" rz="-164.442" fatherId="FrmDraw[0]" />
+      <Value key="3" x="12.409" y="-23.75" z="273.205" rx="-177" ry="0.362" rz="-166.257" fatherId="FrmDraw[0]" />
+      <Value key="4" x="10.813" y="-23.335" z="273.207" rx="-177" ry="0.314" rz="-168.059" fatherId="FrmDraw[0]" />
+      <Value key="5" x="9.215" y="-22.978" z="273.208" rx="-177" ry="0.267" rz="-169.848" fatherId="FrmDraw[0]" />
+      <Value key="6" x="7.615" y="-22.681" z="273.209" rx="-177" ry="0.22" rz="-171.628" fatherId="FrmDraw[0]" />
+      <Value key="7" x="6.014" y="-22.441" z="273.209" rx="-177" ry="0.173" rz="-173.399" fatherId="FrmDraw[0]" />
+      <Value key="8" x="4.411" y="-22.259" z="273.21" rx="-177" ry="0.127" rz="-175.164" fatherId="FrmDraw[0]" />
+      <Value key="9" x="2.807" y="-22.133" z="273.21" rx="-177" ry="0.081" rz="-176.925" fatherId="FrmDraw[0]" />
+      <Value key="10" x="1.203" y="-22.063" z="273.211" rx="-177" ry="0.034" rz="-178.683" fatherId="FrmDraw[0]" />
+      <Value key="11" x="0.134" y="-22.047" z="273.211" rx="-177" ry="0.004" rz="-179.854" fatherId="FrmDraw[0]" />
+      <Value key="12" x="-1.203" y="-22.063" z="273.211" rx="-177" ry="-0.034" rz="178.683" fatherId="FrmDraw[0]" />
+      <Value key="13" x="-2.807" y="-22.133" z="273.21" rx="-177" ry="-0.081" rz="176.925" fatherId="FrmDraw[0]" />
+      <Value key="14" x="-4.411" y="-22.259" z="273.21" rx="-177" ry="-0.127" rz="175.164" fatherId="FrmDraw[0]" />
+      <Value key="15" x="-6.014" y="-22.441" z="273.209" rx="-177" ry="-0.173" rz="173.399" fatherId="FrmDraw[0]" />
+      <Value key="16" x="-7.615" y="-22.681" z="273.209" rx="-177" ry="-0.22" rz="171.628" fatherId="FrmDraw[0]" />
+      <Value key="17" x="-9.215" y="-22.978" z="273.208" rx="-177" ry="-0.267" rz="169.848" fatherId="FrmDraw[0]" />
+      <Value key="18" x="-10.813" y="-23.335" z="273.207" rx="-177" ry="-0.314" rz="168.059" fatherId="FrmDraw[0]" />
+      <Value key="19" x="-12.409" y="-23.75" z="273.205" rx="-177" ry="-0.362" rz="166.257" fatherId="FrmDraw[0]" />
+      <Value key="20" x="-14.002" y="-24.227" z="273.204" rx="-177" ry="-0.41" rz="164.442" fatherId="FrmDraw[0]" />
+      <Value key="21" x="-15.593" y="-24.767" z="273.202" rx="-177" ry="-0.459" rz="162.61" fatherId="FrmDraw[0]" />
+      <Value key="22" x="-16.915" y="-25.265" z="273.2" rx="-177" ry="-0.5" rz="161.069" fatherId="FrmDraw[0]" />
+      <Value key="23" x="-16.935" y="-25.265" z="270.798" rx="-177" ry="-0.5" rz="161.071" fatherId="FrmDraw[0]" />
+      <Value key="24" x="-16.956" y="-25.264" z="268.2" rx="-177" ry="-0.5" rz="161.073" fatherId="FrmDraw[0]" />
+      <Value key="25" x="-15.63" y="-24.766" z="268.202" rx="-177" ry="-0.459" rz="162.614" fatherId="FrmDraw[0]" />
+      <Value key="26" x="-14.035" y="-24.226" z="268.204" rx="-177" ry="-0.41" rz="164.445" fatherId="FrmDraw[0]" />
+      <Value key="27" x="-12.438" y="-23.75" z="268.205" rx="-177" ry="-0.362" rz="166.26" fatherId="FrmDraw[0]" />
+      <Value key="28" x="-10.838" y="-23.334" z="268.207" rx="-177" ry="-0.314" rz="168.061" fatherId="FrmDraw[0]" />
+      <Value key="29" x="-9.236" y="-22.978" z="268.208" rx="-177" ry="-0.266" rz="169.85" fatherId="FrmDraw[0]" />
+      <Value key="30" x="-7.633" y="-22.681" z="268.209" rx="-177" ry="-0.22" rz="171.63" fatherId="FrmDraw[0]" />
+      <Value key="31" x="-6.027" y="-22.441" z="268.209" rx="-177" ry="-0.173" rz="173.401" fatherId="FrmDraw[0]" />
+      <Value key="32" x="-4.421" y="-22.259" z="268.21" rx="-177" ry="-0.127" rz="175.165" fatherId="FrmDraw[0]" />
+      <Value key="33" x="-2.814" y="-22.133" z="268.21" rx="-177" ry="-0.081" rz="176.926" fatherId="FrmDraw[0]" />
+      <Value key="34" x="-1.206" y="-22.063" z="268.211" rx="-177" ry="-0.034" rz="178.683" fatherId="FrmDraw[0]" />
+      <Value key="35" x="-0.134" y="-22.047" z="268.211" rx="-177" ry="-0.004" rz="179.854" fatherId="FrmDraw[0]" />
+      <Value key="36" x="1.206" y="-22.063" z="268.211" rx="-177" ry="0.034" rz="-178.683" fatherId="FrmDraw[0]" />
+      <Value key="37" x="2.814" y="-22.133" z="268.21" rx="-177" ry="0.081" rz="-176.926" fatherId="FrmDraw[0]" />
+      <Value key="38" x="4.421" y="-22.259" z="268.21" rx="-177" ry="0.127" rz="-175.165" fatherId="FrmDraw[0]" />
+      <Value key="39" x="6.027" y="-22.441" z="268.209" rx="-177" ry="0.173" rz="-173.401" fatherId="FrmDraw[0]" />
+      <Value key="40" x="7.633" y="-22.681" z="268.209" rx="-177" ry="0.22" rz="-171.63" fatherId="FrmDraw[0]" />
+      <Value key="41" x="9.237" y="-22.978" z="268.208" rx="-177" ry="0.266" rz="-169.85" fatherId="FrmDraw[0]" />
+      <Value key="42" x="10.838" y="-23.334" z="268.207" rx="-177" ry="0.314" rz="-168.061" fatherId="FrmDraw[0]" />
+      <Value key="43" x="12.438" y="-23.75" z="268.205" rx="-177" ry="0.362" rz="-166.26" fatherId="FrmDraw[0]" />
+      <Value key="44" x="14.035" y="-24.226" z="268.204" rx="-177" ry="0.41" rz="-164.445" fatherId="FrmDraw[0]" />
+      <Value key="45" x="15.63" y="-24.766" z="268.202" rx="-177" ry="0.459" rz="-162.614" fatherId="FrmDraw[0]" />
+      <Value key="46" x="16.956" y="-25.264" z="268.2" rx="-177" ry="0.5" rz="-161.073" fatherId="FrmDraw[0]" />
+      <Value key="47" x="16.978" y="-25.265" z="265.798" rx="-177" ry="0.5" rz="-161.071" fatherId="FrmDraw[0]" />
+      <Value key="48" x="17.003" y="-25.265" z="263.201" rx="-177" ry="0.5" rz="-161.069" fatherId="FrmDraw[0]" />
+      <Value key="49" x="15.673" y="-24.767" z="263.202" rx="-177" ry="0.459" rz="-162.61" fatherId="FrmDraw[0]" />
+      <Value key="50" x="14.074" y="-24.227" z="263.204" rx="-177" ry="0.41" rz="-164.442" fatherId="FrmDraw[0]" />
+      <Value key="51" x="12.472" y="-23.75" z="263.205" rx="-177" ry="0.362" rz="-166.257" fatherId="FrmDraw[0]" />
+      <Value key="52" x="10.868" y="-23.335" z="263.207" rx="-177" ry="0.314" rz="-168.059" fatherId="FrmDraw[0]" />
+      <Value key="53" x="9.262" y="-22.978" z="263.208" rx="-177" ry="0.267" rz="-169.848" fatherId="FrmDraw[0]" />
+      <Value key="54" x="7.653" y="-22.681" z="263.209" rx="-177" ry="0.22" rz="-171.628" fatherId="FrmDraw[0]" />
+      <Value key="55" x="6.044" y="-22.441" z="263.209" rx="-177" ry="0.173" rz="-173.399" fatherId="FrmDraw[0]" />
+      <Value key="56" x="4.433" y="-22.259" z="263.21" rx="-177" ry="0.127" rz="-175.164" fatherId="FrmDraw[0]" />
+      <Value key="57" x="2.821" y="-22.133" z="263.21" rx="-177" ry="0.081" rz="-176.925" fatherId="FrmDraw[0]" />
+      <Value key="58" x="1.209" y="-22.063" z="263.211" rx="-177" ry="0.034" rz="-178.683" fatherId="FrmDraw[0]" />
+      <Value key="59" x="0.134" y="-22.047" z="263.211" rx="-177" ry="0.004" rz="-179.854" fatherId="FrmDraw[0]" />
+      <Value key="60" x="-1.209" y="-22.063" z="263.211" rx="-177" ry="-0.034" rz="178.683" fatherId="FrmDraw[0]" />
+      <Value key="61" x="-2.821" y="-22.133" z="263.21" rx="-177" ry="-0.081" rz="176.925" fatherId="FrmDraw[0]" />
+      <Value key="62" x="-4.433" y="-22.259" z="263.21" rx="-177" ry="-0.127" rz="175.165" fatherId="FrmDraw[0]" />
+      <Value key="63" x="-6.044" y="-22.441" z="263.209" rx="-177" ry="-0.173" rz="173.399" fatherId="FrmDraw[0]" />
+      <Value key="64" x="-7.653" y="-22.681" z="263.209" rx="-177" ry="-0.22" rz="171.628" fatherId="FrmDraw[0]" />
+      <Value key="65" x="-9.262" y="-22.978" z="263.208" rx="-177" ry="-0.267" rz="169.848" fatherId="FrmDraw[0]" />
+      <Value key="66" x="-10.868" y="-23.335" z="263.207" rx="-177" ry="-0.314" rz="168.059" fatherId="FrmDraw[0]" />
+      <Value key="67" x="-12.472" y="-23.75" z="263.205" rx="-177" ry="-0.362" rz="166.257" fatherId="FrmDraw[0]" />
+      <Value key="68" x="-14.074" y="-24.227" z="263.204" rx="-177" ry="-0.41" rz="164.442" fatherId="FrmDraw[0]" />
+      <Value key="69" x="-15.673" y="-24.767" z="263.202" rx="-177" ry="-0.459" rz="162.61" fatherId="FrmDraw[0]" />
+      <Value key="70" x="-17.003" y="-25.265" z="263.201" rx="-177" ry="-0.5" rz="161.069" fatherId="FrmDraw[0]" />
+      <Value key="71" x="-17.022" y="-25.265" z="260.799" rx="-177" ry="-0.5" rz="161.071" fatherId="FrmDraw[0]" />
+      <Value key="72" x="-17.043" y="-25.264" z="258.201" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="73" x="-15.455" y="-24.676" z="258.203" rx="-177" ry="-0.451" rz="162.906" fatherId="FrmDraw[0]" />
+      <Value key="74" x="-13.865" y="-24.15" z="258.204" rx="-177" ry="-0.403" rz="164.72" fatherId="FrmDraw[0]" />
+      <Value key="75" x="-12.271" y="-23.686" z="258.206" rx="-177" ry="-0.355" rz="166.519" fatherId="FrmDraw[0]" />
+      <Value key="76" x="-10.675" y="-23.282" z="258.207" rx="-177" ry="-0.307" rz="168.304" fatherId="FrmDraw[0]" />
+      <Value key="77" x="-9.077" y="-22.937" z="258.208" rx="-177" ry="-0.26" rz="170.078" fatherId="FrmDraw[0]" />
+      <Value key="78" x="-7.478" y="-22.649" z="258.209" rx="-177" ry="-0.214" rz="171.842" fatherId="FrmDraw[0]" />
+      <Value key="79" x="-5.877" y="-22.418" z="258.209" rx="-177" ry="-0.168" rz="173.599" fatherId="FrmDraw[0]" />
+      <Value key="80" x="-4.275" y="-22.243" z="258.21" rx="-177" ry="-0.122" rz="175.349" fatherId="FrmDraw[0]" />
+      <Value key="81" x="-2.672" y="-22.123" z="258.21" rx="-177" ry="-0.076" rz="177.095" fatherId="FrmDraw[0]" />
+      <Value key="82" x="-1.069" y="-22.059" z="258.211" rx="-177" ry="-0.03" rz="178.838" fatherId="FrmDraw[0]" />
+      <Value key="83" y="-22.047" z="258.211" rx="-177" rz="180" fatherId="FrmDraw[0]" />
+      <Value key="84" x="1.069" y="-22.059" z="258.211" rx="-177" ry="0.03" rz="-178.838" fatherId="FrmDraw[0]" />
+      <Value key="85" x="2.672" y="-22.123" z="258.21" rx="-177" ry="0.076" rz="-177.095" fatherId="FrmDraw[0]" />
+      <Value key="86" x="4.275" y="-22.243" z="258.21" rx="-177" ry="0.122" rz="-175.349" fatherId="FrmDraw[0]" />
+      <Value key="87" x="5.877" y="-22.418" z="258.209" rx="-177" ry="0.168" rz="-173.599" fatherId="FrmDraw[0]" />
+      <Value key="88" x="7.478" y="-22.649" z="258.209" rx="-177" ry="0.214" rz="-171.842" fatherId="FrmDraw[0]" />
+      <Value key="89" x="9.077" y="-22.937" z="258.208" rx="-177" ry="0.26" rz="-170.078" fatherId="FrmDraw[0]" />
+      <Value key="90" x="10.675" y="-23.282" z="258.207" rx="-177" ry="0.307" rz="-168.304" fatherId="FrmDraw[0]" />
+      <Value key="91" x="12.271" y="-23.686" z="258.206" rx="-177" ry="0.355" rz="-166.519" fatherId="FrmDraw[0]" />
+      <Value key="92" x="13.865" y="-24.15" z="258.204" rx="-177" ry="0.403" rz="-164.72" fatherId="FrmDraw[0]" />
+      <Value key="93" x="15.455" y="-24.676" z="258.203" rx="-177" ry="0.451" rz="-162.906" fatherId="FrmDraw[0]" />
+      <Value key="94" x="17.043" y="-25.264" z="258.201" rx="-177" ry="0.5" rz="-161.073" fatherId="FrmDraw[0]" />
+      <Value key="95" x="17.066" y="-25.265" z="255.799" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="96" x="17.09" y="-25.265" z="253.201" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="97" x="15.763" y="-24.77" z="253.203" rx="-177" ry="0.459" rz="-162.598" fatherId="FrmDraw[0]" />
+      <Value key="98" x="14.169" y="-24.234" z="253.204" rx="-177" ry="0.411" rz="-164.416" fatherId="FrmDraw[0]" />
+      <Value key="99" x="12.571" y="-23.76" z="253.206" rx="-177" ry="0.363" rz="-166.217" fatherId="FrmDraw[0]" />
+      <Value key="100" x="10.971" y="-23.346" z="253.207" rx="-177" ry="0.315" rz="-168.005" fatherId="FrmDraw[0]" />
+      <Value key="101" x="9.369" y="-22.991" z="253.208" rx="-177" ry="0.268" rz="-169.781" fatherId="FrmDraw[0]" />
+      <Value key="102" x="7.765" y="-22.693" z="253.209" rx="-177" ry="0.222" rz="-171.547" fatherId="FrmDraw[0]" />
+      <Value key="103" x="6.16" y="-22.453" z="253.209" rx="-177" ry="0.176" rz="-173.305" fatherId="FrmDraw[0]" />
+      <Value key="104" x="4.554" y="-22.268" z="253.21" rx="-177" ry="0.13" rz="-175.057" fatherId="FrmDraw[0]" />
+      <Value key="105" x="2.947" y="-22.139" z="253.21" rx="-177" ry="0.084" rz="-176.804" fatherId="FrmDraw[0]" />
+      <Value key="106" x="1.34" y="-22.066" z="253.211" rx="-177" ry="0.038" rz="-178.548" fatherId="FrmDraw[0]" />
+      <Value key="107" x="0.268" y="-22.048" z="253.211" rx="-177" ry="0.008" rz="-179.71" fatherId="FrmDraw[0]" />
+      <Value key="108" x="-1.34" y="-22.066" z="253.211" rx="-177" ry="-0.038" rz="178.548" fatherId="FrmDraw[0]" />
+      <Value key="109" x="-2.947" y="-22.139" z="253.21" rx="-177" ry="-0.084" rz="176.804" fatherId="FrmDraw[0]" />
+      <Value key="110" x="-4.554" y="-22.268" z="253.21" rx="-177" ry="-0.13" rz="175.057" fatherId="FrmDraw[0]" />
+      <Value key="111" x="-6.16" y="-22.453" z="253.209" rx="-177" ry="-0.176" rz="173.305" fatherId="FrmDraw[0]" />
+      <Value key="112" x="-7.765" y="-22.693" z="253.209" rx="-177" ry="-0.222" rz="171.547" fatherId="FrmDraw[0]" />
+      <Value key="113" x="-9.369" y="-22.991" z="253.208" rx="-177" ry="-0.268" rz="169.781" fatherId="FrmDraw[0]" />
+      <Value key="114" x="-10.971" y="-23.346" z="253.207" rx="-177" ry="-0.315" rz="168.005" fatherId="FrmDraw[0]" />
+      <Value key="115" x="-12.571" y="-23.76" z="253.206" rx="-177" ry="-0.363" rz="166.217" fatherId="FrmDraw[0]" />
+      <Value key="116" x="-14.169" y="-24.234" z="253.204" rx="-177" ry="-0.411" rz="164.416" fatherId="FrmDraw[0]" />
+      <Value key="117" x="-15.763" y="-24.77" z="253.203" rx="-177" ry="-0.459" rz="162.598" fatherId="FrmDraw[0]" />
+      <Value key="118" x="-17.09" y="-25.265" z="253.201" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="119" x="-17.109" y="-25.265" z="250.799" rx="-177" ry="-0.5" rz="161.071" fatherId="FrmDraw[0]" />
+      <Value key="120" x="-17.13" y="-25.264" z="248.201" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="121" x="-15.8" y="-24.769" z="248.203" rx="-177" ry="-0.459" rz="162.602" fatherId="FrmDraw[0]" />
+      <Value key="122" x="-14.202" y="-24.234" z="248.204" rx="-177" ry="-0.411" rz="164.419" fatherId="FrmDraw[0]" />
+      <Value key="123" x="-12.6" y="-23.76" z="248.206" rx="-177" ry="-0.363" rz="166.22" fatherId="FrmDraw[0]" />
+      <Value key="124" x="-10.996" y="-23.346" z="248.207" rx="-177" ry="-0.315" rz="168.007" fatherId="FrmDraw[0]" />
+      <Value key="125" x="-9.391" y="-22.99" z="248.208" rx="-177" ry="-0.268" rz="169.783" fatherId="FrmDraw[0]" />
+      <Value key="126" x="-7.783" y="-22.693" z="248.209" rx="-177" ry="-0.222" rz="171.549" fatherId="FrmDraw[0]" />
+      <Value key="127" x="-6.174" y="-22.453" z="248.209" rx="-177" ry="-0.175" rz="173.306" fatherId="FrmDraw[0]" />
+      <Value key="128" x="-4.565" y="-22.268" z="248.21" rx="-177" ry="-0.13" rz="175.058" fatherId="FrmDraw[0]" />
+      <Value key="129" x="-2.954" y="-22.139" z="248.21" rx="-177" ry="-0.084" rz="176.804" fatherId="FrmDraw[0]" />
+      <Value key="130" x="-1.343" y="-22.066" z="248.211" rx="-177" ry="-0.038" rz="178.548" fatherId="FrmDraw[0]" />
+      <Value key="131" y="-22.047" z="248.211" rx="-177" rz="180" fatherId="FrmDraw[0]" />
+      <Value key="132" x="1.343" y="-22.066" z="248.211" rx="-177" ry="0.038" rz="-178.548" fatherId="FrmDraw[0]" />
+      <Value key="133" x="2.954" y="-22.139" z="248.21" rx="-177" ry="0.084" rz="-176.804" fatherId="FrmDraw[0]" />
+      <Value key="134" x="4.565" y="-22.268" z="248.21" rx="-177" ry="0.13" rz="-175.058" fatherId="FrmDraw[0]" />
+      <Value key="135" x="6.174" y="-22.453" z="248.209" rx="-177" ry="0.175" rz="-173.306" fatherId="FrmDraw[0]" />
+      <Value key="136" x="7.783" y="-22.693" z="248.209" rx="-177" ry="0.222" rz="-171.549" fatherId="FrmDraw[0]" />
+      <Value key="137" x="9.391" y="-22.99" z="248.208" rx="-177" ry="0.268" rz="-169.783" fatherId="FrmDraw[0]" />
+      <Value key="138" x="10.997" y="-23.346" z="248.207" rx="-177" ry="0.315" rz="-168.007" fatherId="FrmDraw[0]" />
+      <Value key="139" x="12.6" y="-23.76" z="248.206" rx="-177" ry="0.363" rz="-166.22" fatherId="FrmDraw[0]" />
+      <Value key="140" x="14.202" y="-24.234" z="248.204" rx="-177" ry="0.411" rz="-164.419" fatherId="FrmDraw[0]" />
+      <Value key="141" x="15.8" y="-24.769" z="248.203" rx="-177" ry="0.459" rz="-162.602" fatherId="FrmDraw[0]" />
+      <Value key="142" x="17.13" y="-25.264" z="248.201" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="143" x="17.153" y="-25.265" z="245.799" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="144" x="17.177" y="-25.265" z="243.201" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="145" x="15.589" y="-24.681" z="243.203" rx="-177" ry="0.451" rz="-162.888" fatherId="FrmDraw[0]" />
+      <Value key="146" x="13.998" y="-24.159" z="243.205" rx="-177" ry="0.403" rz="-164.689" fatherId="FrmDraw[0]" />
+      <Value key="147" x="12.404" y="-23.697" z="243.206" rx="-177" ry="0.356" rz="-166.474" fatherId="FrmDraw[0]" />
+      <Value key="148" x="10.808" y="-23.294" z="243.207" rx="-177" ry="0.309" rz="-168.247" fatherId="FrmDraw[0]" />
+      <Value key="149" x="9.21" y="-22.95" z="243.208" rx="-177" ry="0.262" rz="-170.007" fatherId="FrmDraw[0]" />
+      <Value key="150" x="7.61" y="-22.661" z="243.209" rx="-177" ry="0.216" rz="-171.759" fatherId="FrmDraw[0]" />
+      <Value key="151" x="6.01" y="-22.429" z="243.21" rx="-177" ry="0.17" rz="-173.502" fatherId="FrmDraw[0]" />
+      <Value key="152" x="4.408" y="-22.252" z="243.21" rx="-177" ry="0.125" rz="-175.24" fatherId="FrmDraw[0]" />
+      <Value key="153" x="2.805" y="-22.13" z="243.21" rx="-177" ry="0.079" rz="-176.973" fatherId="FrmDraw[0]" />
+      <Value key="154" x="1.202" y="-22.062" z="243.211" rx="-177" ry="0.034" rz="-178.703" fatherId="FrmDraw[0]" />
+      <Value key="155" x="0.134" y="-22.047" z="243.211" rx="-177" ry="0.004" rz="-179.856" fatherId="FrmDraw[0]" />
+      <Value key="156" x="-1.202" y="-22.062" z="243.211" rx="-177" ry="-0.034" rz="178.703" fatherId="FrmDraw[0]" />
+      <Value key="157" x="-2.805" y="-22.13" z="243.21" rx="-177" ry="-0.079" rz="176.973" fatherId="FrmDraw[0]" />
+      <Value key="158" x="-4.408" y="-22.252" z="243.21" rx="-177" ry="-0.125" rz="175.24" fatherId="FrmDraw[0]" />
+      <Value key="159" x="-6.01" y="-22.429" z="243.21" rx="-177" ry="-0.17" rz="173.502" fatherId="FrmDraw[0]" />
+      <Value key="160" x="-7.61" y="-22.661" z="243.209" rx="-177" ry="-0.216" rz="171.759" fatherId="FrmDraw[0]" />
+      <Value key="161" x="-9.21" y="-22.95" z="243.208" rx="-177" ry="-0.262" rz="170.007" fatherId="FrmDraw[0]" />
+      <Value key="162" x="-10.808" y="-23.294" z="243.207" rx="-177" ry="-0.309" rz="168.247" fatherId="FrmDraw[0]" />
+      <Value key="163" x="-12.404" y="-23.697" z="243.206" rx="-177" ry="-0.356" rz="166.474" fatherId="FrmDraw[0]" />
+      <Value key="164" x="-13.998" y="-24.159" z="243.205" rx="-177" ry="-0.403" rz="164.689" fatherId="FrmDraw[0]" />
+      <Value key="165" x="-15.589" y="-24.681" z="243.203" rx="-177" ry="-0.451" rz="162.888" fatherId="FrmDraw[0]" />
+      <Value key="166" x="-17.177" y="-25.265" z="243.201" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="167" x="-17.197" y="-25.265" z="240.799" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="168" x="-17.218" y="-25.264" z="238.202" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="169" x="-15.625" y="-24.68" z="238.203" rx="-177" ry="-0.451" rz="162.892" fatherId="FrmDraw[0]" />
+      <Value key="170" x="-14.03" y="-24.158" z="238.205" rx="-177" ry="-0.403" rz="164.692" fatherId="FrmDraw[0]" />
+      <Value key="171" x="-12.433" y="-23.696" z="238.206" rx="-177" ry="-0.356" rz="166.477" fatherId="FrmDraw[0]" />
+      <Value key="172" x="-10.833" y="-23.294" z="238.207" rx="-177" ry="-0.309" rz="168.249" fatherId="FrmDraw[0]" />
+      <Value key="173" x="-9.231" y="-22.949" z="238.208" rx="-177" ry="-0.262" rz="170.009" fatherId="FrmDraw[0]" />
+      <Value key="174" x="-7.628" y="-22.661" z="238.209" rx="-177" ry="-0.216" rz="171.76" fatherId="FrmDraw[0]" />
+      <Value key="175" x="-6.023" y="-22.429" z="238.21" rx="-177" ry="-0.17" rz="173.503" fatherId="FrmDraw[0]" />
+      <Value key="176" x="-4.418" y="-22.252" z="238.21" rx="-177" ry="-0.125" rz="175.241" fatherId="FrmDraw[0]" />
+      <Value key="177" x="-2.812" y="-22.13" z="238.21" rx="-177" ry="-0.079" rz="176.973" fatherId="FrmDraw[0]" />
+      <Value key="178" x="-1.205" y="-22.062" z="238.211" rx="-177" ry="-0.034" rz="178.703" fatherId="FrmDraw[0]" />
+      <Value key="179" x="-0.134" y="-22.047" z="238.211" rx="-177" ry="-0.004" rz="179.856" fatherId="FrmDraw[0]" />
+      <Value key="180" x="1.205" y="-22.062" z="238.211" rx="-177" ry="0.034" rz="-178.703" fatherId="FrmDraw[0]" />
+      <Value key="181" x="2.812" y="-22.13" z="238.21" rx="-177" ry="0.079" rz="-176.973" fatherId="FrmDraw[0]" />
+      <Value key="182" x="4.418" y="-22.252" z="238.21" rx="-177" ry="0.125" rz="-175.241" fatherId="FrmDraw[0]" />
+      <Value key="183" x="6.023" y="-22.429" z="238.21" rx="-177" ry="0.17" rz="-173.503" fatherId="FrmDraw[0]" />
+      <Value key="184" x="7.628" y="-22.661" z="238.209" rx="-177" ry="0.216" rz="-171.76" fatherId="FrmDraw[0]" />
+      <Value key="185" x="9.231" y="-22.949" z="238.208" rx="-177" ry="0.262" rz="-170.009" fatherId="FrmDraw[0]" />
+      <Value key="186" x="10.833" y="-23.294" z="238.207" rx="-177" ry="0.309" rz="-168.249" fatherId="FrmDraw[0]" />
+      <Value key="187" x="12.433" y="-23.697" z="238.206" rx="-177" ry="0.356" rz="-166.477" fatherId="FrmDraw[0]" />
+      <Value key="188" x="14.03" y="-24.158" z="238.205" rx="-177" ry="0.403" rz="-164.692" fatherId="FrmDraw[0]" />
+      <Value key="189" x="15.625" y="-24.68" z="238.203" rx="-177" ry="0.451" rz="-162.892" fatherId="FrmDraw[0]" />
+      <Value key="190" x="17.218" y="-25.264" z="238.202" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="191" x="17.24" y="-25.265" z="235.8" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="192" x="17.265" y="-25.265" z="233.202" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="193" x="15.934" y="-24.774" z="233.203" rx="-177" ry="0.46" rz="-162.586" fatherId="FrmDraw[0]" />
+      <Value key="194" x="14.335" y="-24.242" z="233.205" rx="-177" ry="0.411" rz="-164.39" fatherId="FrmDraw[0]" />
+      <Value key="195" x="12.733" y="-23.77" z="233.206" rx="-177" ry="0.364" rz="-166.178" fatherId="FrmDraw[0]" />
+      <Value key="196" x="11.129" y="-23.358" z="233.207" rx="-177" ry="0.317" rz="-167.952" fatherId="FrmDraw[0]" />
+      <Value key="197" x="9.524" y="-23.003" z="233.208" rx="-177" ry="0.27" rz="-169.715" fatherId="FrmDraw[0]" />
+      <Value key="198" x="7.916" y="-22.706" z="233.209" rx="-177" ry="0.224" rz="-171.467" fatherId="FrmDraw[0]" />
+      <Value key="199" x="6.308" y="-22.464" z="233.209" rx="-177" ry="0.178" rz="-173.212" fatherId="FrmDraw[0]" />
+      <Value key="200" x="4.698" y="-22.278" z="233.21" rx="-177" ry="0.132" rz="-174.95" fatherId="FrmDraw[0]" />
+      <Value key="201" x="3.088" y="-22.147" z="233.21" rx="-177" ry="0.087" rz="-176.684" fatherId="FrmDraw[0]" />
+      <Value key="202" x="1.477" y="-22.07" z="233.211" rx="-177" ry="0.042" rz="-178.415" fatherId="FrmDraw[0]" />
+      <Value key="203" x="0.134" y="-22.047" z="233.211" rx="-177" ry="0.004" rz="-179.856" fatherId="FrmDraw[0]" />
+      <Value key="204" x="-1.477" y="-22.07" z="233.211" rx="-177" ry="-0.042" rz="178.415" fatherId="FrmDraw[0]" />
+      <Value key="205" x="-3.088" y="-22.147" z="233.21" rx="-177" ry="-0.087" rz="176.684" fatherId="FrmDraw[0]" />
+      <Value key="206" x="-4.698" y="-22.278" z="233.21" rx="-177" ry="-0.132" rz="174.95" fatherId="FrmDraw[0]" />
+      <Value key="207" x="-6.308" y="-22.464" z="233.209" rx="-177" ry="-0.178" rz="173.212" fatherId="FrmDraw[0]" />
+      <Value key="208" x="-7.916" y="-22.706" z="233.209" rx="-177" ry="-0.224" rz="171.467" fatherId="FrmDraw[0]" />
+      <Value key="209" x="-9.524" y="-23.003" z="233.208" rx="-177" ry="-0.27" rz="169.715" fatherId="FrmDraw[0]" />
+      <Value key="210" x="-11.129" y="-23.358" z="233.207" rx="-177" ry="-0.317" rz="167.952" fatherId="FrmDraw[0]" />
+      <Value key="211" x="-12.733" y="-23.77" z="233.206" rx="-177" ry="-0.364" rz="166.178" fatherId="FrmDraw[0]" />
+      <Value key="212" x="-14.335" y="-24.242" z="233.205" rx="-177" ry="-0.411" rz="164.39" fatherId="FrmDraw[0]" />
+      <Value key="213" x="-15.934" y="-24.774" z="233.203" rx="-177" ry="-0.46" rz="162.586" fatherId="FrmDraw[0]" />
+      <Value key="214" x="-17.265" y="-25.265" z="233.202" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="215" x="-17.284" y="-25.265" z="230.8" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="216" x="-17.305" y="-25.264" z="228.202" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="217" x="-15.971" y="-24.773" z="228.203" rx="-177" ry="-0.459" rz="162.59" fatherId="FrmDraw[0]" />
+      <Value key="218" x="-14.368" y="-24.241" z="228.205" rx="-177" ry="-0.411" rz="164.393" fatherId="FrmDraw[0]" />
+      <Value key="219" x="-12.762" y="-23.769" z="228.206" rx="-177" ry="-0.364" rz="166.181" fatherId="FrmDraw[0]" />
+      <Value key="220" x="-11.155" y="-23.357" z="228.207" rx="-177" ry="-0.317" rz="167.955" fatherId="FrmDraw[0]" />
+      <Value key="221" x="-9.545" y="-23.003" z="228.208" rx="-177" ry="-0.27" rz="169.717" fatherId="FrmDraw[0]" />
+      <Value key="222" x="-7.934" y="-22.705" z="228.209" rx="-177" ry="-0.224" rz="171.469" fatherId="FrmDraw[0]" />
+      <Value key="223" x="-6.322" y="-22.464" z="228.209" rx="-177" ry="-0.178" rz="173.213" fatherId="FrmDraw[0]" />
+      <Value key="224" x="-4.709" y="-22.278" z="228.21" rx="-177" ry="-0.132" rz="174.951" fatherId="FrmDraw[0]" />
+      <Value key="225" x="-3.095" y="-22.146" z="228.21" rx="-177" ry="-0.087" rz="176.685" fatherId="FrmDraw[0]" />
+      <Value key="226" x="-1.48" y="-22.07" z="228.211" rx="-177" ry="-0.042" rz="178.415" fatherId="FrmDraw[0]" />
+      <Value key="227" x="-0.135" y="-22.047" z="228.211" rx="-177" ry="-0.004" rz="179.856" fatherId="FrmDraw[0]" />
+      <Value key="228" x="1.48" y="-22.07" z="228.211" rx="-177" ry="0.042" rz="-178.415" fatherId="FrmDraw[0]" />
+      <Value key="229" x="3.095" y="-22.146" z="228.21" rx="-177" ry="0.087" rz="-176.685" fatherId="FrmDraw[0]" />
+      <Value key="230" x="4.709" y="-22.278" z="228.21" rx="-177" ry="0.132" rz="-174.951" fatherId="FrmDraw[0]" />
+      <Value key="231" x="6.322" y="-22.464" z="228.209" rx="-177" ry="0.178" rz="-173.213" fatherId="FrmDraw[0]" />
+      <Value key="232" x="7.934" y="-22.705" z="228.209" rx="-177" ry="0.224" rz="-171.469" fatherId="FrmDraw[0]" />
+      <Value key="233" x="9.545" y="-23.003" z="228.208" rx="-177" ry="0.27" rz="-169.717" fatherId="FrmDraw[0]" />
+      <Value key="234" x="11.155" y="-23.357" z="228.207" rx="-177" ry="0.317" rz="-167.955" fatherId="FrmDraw[0]" />
+      <Value key="235" x="12.763" y="-23.769" z="228.206" rx="-177" ry="0.364" rz="-166.181" fatherId="FrmDraw[0]" />
+      <Value key="236" x="14.368" y="-24.241" z="228.205" rx="-177" ry="0.411" rz="-164.393" fatherId="FrmDraw[0]" />
+      <Value key="237" x="15.971" y="-24.773" z="228.203" rx="-177" ry="0.459" rz="-162.59" fatherId="FrmDraw[0]" />
+      <Value key="238" x="17.305" y="-25.264" z="228.202" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="239" x="17.328" y="-25.264" z="225.8" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="240" x="17.352" y="-25.265" z="223.202" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="241" x="15.759" y="-24.685" z="223.204" rx="-177" ry="0.452" rz="-162.874" fatherId="FrmDraw[0]" />
+      <Value key="242" x="14.163" y="-24.166" z="223.205" rx="-177" ry="0.404" rz="-164.662" fatherId="FrmDraw[0]" />
+      <Value key="243" x="12.565" y="-23.707" z="223.206" rx="-177" ry="0.357" rz="-166.434" fatherId="FrmDraw[0]" />
+      <Value key="244" x="10.965" y="-23.306" z="223.207" rx="-177" ry="0.31" rz="-168.192" fatherId="FrmDraw[0]" />
+      <Value key="245" x="9.364" y="-22.962" z="223.208" rx="-177" ry="0.264" rz="-169.94" fatherId="FrmDraw[0]" />
+      <Value key="246" x="7.761" y="-22.673" z="223.209" rx="-177" ry="0.218" rz="-171.678" fatherId="FrmDraw[0]" />
+      <Value key="247" x="6.156" y="-22.44" z="223.21" rx="-177" ry="0.173" rz="-173.409" fatherId="FrmDraw[0]" />
+      <Value key="248" x="4.551" y="-22.261" z="223.21" rx="-177" ry="0.128" rz="-175.133" fatherId="FrmDraw[0]" />
+      <Value key="249" x="2.945" y="-22.137" z="223.21" rx="-177" ry="0.082" rz="-176.853" fatherId="FrmDraw[0]" />
+      <Value key="250" x="1.339" y="-22.065" z="223.211" rx="-177" ry="0.037" rz="-178.57" fatherId="FrmDraw[0]" />
+      <Value key="251" x="0.268" y="-22.048" z="223.211" rx="-177" ry="0.007" rz="-179.714" fatherId="FrmDraw[0]" />
+      <Value key="252" x="-1.339" y="-22.065" z="223.211" rx="-177" ry="-0.037" rz="178.57" fatherId="FrmDraw[0]" />
+      <Value key="253" x="-2.945" y="-22.137" z="223.21" rx="-177" ry="-0.082" rz="176.853" fatherId="FrmDraw[0]" />
+      <Value key="254" x="-4.551" y="-22.261" z="223.21" rx="-177" ry="-0.128" rz="175.133" fatherId="FrmDraw[0]" />
+      <Value key="255" x="-6.156" y="-22.44" z="223.21" rx="-177" ry="-0.173" rz="173.409" fatherId="FrmDraw[0]" />
+      <Value key="256" x="-7.761" y="-22.673" z="223.209" rx="-177" ry="-0.218" rz="171.678" fatherId="FrmDraw[0]" />
+      <Value key="257" x="-9.364" y="-22.962" z="223.208" rx="-177" ry="-0.264" rz="169.94" fatherId="FrmDraw[0]" />
+      <Value key="258" x="-10.965" y="-23.306" z="223.207" rx="-177" ry="-0.31" rz="168.192" fatherId="FrmDraw[0]" />
+      <Value key="259" x="-12.565" y="-23.707" z="223.206" rx="-177" ry="-0.357" rz="166.434" fatherId="FrmDraw[0]" />
+      <Value key="260" x="-14.163" y="-24.166" z="223.205" rx="-177" ry="-0.404" rz="164.662" fatherId="FrmDraw[0]" />
+      <Value key="261" x="-15.759" y="-24.685" z="223.204" rx="-177" ry="-0.452" rz="162.874" fatherId="FrmDraw[0]" />
+      <Value key="262" x="-17.352" y="-25.265" z="223.202" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="263" x="-17.371" y="-25.265" z="220.8" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="264" x="-17.392" y="-25.264" z="218.202" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="265" x="-15.795" y="-24.684" z="218.204" rx="-177" ry="-0.452" rz="162.878" fatherId="FrmDraw[0]" />
+      <Value key="266" x="-14.196" y="-24.166" z="218.205" rx="-177" ry="-0.404" rz="164.665" fatherId="FrmDraw[0]" />
+      <Value key="267" x="-12.594" y="-23.706" z="218.206" rx="-177" ry="-0.357" rz="166.436" fatherId="FrmDraw[0]" />
+      <Value key="268" x="-10.99" y="-23.305" z="218.207" rx="-177" ry="-0.31" rz="168.195" fatherId="FrmDraw[0]" />
+      <Value key="269" x="-9.385" y="-22.961" z="218.208" rx="-177" ry="-0.264" rz="169.942" fatherId="FrmDraw[0]" />
+      <Value key="270" x="-7.778" y="-22.673" z="218.209" rx="-177" ry="-0.218" rz="171.68" fatherId="FrmDraw[0]" />
+      <Value key="271" x="-6.17" y="-22.44" z="218.21" rx="-177" ry="-0.173" rz="173.41" fatherId="FrmDraw[0]" />
+      <Value key="272" x="-4.561" y="-22.261" z="218.21" rx="-177" ry="-0.128" rz="175.134" fatherId="FrmDraw[0]" />
+      <Value key="273" x="-2.952" y="-22.137" z="218.21" rx="-177" ry="-0.082" rz="176.854" fatherId="FrmDraw[0]" />
+      <Value key="274" x="-1.342" y="-22.065" z="218.211" rx="-177" ry="-0.037" rz="178.57" fatherId="FrmDraw[0]" />
+      <Value key="275" y="-22.047" z="218.211" rx="-177" rz="180" fatherId="FrmDraw[0]" />
+      <Value key="276" x="1.342" y="-22.065" z="218.211" rx="-177" ry="0.037" rz="-178.57" fatherId="FrmDraw[0]" />
+      <Value key="277" x="2.952" y="-22.137" z="218.21" rx="-177" ry="0.082" rz="-176.854" fatherId="FrmDraw[0]" />
+      <Value key="278" x="4.561" y="-22.261" z="218.21" rx="-177" ry="0.128" rz="-175.134" fatherId="FrmDraw[0]" />
+      <Value key="279" x="6.17" y="-22.44" z="218.21" rx="-177" ry="0.173" rz="-173.41" fatherId="FrmDraw[0]" />
+      <Value key="280" x="7.778" y="-22.673" z="218.209" rx="-177" ry="0.218" rz="-171.68" fatherId="FrmDraw[0]" />
+      <Value key="281" x="9.385" y="-22.961" z="218.208" rx="-177" ry="0.264" rz="-169.942" fatherId="FrmDraw[0]" />
+      <Value key="282" x="10.99" y="-23.305" z="218.207" rx="-177" ry="0.31" rz="-168.195" fatherId="FrmDraw[0]" />
+      <Value key="283" x="12.594" y="-23.706" z="218.206" rx="-177" ry="0.357" rz="-166.436" fatherId="FrmDraw[0]" />
+      <Value key="284" x="14.196" y="-24.166" z="218.205" rx="-177" ry="0.404" rz="-164.665" fatherId="FrmDraw[0]" />
+      <Value key="285" x="15.795" y="-24.684" z="218.204" rx="-177" ry="0.452" rz="-162.878" fatherId="FrmDraw[0]" />
+      <Value key="286" x="17.392" y="-25.264" z="218.202" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="287" x="17.415" y="-25.264" z="215.8" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="288" x="17.439" y="-25.265" z="213.203" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="289" x="15.838" y="-24.685" z="213.204" rx="-177" ry="0.452" rz="-162.874" fatherId="FrmDraw[0]" />
+      <Value key="290" x="14.234" y="-24.166" z="213.205" rx="-177" ry="0.404" rz="-164.662" fatherId="FrmDraw[0]" />
+      <Value key="291" x="12.628" y="-23.707" z="213.206" rx="-177" ry="0.357" rz="-166.434" fatherId="FrmDraw[0]" />
+      <Value key="292" x="11.02" y="-23.306" z="213.207" rx="-177" ry="0.31" rz="-168.192" fatherId="FrmDraw[0]" />
+      <Value key="293" x="9.41" y="-22.962" z="213.208" rx="-177" ry="0.264" rz="-169.94" fatherId="FrmDraw[0]" />
+      <Value key="294" x="7.799" y="-22.673" z="213.209" rx="-177" ry="0.218" rz="-171.678" fatherId="FrmDraw[0]" />
+      <Value key="295" x="6.186" y="-22.44" z="213.21" rx="-177" ry="0.173" rz="-173.409" fatherId="FrmDraw[0]" />
+      <Value key="296" x="4.573" y="-22.261" z="213.21" rx="-177" ry="0.128" rz="-175.133" fatherId="FrmDraw[0]" />
+      <Value key="297" x="2.959" y="-22.137" z="213.21" rx="-177" ry="0.082" rz="-176.853" fatherId="FrmDraw[0]" />
+      <Value key="298" x="1.345" y="-22.065" z="213.211" rx="-177" ry="0.037" rz="-178.57" fatherId="FrmDraw[0]" />
+      <Value key="299" x="0.269" y="-22.048" z="213.211" rx="-177" ry="0.007" rz="-179.714" fatherId="FrmDraw[0]" />
+      <Value key="300" x="-1.345" y="-22.065" z="213.211" rx="-177" ry="-0.037" rz="178.57" fatherId="FrmDraw[0]" />
+      <Value key="301" x="-2.959" y="-22.137" z="213.21" rx="-177" ry="-0.082" rz="176.853" fatherId="FrmDraw[0]" />
+      <Value key="302" x="-4.573" y="-22.261" z="213.21" rx="-177" ry="-0.128" rz="175.133" fatherId="FrmDraw[0]" />
+      <Value key="303" x="-6.186" y="-22.44" z="213.21" rx="-177" ry="-0.173" rz="173.409" fatherId="FrmDraw[0]" />
+      <Value key="304" x="-7.799" y="-22.673" z="213.209" rx="-177" ry="-0.218" rz="171.678" fatherId="FrmDraw[0]" />
+      <Value key="305" x="-9.41" y="-22.962" z="213.208" rx="-177" ry="-0.264" rz="169.94" fatherId="FrmDraw[0]" />
+      <Value key="306" x="-11.02" y="-23.306" z="213.207" rx="-177" ry="-0.31" rz="168.192" fatherId="FrmDraw[0]" />
+      <Value key="307" x="-12.628" y="-23.707" z="213.206" rx="-177" ry="-0.357" rz="166.434" fatherId="FrmDraw[0]" />
+      <Value key="308" x="-14.234" y="-24.166" z="213.205" rx="-177" ry="-0.404" rz="164.662" fatherId="FrmDraw[0]" />
+      <Value key="309" x="-15.838" y="-24.685" z="213.204" rx="-177" ry="-0.452" rz="162.874" fatherId="FrmDraw[0]" />
+      <Value key="310" x="-17.439" y="-25.265" z="213.203" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="311" x="-17.459" y="-25.264" z="210.801" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="312" x="-17.48" y="-25.264" z="208.203" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="313" x="-16.142" y="-24.776" z="208.204" rx="-177" ry="-0.46" rz="162.579" fatherId="FrmDraw[0]" />
+      <Value key="314" x="-14.535" y="-24.248" z="208.205" rx="-177" ry="-0.412" rz="164.368" fatherId="FrmDraw[0]" />
+      <Value key="315" x="-12.925" y="-23.779" z="208.206" rx="-177" ry="-0.365" rz="166.142" fatherId="FrmDraw[0]" />
+      <Value key="316" x="-11.313" y="-23.368" z="208.207" rx="-177" ry="-0.318" rz="167.903" fatherId="FrmDraw[0]" />
+      <Value key="317" x="-9.7" y="-23.015" z="208.208" rx="-177" ry="-0.272" rz="169.652" fatherId="FrmDraw[0]" />
+      <Value key="318" x="-8.085" y="-22.717" z="208.209" rx="-177" ry="-0.226" rz="171.391" fatherId="FrmDraw[0]" />
+      <Value key="319" x="-6.47" y="-22.475" z="208.21" rx="-177" ry="-0.18" rz="173.122" fatherId="FrmDraw[0]" />
+      <Value key="320" x="-4.853" y="-22.287" z="208.21" rx="-177" ry="-0.135" rz="174.847" fatherId="FrmDraw[0]" />
+      <Value key="321" x="-3.236" y="-22.154" z="208.21" rx="-177" ry="-0.09" rz="176.567" fatherId="FrmDraw[0]" />
+      <Value key="322" x="-1.618" y="-22.074" z="208.211" rx="-177" ry="-0.045" rz="178.284" fatherId="FrmDraw[0]" />
+      <Value key="323" y="-22.047" z="208.211" rx="-177" rz="180" fatherId="FrmDraw[0]" />
+      <Value key="324" x="1.618" y="-22.074" z="208.211" rx="-177" ry="0.045" rz="-178.284" fatherId="FrmDraw[0]" />
+      <Value key="325" x="3.236" y="-22.154" z="208.21" rx="-177" ry="0.09" rz="-176.567" fatherId="FrmDraw[0]" />
+      <Value key="326" x="4.853" y="-22.287" z="208.21" rx="-177" ry="0.135" rz="-174.847" fatherId="FrmDraw[0]" />
+      <Value key="327" x="6.47" y="-22.475" z="208.21" rx="-177" ry="0.18" rz="-173.122" fatherId="FrmDraw[0]" />
+      <Value key="328" x="8.085" y="-22.717" z="208.209" rx="-177" ry="0.226" rz="-171.391" fatherId="FrmDraw[0]" />
+      <Value key="329" x="9.7" y="-23.015" z="208.208" rx="-177" ry="0.272" rz="-169.651" fatherId="FrmDraw[0]" />
+      <Value key="330" x="11.313" y="-23.368" z="208.207" rx="-177" ry="0.318" rz="-167.902" fatherId="FrmDraw[0]" />
+      <Value key="331" x="12.925" y="-23.779" z="208.206" rx="-177" ry="0.365" rz="-166.142" fatherId="FrmDraw[0]" />
+      <Value key="332" x="14.535" y="-24.248" z="208.205" rx="-177" ry="0.412" rz="-164.368" fatherId="FrmDraw[0]" />
+      <Value key="333" x="16.142" y="-24.776" z="208.204" rx="-177" ry="0.46" rz="-162.579" fatherId="FrmDraw[0]" />
+      <Value key="334" x="17.48" y="-25.264" z="208.203" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="335" x="17.502" y="-25.264" z="205.801" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="336" x="17.527" y="-25.265" z="203.203" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="337" x="15.929" y="-24.689" z="203.204" rx="-177" ry="0.452" rz="-162.861" fatherId="FrmDraw[0]" />
+      <Value key="338" x="14.329" y="-24.174" z="203.206" rx="-177" ry="0.405" rz="-164.635" fatherId="FrmDraw[0]" />
+      <Value key="339" x="12.727" y="-23.717" z="203.207" rx="-177" ry="0.358" rz="-166.393" fatherId="FrmDraw[0]" />
+      <Value key="340" x="11.123" y="-23.317" z="203.208" rx="-177" ry="0.312" rz="-168.139" fatherId="FrmDraw[0]" />
+      <Value key="341" x="9.518" y="-22.974" z="203.208" rx="-177" ry="0.266" rz="-169.874" fatherId="FrmDraw[0]" />
+      <Value key="342" x="7.911" y="-22.685" z="203.209" rx="-177" ry="0.22" rz="-171.599" fatherId="FrmDraw[0]" />
+      <Value key="343" x="6.303" y="-22.451" z="203.21" rx="-177" ry="0.175" rz="-173.316" fatherId="FrmDraw[0]" />
+      <Value key="344" x="4.695" y="-22.271" z="203.21" rx="-177" ry="0.13" rz="-175.028" fatherId="FrmDraw[0]" />
+      <Value key="345" x="3.085" y="-22.144" z="203.21" rx="-177" ry="0.086" rz="-176.735" fatherId="FrmDraw[0]" />
+      <Value key="346" x="1.476" y="-22.069" z="203.211" rx="-177" ry="0.041" rz="-178.439" fatherId="FrmDraw[0]" />
+      <Value key="347" x="0.134" y="-22.047" z="203.211" rx="-177" ry="0.004" rz="-179.858" fatherId="FrmDraw[0]" />
+      <Value key="348" x="-1.476" y="-22.069" z="203.211" rx="-177" ry="-0.041" rz="178.439" fatherId="FrmDraw[0]" />
+      <Value key="349" x="-3.085" y="-22.144" z="203.21" rx="-177" ry="-0.086" rz="176.735" fatherId="FrmDraw[0]" />
+      <Value key="350" x="-4.695" y="-22.271" z="203.21" rx="-177" ry="-0.13" rz="175.028" fatherId="FrmDraw[0]" />
+      <Value key="351" x="-6.303" y="-22.451" z="203.21" rx="-177" ry="-0.175" rz="173.316" fatherId="FrmDraw[0]" />
+      <Value key="352" x="-7.911" y="-22.685" z="203.209" rx="-177" ry="-0.22" rz="171.599" fatherId="FrmDraw[0]" />
+      <Value key="353" x="-9.518" y="-22.974" z="203.208" rx="-177" ry="-0.266" rz="169.874" fatherId="FrmDraw[0]" />
+      <Value key="354" x="-11.123" y="-23.317" z="203.208" rx="-177" ry="-0.312" rz="168.139" fatherId="FrmDraw[0]" />
+      <Value key="355" x="-12.727" y="-23.717" z="203.207" rx="-177" ry="-0.358" rz="166.393" fatherId="FrmDraw[0]" />
+      <Value key="356" x="-14.329" y="-24.174" z="203.206" rx="-177" ry="-0.405" rz="164.635" fatherId="FrmDraw[0]" />
+      <Value key="357" x="-15.929" y="-24.689" z="203.204" rx="-177" ry="-0.452" rz="162.861" fatherId="FrmDraw[0]" />
+      <Value key="358" x="-17.527" y="-25.265" z="203.203" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="359" x="-17.546" y="-25.264" z="200.801" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="360" x="-17.567" y="-25.264" z="198.203" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="361" x="-15.966" y="-24.688" z="198.204" rx="-177" ry="-0.452" rz="162.864" fatherId="FrmDraw[0]" />
+      <Value key="362" x="-14.362" y="-24.173" z="198.206" rx="-177" ry="-0.405" rz="164.638" fatherId="FrmDraw[0]" />
+      <Value key="363" x="-12.756" y="-23.716" z="198.207" rx="-177" ry="-0.358" rz="166.396" fatherId="FrmDraw[0]" />
+      <Value key="364" x="-11.148" y="-23.317" z="198.208" rx="-177" ry="-0.312" rz="168.141" fatherId="FrmDraw[0]" />
+      <Value key="365" x="-9.539" y="-22.973" z="198.208" rx="-177" ry="-0.266" rz="169.876" fatherId="FrmDraw[0]" />
+      <Value key="366" x="-7.929" y="-22.685" z="198.209" rx="-177" ry="-0.22" rz="171.6" fatherId="FrmDraw[0]" />
+      <Value key="367" x="-6.317" y="-22.451" z="198.21" rx="-177" ry="-0.175" rz="173.318" fatherId="FrmDraw[0]" />
+      <Value key="368" x="-4.705" y="-22.271" z="198.21" rx="-177" ry="-0.13" rz="175.029" fatherId="FrmDraw[0]" />
+      <Value key="369" x="-3.092" y="-22.143" z="198.21" rx="-177" ry="-0.086" rz="176.736" fatherId="FrmDraw[0]" />
+      <Value key="370" x="-1.479" y="-22.069" z="198.211" rx="-177" ry="-0.041" rz="178.439" fatherId="FrmDraw[0]" />
+      <Value key="371" x="-0.134" y="-22.047" z="198.211" rx="-177" ry="-0.004" rz="179.858" fatherId="FrmDraw[0]" />
+      <Value key="372" x="1.479" y="-22.069" z="198.211" rx="-177" ry="0.041" rz="-178.439" fatherId="FrmDraw[0]" />
+      <Value key="373" x="3.092" y="-22.143" z="198.21" rx="-177" ry="0.086" rz="-176.736" fatherId="FrmDraw[0]" />
+      <Value key="374" x="4.705" y="-22.271" z="198.21" rx="-177" ry="0.13" rz="-175.029" fatherId="FrmDraw[0]" />
+      <Value key="375" x="6.317" y="-22.451" z="198.21" rx="-177" ry="0.175" rz="-173.318" fatherId="FrmDraw[0]" />
+      <Value key="376" x="7.929" y="-22.685" z="198.209" rx="-177" ry="0.22" rz="-171.6" fatherId="FrmDraw[0]" />
+      <Value key="377" x="9.539" y="-22.973" z="198.208" rx="-177" ry="0.266" rz="-169.875" fatherId="FrmDraw[0]" />
+      <Value key="378" x="11.148" y="-23.317" z="198.208" rx="-177" ry="0.312" rz="-168.141" fatherId="FrmDraw[0]" />
+      <Value key="379" x="12.756" y="-23.716" z="198.207" rx="-177" ry="0.358" rz="-166.396" fatherId="FrmDraw[0]" />
+      <Value key="380" x="14.362" y="-24.173" z="198.206" rx="-177" ry="0.405" rz="-164.638" fatherId="FrmDraw[0]" />
+      <Value key="381" x="15.966" y="-24.688" z="198.204" rx="-177" ry="0.452" rz="-162.864" fatherId="FrmDraw[0]" />
+      <Value key="382" x="17.567" y="-25.264" z="198.203" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="383" x="17.59" y="-25.264" z="195.801" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="384" x="17.614" y="-25.265" z="193.203" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="385" x="16.008" y="-24.689" z="193.205" rx="-177" ry="0.452" rz="-162.861" fatherId="FrmDraw[0]" />
+      <Value key="386" x="14.4" y="-24.174" z="193.206" rx="-177" ry="0.405" rz="-164.635" fatherId="FrmDraw[0]" />
+      <Value key="387" x="12.79" y="-23.717" z="193.207" rx="-177" ry="0.358" rz="-166.393" fatherId="FrmDraw[0]" />
+      <Value key="388" x="11.178" y="-23.317" z="193.208" rx="-177" ry="0.312" rz="-168.139" fatherId="FrmDraw[0]" />
+      <Value key="389" x="9.564" y="-22.974" z="193.209" rx="-177" ry="0.266" rz="-169.874" fatherId="FrmDraw[0]" />
+      <Value key="390" x="7.949" y="-22.685" z="193.209" rx="-177" ry="0.22" rz="-171.599" fatherId="FrmDraw[0]" />
+      <Value key="391" x="6.334" y="-22.451" z="193.21" rx="-177" ry="0.175" rz="-173.316" fatherId="FrmDraw[0]" />
+      <Value key="392" x="4.717" y="-22.271" z="193.21" rx="-177" ry="0.13" rz="-175.028" fatherId="FrmDraw[0]" />
+      <Value key="393" x="3.1" y="-22.143" z="193.21" rx="-177" ry="0.086" rz="-176.735" fatherId="FrmDraw[0]" />
+      <Value key="394" x="1.483" y="-22.069" z="193.211" rx="-177" ry="0.041" rz="-178.439" fatherId="FrmDraw[0]" />
+      <Value key="395" x="0.135" y="-22.047" z="193.211" rx="-177" ry="0.004" rz="-179.858" fatherId="FrmDraw[0]" />
+      <Value key="396" x="-1.483" y="-22.069" z="193.211" rx="-177" ry="-0.041" rz="178.439" fatherId="FrmDraw[0]" />
+      <Value key="397" x="-3.1" y="-22.144" z="193.21" rx="-177" ry="-0.086" rz="176.735" fatherId="FrmDraw[0]" />
+      <Value key="398" x="-4.717" y="-22.271" z="193.21" rx="-177" ry="-0.13" rz="175.028" fatherId="FrmDraw[0]" />
+      <Value key="399" x="-6.334" y="-22.451" z="193.21" rx="-177" ry="-0.175" rz="173.316" fatherId="FrmDraw[0]" />
+      <Value key="400" x="-7.949" y="-22.685" z="193.209" rx="-177" ry="-0.22" rz="171.599" fatherId="FrmDraw[0]" />
+      <Value key="401" x="-9.564" y="-22.974" z="193.209" rx="-177" ry="-0.266" rz="169.874" fatherId="FrmDraw[0]" />
+      <Value key="402" x="-11.178" y="-23.317" z="193.208" rx="-177" ry="-0.312" rz="168.139" fatherId="FrmDraw[0]" />
+      <Value key="403" x="-12.79" y="-23.717" z="193.207" rx="-177" ry="-0.358" rz="166.393" fatherId="FrmDraw[0]" />
+      <Value key="404" x="-14.4" y="-24.174" z="193.206" rx="-177" ry="-0.405" rz="164.635" fatherId="FrmDraw[0]" />
+      <Value key="405" x="-16.008" y="-24.689" z="193.205" rx="-177" ry="-0.452" rz="162.861" fatherId="FrmDraw[0]" />
+      <Value key="406" x="-17.614" y="-25.265" z="193.203" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="407" x="-17.633" y="-25.264" z="190.801" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="408" x="-17.654" y="-25.264" z="188.204" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="409" x="-16.057" y="-24.692" z="188.205" rx="-177" ry="-0.452" rz="162.851" fatherId="FrmDraw[0]" />
+      <Value key="410" x="-14.457" y="-24.18" z="188.206" rx="-177" ry="-0.405" rz="164.611" fatherId="FrmDraw[0]" />
+      <Value key="411" x="-12.855" y="-23.726" z="188.207" rx="-177" ry="-0.359" rz="166.356" fatherId="FrmDraw[0]" />
+      <Value key="412" x="-11.252" y="-23.328" z="188.208" rx="-177" ry="-0.313" rz="168.089" fatherId="FrmDraw[0]" />
+      <Value key="413" x="-9.647" y="-22.985" z="188.209" rx="-177" ry="-0.268" rz="169.81" fatherId="FrmDraw[0]" />
+      <Value key="414" x="-8.041" y="-22.697" z="188.209" rx="-177" ry="-0.222" rz="171.522" fatherId="FrmDraw[0]" />
+      <Value key="415" x="-6.434" y="-22.462" z="188.21" rx="-177" ry="-0.178" rz="173.227" fatherId="FrmDraw[0]" />
+      <Value key="416" x="-4.826" y="-22.28" z="188.21" rx="-177" ry="-0.133" rz="174.925" fatherId="FrmDraw[0]" />
+      <Value key="417" x="-3.218" y="-22.15" z="188.21" rx="-177" ry="-0.089" rz="176.619" fatherId="FrmDraw[0]" />
+      <Value key="418" x="-1.609" y="-22.073" z="188.211" rx="-177" ry="-0.044" rz="178.31" fatherId="FrmDraw[0]" />
+      <Value key="419" y="-22.047" z="188.211" rx="-177" rz="180" fatherId="FrmDraw[0]" />
+      <Value key="420" x="1.609" y="-22.073" z="188.211" rx="-177" ry="0.044" rz="-178.31" fatherId="FrmDraw[0]" />
+      <Value key="421" x="3.218" y="-22.15" z="188.21" rx="-177" ry="0.089" rz="-176.619" fatherId="FrmDraw[0]" />
+      <Value key="422" x="4.826" y="-22.28" z="188.21" rx="-177" ry="0.133" rz="-174.925" fatherId="FrmDraw[0]" />
+      <Value key="423" x="6.434" y="-22.462" z="188.21" rx="-177" ry="0.178" rz="-173.227" fatherId="FrmDraw[0]" />
+      <Value key="424" x="8.041" y="-22.697" z="188.209" rx="-177" ry="0.222" rz="-171.522" fatherId="FrmDraw[0]" />
+      <Value key="425" x="9.647" y="-22.985" z="188.209" rx="-177" ry="0.268" rz="-169.81" fatherId="FrmDraw[0]" />
+      <Value key="426" x="11.252" y="-23.328" z="188.208" rx="-177" ry="0.313" rz="-168.089" fatherId="FrmDraw[0]" />
+      <Value key="427" x="12.855" y="-23.726" z="188.207" rx="-177" ry="0.359" rz="-166.356" fatherId="FrmDraw[0]" />
+      <Value key="428" x="14.457" y="-24.18" z="188.206" rx="-177" ry="0.405" rz="-164.611" fatherId="FrmDraw[0]" />
+      <Value key="429" x="16.057" y="-24.692" z="188.205" rx="-177" ry="0.452" rz="-162.851" fatherId="FrmDraw[0]" />
+      <Value key="430" x="17.654" y="-25.264" z="188.204" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="431" x="17.677" y="-25.264" z="185.801" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="432" x="17.702" y="-25.265" z="183.204" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="433" x="16.099" y="-24.693" z="183.205" rx="-177" ry="0.453" rz="-162.847" fatherId="FrmDraw[0]" />
+      <Value key="434" x="14.495" y="-24.181" z="183.206" rx="-177" ry="0.406" rz="-164.608" fatherId="FrmDraw[0]" />
+      <Value key="435" x="12.889" y="-23.727" z="183.207" rx="-177" ry="0.359" rz="-166.354" fatherId="FrmDraw[0]" />
+      <Value key="436" x="11.281" y="-23.329" z="183.208" rx="-177" ry="0.313" rz="-168.086" fatherId="FrmDraw[0]" />
+      <Value key="437" x="9.672" y="-22.986" z="183.209" rx="-177" ry="0.268" rz="-169.808" fatherId="FrmDraw[0]" />
+      <Value key="438" x="8.062" y="-22.697" z="183.209" rx="-177" ry="0.222" rz="-171.521" fatherId="FrmDraw[0]" />
+      <Value key="439" x="6.45" y="-22.462" z="183.21" rx="-177" ry="0.178" rz="-173.225" fatherId="FrmDraw[0]" />
+      <Value key="440" x="4.839" y="-22.28" z="183.21" rx="-177" ry="0.133" rz="-174.924" fatherId="FrmDraw[0]" />
+      <Value key="441" x="3.226" y="-22.151" z="183.21" rx="-177" ry="0.089" rz="-176.619" fatherId="FrmDraw[0]" />
+      <Value key="442" x="1.613" y="-22.073" z="183.211" rx="-177" ry="0.044" rz="-178.31" fatherId="FrmDraw[0]" />
+      <Value key="443" y="-22.047" z="183.211" rx="-177" rz="180" fatherId="FrmDraw[0]" />
+      <Value key="444" x="-1.613" y="-22.073" z="183.211" rx="-177" ry="-0.044" rz="178.31" fatherId="FrmDraw[0]" />
+      <Value key="445" x="-3.226" y="-22.151" z="183.21" rx="-177" ry="-0.089" rz="176.619" fatherId="FrmDraw[0]" />
+      <Value key="446" x="-4.838" y="-22.28" z="183.21" rx="-177" ry="-0.133" rz="174.924" fatherId="FrmDraw[0]" />
+      <Value key="447" x="-6.45" y="-22.462" z="183.21" rx="-177" ry="-0.178" rz="173.225" fatherId="FrmDraw[0]" />
+      <Value key="448" x="-8.062" y="-22.697" z="183.209" rx="-177" ry="-0.222" rz="171.521" fatherId="FrmDraw[0]" />
+      <Value key="449" x="-9.672" y="-22.986" z="183.209" rx="-177" ry="-0.268" rz="169.808" fatherId="FrmDraw[0]" />
+      <Value key="450" x="-11.281" y="-23.329" z="183.208" rx="-177" ry="-0.313" rz="168.086" fatherId="FrmDraw[0]" />
+      <Value key="451" x="-12.889" y="-23.727" z="183.207" rx="-177" ry="-0.359" rz="166.354" fatherId="FrmDraw[0]" />
+      <Value key="452" x="-14.495" y="-24.181" z="183.206" rx="-177" ry="-0.406" rz="164.608" fatherId="FrmDraw[0]" />
+      <Value key="453" x="-16.099" y="-24.693" z="183.205" rx="-177" ry="-0.453" rz="162.847" fatherId="FrmDraw[0]" />
+      <Value key="454" x="-17.701" y="-25.265" z="183.204" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="455" x="-17.721" y="-25.264" z="180.802" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="456" x="-17.742" y="-25.264" z="178.204" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="457" x="-16.136" y="-24.692" z="178.205" rx="-177" ry="-0.452" rz="162.851" fatherId="FrmDraw[0]" />
+      <Value key="458" x="-14.528" y="-24.18" z="178.206" rx="-177" ry="-0.405" rz="164.611" fatherId="FrmDraw[0]" />
+      <Value key="459" x="-12.918" y="-23.726" z="178.207" rx="-177" ry="-0.359" rz="166.356" fatherId="FrmDraw[0]" />
+      <Value key="460" x="-11.306" y="-23.328" z="178.208" rx="-177" ry="-0.313" rz="168.089" fatherId="FrmDraw[0]" />
+      <Value key="461" x="-9.693" y="-22.985" z="178.209" rx="-177" ry="-0.268" rz="169.81" fatherId="FrmDraw[0]" />
+      <Value key="462" x="-8.08" y="-22.697" z="178.209" rx="-177" ry="-0.222" rz="171.522" fatherId="FrmDraw[0]" />
+      <Value key="463" x="-6.465" y="-22.462" z="178.21" rx="-177" ry="-0.178" rz="173.227" fatherId="FrmDraw[0]" />
+      <Value key="464" x="-4.849" y="-22.28" z="178.21" rx="-177" ry="-0.133" rz="174.925" fatherId="FrmDraw[0]" />
+      <Value key="465" x="-3.233" y="-22.15" z="178.21" rx="-177" ry="-0.089" rz="176.619" fatherId="FrmDraw[0]" />
+      <Value key="466" x="-1.617" y="-22.073" z="178.211" rx="-177" ry="-0.044" rz="178.31" fatherId="FrmDraw[0]" />
+      <Value key="467" y="-22.047" z="178.211" rx="-177" rz="180" fatherId="FrmDraw[0]" />
+      <Value key="468" x="1.617" y="-22.073" z="178.211" rx="-177" ry="0.044" rz="-178.31" fatherId="FrmDraw[0]" />
+      <Value key="469" x="3.233" y="-22.15" z="178.21" rx="-177" ry="0.089" rz="-176.619" fatherId="FrmDraw[0]" />
+      <Value key="470" x="4.849" y="-22.28" z="178.21" rx="-177" ry="0.133" rz="-174.925" fatherId="FrmDraw[0]" />
+      <Value key="471" x="6.465" y="-22.462" z="178.21" rx="-177" ry="0.178" rz="-173.227" fatherId="FrmDraw[0]" />
+      <Value key="472" x="8.08" y="-22.697" z="178.209" rx="-177" ry="0.222" rz="-171.522" fatherId="FrmDraw[0]" />
+      <Value key="473" x="9.694" y="-22.985" z="178.209" rx="-177" ry="0.268" rz="-169.81" fatherId="FrmDraw[0]" />
+      <Value key="474" x="11.306" y="-23.328" z="178.208" rx="-177" ry="0.313" rz="-168.089" fatherId="FrmDraw[0]" />
+      <Value key="475" x="12.918" y="-23.726" z="178.207" rx="-177" ry="0.359" rz="-166.356" fatherId="FrmDraw[0]" />
+      <Value key="476" x="14.528" y="-24.18" z="178.206" rx="-177" ry="0.405" rz="-164.611" fatherId="FrmDraw[0]" />
+      <Value key="477" x="16.136" y="-24.692" z="178.205" rx="-177" ry="0.452" rz="-162.851" fatherId="FrmDraw[0]" />
+      <Value key="478" x="17.742" y="-25.264" z="178.204" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="479" x="17.764" y="-25.264" z="175.802" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="480" x="17.789" y="-25.265" z="173.204" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="481" x="16.178" y="-24.693" z="173.205" rx="-177" ry="0.453" rz="-162.848" fatherId="FrmDraw[0]" />
+      <Value key="482" x="14.566" y="-24.181" z="173.206" rx="-177" ry="0.406" rz="-164.608" fatherId="FrmDraw[0]" />
+      <Value key="483" x="12.952" y="-23.727" z="173.207" rx="-177" ry="0.359" rz="-166.354" fatherId="FrmDraw[0]" />
+      <Value key="484" x="11.336" y="-23.329" z="173.208" rx="-177" ry="0.313" rz="-168.086" fatherId="FrmDraw[0]" />
+      <Value key="485" x="9.719" y="-22.986" z="173.209" rx="-177" ry="0.268" rz="-169.808" fatherId="FrmDraw[0]" />
+      <Value key="486" x="8.101" y="-22.697" z="173.209" rx="-177" ry="0.222" rz="-171.521" fatherId="FrmDraw[0]" />
+      <Value key="487" x="6.481" y="-22.462" z="173.21" rx="-177" ry="0.178" rz="-173.225" fatherId="FrmDraw[0]" />
+      <Value key="488" x="4.862" y="-22.28" z="173.21" rx="-177" ry="0.133" rz="-174.924" fatherId="FrmDraw[0]" />
+      <Value key="489" x="3.241" y="-22.15" z="173.21" rx="-177" ry="0.089" rz="-176.619" fatherId="FrmDraw[0]" />
+      <Value key="490" x="1.621" y="-22.073" z="173.211" rx="-177" ry="0.044" rz="-178.31" fatherId="FrmDraw[0]" />
+      <Value key="491" y="-22.047" z="173.211" rx="-177" rz="180" fatherId="FrmDraw[0]" />
+      <Value key="492" x="-1.621" y="-22.073" z="173.211" rx="-177" ry="-0.044" rz="178.31" fatherId="FrmDraw[0]" />
+      <Value key="493" x="-3.241" y="-22.151" z="173.21" rx="-177" ry="-0.089" rz="176.619" fatherId="FrmDraw[0]" />
+      <Value key="494" x="-4.862" y="-22.28" z="173.21" rx="-177" ry="-0.133" rz="174.924" fatherId="FrmDraw[0]" />
+      <Value key="495" x="-6.481" y="-22.462" z="173.21" rx="-177" ry="-0.178" rz="173.225" fatherId="FrmDraw[0]" />
+      <Value key="496" x="-8.101" y="-22.697" z="173.209" rx="-177" ry="-0.222" rz="171.521" fatherId="FrmDraw[0]" />
+      <Value key="497" x="-9.719" y="-22.986" z="173.209" rx="-177" ry="-0.268" rz="169.808" fatherId="FrmDraw[0]" />
+      <Value key="498" x="-11.336" y="-23.329" z="173.208" rx="-177" ry="-0.313" rz="168.086" fatherId="FrmDraw[0]" />
+      <Value key="499" x="-12.952" y="-23.727" z="173.207" rx="-177" ry="-0.359" rz="166.354" fatherId="FrmDraw[0]" />
+      <Value key="500" x="-14.566" y="-24.181" z="173.206" rx="-177" ry="-0.406" rz="164.608" fatherId="FrmDraw[0]" />
+      <Value key="501" x="-16.178" y="-24.693" z="173.205" rx="-177" ry="-0.453" rz="162.848" fatherId="FrmDraw[0]" />
+      <Value key="502" x="-17.789" y="-25.265" z="173.204" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="503" x="-17.808" y="-25.264" z="170.802" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="504" x="-17.829" y="-25.264" z="168.204" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="505" x="-16.227" y="-24.696" z="168.205" rx="-177" ry="-0.453" rz="162.838" fatherId="FrmDraw[0]" />
+      <Value key="506" x="-14.623" y="-24.188" z="168.206" rx="-177" ry="-0.406" rz="164.585" fatherId="FrmDraw[0]" />
+      <Value key="507" x="-13.017" y="-23.736" z="168.207" rx="-177" ry="-0.36" rz="166.317" fatherId="FrmDraw[0]" />
+      <Value key="508" x="-11.41" y="-23.339" z="168.208" rx="-177" ry="-0.314" rz="168.037" fatherId="FrmDraw[0]" />
+      <Value key="509" x="-9.801" y="-22.997" z="168.209" rx="-177" ry="-0.269" rz="169.746" fatherId="FrmDraw[0]" />
+      <Value key="510" x="-8.192" y="-22.709" z="168.209" rx="-177" ry="-0.224" rz="171.445" fatherId="FrmDraw[0]" />
+      <Value key="511" x="-6.581" y="-22.473" z="168.21" rx="-177" ry="-0.18" rz="173.137" fatherId="FrmDraw[0]" />
+      <Value key="512" x="-4.97" y="-22.29" z="168.21" rx="-177" ry="-0.136" rz="174.823" fatherId="FrmDraw[0]" />
+      <Value key="513" x="-3.358" y="-22.158" z="168.21" rx="-177" ry="-0.092" rz="176.505" fatherId="FrmDraw[0]" />
+      <Value key="514" x="-1.746" y="-22.077" z="168.211" rx="-177" ry="-0.048" rz="178.183" fatherId="FrmDraw[0]" />
+      <Value key="515" x="-0.672" y="-22.051" z="168.211" rx="-177" ry="-0.018" rz="179.301" fatherId="FrmDraw[0]" />
+      <Value key="516" x="0.134" y="-22.047" z="168.211" rx="-177" ry="0.004" rz="-179.86" fatherId="FrmDraw[0]" />
+      <Value key="517" x="1.747" y="-22.077" z="168.211" rx="-177" ry="0.048" rz="-178.183" fatherId="FrmDraw[0]" />
+      <Value key="518" x="3.358" y="-22.158" z="168.21" rx="-177" ry="0.092" rz="-176.505" fatherId="FrmDraw[0]" />
+      <Value key="519" x="4.97" y="-22.29" z="168.21" rx="-177" ry="0.136" rz="-174.823" fatherId="FrmDraw[0]" />
+      <Value key="520" x="6.581" y="-22.473" z="168.21" rx="-177" ry="0.18" rz="-173.137" fatherId="FrmDraw[0]" />
+      <Value key="521" x="8.192" y="-22.709" z="168.209" rx="-177" ry="0.224" rz="-171.445" fatherId="FrmDraw[0]" />
+      <Value key="522" x="9.801" y="-22.997" z="168.209" rx="-177" ry="0.269" rz="-169.746" fatherId="FrmDraw[0]" />
+      <Value key="523" x="11.41" y="-23.339" z="168.208" rx="-177" ry="0.314" rz="-168.037" fatherId="FrmDraw[0]" />
+      <Value key="524" x="13.017" y="-23.736" z="168.207" rx="-177" ry="0.36" rz="-166.317" fatherId="FrmDraw[0]" />
+      <Value key="525" x="14.623" y="-24.188" z="168.206" rx="-177" ry="0.406" rz="-164.585" fatherId="FrmDraw[0]" />
+      <Value key="526" x="16.227" y="-24.696" z="168.205" rx="-177" ry="0.453" rz="-162.838" fatherId="FrmDraw[0]" />
+      <Value key="527" x="17.829" y="-25.264" z="168.204" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="528" x="17.852" y="-25.264" z="165.802" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="529" x="17.876" y="-25.265" z="163.204" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="530" x="16.27" y="-24.697" z="163.206" rx="-177" ry="0.453" rz="-162.834" fatherId="FrmDraw[0]" />
+      <Value key="531" x="14.661" y="-24.188" z="163.207" rx="-177" ry="0.406" rz="-164.582" fatherId="FrmDraw[0]" />
+      <Value key="532" x="13.051" y="-23.736" z="163.207" rx="-177" ry="0.36" rz="-166.314" fatherId="FrmDraw[0]" />
+      <Value key="533" x="11.439" y="-23.34" z="163.208" rx="-177" ry="0.314" rz="-168.034" fatherId="FrmDraw[0]" />
+      <Value key="534" x="9.827" y="-22.998" z="163.209" rx="-177" ry="0.269" rz="-169.744" fatherId="FrmDraw[0]" />
+      <Value key="535" x="8.213" y="-22.709" z="163.209" rx="-177" ry="0.224" rz="-171.444" fatherId="FrmDraw[0]" />
+      <Value key="536" x="6.598" y="-22.473" z="163.21" rx="-177" ry="0.18" rz="-173.136" fatherId="FrmDraw[0]" />
+      <Value key="537" x="4.983" y="-22.29" z="163.21" rx="-177" ry="0.136" rz="-174.822" fatherId="FrmDraw[0]" />
+      <Value key="538" x="3.367" y="-22.158" z="163.21" rx="-177" ry="0.092" rz="-176.504" fatherId="FrmDraw[0]" />
+      <Value key="539" x="1.751" y="-22.077" z="163.211" rx="-177" ry="0.048" rz="-178.183" fatherId="FrmDraw[0]" />
+      <Value key="540" x="0.673" y="-22.051" z="163.211" rx="-177" ry="0.018" rz="-179.301" fatherId="FrmDraw[0]" />
+      <Value key="541" x="-0.135" y="-22.047" z="163.211" rx="-177" ry="-0.004" rz="179.86" fatherId="FrmDraw[0]" />
+      <Value key="542" x="-1.751" y="-22.077" z="163.211" rx="-177" ry="-0.048" rz="178.183" fatherId="FrmDraw[0]" />
+      <Value key="543" x="-3.367" y="-22.158" z="163.21" rx="-177" ry="-0.092" rz="176.504" fatherId="FrmDraw[0]" />
+      <Value key="544" x="-4.983" y="-22.29" z="163.21" rx="-177" ry="-0.136" rz="174.822" fatherId="FrmDraw[0]" />
+      <Value key="545" x="-6.598" y="-22.473" z="163.21" rx="-177" ry="-0.18" rz="173.136" fatherId="FrmDraw[0]" />
+      <Value key="546" x="-8.213" y="-22.709" z="163.209" rx="-177" ry="-0.224" rz="171.444" fatherId="FrmDraw[0]" />
+      <Value key="547" x="-9.827" y="-22.998" z="163.209" rx="-177" ry="-0.269" rz="169.744" fatherId="FrmDraw[0]" />
+      <Value key="548" x="-11.439" y="-23.34" z="163.208" rx="-177" ry="-0.314" rz="168.034" fatherId="FrmDraw[0]" />
+      <Value key="549" x="-13.051" y="-23.736" z="163.207" rx="-177" ry="-0.36" rz="166.314" fatherId="FrmDraw[0]" />
+      <Value key="550" x="-14.661" y="-24.188" z="163.207" rx="-177" ry="-0.406" rz="164.582" fatherId="FrmDraw[0]" />
+      <Value key="551" x="-16.27" y="-24.697" z="163.206" rx="-177" ry="-0.453" rz="162.834" fatherId="FrmDraw[0]" />
+      <Value key="552" x="-17.876" y="-25.265" z="163.204" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="553" x="-17.896" y="-25.264" z="160.802" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="554" x="-17.917" y="-25.264" z="158.205" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="555" x="-16.306" y="-24.696" z="158.206" rx="-177" ry="-0.453" rz="162.838" fatherId="FrmDraw[0]" />
+      <Value key="556" x="-14.694" y="-24.188" z="158.207" rx="-177" ry="-0.406" rz="164.585" fatherId="FrmDraw[0]" />
+      <Value key="557" x="-13.08" y="-23.736" z="158.208" rx="-177" ry="-0.36" rz="166.317" fatherId="FrmDraw[0]" />
+      <Value key="558" x="-11.465" y="-23.339" z="158.208" rx="-177" ry="-0.314" rz="168.037" fatherId="FrmDraw[0]" />
+      <Value key="559" x="-9.848" y="-22.997" z="158.209" rx="-177" ry="-0.269" rz="169.746" fatherId="FrmDraw[0]" />
+      <Value key="560" x="-8.231" y="-22.709" z="158.209" rx="-177" ry="-0.224" rz="171.445" fatherId="FrmDraw[0]" />
+      <Value key="561" x="-6.613" y="-22.473" z="158.21" rx="-177" ry="-0.18" rz="173.137" fatherId="FrmDraw[0]" />
+      <Value key="562" x="-4.994" y="-22.29" z="158.21" rx="-177" ry="-0.136" rz="174.823" fatherId="FrmDraw[0]" />
+      <Value key="563" x="-3.374" y="-22.158" z="158.21" rx="-177" ry="-0.092" rz="176.505" fatherId="FrmDraw[0]" />
+      <Value key="564" x="-1.755" y="-22.077" z="158.211" rx="-177" ry="-0.048" rz="178.183" fatherId="FrmDraw[0]" />
+      <Value key="565" x="-0.675" y="-22.051" z="158.211" rx="-177" ry="-0.018" rz="179.301" fatherId="FrmDraw[0]" />
+      <Value key="566" x="0.135" y="-22.047" z="158.211" rx="-177" ry="0.004" rz="-179.86" fatherId="FrmDraw[0]" />
+      <Value key="567" x="1.755" y="-22.077" z="158.211" rx="-177" ry="0.048" rz="-178.183" fatherId="FrmDraw[0]" />
+      <Value key="568" x="3.374" y="-22.158" z="158.21" rx="-177" ry="0.092" rz="-176.505" fatherId="FrmDraw[0]" />
+      <Value key="569" x="4.994" y="-22.29" z="158.21" rx="-177" ry="0.136" rz="-174.823" fatherId="FrmDraw[0]" />
+      <Value key="570" x="6.613" y="-22.473" z="158.21" rx="-177" ry="0.18" rz="-173.137" fatherId="FrmDraw[0]" />
+      <Value key="571" x="8.231" y="-22.709" z="158.209" rx="-177" ry="0.224" rz="-171.445" fatherId="FrmDraw[0]" />
+      <Value key="572" x="9.848" y="-22.997" z="158.209" rx="-177" ry="0.269" rz="-169.746" fatherId="FrmDraw[0]" />
+      <Value key="573" x="11.465" y="-23.339" z="158.208" rx="-177" ry="0.314" rz="-168.037" fatherId="FrmDraw[0]" />
+      <Value key="574" x="13.08" y="-23.736" z="158.208" rx="-177" ry="0.36" rz="-166.317" fatherId="FrmDraw[0]" />
+      <Value key="575" x="14.694" y="-24.188" z="158.207" rx="-177" ry="0.406" rz="-164.585" fatherId="FrmDraw[0]" />
+      <Value key="576" x="16.306" y="-24.696" z="158.206" rx="-177" ry="0.453" rz="-162.838" fatherId="FrmDraw[0]" />
+      <Value key="577" x="17.917" y="-25.264" z="158.205" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="578" x="17.939" y="-25.264" z="155.803" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="579" x="17.964" y="-25.265" z="153.205" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="580" x="16.361" y="-24.701" z="153.206" rx="-177" ry="0.453" rz="-162.821" fatherId="FrmDraw[0]" />
+      <Value key="581" x="14.756" y="-24.196" z="153.207" rx="-177" ry="0.407" rz="-164.556" fatherId="FrmDraw[0]" />
+      <Value key="582" x="13.15" y="-23.746" z="153.208" rx="-177" ry="0.361" rz="-166.276" fatherId="FrmDraw[0]" />
+      <Value key="583" x="11.543" y="-23.351" z="153.208" rx="-177" ry="0.316" rz="-167.983" fatherId="FrmDraw[0]" />
+      <Value key="584" x="9.934" y="-23.01" z="153.209" rx="-177" ry="0.271" rz="-169.68" fatherId="FrmDraw[0]" />
+      <Value key="585" x="8.325" y="-22.721" z="153.209" rx="-177" ry="0.226" rz="-171.368" fatherId="FrmDraw[0]" />
+      <Value key="586" x="6.714" y="-22.484" z="153.21" rx="-177" ry="0.182" rz="-173.048" fatherId="FrmDraw[0]" />
+      <Value key="587" x="5.103" y="-22.299" z="153.21" rx="-177" ry="0.138" rz="-174.722" fatherId="FrmDraw[0]" />
+      <Value key="588" x="3.492" y="-22.165" z="153.21" rx="-177" ry="0.095" rz="-176.391" fatherId="FrmDraw[0]" />
+      <Value key="589" x="1.88" y="-22.081" z="153.211" rx="-177" ry="0.051" rz="-178.058" fatherId="FrmDraw[0]" />
+      <Value key="590" x="0.806" y="-22.053" z="153.211" rx="-177" ry="0.022" rz="-179.168" fatherId="FrmDraw[0]" />
+      <Value key="591" x="-0.269" y="-22.048" z="153.211" rx="-177" ry="-0.007" rz="179.723" fatherId="FrmDraw[0]" />
+      <Value key="592" x="-1.88" y="-22.081" z="153.211" rx="-177" ry="-0.051" rz="178.058" fatherId="FrmDraw[0]" />
+      <Value key="593" x="-3.492" y="-22.165" z="153.21" rx="-177" ry="-0.095" rz="176.391" fatherId="FrmDraw[0]" />
+      <Value key="594" x="-5.103" y="-22.299" z="153.21" rx="-177" ry="-0.138" rz="174.722" fatherId="FrmDraw[0]" />
+      <Value key="595" x="-6.714" y="-22.484" z="153.21" rx="-177" ry="-0.182" rz="173.048" fatherId="FrmDraw[0]" />
+      <Value key="596" x="-8.325" y="-22.721" z="153.209" rx="-177" ry="-0.226" rz="171.368" fatherId="FrmDraw[0]" />
+      <Value key="597" x="-9.934" y="-23.01" z="153.209" rx="-177" ry="-0.271" rz="169.68" fatherId="FrmDraw[0]" />
+      <Value key="598" x="-11.543" y="-23.351" z="153.208" rx="-177" ry="-0.316" rz="167.983" fatherId="FrmDraw[0]" />
+      <Value key="599" x="-13.15" y="-23.746" z="153.208" rx="-177" ry="-0.361" rz="166.276" fatherId="FrmDraw[0]" />
+      <Value key="600" x="-14.756" y="-24.196" z="153.207" rx="-177" ry="-0.407" rz="164.556" fatherId="FrmDraw[0]" />
+      <Value key="601" x="-16.361" y="-24.701" z="153.206" rx="-177" ry="-0.453" rz="162.821" fatherId="FrmDraw[0]" />
+      <Value key="602" x="-17.964" y="-25.265" z="153.205" rx="-177" ry="-0.5" rz="161.07" fatherId="FrmDraw[0]" />
+      <Value key="603" x="-17.983" y="-25.264" z="150.803" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="604" x="-18.004" y="-25.264" z="148.205" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="605" x="-16.397" y="-24.7" z="148.206" rx="-177" ry="-0.453" rz="162.825" fatherId="FrmDraw[0]" />
+      <Value key="606" x="-14.789" y="-24.195" z="148.207" rx="-177" ry="-0.407" rz="164.559" fatherId="FrmDraw[0]" />
+      <Value key="607" x="-13.179" y="-23.745" z="148.208" rx="-177" ry="-0.361" rz="166.279" fatherId="FrmDraw[0]" />
+      <Value key="608" x="-11.568" y="-23.35" z="148.208" rx="-177" ry="-0.316" rz="167.986" fatherId="FrmDraw[0]" />
+      <Value key="609" x="-9.956" y="-23.009" z="148.209" rx="-177" ry="-0.271" rz="169.682" fatherId="FrmDraw[0]" />
+      <Value key="610" x="-8.343" y="-22.721" z="148.209" rx="-177" ry="-0.226" rz="171.369" fatherId="FrmDraw[0]" />
+      <Value key="611" x="-6.729" y="-22.484" z="148.21" rx="-177" ry="-0.182" rz="173.049" fatherId="FrmDraw[0]" />
+      <Value key="612" x="-5.115" y="-22.299" z="148.21" rx="-177" ry="-0.138" rz="174.723" fatherId="FrmDraw[0]" />
+      <Value key="613" x="-3.5" y="-22.165" z="148.21" rx="-177" ry="-0.095" rz="176.392" fatherId="FrmDraw[0]" />
+      <Value key="614" x="-1.885" y="-22.081" z="148.211" rx="-177" ry="-0.051" rz="178.058" fatherId="FrmDraw[0]" />
+      <Value key="615" x="-0.808" y="-22.053" z="148.211" rx="-177" ry="-0.022" rz="179.168" fatherId="FrmDraw[0]" />
+      <Value key="616" x="0.269" y="-22.048" z="148.211" rx="-177" ry="0.007" rz="-179.723" fatherId="FrmDraw[0]" />
+      <Value key="617" x="1.885" y="-22.081" z="148.211" rx="-177" ry="0.051" rz="-178.058" fatherId="FrmDraw[0]" />
+      <Value key="618" x="3.5" y="-22.165" z="148.21" rx="-177" ry="0.095" rz="-176.392" fatherId="FrmDraw[0]" />
+      <Value key="619" x="5.115" y="-22.299" z="148.21" rx="-177" ry="0.138" rz="-174.723" fatherId="FrmDraw[0]" />
+      <Value key="620" x="6.729" y="-22.484" z="148.21" rx="-177" ry="0.182" rz="-173.049" fatherId="FrmDraw[0]" />
+      <Value key="621" x="8.343" y="-22.721" z="148.209" rx="-177" ry="0.226" rz="-171.369" fatherId="FrmDraw[0]" />
+      <Value key="622" x="9.956" y="-23.009" z="148.209" rx="-177" ry="0.271" rz="-169.682" fatherId="FrmDraw[0]" />
+      <Value key="623" x="11.568" y="-23.35" z="148.208" rx="-177" ry="0.316" rz="-167.986" fatherId="FrmDraw[0]" />
+      <Value key="624" x="13.179" y="-23.745" z="148.208" rx="-177" ry="0.361" rz="-166.278" fatherId="FrmDraw[0]" />
+      <Value key="625" x="14.789" y="-24.195" z="148.207" rx="-177" ry="0.407" rz="-164.559" fatherId="FrmDraw[0]" />
+      <Value key="626" x="16.397" y="-24.7" z="148.206" rx="-177" ry="0.453" rz="-162.825" fatherId="FrmDraw[0]" />
+      <Value key="627" x="18.004" y="-25.264" z="148.205" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="628" x="18.027" y="-25.264" z="145.803" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="629" x="18.051" y="-25.265" z="143.205" rx="-177" ry="0.5" rz="-161.07" fatherId="FrmDraw[0]" />
+      <Value key="630" x="16.44" y="-24.701" z="143.206" rx="-177" ry="0.453" rz="-162.821" fatherId="FrmDraw[0]" />
+      <Value key="631" x="14.827" y="-24.196" z="143.207" rx="-177" ry="0.407" rz="-164.556" fatherId="FrmDraw[0]" />
+      <Value key="632" x="13.213" y="-23.746" z="143.208" rx="-177" ry="0.361" rz="-166.276" fatherId="FrmDraw[0]" />
+      <Value key="633" x="11.598" y="-23.351" z="143.208" rx="-177" ry="0.316" rz="-167.983" fatherId="FrmDraw[0]" />
+      <Value key="634" x="9.981" y="-23.009" z="143.209" rx="-177" ry="0.271" rz="-169.68" fatherId="FrmDraw[0]" />
+      <Value key="635" x="8.364" y="-22.721" z="143.209" rx="-177" ry="0.226" rz="-171.368" fatherId="FrmDraw[0]" />
+      <Value key="636" x="6.746" y="-22.484" z="143.21" rx="-177" ry="0.182" rz="-173.048" fatherId="FrmDraw[0]" />
+      <Value key="637" x="5.128" y="-22.299" z="143.21" rx="-177" ry="0.138" rz="-174.722" fatherId="FrmDraw[0]" />
+      <Value key="638" x="3.509" y="-22.165" z="143.21" rx="-177" ry="0.095" rz="-176.391" fatherId="FrmDraw[0]" />
+      <Value key="639" x="1.889" y="-22.081" z="143.211" rx="-177" ry="0.051" rz="-178.058" fatherId="FrmDraw[0]" />
+      <Value key="640" x="0.81" y="-22.053" z="143.211" rx="-177" ry="0.022" rz="-179.168" fatherId="FrmDraw[0]" />
+      <Value key="641" x="-0.27" y="-22.048" z="143.211" rx="-177" ry="-0.007" rz="179.723" fatherId="FrmDraw[0]" />
+      <Value key="642" x="-1.889" y="-22.081" z="143.211" rx="-177" ry="-0.051" rz="178.058" fatherId="FrmDraw[0]" />
+      <Value key="643" x="-3.509" y="-22.165" z="143.21" rx="-177" ry="-0.095" rz="176.391" fatherId="FrmDraw[0]" />
+      <Value key="644" x="-5.128" y="-22.299" z="143.21" rx="-177" ry="-0.138" rz="174.722" fatherId="FrmDraw[0]" />
+      <Value key="645" x="-6.746" y="-22.484" z="143.21" rx="-177" ry="-0.182" rz="173.048" fatherId="FrmDraw[0]" />
+      <Value key="646" x="-8.364" y="-22.721" z="143.209" rx="-177" ry="-0.226" rz="171.368" fatherId="FrmDraw[0]" />
+      <Value key="647" x="-9.981" y="-23.01" z="143.209" rx="-177" ry="-0.271" rz="169.68" fatherId="FrmDraw[0]" />
+      <Value key="648" x="-11.598" y="-23.351" z="143.208" rx="-177" ry="-0.316" rz="167.983" fatherId="FrmDraw[0]" />
+      <Value key="649" x="-13.213" y="-23.746" z="143.208" rx="-177" ry="-0.361" rz="166.276" fatherId="FrmDraw[0]" />
+      <Value key="650" x="-14.827" y="-24.196" z="143.207" rx="-177" ry="-0.407" rz="164.556" fatherId="FrmDraw[0]" />
+      <Value key="651" x="-16.44" y="-24.701" z="143.206" rx="-177" ry="-0.453" rz="162.821" fatherId="FrmDraw[0]" />
+      <Value key="652" x="-18.051" y="-25.265" z="143.205" rx="-177" ry="-0.5" rz="161.071" fatherId="FrmDraw[0]" />
+      <Value key="653" x="-18.07" y="-25.264" z="140.803" rx="-177" ry="-0.5" rz="161.072" fatherId="FrmDraw[0]" />
+      <Value key="654" x="-18.091" y="-25.264" z="138.205" rx="-177" ry="-0.5" rz="161.074" fatherId="FrmDraw[0]" />
+      <Value key="655" x="-16.537" y="-24.72" z="138.206" rx="-177" ry="-0.455" rz="162.76" fatherId="FrmDraw[0]" />
+      <Value key="656" x="-15.025" y="-24.244" z="138.207" rx="-177" ry="-0.412" rz="164.383" fatherId="FrmDraw[0]" />
+      <Value key="657" x="-13.512" y="-23.816" z="138.208" rx="-177" ry="-0.369" rz="165.993" fatherId="FrmDraw[0]" />
+      <Value key="658" x="-11.86" y="-23.405" z="138.208" rx="-177" ry="-0.322" rz="167.737" fatherId="FrmDraw[0]" />
+      <Value key="659" x="-10.207" y="-23.049" z="138.209" rx="-177" ry="-0.277" rz="169.469" fatherId="FrmDraw[0]" />
+      <Value key="660" x="-8.553" y="-22.749" z="138.209" rx="-177" ry="-0.231" rz="171.192" fatherId="FrmDraw[0]" />
+      <Value key="661" x="-6.899" y="-22.502" z="138.21" rx="-177" ry="-0.186" rz="172.906" fatherId="FrmDraw[0]" />
+      <Value key="662" x="-5.244" y="-22.31" z="138.21" rx="-177" ry="-0.141" rz="174.615" fatherId="FrmDraw[0]" />
+      <Value key="663" x="-3.588" y="-22.17" z="138.21" rx="-177" ry="-0.096" rz="176.318" fatherId="FrmDraw[0]" />
+      <Value key="664" x="-1.932" y="-22.082" z="138.211" rx="-177" ry="-0.052" rz="178.018" fatherId="FrmDraw[0]" />
+      <Value key="665" x="-0.828" y="-22.053" z="138.211" rx="-177" ry="-0.022" rz="179.151" fatherId="FrmDraw[0]" />
+      <Value key="666" x="0.276" y="-22.048" z="138.211" rx="-177" ry="0.007" rz="-179.717" fatherId="FrmDraw[0]" />
+      <Value key="667" x="1.932" y="-22.082" z="138.211" rx="-177" ry="0.052" rz="-178.018" fatherId="FrmDraw[0]" />
+      <Value key="668" x="3.588" y="-22.17" z="138.21" rx="-177" ry="0.096" rz="-176.318" fatherId="FrmDraw[0]" />
+      <Value key="669" x="5.244" y="-22.31" z="138.21" rx="-177" ry="0.141" rz="-174.615" fatherId="FrmDraw[0]" />
+      <Value key="670" x="6.899" y="-22.502" z="138.21" rx="-177" ry="0.186" rz="-172.906" fatherId="FrmDraw[0]" />
+      <Value key="671" x="8.553" y="-22.749" z="138.209" rx="-177" ry="0.231" rz="-171.192" fatherId="FrmDraw[0]" />
+      <Value key="672" x="10.207" y="-23.049" z="138.209" rx="-177" ry="0.277" rz="-169.469" fatherId="FrmDraw[0]" />
+      <Value key="673" x="11.86" y="-23.405" z="138.208" rx="-177" ry="0.322" rz="-167.737" fatherId="FrmDraw[0]" />
+      <Value key="674" x="13.512" y="-23.816" z="138.208" rx="-177" ry="0.369" rz="-165.993" fatherId="FrmDraw[0]" />
+      <Value key="675" x="15.025" y="-24.244" z="138.207" rx="-177" ry="0.412" rz="-164.383" fatherId="FrmDraw[0]" />
+      <Value key="676" x="16.537" y="-24.72" z="138.206" rx="-177" ry="0.455" rz="-162.759" fatherId="FrmDraw[0]" />
+      <Value key="677" x="18.091" y="-25.264" z="138.205" rx="-177" ry="0.5" rz="-161.074" fatherId="FrmDraw[0]" />
+      <Value key="678" x="18.114" y="-25.264" z="135.803" rx="-177" ry="0.5" rz="-161.072" fatherId="FrmDraw[0]" />
+      <Value key="679" x="18.138" y="-25.265" z="133.206" rx="-177" ry="0.5" rz="-161.071" fatherId="FrmDraw[0]" />
+      <Value key="680" x="16.531" y="-24.705" z="133.206" rx="-177" ry="0.454" rz="-162.809" fatherId="FrmDraw[0]" />
+      <Value key="681" x="14.922" y="-24.203" z="133.207" rx="-177" ry="0.408" rz="-164.53" fatherId="FrmDraw[0]" />
+      <Value key="682" x="13.312" y="-23.755" z="133.208" rx="-177" ry="0.362" rz="-166.238" fatherId="FrmDraw[0]" />
+      <Value key="683" x="11.701" y="-23.362" z="133.209" rx="-177" ry="0.317" rz="-167.933" fatherId="FrmDraw[0]" />
+      <Value key="684" x="10.089" y="-23.021" z="133.209" rx="-177" ry="0.273" rz="-169.617" fatherId="FrmDraw[0]" />
+      <Value key="685" x="8.476" y="-22.733" z="133.21" rx="-177" ry="0.228" rz="-171.293" fatherId="FrmDraw[0]" />
+      <Value key="686" x="6.862" y="-22.495" z="133.21" rx="-177" ry="0.185" rz="-172.961" fatherId="FrmDraw[0]" />
+      <Value key="687" x="5.248" y="-22.309" z="133.21" rx="-177" ry="0.141" rz="-174.623" fatherId="FrmDraw[0]" />
+      <Value key="688" x="3.634" y="-22.172" z="133.21" rx="-177" ry="0.097" rz="-176.28" fatherId="FrmDraw[0]" />
+      <Value key="689" x="2.019" y="-22.086" z="133.211" rx="-177" ry="0.054" rz="-177.934" fatherId="FrmDraw[0]" />
+      <Value key="690" x="0.673" y="-22.051" z="133.211" rx="-177" ry="0.018" rz="-179.312" fatherId="FrmDraw[0]" />
+      <Value key="691" x="-0.404" y="-22.048" z="133.211" rx="-177" ry="-0.011" rz="179.587" fatherId="FrmDraw[0]" />
+      <Value key="692" x="-2.019" y="-22.086" z="133.211" rx="-177" ry="-0.054" rz="177.934" fatherId="FrmDraw[0]" />
+      <Value key="693" x="-3.634" y="-22.172" z="133.21" rx="-177" ry="-0.097" rz="176.28" fatherId="FrmDraw[0]" />
+      <Value key="694" x="-5.248" y="-22.309" z="133.21" rx="-177" ry="-0.141" rz="174.623" fatherId="FrmDraw[0]" />
+      <Value key="695" x="-6.862" y="-22.495" z="133.21" rx="-177" ry="-0.185" rz="172.961" fatherId="FrmDraw[0]" />
+      <Value key="696" x="-8.476" y="-22.733" z="133.21" rx="-177" ry="-0.228" rz="171.293" fatherId="FrmDraw[0]" />
+      <Value key="697" x="-10.089" y="-23.021" z="133.209" rx="-177" ry="-0.273" rz="169.617" fatherId="FrmDraw[0]" />
+      <Value key="698" x="-11.701" y="-23.362" z="133.209" rx="-177" ry="-0.317" rz="167.933" fatherId="FrmDraw[0]" />
+      <Value key="699" x="-13.312" y="-23.755" z="133.208" rx="-177" ry="-0.362" rz="166.238" fatherId="FrmDraw[0]" />
+      <Value key="700" x="-14.922" y="-24.203" z="133.207" rx="-177" ry="-0.408" rz="164.53" fatherId="FrmDraw[0]" />
+      <Value key="701" x="-16.531" y="-24.705" z="133.206" rx="-177" ry="-0.454" rz="162.809" fatherId="FrmDraw[0]" />
+      <Value key="702" x="-18.138" y="-25.265" z="133.206" rx="-177" ry="-0.5" rz="161.071" fatherId="FrmDraw[0]" />
+      <Value key="703" x="-18.162" y="-25.265" z="130.659" rx="-177" ry="-0.5" rz="161.069" fatherId="FrmDraw[0]" />
+      <Value key="704" x="-16.552" y="-24.706" z="130.66" rx="-177" ry="-0.454" rz="162.808" fatherId="FrmDraw[0]" />
+      <Value key="705" x="-14.941" y="-24.203" z="130.661" rx="-177" ry="-0.408" rz="164.529" fatherId="FrmDraw[0]" />
+      <Value key="706" x="-13.329" y="-23.755" z="130.662" rx="-177" ry="-0.362" rz="166.237" fatherId="FrmDraw[0]" />
+      <Value key="707" x="-11.716" y="-23.362" z="130.662" rx="-177" ry="-0.317" rz="167.932" fatherId="FrmDraw[0]" />
+      <Value key="708" x="-10.102" y="-23.021" z="130.663" rx="-177" ry="-0.273" rz="169.617" fatherId="FrmDraw[0]" />
+      <Value key="709" x="-8.487" y="-22.733" z="130.663" rx="-177" ry="-0.228" rz="171.292" fatherId="FrmDraw[0]" />
+      <Value key="710" x="-6.871" y="-22.495" z="130.663" rx="-177" ry="-0.185" rz="172.96" fatherId="FrmDraw[0]" />
+      <Value key="711" x="-5.255" y="-22.309" z="130.664" rx="-177" ry="-0.141" rz="174.622" fatherId="FrmDraw[0]" />
+      <Value key="712" x="-3.638" y="-22.172" z="130.664" rx="-177" ry="-0.097" rz="176.28" fatherId="FrmDraw[0]" />
+      <Value key="713" x="-2.021" y="-22.086" z="130.664" rx="-177" ry="-0.054" rz="177.934" fatherId="FrmDraw[0]" />
+      <Value key="714" x="-0.674" y="-22.051" z="130.664" rx="-177" ry="-0.018" rz="179.312" fatherId="FrmDraw[0]" />
+      <Value key="715" x="0.404" y="-22.048" z="130.664" rx="-177" ry="0.011" rz="-179.587" fatherId="FrmDraw[0]" />
+      <Value key="716" x="2.021" y="-22.086" z="130.664" rx="-177" ry="0.054" rz="-177.934" fatherId="FrmDraw[0]" />
+      <Value key="717" x="3.638" y="-22.172" z="130.664" rx="-177" ry="0.097" rz="-176.28" fatherId="FrmDraw[0]" />
+      <Value key="718" x="5.255" y="-22.309" z="130.664" rx="-177" ry="0.141" rz="-174.622" fatherId="FrmDraw[0]" />
+      <Value key="719" x="6.871" y="-22.495" z="130.663" rx="-177" ry="0.185" rz="-172.96" fatherId="FrmDraw[0]" />
+      <Value key="720" x="8.487" y="-22.733" z="130.663" rx="-177" ry="0.228" rz="-171.292" fatherId="FrmDraw[0]" />
+      <Value key="721" x="10.102" y="-23.021" z="130.663" rx="-177" ry="0.273" rz="-169.617" fatherId="FrmDraw[0]" />
+      <Value key="722" x="11.716" y="-23.362" z="130.662" rx="-177" ry="0.317" rz="-167.932" fatherId="FrmDraw[0]" />
+      <Value key="723" x="13.329" y="-23.755" z="130.662" rx="-177" ry="0.362" rz="-166.237" fatherId="FrmDraw[0]" />
+      <Value key="724" x="14.941" y="-24.203" z="130.661" rx="-177" ry="0.408" rz="-164.529" fatherId="FrmDraw[0]" />
+      <Value key="725" x="16.552" y="-24.706" z="130.66" rx="-177" ry="0.454" rz="-162.807" fatherId="FrmDraw[0]" />
+      <Value key="726" x="18.162" y="-25.265" z="130.659" rx="-177" ry="0.5" rz="-161.069" fatherId="FrmDraw[0]" />
+      <Value key="727" x="18.185" y="-25.266" z="128.087" rx="-177" ry="0.5" rz="-161.069" fatherId="FrmDraw[0]" />
+      <Value key="728" x="16.573" y="-24.706" z="128.088" rx="-177" ry="0.454" rz="-162.807" fatherId="FrmDraw[0]" />
+      <Value key="729" x="14.96" y="-24.203" z="128.089" rx="-177" ry="0.408" rz="-164.529" fatherId="FrmDraw[0]" />
+      <Value key="730" x="13.346" y="-23.755" z="128.09" rx="-177" ry="0.362" rz="-166.236" fatherId="FrmDraw[0]" />
+      <Value key="731" x="11.731" y="-23.362" z="128.09" rx="-177" ry="0.317" rz="-167.932" fatherId="FrmDraw[0]" />
+      <Value key="732" x="10.114" y="-23.021" z="128.091" rx="-177" ry="0.273" rz="-169.616" fatherId="FrmDraw[0]" />
+      <Value key="733" x="8.497" y="-22.733" z="128.091" rx="-177" ry="0.228" rz="-171.292" fatherId="FrmDraw[0]" />
+      <Value key="734" x="6.88" y="-22.495" z="128.092" rx="-177" ry="0.185" rz="-172.96" fatherId="FrmDraw[0]" />
+      <Value key="735" x="5.261" y="-22.309" z="128.092" rx="-177" ry="0.141" rz="-174.622" fatherId="FrmDraw[0]" />
+      <Value key="736" x="3.643" y="-22.172" z="128.092" rx="-177" ry="0.097" rz="-176.28" fatherId="FrmDraw[0]" />
+      <Value key="737" x="2.024" y="-22.086" z="128.092" rx="-177" ry="0.054" rz="-177.934" fatherId="FrmDraw[0]" />
+      <Value key="738" x="0.675" y="-22.051" z="128.092" rx="-177" ry="0.018" rz="-179.312" fatherId="FrmDraw[0]" />
+      <Value key="739" x="-0.405" y="-22.048" z="128.092" rx="-177" ry="-0.011" rz="179.587" fatherId="FrmDraw[0]" />
+      <Value key="740" x="-2.024" y="-22.086" z="128.092" rx="-177" ry="-0.054" rz="177.934" fatherId="FrmDraw[0]" />
+      <Value key="741" x="-3.643" y="-22.172" z="128.092" rx="-177" ry="-0.097" rz="176.28" fatherId="FrmDraw[0]" />
+      <Value key="742" x="-5.261" y="-22.309" z="128.092" rx="-177" ry="-0.141" rz="174.622" fatherId="FrmDraw[0]" />
+      <Value key="743" x="-6.879" y="-22.496" z="128.092" rx="-177" ry="-0.185" rz="172.96" fatherId="FrmDraw[0]" />
+      <Value key="744" x="-8.497" y="-22.733" z="128.091" rx="-177" ry="-0.228" rz="171.292" fatherId="FrmDraw[0]" />
+      <Value key="745" x="-10.114" y="-23.021" z="128.091" rx="-177" ry="-0.273" rz="169.616" fatherId="FrmDraw[0]" />
+      <Value key="746" x="-11.731" y="-23.362" z="128.09" rx="-177" ry="-0.317" rz="167.932" fatherId="FrmDraw[0]" />
+      <Value key="747" x="-13.346" y="-23.755" z="128.09" rx="-177" ry="-0.362" rz="166.236" fatherId="FrmDraw[0]" />
+      <Value key="748" x="-14.96" y="-24.203" z="128.089" rx="-177" ry="-0.408" rz="164.529" fatherId="FrmDraw[0]" />
+      <Value key="749" x="-16.573" y="-24.706" z="128.088" rx="-177" ry="-0.454" rz="162.807" fatherId="FrmDraw[0]" />
+      <Value key="750" x="-18.185" y="-25.266" z="128.087" rx="-177" ry="-0.5" rz="161.069" fatherId="FrmDraw[0]" />
+      <Value key="751" x="-18.208" y="-25.266" z="125.49" rx="-177" ry="-0.5" rz="161.068" fatherId="FrmDraw[0]" />
+      <Value key="752" x="-16.594" y="-24.706" z="125.491" rx="-177" ry="-0.454" rz="162.806" fatherId="FrmDraw[0]" />
+      <Value key="753" x="-14.979" y="-24.203" z="125.491" rx="-177" ry="-0.408" rz="164.528" fatherId="FrmDraw[0]" />
+      <Value key="754" x="-13.363" y="-23.756" z="125.492" rx="-177" ry="-0.362" rz="166.236" fatherId="FrmDraw[0]" />
+      <Value key="755" x="-11.745" y="-23.362" z="125.493" rx="-177" ry="-0.317" rz="167.932" fatherId="FrmDraw[0]" />
+      <Value key="756" x="-10.127" y="-23.021" z="125.493" rx="-177" ry="-0.273" rz="169.616" fatherId="FrmDraw[0]" />
+      <Value key="757" x="-8.508" y="-22.733" z="125.494" rx="-177" ry="-0.228" rz="171.292" fatherId="FrmDraw[0]" />
+      <Value key="758" x="-6.888" y="-22.496" z="125.494" rx="-177" ry="-0.185" rz="172.96" fatherId="FrmDraw[0]" />
+      <Value key="759" x="-5.268" y="-22.309" z="125.494" rx="-177" ry="-0.141" rz="174.622" fatherId="FrmDraw[0]" />
+      <Value key="760" x="-3.647" y="-22.172" z="125.494" rx="-177" ry="-0.097" rz="176.28" fatherId="FrmDraw[0]" />
+      <Value key="761" x="-2.026" y="-22.086" z="125.495" rx="-177" ry="-0.054" rz="177.934" fatherId="FrmDraw[0]" />
+      <Value key="762" x="-0.675" y="-22.051" z="125.495" rx="-177" ry="-0.018" rz="179.312" fatherId="FrmDraw[0]" />
+      <Value key="763" x="0.405" y="-22.048" z="125.495" rx="-177" ry="0.011" rz="-179.587" fatherId="FrmDraw[0]" />
+      <Value key="764" x="2.026" y="-22.086" z="125.495" rx="-177" ry="0.054" rz="-177.934" fatherId="FrmDraw[0]" />
+      <Value key="765" x="3.647" y="-22.172" z="125.494" rx="-177" ry="0.097" rz="-176.28" fatherId="FrmDraw[0]" />
+      <Value key="766" x="5.268" y="-22.309" z="125.494" rx="-177" ry="0.141" rz="-174.622" fatherId="FrmDraw[0]" />
+      <Value key="767" x="6.888" y="-22.496" z="125.494" rx="-177" ry="0.185" rz="-172.96" fatherId="FrmDraw[0]" />
+      <Value key="768" x="8.508" y="-22.733" z="125.494" rx="-177" ry="0.228" rz="-171.292" fatherId="FrmDraw[0]" />
+      <Value key="769" x="10.127" y="-23.021" z="125.493" rx="-177" ry="0.273" rz="-169.616" fatherId="FrmDraw[0]" />
+      <Value key="770" x="11.745" y="-23.362" z="125.493" rx="-177" ry="0.317" rz="-167.931" fatherId="FrmDraw[0]" />
+      <Value key="771" x="13.363" y="-23.756" z="125.492" rx="-177" ry="0.362" rz="-166.236" fatherId="FrmDraw[0]" />
+      <Value key="772" x="14.979" y="-24.203" z="125.491" rx="-177" ry="0.408" rz="-164.528" fatherId="FrmDraw[0]" />
+      <Value key="773" x="16.594" y="-24.706" z="125.491" rx="-177" ry="0.454" rz="-162.806" fatherId="FrmDraw[0]" />
+      <Value key="774" x="18.208" y="-25.266" z="125.49" rx="-177" ry="0.5" rz="-161.068" fatherId="FrmDraw[0]" />
+      <Value key="775" x="18.225" y="-25.264" z="123.02" rx="-177" ry="0.5" rz="-161.073" fatherId="FrmDraw[0]" />
+      <Value key="776" x="16.61" y="-24.705" z="123.021" rx="-177" ry="0.454" rz="-162.811" fatherId="FrmDraw[0]" />
+      <Value key="777" x="14.993" y="-24.202" z="123.022" rx="-177" ry="0.408" rz="-164.532" fatherId="FrmDraw[0]" />
+      <Value key="778" x="13.375" y="-23.755" z="123.022" rx="-177" ry="0.362" rz="-166.24" fatherId="FrmDraw[0]" />
+      <Value key="779" x="11.756" y="-23.361" z="123.023" rx="-177" ry="0.317" rz="-167.935" fatherId="FrmDraw[0]" />
+      <Value key="780" x="10.136" y="-23.021" z="123.023" rx="-177" ry="0.273" rz="-169.619" fatherId="FrmDraw[0]" />
+      <Value key="781" x="8.515" y="-22.732" z="123.024" rx="-177" ry="0.228" rz="-171.294" fatherId="FrmDraw[0]" />
+      <Value key="782" x="6.894" y="-22.495" z="123.024" rx="-177" ry="0.185" rz="-172.962" fatherId="FrmDraw[0]" />
+      <Value key="783" x="5.273" y="-22.309" z="123.024" rx="-177" ry="0.141" rz="-174.623" fatherId="FrmDraw[0]" />
+      <Value key="784" x="3.65" y="-22.172" z="123.025" rx="-177" ry="0.097" rz="-176.281" fatherId="FrmDraw[0]" />
+      <Value key="785" x="2.028" y="-22.086" z="123.025" rx="-177" ry="0.054" rz="-177.935" fatherId="FrmDraw[0]" />
+      <Value key="786" x="0.676" y="-22.051" z="123.025" rx="-177" ry="0.018" rz="-179.312" fatherId="FrmDraw[0]" />
+      <Value key="787" x="-0.406" y="-22.048" z="123.025" rx="-177" ry="-0.011" rz="179.587" fatherId="FrmDraw[0]" />
+      <Value key="788" x="-2.028" y="-22.086" z="123.025" rx="-177" ry="-0.054" rz="177.935" fatherId="FrmDraw[0]" />
+      <Value key="789" x="-3.65" y="-22.172" z="123.025" rx="-177" ry="-0.097" rz="176.281" fatherId="FrmDraw[0]" />
+      <Value key="790" x="-5.273" y="-22.309" z="123.024" rx="-177" ry="-0.141" rz="174.623" fatherId="FrmDraw[0]" />
+      <Value key="791" x="-6.894" y="-22.495" z="123.024" rx="-177" ry="-0.185" rz="172.962" fatherId="FrmDraw[0]" />
+      <Value key="792" x="-8.515" y="-22.732" z="123.024" rx="-177" ry="-0.228" rz="171.294" fatherId="FrmDraw[0]" />
+      <Value key="793" x="-10.136" y="-23.021" z="123.023" rx="-177" ry="-0.273" rz="169.619" fatherId="FrmDraw[0]" />
+      <Value key="794" x="-11.756" y="-23.361" z="123.023" rx="-177" ry="-0.317" rz="167.935" fatherId="FrmDraw[0]" />
+      <Value key="795" x="-13.375" y="-23.755" z="123.022" rx="-177" ry="-0.362" rz="166.24" fatherId="FrmDraw[0]" />
+      <Value key="796" x="-14.993" y="-24.202" z="123.022" rx="-177" ry="-0.408" rz="164.533" fatherId="FrmDraw[0]" />
+      <Value key="797" x="-16.61" y="-24.705" z="123.021" rx="-177" ry="-0.454" rz="162.811" fatherId="FrmDraw[0]" />
+      <Value key="798" x="-18.225" y="-25.264" z="123.02" rx="-177" ry="-0.5" rz="161.073" fatherId="FrmDraw[0]" />
+    </Data>
+    <Data name="shere" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" x="16.915" y="-25.265" z="273.2" rx="-177" ry="0.5" rz="-161.069" fatherId="FrmDraw[0]" />
+    </Data>
+    <Data name="sString" access="private" xsi:type="array" type="string" size="1500">
+      <Value key="0" value="16.915000,-25.265000,273.200000,-177.000000,0.500000,-161.069000," />
+      <Value key="1" value="15.593000,-24.767000,273.202000,-177.000000,0.459000,-162.610000," />
+      <Value key="2" value="14.003000,-24.227000,273.204000,-177.000000,0.410000,-164.442000," />
+      <Value key="3" value="12.409000,-23.750000,273.205000,-177.000000,0.362000,-166.257000," />
+      <Value key="4" value="10.813000,-23.335000,273.207000,-177.000000,0.314000,-168.059000," />
+      <Value key="5" value="9.215000,-22.978000,273.208000,-177.000000,0.267000,-169.848000," />
+      <Value key="6" value="7.615000,-22.681000,273.209000,-177.000000,0.220000,-171.628000," />
+      <Value key="7" value="6.014000,-22.441000,273.209000,-177.000000,0.173000,-173.399000," />
+      <Value key="8" value="4.411000,-22.259000,273.210000,-177.000000,0.127000,-175.164000," />
+      <Value key="9" value="2.807000,-22.133000,273.210000,-177.000000,0.081000,-176.925000," />
+      <Value key="10" value="1.203000,-22.063000,273.211000,-177.000000,0.034000,-178.683000," />
+      <Value key="11" value="0.134000,-22.047000,273.211000,-177.000000,0.004000,-179.854000," />
+      <Value key="12" value="-1.203000,-22.063000,273.211000,-177.000000,-0.034000,178.683000," />
+      <Value key="13" value="-2.807000,-22.133000,273.210000,-177.000000,-0.081000,176.925000," />
+      <Value key="14" value="-4.411000,-22.259000,273.210000,-177.000000,-0.127000,175.164000," />
+      <Value key="15" value="-6.014000,-22.441000,273.209000,-177.000000,-0.173000,173.399000," />
+      <Value key="16" value="-7.615000,-22.681000,273.209000,-177.000000,-0.220000,171.628000," />
+      <Value key="17" value="-9.215000,-22.978000,273.208000,-177.000000,-0.267000,169.848000," />
+      <Value key="18" value="-10.813000,-23.335000,273.207000,-177.000000,-0.314000,168.059000," />
+      <Value key="19" value="-12.409000,-23.750000,273.205000,-177.000000,-0.362000,166.257000," />
+      <Value key="20" value="-14.002000,-24.227000,273.204000,-177.000000,-0.410000,164.442000," />
+      <Value key="21" value="-15.593000,-24.767000,273.202000,-177.000000,-0.459000,162.610000," />
+      <Value key="22" value="-16.915000,-25.265000,273.200000,-177.000000,-0.500000,161.069000," />
+      <Value key="23" value="-16.935000,-25.265000,270.798000,-177.000000,-0.500000,161.071000," />
+      <Value key="24" value="-16.956000,-25.264000,268.200000,-177.000000,-0.500000,161.073000," />
+      <Value key="25" value="-15.630000,-24.766000,268.202000,-177.000000,-0.459000,162.614000," />
+      <Value key="26" value="-14.035000,-24.226000,268.204000,-177.000000,-0.410000,164.445000," />
+      <Value key="27" value="-12.438000,-23.750000,268.205000,-177.000000,-0.362000,166.260000," />
+      <Value key="28" value="-10.838000,-23.334000,268.207000,-177.000000,-0.314000,168.061000," />
+      <Value key="29" value="-9.236000,-22.978000,268.208000,-177.000000,-0.266000,169.850000," />
+      <Value key="30" value="-7.633000,-22.681000,268.209000,-177.000000,-0.220000,171.630000," />
+      <Value key="31" value="-6.027000,-22.441000,268.209000,-177.000000,-0.173000,173.401000," />
+      <Value key="32" value="-4.421000,-22.259000,268.210000,-177.000000,-0.127000,175.165000," />
+      <Value key="33" value="-2.814000,-22.133000,268.210000,-177.000000,-0.081000,176.926000," />
+      <Value key="34" value="-1.206000,-22.063000,268.211000,-177.000000,-0.034000,178.683000," />
+      <Value key="35" value="-0.134000,-22.047000,268.211000,-177.000000,-0.004000,179.854000," />
+      <Value key="36" value="1.206000,-22.063000,268.211000,-177.000000,0.034000,-178.683000," />
+      <Value key="37" value="2.814000,-22.133000,268.210000,-177.000000,0.081000,-176.926000," />
+      <Value key="38" value="4.421000,-22.259000,268.210000,-177.000000,0.127000,-175.165000," />
+      <Value key="39" value="6.027000,-22.441000,268.209000,-177.000000,0.173000,-173.401000," />
+      <Value key="40" value="7.633000,-22.681000,268.209000,-177.000000,0.220000,-171.630000," />
+      <Value key="41" value="9.237000,-22.978000,268.208000,-177.000000,0.266000,-169.850000," />
+      <Value key="42" value="10.838000,-23.334000,268.207000,-177.000000,0.314000,-168.061000," />
+      <Value key="43" value="12.438000,-23.750000,268.205000,-177.000000,0.362000,-166.260000," />
+      <Value key="44" value="14.035000,-24.226000,268.204000,-177.000000,0.410000,-164.445000," />
+      <Value key="45" value="15.630000,-24.766000,268.202000,-177.000000,0.459000,-162.614000," />
+      <Value key="46" value="16.956000,-25.264000,268.200000,-177.000000,0.500000,-161.073000," />
+      <Value key="47" value="16.978000,-25.265000,265.798000,-177.000000,0.500000,-161.071000," />
+      <Value key="48" value="17.003000,-25.265000,263.201000,-177.000000,0.500000,-161.069000," />
+      <Value key="49" value="15.673000,-24.767000,263.202000,-177.000000,0.459000,-162.610000," />
+      <Value key="50" value="14.074000,-24.227000,263.204000,-177.000000,0.410000,-164.442000," />
+      <Value key="51" value="12.472000,-23.750000,263.205000,-177.000000,0.362000,-166.257000," />
+      <Value key="52" value="10.868000,-23.335000,263.207000,-177.000000,0.314000,-168.059000," />
+      <Value key="53" value="9.262000,-22.978000,263.208000,-177.000000,0.267000,-169.848000," />
+      <Value key="54" value="7.653000,-22.681000,263.209000,-177.000000,0.220000,-171.628000," />
+      <Value key="55" value="6.044000,-22.441000,263.209000,-177.000000,0.173000,-173.399000," />
+      <Value key="56" value="4.433000,-22.259000,263.210000,-177.000000,0.127000,-175.164000," />
+      <Value key="57" value="2.821000,-22.133000,263.210000,-177.000000,0.081000,-176.925000," />
+      <Value key="58" value="1.209000,-22.063000,263.211000,-177.000000,0.034000,-178.683000," />
+      <Value key="59" value="0.134000,-22.047000,263.211000,-177.000000,0.004000,-179.854000," />
+      <Value key="60" value="-1.209000,-22.063000,263.211000,-177.000000,-0.034000,178.683000," />
+      <Value key="61" value="-2.821000,-22.133000,263.210000,-177.000000,-0.081000,176.925000," />
+      <Value key="62" value="-4.433000,-22.259000,263.210000,-177.000000,-0.127000,175.165000," />
+      <Value key="63" value="-6.044000,-22.441000,263.209000,-177.000000,-0.173000,173.399000," />
+      <Value key="64" value="-7.653000,-22.681000,263.209000,-177.000000,-0.220000,171.628000," />
+      <Value key="65" value="-9.262000,-22.978000,263.208000,-177.000000,-0.267000,169.848000," />
+      <Value key="66" value="-10.868000,-23.335000,263.207000,-177.000000,-0.314000,168.059000," />
+      <Value key="67" value="-12.472000,-23.750000,263.205000,-177.000000,-0.362000,166.257000," />
+      <Value key="68" value="-14.074000,-24.227000,263.204000,-177.000000,-0.410000,164.442000," />
+      <Value key="69" value="-15.673000,-24.767000,263.202000,-177.000000,-0.459000,162.610000," />
+      <Value key="70" value="-17.003000,-25.265000,263.201000,-177.000000,-0.500000,161.069000," />
+      <Value key="71" value="-17.022000,-25.265000,260.799000,-177.000000,-0.500000,161.071000," />
+      <Value key="72" value="-17.043000,-25.264000,258.201000,-177.000000,-0.500000,161.074000," />
+      <Value key="73" value="-15.455000,-24.676000,258.203000,-177.000000,-0.451000,162.906000," />
+      <Value key="74" value="-13.865000,-24.150000,258.204000,-177.000000,-0.403000,164.720000," />
+      <Value key="75" value="-12.271000,-23.686000,258.206000,-177.000000,-0.355000,166.519000," />
+      <Value key="76" value="-10.675000,-23.282000,258.207000,-177.000000,-0.307000,168.304000," />
+      <Value key="77" value="-9.077000,-22.937000,258.208000,-177.000000,-0.260000,170.078000," />
+      <Value key="78" value="-7.478000,-22.649000,258.209000,-177.000000,-0.214000,171.842000," />
+      <Value key="79" value="-5.877000,-22.418000,258.209000,-177.000000,-0.168000,173.599000," />
+      <Value key="80" value="-4.275000,-22.243000,258.210000,-177.000000,-0.122000,175.349000," />
+      <Value key="81" value="-2.672000,-22.123000,258.210000,-177.000000,-0.076000,177.095000," />
+      <Value key="82" value="-1.069000,-22.059000,258.211000,-177.000000,-0.030000,178.838000," />
+      <Value key="83" value="0.000000,-22.047000,258.211000,-177.000000,0.000000,180.000000," />
+      <Value key="84" value="1.069000,-22.059000,258.211000,-177.000000,0.030000,-178.838000," />
+      <Value key="85" value="2.672000,-22.123000,258.210000,-177.000000,0.076000,-177.095000," />
+      <Value key="86" value="4.275000,-22.243000,258.210000,-177.000000,0.122000,-175.349000," />
+      <Value key="87" value="5.877000,-22.418000,258.209000,-177.000000,0.168000,-173.599000," />
+      <Value key="88" value="7.478000,-22.649000,258.209000,-177.000000,0.214000,-171.842000," />
+      <Value key="89" value="9.077000,-22.937000,258.208000,-177.000000,0.260000,-170.078000," />
+      <Value key="90" value="10.675000,-23.282000,258.207000,-177.000000,0.307000,-168.304000," />
+      <Value key="91" value="12.271000,-23.686000,258.206000,-177.000000,0.355000,-166.519000," />
+      <Value key="92" value="13.865000,-24.150000,258.204000,-177.000000,0.403000,-164.720000," />
+      <Value key="93" value="15.455000,-24.676000,258.203000,-177.000000,0.451000,-162.906000," />
+      <Value key="94" value="17.043000,-25.264000,258.201000,-177.000000,0.500000,-161.073000," />
+      <Value key="95" value="17.066000,-25.265000,255.799000,-177.000000,0.500000,-161.072000," />
+      <Value key="96" value="17.090000,-25.265000,253.201000,-177.000000,0.500000,-161.070000," />
+      <Value key="97" value="15.763000,-24.770000,253.203000,-177.000000,0.459000,-162.598000," />
+      <Value key="98" value="14.169000,-24.234000,253.204000,-177.000000,0.411000,-164.416000," />
+      <Value key="99" value="12.571000,-23.760000,253.206000,-177.000000,0.363000,-166.217000," />
+      <Value key="100" value="10.971000,-23.346000,253.207000,-177.000000,0.315000,-168.005000," />
+      <Value key="101" value="9.369000,-22.991000,253.208000,-177.000000,0.268000,-169.781000," />
+      <Value key="102" value="7.765000,-22.693000,253.209000,-177.000000,0.222000,-171.547000," />
+      <Value key="103" value="6.160000,-22.453000,253.209000,-177.000000,0.176000,-173.305000," />
+      <Value key="104" value="4.554000,-22.268000,253.210000,-177.000000,0.130000,-175.057000," />
+      <Value key="105" value="2.947000,-22.139000,253.210000,-177.000000,0.084000,-176.804000," />
+      <Value key="106" value="1.340000,-22.066000,253.211000,-177.000000,0.038000,-178.548000," />
+      <Value key="107" value="0.268000,-22.048000,253.211000,-177.000000,0.008000,-179.710000," />
+      <Value key="108" value="-1.340000,-22.066000,253.211000,-177.000000,-0.038000,178.548000," />
+      <Value key="109" value="-2.947000,-22.139000,253.210000,-177.000000,-0.084000,176.804000," />
+      <Value key="110" value="-4.554000,-22.268000,253.210000,-177.000000,-0.130000,175.057000," />
+      <Value key="111" value="-6.160000,-22.453000,253.209000,-177.000000,-0.176000,173.305000," />
+      <Value key="112" value="-7.765000,-22.693000,253.209000,-177.000000,-0.222000,171.547000," />
+      <Value key="113" value="-9.369000,-22.991000,253.208000,-177.000000,-0.268000,169.781000," />
+      <Value key="114" value="-10.971000,-23.346000,253.207000,-177.000000,-0.315000,168.005000," />
+      <Value key="115" value="-12.571000,-23.760000,253.206000,-177.000000,-0.363000,166.217000," />
+      <Value key="116" value="-14.169000,-24.234000,253.204000,-177.000000,-0.411000,164.416000," />
+      <Value key="117" value="-15.763000,-24.770000,253.203000,-177.000000,-0.459000,162.598000," />
+      <Value key="118" value="-17.090000,-25.265000,253.201000,-177.000000,-0.500000,161.070000," />
+      <Value key="119" value="-17.109000,-25.265000,250.799000,-177.000000,-0.500000,161.071000," />
+      <Value key="120" value="-17.130000,-25.264000,248.201000,-177.000000,-0.500000,161.074000," />
+      <Value key="121" value="-15.800000,-24.769000,248.203000,-177.000000,-0.459000,162.602000," />
+      <Value key="122" value="-14.202000,-24.234000,248.204000,-177.000000,-0.411000,164.419000," />
+      <Value key="123" value="-12.600000,-23.760000,248.206000,-177.000000,-0.363000,166.220000," />
+      <Value key="124" value="-10.996000,-23.346000,248.207000,-177.000000,-0.315000,168.007000," />
+      <Value key="125" value="-9.391000,-22.990000,248.208000,-177.000000,-0.268000,169.783000," />
+      <Value key="126" value="-7.783000,-22.693000,248.209000,-177.000000,-0.222000,171.549000," />
+      <Value key="127" value="-6.174000,-22.453000,248.209000,-177.000000,-0.175000,173.306000," />
+      <Value key="128" value="-4.565000,-22.268000,248.210000,-177.000000,-0.130000,175.058000," />
+      <Value key="129" value="-2.954000,-22.139000,248.210000,-177.000000,-0.084000,176.804000," />
+      <Value key="130" value="-1.343000,-22.066000,248.211000,-177.000000,-0.038000,178.548000," />
+      <Value key="131" value="0.000000,-22.047000,248.211000,-177.000000,0.000000,180.000000," />
+      <Value key="132" value="1.343000,-22.066000,248.211000,-177.000000,0.038000,-178.548000," />
+      <Value key="133" value="2.954000,-22.139000,248.210000,-177.000000,0.084000,-176.804000," />
+      <Value key="134" value="4.565000,-22.268000,248.210000,-177.000000,0.130000,-175.058000," />
+      <Value key="135" value="6.174000,-22.453000,248.209000,-177.000000,0.175000,-173.306000," />
+      <Value key="136" value="7.783000,-22.693000,248.209000,-177.000000,0.222000,-171.549000," />
+      <Value key="137" value="9.391000,-22.990000,248.208000,-177.000000,0.268000,-169.783000," />
+      <Value key="138" value="10.997000,-23.346000,248.207000,-177.000000,0.315000,-168.007000," />
+      <Value key="139" value="12.600000,-23.760000,248.206000,-177.000000,0.363000,-166.220000," />
+      <Value key="140" value="14.202000,-24.234000,248.204000,-177.000000,0.411000,-164.419000," />
+      <Value key="141" value="15.800000,-24.769000,248.203000,-177.000000,0.459000,-162.602000," />
+      <Value key="142" value="17.130000,-25.264000,248.201000,-177.000000,0.500000,-161.074000," />
+      <Value key="143" value="17.153000,-25.265000,245.799000,-177.000000,0.500000,-161.072000," />
+      <Value key="144" value="17.177000,-25.265000,243.201000,-177.000000,0.500000,-161.070000," />
+      <Value key="145" value="15.589000,-24.681000,243.203000,-177.000000,0.451000,-162.888000," />
+      <Value key="146" value="13.998000,-24.159000,243.205000,-177.000000,0.403000,-164.689000," />
+      <Value key="147" value="12.404000,-23.697000,243.206000,-177.000000,0.356000,-166.474000," />
+      <Value key="148" value="10.808000,-23.294000,243.207000,-177.000000,0.309000,-168.247000," />
+      <Value key="149" value="9.210000,-22.950000,243.208000,-177.000000,0.262000,-170.007000," />
+      <Value key="150" value="7.610000,-22.661000,243.209000,-177.000000,0.216000,-171.759000," />
+      <Value key="151" value="6.010000,-22.429000,243.210000,-177.000000,0.170000,-173.502000," />
+      <Value key="152" value="4.408000,-22.252000,243.210000,-177.000000,0.125000,-175.240000," />
+      <Value key="153" value="2.805000,-22.130000,243.210000,-177.000000,0.079000,-176.973000," />
+      <Value key="154" value="1.202000,-22.062000,243.211000,-177.000000,0.034000,-178.703000," />
+      <Value key="155" value="0.134000,-22.047000,243.211000,-177.000000,0.004000,-179.856000," />
+      <Value key="156" value="-1.202000,-22.062000,243.211000,-177.000000,-0.034000,178.703000," />
+      <Value key="157" value="-2.805000,-22.130000,243.210000,-177.000000,-0.079000,176.973000," />
+      <Value key="158" value="-4.408000,-22.252000,243.210000,-177.000000,-0.125000,175.240000," />
+      <Value key="159" value="-6.010000,-22.429000,243.210000,-177.000000,-0.170000,173.502000," />
+      <Value key="160" value="-7.610000,-22.661000,243.209000,-177.000000,-0.216000,171.759000," />
+      <Value key="161" value="-9.210000,-22.950000,243.208000,-177.000000,-0.262000,170.007000," />
+      <Value key="162" value="-10.808000,-23.294000,243.207000,-177.000000,-0.309000,168.247000," />
+      <Value key="163" value="-12.404000,-23.697000,243.206000,-177.000000,-0.356000,166.474000," />
+      <Value key="164" value="-13.998000,-24.159000,243.205000,-177.000000,-0.403000,164.689000," />
+      <Value key="165" value="-15.589000,-24.681000,243.203000,-177.000000,-0.451000,162.888000," />
+      <Value key="166" value="-17.177000,-25.265000,243.201000,-177.000000,-0.500000,161.070000," />
+      <Value key="167" value="-17.197000,-25.265000,240.799000,-177.000000,-0.500000,161.072000," />
+      <Value key="168" value="-17.218000,-25.264000,238.202000,-177.000000,-0.500000,161.074000," />
+      <Value key="169" value="-15.625000,-24.680000,238.203000,-177.000000,-0.451000,162.892000," />
+      <Value key="170" value="-14.030000,-24.158000,238.205000,-177.000000,-0.403000,164.692000," />
+      <Value key="171" value="-12.433000,-23.696000,238.206000,-177.000000,-0.356000,166.477000," />
+      <Value key="172" value="-10.833000,-23.294000,238.207000,-177.000000,-0.309000,168.249000," />
+      <Value key="173" value="-9.231000,-22.949000,238.208000,-177.000000,-0.262000,170.009000," />
+      <Value key="174" value="-7.628000,-22.661000,238.209000,-177.000000,-0.216000,171.760000," />
+      <Value key="175" value="-6.023000,-22.429000,238.210000,-177.000000,-0.170000,173.503000," />
+      <Value key="176" value="-4.418000,-22.252000,238.210000,-177.000000,-0.125000,175.241000," />
+      <Value key="177" value="-2.812000,-22.130000,238.210000,-177.000000,-0.079000,176.973000," />
+      <Value key="178" value="-1.205000,-22.062000,238.211000,-177.000000,-0.034000,178.703000," />
+      <Value key="179" value="-0.134000,-22.047000,238.211000,-177.000000,-0.004000,179.856000," />
+      <Value key="180" value="1.205000,-22.062000,238.211000,-177.000000,0.034000,-178.703000," />
+      <Value key="181" value="2.812000,-22.130000,238.210000,-177.000000,0.079000,-176.973000," />
+      <Value key="182" value="4.418000,-22.252000,238.210000,-177.000000,0.125000,-175.241000," />
+      <Value key="183" value="6.023000,-22.429000,238.210000,-177.000000,0.170000,-173.503000," />
+      <Value key="184" value="7.628000,-22.661000,238.209000,-177.000000,0.216000,-171.760000," />
+      <Value key="185" value="9.231000,-22.949000,238.208000,-177.000000,0.262000,-170.009000," />
+      <Value key="186" value="10.833000,-23.294000,238.207000,-177.000000,0.309000,-168.249000," />
+      <Value key="187" value="12.433000,-23.697000,238.206000,-177.000000,0.356000,-166.477000," />
+      <Value key="188" value="14.030000,-24.158000,238.205000,-177.000000,0.403000,-164.692000," />
+      <Value key="189" value="15.625000,-24.680000,238.203000,-177.000000,0.451000,-162.892000," />
+      <Value key="190" value="17.218000,-25.264000,238.202000,-177.000000,0.500000,-161.074000," />
+      <Value key="191" value="17.240000,-25.265000,235.800000,-177.000000,0.500000,-161.072000," />
+      <Value key="192" value="17.265000,-25.265000,233.202000,-177.000000,0.500000,-161.070000," />
+      <Value key="193" value="15.934000,-24.774000,233.203000,-177.000000,0.460000,-162.586000," />
+      <Value key="194" value="14.335000,-24.242000,233.205000,-177.000000,0.411000,-164.390000," />
+      <Value key="195" value="12.733000,-23.770000,233.206000,-177.000000,0.364000,-166.178000," />
+      <Value key="196" value="11.129000,-23.358000,233.207000,-177.000000,0.317000,-167.952000," />
+      <Value key="197" value="9.524000,-23.003000,233.208000,-177.000000,0.270000,-169.715000," />
+      <Value key="198" value="7.916000,-22.706000,233.209000,-177.000000,0.224000,-171.467000," />
+      <Value key="199" value="6.308000,-22.464000,233.209000,-177.000000,0.178000,-173.212000," />
+      <Value key="200" value="4.698000,-22.278000,233.210000,-177.000000,0.132000,-174.950000," />
+      <Value key="201" value="3.088000,-22.147000,233.210000,-177.000000,0.087000,-176.684000," />
+      <Value key="202" value="1.477000,-22.070000,233.211000,-177.000000,0.042000,-178.415000," />
+      <Value key="203" value="0.134000,-22.047000,233.211000,-177.000000,0.004000,-179.856000," />
+      <Value key="204" value="-1.477000,-22.070000,233.211000,-177.000000,-0.042000,178.415000," />
+      <Value key="205" value="-3.088000,-22.147000,233.210000,-177.000000,-0.087000,176.684000," />
+      <Value key="206" value="-4.698000,-22.278000,233.210000,-177.000000,-0.132000,174.950000," />
+      <Value key="207" value="-6.308000,-22.464000,233.209000,-177.000000,-0.178000,173.212000," />
+      <Value key="208" value="-7.916000,-22.706000,233.209000,-177.000000,-0.224000,171.467000," />
+      <Value key="209" value="-9.524000,-23.003000,233.208000,-177.000000,-0.270000,169.715000," />
+      <Value key="210" value="-11.129000,-23.358000,233.207000,-177.000000,-0.317000,167.952000," />
+      <Value key="211" value="-12.733000,-23.770000,233.206000,-177.000000,-0.364000,166.178000," />
+      <Value key="212" value="-14.335000,-24.242000,233.205000,-177.000000,-0.411000,164.390000," />
+      <Value key="213" value="-15.934000,-24.774000,233.203000,-177.000000,-0.460000,162.586000," />
+      <Value key="214" value="-17.265000,-25.265000,233.202000,-177.000000,-0.500000,161.070000," />
+      <Value key="215" value="-17.284000,-25.265000,230.800000,-177.000000,-0.500000,161.072000," />
+      <Value key="216" value="-17.305000,-25.264000,228.202000,-177.000000,-0.500000,161.074000," />
+      <Value key="217" value="-15.971000,-24.773000,228.203000,-177.000000,-0.459000,162.590000," />
+      <Value key="218" value="-14.368000,-24.241000,228.205000,-177.000000,-0.411000,164.393000," />
+      <Value key="219" value="-12.762000,-23.769000,228.206000,-177.000000,-0.364000,166.181000," />
+      <Value key="220" value="-11.155000,-23.357000,228.207000,-177.000000,-0.317000,167.955000," />
+      <Value key="221" value="-9.545000,-23.003000,228.208000,-177.000000,-0.270000,169.717000," />
+      <Value key="222" value="-7.934000,-22.705000,228.209000,-177.000000,-0.224000,171.469000," />
+      <Value key="223" value="-6.322000,-22.464000,228.209000,-177.000000,-0.178000,173.213000," />
+      <Value key="224" value="-4.709000,-22.278000,228.210000,-177.000000,-0.132000,174.951000," />
+      <Value key="225" value="-3.095000,-22.146000,228.210000,-177.000000,-0.087000,176.685000," />
+      <Value key="226" value="-1.480000,-22.070000,228.211000,-177.000000,-0.042000,178.415000," />
+      <Value key="227" value="-0.135000,-22.047000,228.211000,-177.000000,-0.004000,179.856000," />
+      <Value key="228" value="1.480000,-22.070000,228.211000,-177.000000,0.042000,-178.415000," />
+      <Value key="229" value="3.095000,-22.146000,228.210000,-177.000000,0.087000,-176.685000," />
+      <Value key="230" value="4.709000,-22.278000,228.210000,-177.000000,0.132000,-174.951000," />
+      <Value key="231" value="6.322000,-22.464000,228.209000,-177.000000,0.178000,-173.213000," />
+      <Value key="232" value="7.934000,-22.705000,228.209000,-177.000000,0.224000,-171.469000," />
+      <Value key="233" value="9.545000,-23.003000,228.208000,-177.000000,0.270000,-169.717000," />
+      <Value key="234" value="11.155000,-23.357000,228.207000,-177.000000,0.317000,-167.955000," />
+      <Value key="235" value="12.763000,-23.769000,228.206000,-177.000000,0.364000,-166.181000," />
+      <Value key="236" value="14.368000,-24.241000,228.205000,-177.000000,0.411000,-164.393000," />
+      <Value key="237" value="15.971000,-24.773000,228.203000,-177.000000,0.459000,-162.590000," />
+      <Value key="238" value="17.305000,-25.264000,228.202000,-177.000000,0.500000,-161.074000," />
+      <Value key="239" value="17.328000,-25.264000,225.800000,-177.000000,0.500000,-161.072000," />
+      <Value key="240" value="17.352000,-25.265000,223.202000,-177.000000,0.500000,-161.070000," />
+      <Value key="241" value="15.759000,-24.685000,223.204000,-177.000000,0.452000,-162.874000," />
+      <Value key="242" value="14.163000,-24.166000,223.205000,-177.000000,0.404000,-164.662000," />
+      <Value key="243" value="12.565000,-23.707000,223.206000,-177.000000,0.357000,-166.434000," />
+      <Value key="244" value="10.965000,-23.306000,223.207000,-177.000000,0.310000,-168.192000," />
+      <Value key="245" value="9.364000,-22.962000,223.208000,-177.000000,0.264000,-169.940000," />
+      <Value key="246" value="7.761000,-22.673000,223.209000,-177.000000,0.218000,-171.678000," />
+      <Value key="247" value="6.156000,-22.440000,223.210000,-177.000000,0.173000,-173.409000," />
+      <Value key="248" value="4.551000,-22.261000,223.210000,-177.000000,0.128000,-175.133000," />
+      <Value key="249" value="2.945000,-22.137000,223.210000,-177.000000,0.082000,-176.853000," />
+      <Value key="250" value="1.339000,-22.065000,223.211000,-177.000000,0.037000,-178.570000," />
+      <Value key="251" value="0.268000,-22.048000,223.211000,-177.000000,0.007000,-179.714000," />
+      <Value key="252" value="-1.339000,-22.065000,223.211000,-177.000000,-0.037000,178.570000," />
+      <Value key="253" value="-2.945000,-22.137000,223.210000,-177.000000,-0.082000,176.853000," />
+      <Value key="254" value="-4.551000,-22.261000,223.210000,-177.000000,-0.128000,175.133000," />
+      <Value key="255" value="-6.156000,-22.440000,223.210000,-177.000000,-0.173000,173.409000," />
+      <Value key="256" value="-7.761000,-22.673000,223.209000,-177.000000,-0.218000,171.678000," />
+      <Value key="257" value="-9.364000,-22.962000,223.208000,-177.000000,-0.264000,169.940000," />
+      <Value key="258" value="-10.965000,-23.306000,223.207000,-177.000000,-0.310000,168.192000," />
+      <Value key="259" value="-12.565000,-23.707000,223.206000,-177.000000,-0.357000,166.434000," />
+      <Value key="260" value="-14.163000,-24.166000,223.205000,-177.000000,-0.404000,164.662000," />
+      <Value key="261" value="-15.759000,-24.685000,223.204000,-177.000000,-0.452000,162.874000," />
+      <Value key="262" value="-17.352000,-25.265000,223.202000,-177.000000,-0.500000,161.070000," />
+      <Value key="263" value="-17.371000,-25.265000,220.800000,-177.000000,-0.500000,161.072000," />
+      <Value key="264" value="-17.392000,-25.264000,218.202000,-177.000000,-0.500000,161.074000," />
+      <Value key="265" value="-15.795000,-24.684000,218.204000,-177.000000,-0.452000,162.878000," />
+      <Value key="266" value="-14.196000,-24.166000,218.205000,-177.000000,-0.404000,164.665000," />
+      <Value key="267" value="-12.594000,-23.706000,218.206000,-177.000000,-0.357000,166.436000," />
+      <Value key="268" value="-10.990000,-23.305000,218.207000,-177.000000,-0.310000,168.195000," />
+      <Value key="269" value="-9.385000,-22.961000,218.208000,-177.000000,-0.264000,169.942000," />
+      <Value key="270" value="-7.778000,-22.673000,218.209000,-177.000000,-0.218000,171.680000," />
+      <Value key="271" value="-6.170000,-22.440000,218.210000,-177.000000,-0.173000,173.410000," />
+      <Value key="272" value="-4.561000,-22.261000,218.210000,-177.000000,-0.128000,175.134000," />
+      <Value key="273" value="-2.952000,-22.137000,218.210000,-177.000000,-0.082000,176.854000," />
+      <Value key="274" value="-1.342000,-22.065000,218.211000,-177.000000,-0.037000,178.570000," />
+      <Value key="275" value="0.000000,-22.047000,218.211000,-177.000000,0.000000,180.000000," />
+      <Value key="276" value="1.342000,-22.065000,218.211000,-177.000000,0.037000,-178.570000," />
+      <Value key="277" value="2.952000,-22.137000,218.210000,-177.000000,0.082000,-176.854000," />
+      <Value key="278" value="4.561000,-22.261000,218.210000,-177.000000,0.128000,-175.134000," />
+      <Value key="279" value="6.170000,-22.440000,218.210000,-177.000000,0.173000,-173.410000," />
+      <Value key="280" value="7.778000,-22.673000,218.209000,-177.000000,0.218000,-171.680000," />
+      <Value key="281" value="9.385000,-22.961000,218.208000,-177.000000,0.264000,-169.942000," />
+      <Value key="282" value="10.990000,-23.305000,218.207000,-177.000000,0.310000,-168.195000," />
+      <Value key="283" value="12.594000,-23.706000,218.206000,-177.000000,0.357000,-166.436000," />
+      <Value key="284" value="14.196000,-24.166000,218.205000,-177.000000,0.404000,-164.665000," />
+      <Value key="285" value="15.795000,-24.684000,218.204000,-177.000000,0.452000,-162.878000," />
+      <Value key="286" value="17.392000,-25.264000,218.202000,-177.000000,0.500000,-161.074000," />
+      <Value key="287" value="17.415000,-25.264000,215.800000,-177.000000,0.500000,-161.072000," />
+      <Value key="288" value="17.439000,-25.265000,213.203000,-177.000000,0.500000,-161.070000," />
+      <Value key="289" value="15.838000,-24.685000,213.204000,-177.000000,0.452000,-162.874000," />
+      <Value key="290" value="14.234000,-24.166000,213.205000,-177.000000,0.404000,-164.662000," />
+      <Value key="291" value="12.628000,-23.707000,213.206000,-177.000000,0.357000,-166.434000," />
+      <Value key="292" value="11.020000,-23.306000,213.207000,-177.000000,0.310000,-168.192000," />
+      <Value key="293" value="9.410000,-22.962000,213.208000,-177.000000,0.264000,-169.940000," />
+      <Value key="294" value="7.799000,-22.673000,213.209000,-177.000000,0.218000,-171.678000," />
+      <Value key="295" value="6.186000,-22.440000,213.210000,-177.000000,0.173000,-173.409000," />
+      <Value key="296" value="4.573000,-22.261000,213.210000,-177.000000,0.128000,-175.133000," />
+      <Value key="297" value="2.959000,-22.137000,213.210000,-177.000000,0.082000,-176.853000," />
+      <Value key="298" value="1.345000,-22.065000,213.211000,-177.000000,0.037000,-178.570000," />
+      <Value key="299" value="0.269000,-22.048000,213.211000,-177.000000,0.007000,-179.714000," />
+      <Value key="300" value="-1.345000,-22.065000,213.211000,-177.000000,-0.037000,178.570000," />
+      <Value key="301" value="-2.959000,-22.137000,213.210000,-177.000000,-0.082000,176.853000," />
+      <Value key="302" value="-4.573000,-22.261000,213.210000,-177.000000,-0.128000,175.133000," />
+      <Value key="303" value="-6.186000,-22.440000,213.210000,-177.000000,-0.173000,173.409000," />
+      <Value key="304" value="-7.799000,-22.673000,213.209000,-177.000000,-0.218000,171.678000," />
+      <Value key="305" value="-9.410000,-22.962000,213.208000,-177.000000,-0.264000,169.940000," />
+      <Value key="306" value="-11.020000,-23.306000,213.207000,-177.000000,-0.310000,168.192000," />
+      <Value key="307" value="-12.628000,-23.707000,213.206000,-177.000000,-0.357000,166.434000," />
+      <Value key="308" value="-14.234000,-24.166000,213.205000,-177.000000,-0.404000,164.662000," />
+      <Value key="309" value="-15.838000,-24.685000,213.204000,-177.000000,-0.452000,162.874000," />
+      <Value key="310" value="-17.439000,-25.265000,213.203000,-177.000000,-0.500000,161.070000," />
+      <Value key="311" value="-17.459000,-25.264000,210.801000,-177.000000,-0.500000,161.072000," />
+      <Value key="312" value="-17.480000,-25.264000,208.203000,-177.000000,-0.500000,161.074000," />
+      <Value key="313" value="-16.142000,-24.776000,208.204000,-177.000000,-0.460000,162.579000," />
+      <Value key="314" value="-14.535000,-24.248000,208.205000,-177.000000,-0.412000,164.368000," />
+      <Value key="315" value="-12.925000,-23.779000,208.206000,-177.000000,-0.365000,166.142000," />
+      <Value key="316" value="-11.313000,-23.368000,208.207000,-177.000000,-0.318000,167.903000," />
+      <Value key="317" value="-9.700000,-23.015000,208.208000,-177.000000,-0.272000,169.652000," />
+      <Value key="318" value="-8.085000,-22.717000,208.209000,-177.000000,-0.226000,171.391000," />
+      <Value key="319" value="-6.470000,-22.475000,208.210000,-177.000000,-0.180000,173.122000," />
+      <Value key="320" value="-4.853000,-22.287000,208.210000,-177.000000,-0.135000,174.847000," />
+      <Value key="321" value="-3.236000,-22.154000,208.210000,-177.000000,-0.090000,176.567000," />
+      <Value key="322" value="-1.618000,-22.074000,208.211000,-177.000000,-0.045000,178.284000," />
+      <Value key="323" value="0.000000,-22.047000,208.211000,-177.000000,0.000000,180.000000," />
+      <Value key="324" value="1.618000,-22.074000,208.211000,-177.000000,0.045000,-178.284000," />
+      <Value key="325" value="3.236000,-22.154000,208.210000,-177.000000,0.090000,-176.567000," />
+      <Value key="326" value="4.853000,-22.287000,208.210000,-177.000000,0.135000,-174.847000," />
+      <Value key="327" value="6.470000,-22.475000,208.210000,-177.000000,0.180000,-173.122000," />
+      <Value key="328" value="8.085000,-22.717000,208.209000,-177.000000,0.226000,-171.391000," />
+      <Value key="329" value="9.700000,-23.015000,208.208000,-177.000000,0.272000,-169.651000," />
+      <Value key="330" value="11.313000,-23.368000,208.207000,-177.000000,0.318000,-167.902000," />
+      <Value key="331" value="12.925000,-23.779000,208.206000,-177.000000,0.365000,-166.142000," />
+      <Value key="332" value="14.535000,-24.248000,208.205000,-177.000000,0.412000,-164.368000," />
+      <Value key="333" value="16.142000,-24.776000,208.204000,-177.000000,0.460000,-162.579000," />
+      <Value key="334" value="17.480000,-25.264000,208.203000,-177.000000,0.500000,-161.074000," />
+      <Value key="335" value="17.502000,-25.264000,205.801000,-177.000000,0.500000,-161.072000," />
+      <Value key="336" value="17.527000,-25.265000,203.203000,-177.000000,0.500000,-161.070000," />
+      <Value key="337" value="15.929000,-24.689000,203.204000,-177.000000,0.452000,-162.861000," />
+      <Value key="338" value="14.329000,-24.174000,203.206000,-177.000000,0.405000,-164.635000," />
+      <Value key="339" value="12.727000,-23.717000,203.207000,-177.000000,0.358000,-166.393000," />
+      <Value key="340" value="11.123000,-23.317000,203.208000,-177.000000,0.312000,-168.139000," />
+      <Value key="341" value="9.518000,-22.974000,203.208000,-177.000000,0.266000,-169.874000," />
+      <Value key="342" value="7.911000,-22.685000,203.209000,-177.000000,0.220000,-171.599000," />
+      <Value key="343" value="6.303000,-22.451000,203.210000,-177.000000,0.175000,-173.316000," />
+      <Value key="344" value="4.695000,-22.271000,203.210000,-177.000000,0.130000,-175.028000," />
+      <Value key="345" value="3.085000,-22.144000,203.210000,-177.000000,0.086000,-176.735000," />
+      <Value key="346" value="1.476000,-22.069000,203.211000,-177.000000,0.041000,-178.439000," />
+      <Value key="347" value="0.134000,-22.047000,203.211000,-177.000000,0.004000,-179.858000," />
+      <Value key="348" value="-1.476000,-22.069000,203.211000,-177.000000,-0.041000,178.439000," />
+      <Value key="349" value="-3.085000,-22.144000,203.210000,-177.000000,-0.086000,176.735000," />
+      <Value key="350" value="-4.695000,-22.271000,203.210000,-177.000000,-0.130000,175.028000," />
+      <Value key="351" value="-6.303000,-22.451000,203.210000,-177.000000,-0.175000,173.316000," />
+      <Value key="352" value="-7.911000,-22.685000,203.209000,-177.000000,-0.220000,171.599000," />
+      <Value key="353" value="-9.518000,-22.974000,203.208000,-177.000000,-0.266000,169.874000," />
+      <Value key="354" value="-11.123000,-23.317000,203.208000,-177.000000,-0.312000,168.139000," />
+      <Value key="355" value="-12.727000,-23.717000,203.207000,-177.000000,-0.358000,166.393000," />
+      <Value key="356" value="-14.329000,-24.174000,203.206000,-177.000000,-0.405000,164.635000," />
+      <Value key="357" value="-15.929000,-24.689000,203.204000,-177.000000,-0.452000,162.861000," />
+      <Value key="358" value="-17.527000,-25.265000,203.203000,-177.000000,-0.500000,161.070000," />
+      <Value key="359" value="-17.546000,-25.264000,200.801000,-177.000000,-0.500000,161.072000," />
+      <Value key="360" value="-17.567000,-25.264000,198.203000,-177.000000,-0.500000,161.074000," />
+      <Value key="361" value="-15.966000,-24.688000,198.204000,-177.000000,-0.452000,162.864000," />
+      <Value key="362" value="-14.362000,-24.173000,198.206000,-177.000000,-0.405000,164.638000," />
+      <Value key="363" value="-12.756000,-23.716000,198.207000,-177.000000,-0.358000,166.396000," />
+      <Value key="364" value="-11.148000,-23.317000,198.208000,-177.000000,-0.312000,168.141000," />
+      <Value key="365" value="-9.539000,-22.973000,198.208000,-177.000000,-0.266000,169.876000," />
+      <Value key="366" value="-7.929000,-22.685000,198.209000,-177.000000,-0.220000,171.600000," />
+      <Value key="367" value="-6.317000,-22.451000,198.210000,-177.000000,-0.175000,173.318000," />
+      <Value key="368" value="-4.705000,-22.271000,198.210000,-177.000000,-0.130000,175.029000," />
+      <Value key="369" value="-3.092000,-22.143000,198.210000,-177.000000,-0.086000,176.736000," />
+      <Value key="370" value="-1.479000,-22.069000,198.211000,-177.000000,-0.041000,178.439000," />
+      <Value key="371" value="-0.134000,-22.047000,198.211000,-177.000000,-0.004000,179.858000," />
+      <Value key="372" value="1.479000,-22.069000,198.211000,-177.000000,0.041000,-178.439000," />
+      <Value key="373" value="3.092000,-22.143000,198.210000,-177.000000,0.086000,-176.736000," />
+      <Value key="374" value="4.705000,-22.271000,198.210000,-177.000000,0.130000,-175.029000," />
+      <Value key="375" value="6.317000,-22.451000,198.210000,-177.000000,0.175000,-173.318000," />
+      <Value key="376" value="7.929000,-22.685000,198.209000,-177.000000,0.220000,-171.600000," />
+      <Value key="377" value="9.539000,-22.973000,198.208000,-177.000000,0.266000,-169.875000," />
+      <Value key="378" value="11.148000,-23.317000,198.208000,-177.000000,0.312000,-168.141000," />
+      <Value key="379" value="12.756000,-23.716000,198.207000,-177.000000,0.358000,-166.396000," />
+      <Value key="380" value="14.362000,-24.173000,198.206000,-177.000000,0.405000,-164.638000," />
+      <Value key="381" value="15.966000,-24.688000,198.204000,-177.000000,0.452000,-162.864000," />
+      <Value key="382" value="17.567000,-25.264000,198.203000,-177.000000,0.500000,-161.074000," />
+      <Value key="383" value="17.590000,-25.264000,195.801000,-177.000000,0.500000,-161.072000," />
+      <Value key="384" value="17.614000,-25.265000,193.203000,-177.000000,0.500000,-161.070000," />
+      <Value key="385" value="16.008000,-24.689000,193.205000,-177.000000,0.452000,-162.861000," />
+      <Value key="386" value="14.400000,-24.174000,193.206000,-177.000000,0.405000,-164.635000," />
+      <Value key="387" value="12.790000,-23.717000,193.207000,-177.000000,0.358000,-166.393000," />
+      <Value key="388" value="11.178000,-23.317000,193.208000,-177.000000,0.312000,-168.139000," />
+      <Value key="389" value="9.564000,-22.974000,193.209000,-177.000000,0.266000,-169.874000," />
+      <Value key="390" value="7.949000,-22.685000,193.209000,-177.000000,0.220000,-171.599000," />
+      <Value key="391" value="6.334000,-22.451000,193.210000,-177.000000,0.175000,-173.316000," />
+      <Value key="392" value="4.717000,-22.271000,193.210000,-177.000000,0.130000,-175.028000," />
+      <Value key="393" value="3.100000,-22.143000,193.210000,-177.000000,0.086000,-176.735000," />
+      <Value key="394" value="1.483000,-22.069000,193.211000,-177.000000,0.041000,-178.439000," />
+      <Value key="395" value="0.135000,-22.047000,193.211000,-177.000000,0.004000,-179.858000," />
+      <Value key="396" value="-1.483000,-22.069000,193.211000,-177.000000,-0.041000,178.439000," />
+      <Value key="397" value="-3.100000,-22.144000,193.210000,-177.000000,-0.086000,176.735000," />
+      <Value key="398" value="-4.717000,-22.271000,193.210000,-177.000000,-0.130000,175.028000," />
+      <Value key="399" value="-6.334000,-22.451000,193.210000,-177.000000,-0.175000,173.316000," />
+      <Value key="400" value="-7.949000,-22.685000,193.209000,-177.000000,-0.220000,171.599000," />
+      <Value key="401" value="-9.564000,-22.974000,193.209000,-177.000000,-0.266000,169.874000," />
+      <Value key="402" value="-11.178000,-23.317000,193.208000,-177.000000,-0.312000,168.139000," />
+      <Value key="403" value="-12.790000,-23.717000,193.207000,-177.000000,-0.358000,166.393000," />
+      <Value key="404" value="-14.400000,-24.174000,193.206000,-177.000000,-0.405000,164.635000," />
+      <Value key="405" value="-16.008000,-24.689000,193.205000,-177.000000,-0.452000,162.861000," />
+      <Value key="406" value="-17.614000,-25.265000,193.203000,-177.000000,-0.500000,161.070000," />
+      <Value key="407" value="-17.633000,-25.264000,190.801000,-177.000000,-0.500000,161.072000," />
+      <Value key="408" value="-17.654000,-25.264000,188.204000,-177.000000,-0.500000,161.074000," />
+      <Value key="409" value="-16.057000,-24.692000,188.205000,-177.000000,-0.452000,162.851000," />
+      <Value key="410" value="-14.457000,-24.180000,188.206000,-177.000000,-0.405000,164.611000," />
+      <Value key="411" value="-12.855000,-23.726000,188.207000,-177.000000,-0.359000,166.356000," />
+      <Value key="412" value="-11.252000,-23.328000,188.208000,-177.000000,-0.313000,168.089000," />
+      <Value key="413" value="-9.647000,-22.985000,188.209000,-177.000000,-0.268000,169.810000," />
+      <Value key="414" value="-8.041000,-22.697000,188.209000,-177.000000,-0.222000,171.522000," />
+      <Value key="415" value="-6.434000,-22.462000,188.210000,-177.000000,-0.178000,173.227000," />
+      <Value key="416" value="-4.826000,-22.280000,188.210000,-177.000000,-0.133000,174.925000," />
+      <Value key="417" value="-3.218000,-22.150000,188.210000,-177.000000,-0.089000,176.619000," />
+      <Value key="418" value="-1.609000,-22.073000,188.211000,-177.000000,-0.044000,178.310000," />
+      <Value key="419" value="0.000000,-22.047000,188.211000,-177.000000,0.000000,180.000000," />
+      <Value key="420" value="1.609000,-22.073000,188.211000,-177.000000,0.044000,-178.310000," />
+      <Value key="421" value="3.218000,-22.150000,188.210000,-177.000000,0.089000,-176.619000," />
+      <Value key="422" value="4.826000,-22.280000,188.210000,-177.000000,0.133000,-174.925000," />
+      <Value key="423" value="6.434000,-22.462000,188.210000,-177.000000,0.178000,-173.227000," />
+      <Value key="424" value="8.041000,-22.697000,188.209000,-177.000000,0.222000,-171.522000," />
+      <Value key="425" value="9.647000,-22.985000,188.209000,-177.000000,0.268000,-169.810000," />
+      <Value key="426" value="11.252000,-23.328000,188.208000,-177.000000,0.313000,-168.089000," />
+      <Value key="427" value="12.855000,-23.726000,188.207000,-177.000000,0.359000,-166.356000," />
+      <Value key="428" value="14.457000,-24.180000,188.206000,-177.000000,0.405000,-164.611000," />
+      <Value key="429" value="16.057000,-24.692000,188.205000,-177.000000,0.452000,-162.851000," />
+      <Value key="430" value="17.654000,-25.264000,188.204000,-177.000000,0.500000,-161.074000," />
+      <Value key="431" value="17.677000,-25.264000,185.801000,-177.000000,0.500000,-161.072000," />
+      <Value key="432" value="17.702000,-25.265000,183.204000,-177.000000,0.500000,-161.070000," />
+      <Value key="433" value="16.099000,-24.693000,183.205000,-177.000000,0.453000,-162.847000," />
+      <Value key="434" value="14.495000,-24.181000,183.206000,-177.000000,0.406000,-164.608000," />
+      <Value key="435" value="12.889000,-23.727000,183.207000,-177.000000,0.359000,-166.354000," />
+      <Value key="436" value="11.281000,-23.329000,183.208000,-177.000000,0.313000,-168.086000," />
+      <Value key="437" value="9.672000,-22.986000,183.209000,-177.000000,0.268000,-169.808000," />
+      <Value key="438" value="8.062000,-22.697000,183.209000,-177.000000,0.222000,-171.521000," />
+      <Value key="439" value="6.450000,-22.462000,183.210000,-177.000000,0.178000,-173.225000," />
+      <Value key="440" value="4.839000,-22.280000,183.210000,-177.000000,0.133000,-174.924000," />
+      <Value key="441" value="3.226000,-22.151000,183.210000,-177.000000,0.089000,-176.619000," />
+      <Value key="442" value="1.613000,-22.073000,183.211000,-177.000000,0.044000,-178.310000," />
+      <Value key="443" value="0.000000,-22.047000,183.211000,-177.000000,0.000000,180.000000," />
+      <Value key="444" value="-1.613000,-22.073000,183.211000,-177.000000,-0.044000,178.310000," />
+      <Value key="445" value="-3.226000,-22.151000,183.210000,-177.000000,-0.089000,176.619000," />
+      <Value key="446" value="-4.838000,-22.280000,183.210000,-177.000000,-0.133000,174.924000," />
+      <Value key="447" value="-6.450000,-22.462000,183.210000,-177.000000,-0.178000,173.225000," />
+      <Value key="448" value="-8.062000,-22.697000,183.209000,-177.000000,-0.222000,171.521000," />
+      <Value key="449" value="-9.672000,-22.986000,183.209000,-177.000000,-0.268000,169.808000," />
+      <Value key="450" value="-11.281000,-23.329000,183.208000,-177.000000,-0.313000,168.086000," />
+      <Value key="451" value="-12.889000,-23.727000,183.207000,-177.000000,-0.359000,166.354000," />
+      <Value key="452" value="-14.495000,-24.181000,183.206000,-177.000000,-0.406000,164.608000," />
+      <Value key="453" value="-16.099000,-24.693000,183.205000,-177.000000,-0.453000,162.847000," />
+      <Value key="454" value="-17.701000,-25.265000,183.204000,-177.000000,-0.500000,161.070000," />
+      <Value key="455" value="-17.721000,-25.264000,180.802000,-177.000000,-0.500000,161.072000," />
+      <Value key="456" value="-17.742000,-25.264000,178.204000,-177.000000,-0.500000,161.074000," />
+      <Value key="457" value="-16.136000,-24.692000,178.205000,-177.000000,-0.452000,162.851000," />
+      <Value key="458" value="-14.528000,-24.180000,178.206000,-177.000000,-0.405000,164.611000," />
+      <Value key="459" value="-12.918000,-23.726000,178.207000,-177.000000,-0.359000,166.356000," />
+      <Value key="460" value="-11.306000,-23.328000,178.208000,-177.000000,-0.313000,168.089000," />
+      <Value key="461" value="-9.693000,-22.985000,178.209000,-177.000000,-0.268000,169.810000," />
+      <Value key="462" value="-8.080000,-22.697000,178.209000,-177.000000,-0.222000,171.522000," />
+      <Value key="463" value="-6.465000,-22.462000,178.210000,-177.000000,-0.178000,173.227000," />
+      <Value key="464" value="-4.849000,-22.280000,178.210000,-177.000000,-0.133000,174.925000," />
+      <Value key="465" value="-3.233000,-22.150000,178.210000,-177.000000,-0.089000,176.619000," />
+      <Value key="466" value="-1.617000,-22.073000,178.211000,-177.000000,-0.044000,178.310000," />
+      <Value key="467" value="0.000000,-22.047000,178.211000,-177.000000,0.000000,180.000000," />
+      <Value key="468" value="1.617000,-22.073000,178.211000,-177.000000,0.044000,-178.310000," />
+      <Value key="469" value="3.233000,-22.150000,178.210000,-177.000000,0.089000,-176.619000," />
+      <Value key="470" value="4.849000,-22.280000,178.210000,-177.000000,0.133000,-174.925000," />
+      <Value key="471" value="6.465000,-22.462000,178.210000,-177.000000,0.178000,-173.227000," />
+      <Value key="472" value="8.080000,-22.697000,178.209000,-177.000000,0.222000,-171.522000," />
+      <Value key="473" value="9.694000,-22.985000,178.209000,-177.000000,0.268000,-169.810000," />
+      <Value key="474" value="11.306000,-23.328000,178.208000,-177.000000,0.313000,-168.089000," />
+      <Value key="475" value="12.918000,-23.726000,178.207000,-177.000000,0.359000,-166.356000," />
+      <Value key="476" value="14.528000,-24.180000,178.206000,-177.000000,0.405000,-164.611000," />
+      <Value key="477" value="16.136000,-24.692000,178.205000,-177.000000,0.452000,-162.851000," />
+      <Value key="478" value="17.742000,-25.264000,178.204000,-177.000000,0.500000,-161.074000," />
+      <Value key="479" value="17.764000,-25.264000,175.802000,-177.000000,0.500000,-161.072000," />
+      <Value key="480" value="17.789000,-25.265000,173.204000,-177.000000,0.500000,-161.070000," />
+      <Value key="481" value="16.178000,-24.693000,173.205000,-177.000000,0.453000,-162.848000," />
+      <Value key="482" value="14.566000,-24.181000,173.206000,-177.000000,0.406000,-164.608000," />
+      <Value key="483" value="12.952000,-23.727000,173.207000,-177.000000,0.359000,-166.354000," />
+      <Value key="484" value="11.336000,-23.329000,173.208000,-177.000000,0.313000,-168.086000," />
+      <Value key="485" value="9.719000,-22.986000,173.209000,-177.000000,0.268000,-169.808000," />
+      <Value key="486" value="8.101000,-22.697000,173.209000,-177.000000,0.222000,-171.521000," />
+      <Value key="487" value="6.481000,-22.462000,173.210000,-177.000000,0.178000,-173.225000," />
+      <Value key="488" value="4.862000,-22.280000,173.210000,-177.000000,0.133000,-174.924000," />
+      <Value key="489" value="3.241000,-22.150000,173.210000,-177.000000,0.089000,-176.619000," />
+      <Value key="490" value="1.621000,-22.073000,173.211000,-177.000000,0.044000,-178.310000," />
+      <Value key="491" value="0.000000,-22.047000,173.211000,-177.000000,0.000000,180.000000," />
+      <Value key="492" value="-1.621000,-22.073000,173.211000,-177.000000,-0.044000,178.310000," />
+      <Value key="493" value="-3.241000,-22.151000,173.210000,-177.000000,-0.089000,176.619000," />
+      <Value key="494" value="-4.862000,-22.280000,173.210000,-177.000000,-0.133000,174.924000," />
+      <Value key="495" value="-6.481000,-22.462000,173.210000,-177.000000,-0.178000,173.225000," />
+      <Value key="496" value="-8.101000,-22.697000,173.209000,-177.000000,-0.222000,171.521000," />
+      <Value key="497" value="-9.719000,-22.986000,173.209000,-177.000000,-0.268000,169.808000," />
+      <Value key="498" value="-11.336000,-23.329000,173.208000,-177.000000,-0.313000,168.086000," />
+      <Value key="499" value="-12.952000,-23.727000,173.207000,-177.000000,-0.359000,166.354000," />
+      <Value key="500" value="-14.566000,-24.181000,173.206000,-177.000000,-0.406000,164.608000," />
+      <Value key="501" value="-16.178000,-24.693000,173.205000,-177.000000,-0.453000,162.848000," />
+      <Value key="502" value="-17.789000,-25.265000,173.204000,-177.000000,-0.500000,161.070000," />
+      <Value key="503" value="-17.808000,-25.264000,170.802000,-177.000000,-0.500000,161.072000," />
+      <Value key="504" value="-17.829000,-25.264000,168.204000,-177.000000,-0.500000,161.074000," />
+      <Value key="505" value="-16.227000,-24.696000,168.205000,-177.000000,-0.453000,162.838000," />
+      <Value key="506" value="-14.623000,-24.188000,168.206000,-177.000000,-0.406000,164.585000," />
+      <Value key="507" value="-13.017000,-23.736000,168.207000,-177.000000,-0.360000,166.317000," />
+      <Value key="508" value="-11.410000,-23.339000,168.208000,-177.000000,-0.314000,168.037000," />
+      <Value key="509" value="-9.801000,-22.997000,168.209000,-177.000000,-0.269000,169.746000," />
+      <Value key="510" value="-8.192000,-22.709000,168.209000,-177.000000,-0.224000,171.445000," />
+      <Value key="511" value="-6.581000,-22.473000,168.210000,-177.000000,-0.180000,173.137000," />
+      <Value key="512" value="-4.970000,-22.290000,168.210000,-177.000000,-0.136000,174.823000," />
+      <Value key="513" value="-3.358000,-22.158000,168.210000,-177.000000,-0.092000,176.505000," />
+      <Value key="514" value="-1.746000,-22.077000,168.211000,-177.000000,-0.048000,178.183000," />
+      <Value key="515" value="-0.672000,-22.051000,168.211000,-177.000000,-0.018000,179.301000," />
+      <Value key="516" value="0.134000,-22.047000,168.211000,-177.000000,0.004000,-179.860000," />
+      <Value key="517" value="1.747000,-22.077000,168.211000,-177.000000,0.048000,-178.183000," />
+      <Value key="518" value="3.358000,-22.158000,168.210000,-177.000000,0.092000,-176.505000," />
+      <Value key="519" value="4.970000,-22.290000,168.210000,-177.000000,0.136000,-174.823000," />
+      <Value key="520" value="6.581000,-22.473000,168.210000,-177.000000,0.180000,-173.137000," />
+      <Value key="521" value="8.192000,-22.709000,168.209000,-177.000000,0.224000,-171.445000," />
+      <Value key="522" value="9.801000,-22.997000,168.209000,-177.000000,0.269000,-169.746000," />
+      <Value key="523" value="11.410000,-23.339000,168.208000,-177.000000,0.314000,-168.037000," />
+      <Value key="524" value="13.017000,-23.736000,168.207000,-177.000000,0.360000,-166.317000," />
+      <Value key="525" value="14.623000,-24.188000,168.206000,-177.000000,0.406000,-164.585000," />
+      <Value key="526" value="16.227000,-24.696000,168.205000,-177.000000,0.453000,-162.838000," />
+      <Value key="527" value="17.829000,-25.264000,168.204000,-177.000000,0.500000,-161.074000," />
+      <Value key="528" value="17.852000,-25.264000,165.802000,-177.000000,0.500000,-161.072000," />
+      <Value key="529" value="17.876000,-25.265000,163.204000,-177.000000,0.500000,-161.070000," />
+      <Value key="530" value="16.270000,-24.697000,163.206000,-177.000000,0.453000,-162.834000," />
+      <Value key="531" value="14.661000,-24.188000,163.207000,-177.000000,0.406000,-164.582000," />
+      <Value key="532" value="13.051000,-23.736000,163.207000,-177.000000,0.360000,-166.314000," />
+      <Value key="533" value="11.439000,-23.340000,163.208000,-177.000000,0.314000,-168.034000," />
+      <Value key="534" value="9.827000,-22.998000,163.209000,-177.000000,0.269000,-169.744000," />
+      <Value key="535" value="8.213000,-22.709000,163.209000,-177.000000,0.224000,-171.444000," />
+      <Value key="536" value="6.598000,-22.473000,163.210000,-177.000000,0.180000,-173.136000," />
+      <Value key="537" value="4.983000,-22.290000,163.210000,-177.000000,0.136000,-174.822000," />
+      <Value key="538" value="3.367000,-22.158000,163.210000,-177.000000,0.092000,-176.504000," />
+      <Value key="539" value="1.751000,-22.077000,163.211000,-177.000000,0.048000,-178.183000," />
+      <Value key="540" value="0.673000,-22.051000,163.211000,-177.000000,0.018000,-179.301000," />
+      <Value key="541" value="-0.135000,-22.047000,163.211000,-177.000000,-0.004000,179.860000," />
+      <Value key="542" value="-1.751000,-22.077000,163.211000,-177.000000,-0.048000,178.183000," />
+      <Value key="543" value="-3.367000,-22.158000,163.210000,-177.000000,-0.092000,176.504000," />
+      <Value key="544" value="-4.983000,-22.290000,163.210000,-177.000000,-0.136000,174.822000," />
+      <Value key="545" value="-6.598000,-22.473000,163.210000,-177.000000,-0.180000,173.136000," />
+      <Value key="546" value="-8.213000,-22.709000,163.209000,-177.000000,-0.224000,171.444000," />
+      <Value key="547" value="-9.827000,-22.998000,163.209000,-177.000000,-0.269000,169.744000," />
+      <Value key="548" value="-11.439000,-23.340000,163.208000,-177.000000,-0.314000,168.034000," />
+      <Value key="549" value="-13.051000,-23.736000,163.207000,-177.000000,-0.360000,166.314000," />
+      <Value key="550" value="-14.661000,-24.188000,163.207000,-177.000000,-0.406000,164.582000," />
+      <Value key="551" value="-16.270000,-24.697000,163.206000,-177.000000,-0.453000,162.834000," />
+      <Value key="552" value="-17.876000,-25.265000,163.204000,-177.000000,-0.500000,161.070000," />
+      <Value key="553" value="-17.896000,-25.264000,160.802000,-177.000000,-0.500000,161.072000," />
+      <Value key="554" value="-17.917000,-25.264000,158.205000,-177.000000,-0.500000,161.074000," />
+      <Value key="555" value="-16.306000,-24.696000,158.206000,-177.000000,-0.453000,162.838000," />
+      <Value key="556" value="-14.694000,-24.188000,158.207000,-177.000000,-0.406000,164.585000," />
+      <Value key="557" value="-13.080000,-23.736000,158.208000,-177.000000,-0.360000,166.317000," />
+      <Value key="558" value="-11.465000,-23.339000,158.208000,-177.000000,-0.314000,168.037000," />
+      <Value key="559" value="-9.848000,-22.997000,158.209000,-177.000000,-0.269000,169.746000," />
+      <Value key="560" value="-8.231000,-22.709000,158.209000,-177.000000,-0.224000,171.445000," />
+      <Value key="561" value="-6.613000,-22.473000,158.210000,-177.000000,-0.180000,173.137000," />
+      <Value key="562" value="-4.994000,-22.290000,158.210000,-177.000000,-0.136000,174.823000," />
+      <Value key="563" value="-3.374000,-22.158000,158.210000,-177.000000,-0.092000,176.505000," />
+      <Value key="564" value="-1.755000,-22.077000,158.211000,-177.000000,-0.048000,178.183000," />
+      <Value key="565" value="-0.675000,-22.051000,158.211000,-177.000000,-0.018000,179.301000," />
+      <Value key="566" value="0.135000,-22.047000,158.211000,-177.000000,0.004000,-179.860000," />
+      <Value key="567" value="1.755000,-22.077000,158.211000,-177.000000,0.048000,-178.183000," />
+      <Value key="568" value="3.374000,-22.158000,158.210000,-177.000000,0.092000,-176.505000," />
+      <Value key="569" value="4.994000,-22.290000,158.210000,-177.000000,0.136000,-174.823000," />
+      <Value key="570" value="6.613000,-22.473000,158.210000,-177.000000,0.180000,-173.137000," />
+      <Value key="571" value="8.231000,-22.709000,158.209000,-177.000000,0.224000,-171.445000," />
+      <Value key="572" value="9.848000,-22.997000,158.209000,-177.000000,0.269000,-169.746000," />
+      <Value key="573" value="11.465000,-23.339000,158.208000,-177.000000,0.314000,-168.037000," />
+      <Value key="574" value="13.080000,-23.736000,158.208000,-177.000000,0.360000,-166.317000," />
+      <Value key="575" value="14.694000,-24.188000,158.207000,-177.000000,0.406000,-164.585000," />
+      <Value key="576" value="16.306000,-24.696000,158.206000,-177.000000,0.453000,-162.838000," />
+      <Value key="577" value="17.917000,-25.264000,158.205000,-177.000000,0.500000,-161.074000," />
+      <Value key="578" value="17.939000,-25.264000,155.803000,-177.000000,0.500000,-161.072000," />
+      <Value key="579" value="17.964000,-25.265000,153.205000,-177.000000,0.500000,-161.070000," />
+      <Value key="580" value="16.361000,-24.701000,153.206000,-177.000000,0.453000,-162.821000," />
+      <Value key="581" value="14.756000,-24.196000,153.207000,-177.000000,0.407000,-164.556000," />
+      <Value key="582" value="13.150000,-23.746000,153.208000,-177.000000,0.361000,-166.276000," />
+      <Value key="583" value="11.543000,-23.351000,153.208000,-177.000000,0.316000,-167.983000," />
+      <Value key="584" value="9.934000,-23.010000,153.209000,-177.000000,0.271000,-169.680000," />
+      <Value key="585" value="8.325000,-22.721000,153.209000,-177.000000,0.226000,-171.368000," />
+      <Value key="586" value="6.714000,-22.484000,153.210000,-177.000000,0.182000,-173.048000," />
+      <Value key="587" value="5.103000,-22.299000,153.210000,-177.000000,0.138000,-174.722000," />
+      <Value key="588" value="3.492000,-22.165000,153.210000,-177.000000,0.095000,-176.391000," />
+      <Value key="589" value="1.880000,-22.081000,153.211000,-177.000000,0.051000,-178.058000," />
+      <Value key="590" value="0.806000,-22.053000,153.211000,-177.000000,0.022000,-179.168000," />
+      <Value key="591" value="-0.269000,-22.048000,153.211000,-177.000000,-0.007000,179.723000," />
+      <Value key="592" value="-1.880000,-22.081000,153.211000,-177.000000,-0.051000,178.058000," />
+      <Value key="593" value="-3.492000,-22.165000,153.210000,-177.000000,-0.095000,176.391000," />
+      <Value key="594" value="-5.103000,-22.299000,153.210000,-177.000000,-0.138000,174.722000," />
+      <Value key="595" value="-6.714000,-22.484000,153.210000,-177.000000,-0.182000,173.048000," />
+      <Value key="596" value="-8.325000,-22.721000,153.209000,-177.000000,-0.226000,171.368000," />
+      <Value key="597" value="-9.934000,-23.010000,153.209000,-177.000000,-0.271000,169.680000," />
+      <Value key="598" value="-11.543000,-23.351000,153.208000,-177.000000,-0.316000,167.983000," />
+      <Value key="599" value="-13.150000,-23.746000,153.208000,-177.000000,-0.361000,166.276000," />
+      <Value key="600" value="-14.756000,-24.196000,153.207000,-177.000000,-0.407000,164.556000," />
+      <Value key="601" value="-16.361000,-24.701000,153.206000,-177.000000,-0.453000,162.821000," />
+      <Value key="602" value="-17.964000,-25.265000,153.205000,-177.000000,-0.500000,161.070000," />
+      <Value key="603" value="-17.983000,-25.264000,150.803000,-177.000000,-0.500000,161.072000," />
+      <Value key="604" value="-18.004000,-25.264000,148.205000,-177.000000,-0.500000,161.074000," />
+      <Value key="605" value="-16.397000,-24.700000,148.206000,-177.000000,-0.453000,162.825000," />
+      <Value key="606" value="-14.789000,-24.195000,148.207000,-177.000000,-0.407000,164.559000," />
+      <Value key="607" value="-13.179000,-23.745000,148.208000,-177.000000,-0.361000,166.279000," />
+      <Value key="608" value="-11.568000,-23.350000,148.208000,-177.000000,-0.316000,167.986000," />
+      <Value key="609" value="-9.956000,-23.009000,148.209000,-177.000000,-0.271000,169.682000," />
+      <Value key="610" value="-8.343000,-22.721000,148.209000,-177.000000,-0.226000,171.369000," />
+      <Value key="611" value="-6.729000,-22.484000,148.210000,-177.000000,-0.182000,173.049000," />
+      <Value key="612" value="-5.115000,-22.299000,148.210000,-177.000000,-0.138000,174.723000," />
+      <Value key="613" value="-3.500000,-22.165000,148.210000,-177.000000,-0.095000,176.392000," />
+      <Value key="614" value="-1.885000,-22.081000,148.211000,-177.000000,-0.051000,178.058000," />
+      <Value key="615" value="-0.808000,-22.053000,148.211000,-177.000000,-0.022000,179.168000," />
+      <Value key="616" value="0.269000,-22.048000,148.211000,-177.000000,0.007000,-179.723000," />
+      <Value key="617" value="1.885000,-22.081000,148.211000,-177.000000,0.051000,-178.058000," />
+      <Value key="618" value="3.500000,-22.165000,148.210000,-177.000000,0.095000,-176.392000," />
+      <Value key="619" value="5.115000,-22.299000,148.210000,-177.000000,0.138000,-174.723000," />
+      <Value key="620" value="6.729000,-22.484000,148.210000,-177.000000,0.182000,-173.049000," />
+      <Value key="621" value="8.343000,-22.721000,148.209000,-177.000000,0.226000,-171.369000," />
+      <Value key="622" value="9.956000,-23.009000,148.209000,-177.000000,0.271000,-169.682000," />
+      <Value key="623" value="11.568000,-23.350000,148.208000,-177.000000,0.316000,-167.986000," />
+      <Value key="624" value="13.179000,-23.745000,148.208000,-177.000000,0.361000,-166.278000," />
+      <Value key="625" value="14.789000,-24.195000,148.207000,-177.000000,0.407000,-164.559000," />
+      <Value key="626" value="16.397000,-24.700000,148.206000,-177.000000,0.453000,-162.825000," />
+      <Value key="627" value="18.004000,-25.264000,148.205000,-177.000000,0.500000,-161.074000," />
+      <Value key="628" value="18.027000,-25.264000,145.803000,-177.000000,0.500000,-161.072000," />
+      <Value key="629" value="18.051000,-25.265000,143.205000,-177.000000,0.500000,-161.070000," />
+      <Value key="630" value="16.440000,-24.701000,143.206000,-177.000000,0.453000,-162.821000," />
+      <Value key="631" value="14.827000,-24.196000,143.207000,-177.000000,0.407000,-164.556000," />
+      <Value key="632" value="13.213000,-23.746000,143.208000,-177.000000,0.361000,-166.276000," />
+      <Value key="633" value="11.598000,-23.351000,143.208000,-177.000000,0.316000,-167.983000," />
+      <Value key="634" value="9.981000,-23.009000,143.209000,-177.000000,0.271000,-169.680000," />
+      <Value key="635" value="8.364000,-22.721000,143.209000,-177.000000,0.226000,-171.368000," />
+      <Value key="636" value="6.746000,-22.484000,143.210000,-177.000000,0.182000,-173.048000," />
+      <Value key="637" value="5.128000,-22.299000,143.210000,-177.000000,0.138000,-174.722000," />
+      <Value key="638" value="3.509000,-22.165000,143.210000,-177.000000,0.095000,-176.391000," />
+      <Value key="639" value="1.889000,-22.081000,143.211000,-177.000000,0.051000,-178.058000," />
+      <Value key="640" value="0.810000,-22.053000,143.211000,-177.000000,0.022000,-179.168000," />
+      <Value key="641" value="-0.270000,-22.048000,143.211000,-177.000000,-0.007000,179.723000," />
+      <Value key="642" value="-1.889000,-22.081000,143.211000,-177.000000,-0.051000,178.058000," />
+      <Value key="643" value="-3.509000,-22.165000,143.210000,-177.000000,-0.095000,176.391000," />
+      <Value key="644" value="-5.128000,-22.299000,143.210000,-177.000000,-0.138000,174.722000," />
+      <Value key="645" value="-6.746000,-22.484000,143.210000,-177.000000,-0.182000,173.048000," />
+      <Value key="646" value="-8.364000,-22.721000,143.209000,-177.000000,-0.226000,171.368000," />
+      <Value key="647" value="-9.981000,-23.010000,143.209000,-177.000000,-0.271000,169.680000," />
+      <Value key="648" value="-11.598000,-23.351000,143.208000,-177.000000,-0.316000,167.983000," />
+      <Value key="649" value="-13.213000,-23.746000,143.208000,-177.000000,-0.361000,166.276000," />
+      <Value key="650" value="-14.827000,-24.196000,143.207000,-177.000000,-0.407000,164.556000," />
+      <Value key="651" value="-16.440000,-24.701000,143.206000,-177.000000,-0.453000,162.821000," />
+      <Value key="652" value="-18.051000,-25.265000,143.205000,-177.000000,-0.500000,161.071000," />
+      <Value key="653" value="-18.070000,-25.264000,140.803000,-177.000000,-0.500000,161.072000," />
+      <Value key="654" value="-18.091000,-25.264000,138.205000,-177.000000,-0.500000,161.074000," />
+      <Value key="655" value="-16.537000,-24.720000,138.206000,-177.000000,-0.455000,162.760000," />
+      <Value key="656" value="-15.025000,-24.244000,138.207000,-177.000000,-0.412000,164.383000," />
+      <Value key="657" value="-13.512000,-23.816000,138.208000,-177.000000,-0.369000,165.993000," />
+      <Value key="658" value="-11.860000,-23.405000,138.208000,-177.000000,-0.322000,167.737000," />
+      <Value key="659" value="-10.207000,-23.049000,138.209000,-177.000000,-0.277000,169.469000," />
+      <Value key="660" value="-8.553000,-22.749000,138.209000,-177.000000,-0.231000,171.192000," />
+      <Value key="661" value="-6.899000,-22.502000,138.210000,-177.000000,-0.186000,172.906000," />
+      <Value key="662" value="-5.244000,-22.310000,138.210000,-177.000000,-0.141000,174.615000," />
+      <Value key="663" value="-3.588000,-22.170000,138.210000,-177.000000,-0.096000,176.318000," />
+      <Value key="664" value="-1.932000,-22.082000,138.211000,-177.000000,-0.052000,178.018000," />
+      <Value key="665" value="-0.828000,-22.053000,138.211000,-177.000000,-0.022000,179.151000," />
+      <Value key="666" value="0.276000,-22.048000,138.211000,-177.000000,0.007000,-179.717000," />
+      <Value key="667" value="1.932000,-22.082000,138.211000,-177.000000,0.052000,-178.018000," />
+      <Value key="668" value="3.588000,-22.170000,138.210000,-177.000000,0.096000,-176.318000," />
+      <Value key="669" value="5.244000,-22.310000,138.210000,-177.000000,0.141000,-174.615000," />
+      <Value key="670" value="6.899000,-22.502000,138.210000,-177.000000,0.186000,-172.906000," />
+      <Value key="671" value="8.553000,-22.749000,138.209000,-177.000000,0.231000,-171.192000," />
+      <Value key="672" value="10.207000,-23.049000,138.209000,-177.000000,0.277000,-169.469000," />
+      <Value key="673" value="11.860000,-23.405000,138.208000,-177.000000,0.322000,-167.737000," />
+      <Value key="674" value="13.512000,-23.816000,138.208000,-177.000000,0.369000,-165.993000," />
+      <Value key="675" value="15.025000,-24.244000,138.207000,-177.000000,0.412000,-164.383000," />
+      <Value key="676" value="16.537000,-24.720000,138.206000,-177.000000,0.455000,-162.759000," />
+      <Value key="677" value="18.091000,-25.264000,138.205000,-177.000000,0.500000,-161.074000," />
+      <Value key="678" value="18.114000,-25.264000,135.803000,-177.000000,0.500000,-161.072000," />
+      <Value key="679" value="18.138000,-25.265000,133.206000,-177.000000,0.500000,-161.071000," />
+      <Value key="680" value="16.531000,-24.705000,133.206000,-177.000000,0.454000,-162.809000," />
+      <Value key="681" value="14.922000,-24.203000,133.207000,-177.000000,0.408000,-164.530000," />
+      <Value key="682" value="13.312000,-23.755000,133.208000,-177.000000,0.362000,-166.238000," />
+      <Value key="683" value="11.701000,-23.362000,133.209000,-177.000000,0.317000,-167.933000," />
+      <Value key="684" value="10.089000,-23.021000,133.209000,-177.000000,0.273000,-169.617000," />
+      <Value key="685" value="8.476000,-22.733000,133.210000,-177.000000,0.228000,-171.293000," />
+      <Value key="686" value="6.862000,-22.495000,133.210000,-177.000000,0.185000,-172.961000," />
+      <Value key="687" value="5.248000,-22.309000,133.210000,-177.000000,0.141000,-174.623000," />
+      <Value key="688" value="3.634000,-22.172000,133.210000,-177.000000,0.097000,-176.280000," />
+      <Value key="689" value="2.019000,-22.086000,133.211000,-177.000000,0.054000,-177.934000," />
+      <Value key="690" value="0.673000,-22.051000,133.211000,-177.000000,0.018000,-179.312000," />
+      <Value key="691" value="-0.404000,-22.048000,133.211000,-177.000000,-0.011000,179.587000," />
+      <Value key="692" value="-2.019000,-22.086000,133.211000,-177.000000,-0.054000,177.934000," />
+      <Value key="693" value="-3.634000,-22.172000,133.210000,-177.000000,-0.097000,176.280000," />
+      <Value key="694" value="-5.248000,-22.309000,133.210000,-177.000000,-0.141000,174.623000," />
+      <Value key="695" value="-6.862000,-22.495000,133.210000,-177.000000,-0.185000,172.961000," />
+      <Value key="696" value="-8.476000,-22.733000,133.210000,-177.000000,-0.228000,171.293000," />
+      <Value key="697" value="-10.089000,-23.021000,133.209000,-177.000000,-0.273000,169.617000," />
+      <Value key="698" value="-11.701000,-23.362000,133.209000,-177.000000,-0.317000,167.933000," />
+      <Value key="699" value="-13.312000,-23.755000,133.208000,-177.000000,-0.362000,166.238000," />
+      <Value key="700" value="-14.922000,-24.203000,133.207000,-177.000000,-0.408000,164.530000," />
+      <Value key="701" value="-16.531000,-24.705000,133.206000,-177.000000,-0.454000,162.809000," />
+      <Value key="702" value="-18.138000,-25.265000,133.206000,-177.000000,-0.500000,161.071000," />
+      <Value key="703" value="-18.162000,-25.265000,130.659000,-177.000000,-0.500000,161.069000," />
+      <Value key="704" value="-16.552000,-24.706000,130.660000,-177.000000,-0.454000,162.808000," />
+      <Value key="705" value="-14.941000,-24.203000,130.661000,-177.000000,-0.408000,164.529000," />
+      <Value key="706" value="-13.329000,-23.755000,130.662000,-177.000000,-0.362000,166.237000," />
+      <Value key="707" value="-11.716000,-23.362000,130.662000,-177.000000,-0.317000,167.932000," />
+      <Value key="708" value="-10.102000,-23.021000,130.663000,-177.000000,-0.273000,169.617000," />
+      <Value key="709" value="-8.487000,-22.733000,130.663000,-177.000000,-0.228000,171.292000," />
+      <Value key="710" value="-6.871000,-22.495000,130.663000,-177.000000,-0.185000,172.960000," />
+      <Value key="711" value="-5.255000,-22.309000,130.664000,-177.000000,-0.141000,174.622000," />
+      <Value key="712" value="-3.638000,-22.172000,130.664000,-177.000000,-0.097000,176.280000," />
+      <Value key="713" value="-2.021000,-22.086000,130.664000,-177.000000,-0.054000,177.934000," />
+      <Value key="714" value="-0.674000,-22.051000,130.664000,-177.000000,-0.018000,179.312000," />
+      <Value key="715" value="0.404000,-22.048000,130.664000,-177.000000,0.011000,-179.587000," />
+      <Value key="716" value="2.021000,-22.086000,130.664000,-177.000000,0.054000,-177.934000," />
+      <Value key="717" value="3.638000,-22.172000,130.664000,-177.000000,0.097000,-176.280000," />
+      <Value key="718" value="5.255000,-22.309000,130.664000,-177.000000,0.141000,-174.622000," />
+      <Value key="719" value="6.871000,-22.495000,130.663000,-177.000000,0.185000,-172.960000," />
+      <Value key="720" value="8.487000,-22.733000,130.663000,-177.000000,0.228000,-171.292000," />
+      <Value key="721" value="10.102000,-23.021000,130.663000,-177.000000,0.273000,-169.617000," />
+      <Value key="722" value="11.716000,-23.362000,130.662000,-177.000000,0.317000,-167.932000," />
+      <Value key="723" value="13.329000,-23.755000,130.662000,-177.000000,0.362000,-166.237000," />
+      <Value key="724" value="14.941000,-24.203000,130.661000,-177.000000,0.408000,-164.529000," />
+      <Value key="725" value="16.552000,-24.706000,130.660000,-177.000000,0.454000,-162.807000," />
+      <Value key="726" value="18.162000,-25.265000,130.659000,-177.000000,0.500000,-161.069000," />
+      <Value key="727" value="18.185000,-25.266000,128.087000,-177.000000,0.500000,-161.069000," />
+      <Value key="728" value="16.573000,-24.706000,128.088000,-177.000000,0.454000,-162.807000," />
+      <Value key="729" value="14.960000,-24.203000,128.089000,-177.000000,0.408000,-164.529000," />
+      <Value key="730" value="13.346000,-23.755000,128.090000,-177.000000,0.362000,-166.236000," />
+      <Value key="731" value="11.731000,-23.362000,128.090000,-177.000000,0.317000,-167.932000," />
+      <Value key="732" value="10.114000,-23.021000,128.091000,-177.000000,0.273000,-169.616000," />
+      <Value key="733" value="8.497000,-22.733000,128.091000,-177.000000,0.228000,-171.292000," />
+      <Value key="734" value="6.880000,-22.495000,128.092000,-177.000000,0.185000,-172.960000," />
+      <Value key="735" value="5.261000,-22.309000,128.092000,-177.000000,0.141000,-174.622000," />
+      <Value key="736" value="3.643000,-22.172000,128.092000,-177.000000,0.097000,-176.280000," />
+      <Value key="737" value="2.024000,-22.086000,128.092000,-177.000000,0.054000,-177.934000," />
+      <Value key="738" value="0.675000,-22.051000,128.092000,-177.000000,0.018000,-179.312000," />
+      <Value key="739" value="-0.405000,-22.048000,128.092000,-177.000000,-0.011000,179.587000," />
+      <Value key="740" value="-2.024000,-22.086000,128.092000,-177.000000,-0.054000,177.934000," />
+      <Value key="741" value="-3.643000,-22.172000,128.092000,-177.000000,-0.097000,176.280000," />
+      <Value key="742" value="-5.261000,-22.309000,128.092000,-177.000000,-0.141000,174.622000," />
+      <Value key="743" value="-6.879000,-22.496000,128.092000,-177.000000,-0.185000,172.960000," />
+      <Value key="744" value="-8.497000,-22.733000,128.091000,-177.000000,-0.228000,171.292000," />
+      <Value key="745" value="-10.114000,-23.021000,128.091000,-177.000000,-0.273000,169.616000," />
+      <Value key="746" value="-11.731000,-23.362000,128.090000,-177.000000,-0.317000,167.932000," />
+      <Value key="747" value="-13.346000,-23.755000,128.090000,-177.000000,-0.362000,166.236000," />
+      <Value key="748" value="-14.960000,-24.203000,128.089000,-177.000000,-0.408000,164.529000," />
+      <Value key="749" value="-16.573000,-24.706000,128.088000,-177.000000,-0.454000,162.807000," />
+      <Value key="750" value="-18.185000,-25.266000,128.087000,-177.000000,-0.500000,161.069000," />
+      <Value key="751" value="-18.208000,-25.266000,125.490000,-177.000000,-0.500000,161.068000," />
+      <Value key="752" value="-16.594000,-24.706000,125.491000,-177.000000,-0.454000,162.806000," />
+      <Value key="753" value="-14.979000,-24.203000,125.491000,-177.000000,-0.408000,164.528000," />
+      <Value key="754" value="-13.363000,-23.756000,125.492000,-177.000000,-0.362000,166.236000," />
+      <Value key="755" value="-11.745000,-23.362000,125.493000,-177.000000,-0.317000,167.932000," />
+      <Value key="756" value="-10.127000,-23.021000,125.493000,-177.000000,-0.273000,169.616000," />
+      <Value key="757" value="-8.508000,-22.733000,125.494000,-177.000000,-0.228000,171.292000," />
+      <Value key="758" value="-6.888000,-22.496000,125.494000,-177.000000,-0.185000,172.960000," />
+      <Value key="759" value="-5.268000,-22.309000,125.494000,-177.000000,-0.141000,174.622000," />
+      <Value key="760" value="-3.647000,-22.172000,125.494000,-177.000000,-0.097000,176.280000," />
+      <Value key="761" value="-2.026000,-22.086000,125.495000,-177.000000,-0.054000,177.934000," />
+      <Value key="762" value="-0.675000,-22.051000,125.495000,-177.000000,-0.018000,179.312000," />
+      <Value key="763" value="0.405000,-22.048000,125.495000,-177.000000,0.011000,-179.587000," />
+      <Value key="764" value="2.026000,-22.086000,125.495000,-177.000000,0.054000,-177.934000," />
+      <Value key="765" value="3.647000,-22.172000,125.494000,-177.000000,0.097000,-176.280000," />
+      <Value key="766" value="5.268000,-22.309000,125.494000,-177.000000,0.141000,-174.622000," />
+      <Value key="767" value="6.888000,-22.496000,125.494000,-177.000000,0.185000,-172.960000," />
+      <Value key="768" value="8.508000,-22.733000,125.494000,-177.000000,0.228000,-171.292000," />
+      <Value key="769" value="10.127000,-23.021000,125.493000,-177.000000,0.273000,-169.616000," />
+      <Value key="770" value="11.745000,-23.362000,125.493000,-177.000000,0.317000,-167.931000," />
+      <Value key="771" value="13.363000,-23.756000,125.492000,-177.000000,0.362000,-166.236000," />
+      <Value key="772" value="14.979000,-24.203000,125.491000,-177.000000,0.408000,-164.528000," />
+      <Value key="773" value="16.594000,-24.706000,125.491000,-177.000000,0.454000,-162.806000," />
+      <Value key="774" value="18.208000,-25.266000,125.490000,-177.000000,0.500000,-161.068000," />
+      <Value key="775" value="18.225000,-25.264000,123.020000,-177.000000,0.500000,-161.073000," />
+      <Value key="776" value="16.610000,-24.705000,123.021000,-177.000000,0.454000,-162.811000," />
+      <Value key="777" value="14.993000,-24.202000,123.022000,-177.000000,0.408000,-164.532000," />
+      <Value key="778" value="13.375000,-23.755000,123.022000,-177.000000,0.362000,-166.240000," />
+      <Value key="779" value="11.756000,-23.361000,123.023000,-177.000000,0.317000,-167.935000," />
+      <Value key="780" value="10.136000,-23.021000,123.023000,-177.000000,0.273000,-169.619000," />
+      <Value key="781" value="8.515000,-22.732000,123.024000,-177.000000,0.228000,-171.294000," />
+      <Value key="782" value="6.894000,-22.495000,123.024000,-177.000000,0.185000,-172.962000," />
+      <Value key="783" value="5.273000,-22.309000,123.024000,-177.000000,0.141000,-174.623000," />
+      <Value key="784" value="3.650000,-22.172000,123.025000,-177.000000,0.097000,-176.281000," />
+      <Value key="785" value="2.028000,-22.086000,123.025000,-177.000000,0.054000,-177.935000," />
+      <Value key="786" value="0.676000,-22.051000,123.025000,-177.000000,0.018000,-179.312000," />
+      <Value key="787" value="-0.406000,-22.048000,123.025000,-177.000000,-0.011000,179.587000," />
+      <Value key="788" value="-2.028000,-22.086000,123.025000,-177.000000,-0.054000,177.935000," />
+      <Value key="789" value="-3.650000,-22.172000,123.025000,-177.000000,-0.097000,176.281000," />
+      <Value key="790" value="-5.273000,-22.309000,123.024000,-177.000000,-0.141000,174.623000," />
+      <Value key="791" value="-6.894000,-22.495000,123.024000,-177.000000,-0.185000,172.962000," />
+      <Value key="792" value="-8.515000,-22.732000,123.024000,-177.000000,-0.228000,171.294000," />
+      <Value key="793" value="-10.136000,-23.021000,123.023000,-177.000000,-0.273000,169.619000," />
+      <Value key="794" value="-11.756000,-23.361000,123.023000,-177.000000,-0.317000,167.935000," />
+      <Value key="795" value="-13.375000,-23.755000,123.022000,-177.000000,-0.362000,166.240000," />
+      <Value key="796" value="-14.993000,-24.202000,123.022000,-177.000000,-0.408000,164.533000," />
+      <Value key="797" value="-16.610000,-24.705000,123.021000,-177.000000,-0.454000,162.811000," />
+      <Value key="798" value="-18.225000,-25.264000,123.020000,-177.000000,-0.500000,161.073000," />
+    </Data>
+    <Data name="tTool" access="private" xsi:type="array" type="tool" size="1">
+      <Value key="0" fatherId="flange[0]" ioLink="valve1" />
+    </Data>
+    <Data name="sSocketout" access="public" xsi:type="array" type="sio" size="1" />
+  </Datas>
+</Database>

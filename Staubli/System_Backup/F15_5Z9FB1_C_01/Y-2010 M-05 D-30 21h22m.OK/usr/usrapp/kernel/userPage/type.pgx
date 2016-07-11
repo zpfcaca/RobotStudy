@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="type" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="pX" type="num" xsi:type="element" />
+      <Parameter name="pY" type="num" xsi:type="element" />
+      <Parameter name="pStr" type="string" xsi:type="element" />
+    </Parameters>
+    <Code><![CDATA[begin
+  //---------------------------------
+  //  S H O W   O N E   S T R I N G
+  //---------------------------------
+  // Display one string to pX column
+  // and pY Line
+  //
+  gotoxy(pX,pY)
+  put(pStr)
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

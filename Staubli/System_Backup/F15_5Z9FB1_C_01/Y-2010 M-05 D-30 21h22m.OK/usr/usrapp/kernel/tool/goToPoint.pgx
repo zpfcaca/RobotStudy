@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="goToPoint" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_nIndexGun" type="num" xsi:type="element" />
+    </Parameters>
+    <Code><![CDATA[begin
+  resetMotion()
+  if x_nIndexGun==0
+    movej(saveTool:rif2,saveTool:gun[x_nIndexGun],{25,25,25,9999,9999,off,50,50})
+  else
+    pPoint.trsf=position(saveTool:rif2,world)
+    pPoint.config={sfree,efree,wfree}
+    movej(pPoint,saveTool:gun[x_nIndexGun],{25,25,25,9999,9999,off,50,50})
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="here" access="public">
+    <Code><![CDATA[begin
+  saveTool:rif2=here(saveTool:gun[0],world)
+  saveTool:bCheck=true
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

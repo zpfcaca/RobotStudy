@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="stringtopoint" access="private" >
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1" >
+      <Parameter name="x_sString" type="string" use="value" xsi:type="element" dimensions="1" />
+      <Parameter name="x_nNum" type="num" use="value" xsi:type="element" dimensions="1" />
+    </Parameters>
+    <Locals>
+      <Local name="l_s" type="string" xsi:type="array" size="1" />
+      <Local name="l_btest" type="bool" xsi:type="array" size="1" />
+      <Local name="nX" type="num" xsi:type="array" size="1" />
+      <Local name="nY" type="num" xsi:type="array" size="1" />
+      <Local name="nZ" type="num" xsi:type="array" size="1" />
+      <Local name="nA" type="num" xsi:type="array" size="1" />
+      <Local name="nB" type="num" xsi:type="array" size="1" />
+      <Local name="nC" type="num" xsi:type="array" size="1" />
+      <Local name="l_pPointRx" type="pointRx" xsi:type="array" size="1" />
+      <Local name="tTrsf" type="trsf" xsi:type="array" size="1" />
+      <Local name="pChangeMid1" type="pointRx" xsi:type="array" size="1" />
+      <Local name="nP" type="num" xsi:type="array" size="1" />
+      <Local name="pChangeMid2" type="pointRx" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  l_s=x_sString
+  l_s=toNum(l_s,nX,l_btest)
+  l_s=toNum(l_s,nY,l_btest)
+  l_s=toNum(l_s,nZ,l_btest)
+  l_s=toNum(l_s,nA,l_btest)
+  l_s=toNum(l_s,nB,l_btest)
+  l_s=toNum(l_s,nC,l_btest)
+  l_s=toNum(l_s,nP,l_btest)
+  nPulse[x_nNum]=nP
+  pChange.trsf.x=nX
+  pChange.trsf.z=nZ
+  pChange.trsf.y=nY
+  ////  pChangeMid=compose(pChange,FrmDraw,{0,0,0,0,90,0})
+  ////  pfrmCad[x_nNum]=compose(pChangeMid,FrmDraw,{0,0,0,0,0,nC})
+  pChangeMid1=compose(pChange,FrmDraw,{0,0,0,nA,0,0})
+  pChangeMid2=compose(pChangeMid1,FrmDraw,{0,0,0,0,0,nB})
+  pfrmCad[x_nNum]=compose(pChangeMid2,FrmDraw,{0,0,0,nC,0,0})
+  pfrmCad[x_nNum].trsf.x=pChange.trsf.x
+  pfrmCad[x_nNum].trsf.z=pChange.trsf.z
+  pfrmCad[x_nNum].trsf.y=pChange.trsf.y
+  pChange[0].trsf={0,0,0,0,0,0}
+end]]></Code>
+  </Program>
+</Programs>

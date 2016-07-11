@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sio>
+  <serialPort>
+    <String name="name" value="portSerial1" />
+    <Uint name="channel" value="0" />
+    <Uint name="baudRate" value="9600" />
+    <Uint name="byteSize" value="8" />
+    <String name="parity" value="none" />
+    <Uint name="nbStopBit" value="2" />
+    <Int name="endOfString" value="13" />
+    <Float name="timeOut" value="5" />
+    <String name="comMode" value="RS232" />
+    <String name="flowControl" value="none" />
+  </serialPort>
+  <serialPort>
+    <String name="name" value="portSerial2" />
+    <Uint name="channel" value="1" />
+    <Uint name="baudRate" value="9600" />
+    <Uint name="byteSize" value="8" />
+    <String name="parity" value="none" />
+    <Uint name="nbStopBit" value="2" />
+    <Int name="endOfString" value="13" />
+    <Float name="timeOut" value="5" />
+    <String name="comMode" value="RS232" />
+    <String name="flowControl" value="none" />
+  </serialPort>
+  <socketClt>
+    <String name="name" value="CClient" />
+    <String name="desc" value="" />
+    <Inet name="serverIp" value="192.168.0.2" />
+    <Uint name="portNumber" value="5000" />
+    <Int name="endOfString" value="48" />
+    <Float name="timeOut" value="1" />
+    <Bool name="nagle" value="true" />
+  </socketClt>
+  <socketSrv>
+    <String name="name" value="CServerSocket" />
+    <String name="desc" value="" />
+    <Uint name="portNumber" value="5000" />
+    <Int name="endOfString" value="48" />
+    <Float name="timeOut" value="0.04" />
+    <Bool name="nagle" value="false" />
+  </socketSrv>
+</sio>

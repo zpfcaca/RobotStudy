@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onExit">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_bSave" type="bool" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_bYes" type="bool" xsi:type="array" size="1" />
+      <Local name="l_nResult" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  if x_bSave
+    // ask to save
+    //    call language:message(l_sMessage,-1)
+    //    call use:yes_no(l_sMessage,l_bYes)
+    //    if l_bYes
+    call tcp:save(l_nResult)
+    // send back the gun
+    //    endIf
+  endIf
+  // give back and update
+
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

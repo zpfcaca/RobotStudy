@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="stringToArray" access="public">
+    <Description><![CDATA[copy one String into an ARRAY of String]]></Description>
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sString" type="string" xsi:type="element" />
+      <Parameter name="x_sArray" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_nItem" type="num" xsi:type="array" size="1" />
+      <Local name="l_sChar" type="string" xsi:type="array" size="1" />
+      <Local name="l_sString" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // define the char use to divide the items
+  // PRIORITY
+  //  ^
+  //  ;
+  //  ,
+  //
+  if find(x_sString,"^")==-1
+    if find(x_sString,";")==-1
+      l_sChar=","
+    else
+      l_sChar=";"
+    endIf
+  else
+    l_sChar="^"
+  endIf
+  // init the X_sArray
+  l_sString=""
+  call stringCopy(l_sString,x_sArray)
+  l_nItem=0
+  do
+    // increase the ARRAY SIZE
+    if l_nItem>0
+      $dins(x_sArray,l_nItem)
+    endIf
+    i=find(x_sString,l_sChar)
+    // look if was found
+    if i!=-1
+      // PUT INSIDE THE ARRAY THE STRING
+      x_sArray[l_nItem]=left(x_sString,i)
+      x_sString=delete(x_sString,i+1,0)
+    else
+      // look if is empty or not
+      if len(x_sString)>0
+        x_sArray[l_nItem]=(x_sString)
+      endIf
+    endIf
+    l_nItem=l_nItem+1
+  until i==-1
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

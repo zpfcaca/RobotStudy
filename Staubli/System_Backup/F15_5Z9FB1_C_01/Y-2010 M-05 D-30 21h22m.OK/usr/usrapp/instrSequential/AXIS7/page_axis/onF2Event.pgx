@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF2Event">
+    <Locals>
+      <Local name="l_nSave" type="num" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_bYes" type="bool" xsi:type="array" size="1" />
+      <Local name="l_sButton" type="string" xsi:type="array" size="2" />
+    </Locals>
+    <Code><![CDATA[begin
+  // look if the bButton is enable
+  if bButton[1]
+    // save the current position
+    
+    ////    io:record=true
+    ////    delay(0.5)
+    ////    io:record=false
+    ////    call axis:setValue(aioGet(io:currentPulse),nIndex)
+    
+    if aioGet(MbAI_bMotorPowe)==1 and aioGet(MbAI_bBackHome)==1
+      l_sMessage="是否要记录当前位置"
+      call language:getYesNo(l_sButton)
+      call use:yes_no(l_sMessage,l_sButton,l_bYes)
+      if l_bYes
+        aioSet(MbAO_b7Axis,1)
+        aioSet(MbAO_bRecordPos,1)
+        delay(0.5)
+        aioSet(MbAO_bRecordPos,0)
+        aioSet(MbAO_b7Axis,0)
+        call axis:setValue(aioGet(MbAI_aCurPosL),nIndex,aioGet(MbAI_aCurPosH))
+        l_nSave=axis:libSave()
+        if l_nSave==0
+          call use:timerDialog("当前位置记录成功",1)
+        else
+          call use:timerDialog("当前位置记录不成功",1)
+        endIf
+      endIf
+    else
+      if aioGet(MbAI_bBackHome)==0
+        call use:timerDialog("7轴未回零位",1)
+        return
+      endIf
+      if aioGet(MbAI_bMotorPowe)==0
+        call use:timerDialog("7轴未上电",1)
+        return
+      endIf
+    endIf
+    //
+  endIf
+end]]></Code>
+  </Program>
+</Programs>

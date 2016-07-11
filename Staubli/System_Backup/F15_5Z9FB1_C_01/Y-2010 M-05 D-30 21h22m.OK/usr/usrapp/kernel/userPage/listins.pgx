@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="listins" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItems" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_nPos" type="num" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // Staubli Copyright 2005
+  //
+  l_nSize=size(sItems)-1
+  if ((x_nPos>=0) and (x_nPos<=l_nSize))
+    for i=0 to (size(x_sItems)-1)
+      if size(sItems)!=1 or sItems!=""
+        $dins(sItems,x_nPos+i)
+        $dins(bReadWrite,x_nPos+i)
+      endIf
+      sItems[x_nPos+i]=x_sItems[i]
+      // for default the RW is true
+      bReadWrite[x_nPos+i]=true
+    endFor
+  else
+    call listadd(x_sItems)
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

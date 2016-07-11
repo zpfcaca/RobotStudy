@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="refresh">
+    <Description><![CDATA[// page refresh]]></Description>
+    <Code><![CDATA[
+begin
+  
+  // refresh the static message
+  if (nKey>=270 and nKey<=278) or use:bUseRefresh
+    call refreshStatic()
+    call refreshDynamic()
+  else
+    // refresh the Dynamic message
+    if (clock()-nRefresh>nTime)
+      call refreshDynamic()
+    endIf
+  endIf
+  // release the resource
+  delay(0)
+end
+            
+      ]]></Code>
+  </Program>
+</Programs>

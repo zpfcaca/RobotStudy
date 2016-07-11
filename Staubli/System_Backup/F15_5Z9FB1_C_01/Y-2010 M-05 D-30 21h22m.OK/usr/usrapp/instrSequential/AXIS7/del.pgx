@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="del" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_nIndex" type="num" xsi:type="element" />
+    </Parameters>
+    <Code><![CDATA[begin
+  //delete(saveAxis[x_nIndex])
+  if size(nSaveaxis)>1
+    $ddel(nSaveaxis,x_nIndex)
+    $ddel(nSaveaxis1,x_nIndex)
+    $ddel(sSaveaxis,x_nIndex)
+    $ddel(nVelocity,x_nIndex)
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

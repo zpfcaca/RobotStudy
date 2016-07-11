@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="main" access="public">
+    <Locals>
+      <Local name="l_bSave" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // INIT
+  call onStart()
+  // LOOP UNTIL nKey=255
+  do
+    call refresh()
+    nKey=getKey()
+    call use:listevent(nKey,nIndex,sEvent)
+    nView=use:nView
+    nSelected=nIndex
+    if isKeyPressed(271)
+      call onF1Event()
+    else
+      aioSet(MbAO_bMoveDirM,0)
+      aioSet(MbAO_b7Axis,0)
+      //logMsg("2")
+    endIf
+    if isKeyPressed(278)
+      call onF8Event()
+    else
+      aioSet(MbAO_bMoveDir,0)
+      aioSet(MbAO_b7Axis,0)
+      //logMsg("3")
+    endIf
+    
+    switch nKey
+      case 263
+        // backSpace
+        call onBackSpace(l_bSave)
+      break
+      case 259
+        // TAB
+        bLarge=!bLarge
+        call use:setView(bLarge)
+      break
+     // case 271
+     //   call onF1Event()
+     // break
+      case 272
+          call onF2Event()
+      break
+      case 273
+          call onF3Event()
+      break
+      case 274
+        call onF4Event()
+      break
+      case 275,32
+        call onF5Event(l_bSave)
+      break
+      case 276
+        call onF6Event(l_bSave)
+      break
+      case 277
+        call onF7Event(l_bSave)
+      break
+    //  case 278
+     //   call onF8Event(l_bSave)
+    //  break
+      case 270
+        call onEnterEvent(l_bSave)
+      break
+      
+      default
+        call onDefault()
+      break
+    endSwitch
+    // release the resource
+    delay(0)
+  until nKey==255
+  // on Exit
+  call onExit(l_bSave)
+end
+]]></Code>
+  </Program>
+</Programs>

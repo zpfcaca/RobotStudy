@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF2Event">
+    <Code><![CDATA[begin
+  // look if the bButton is enable
+  if bButton[1]
+    //
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="RobotMotion" access="private" >
+    <Locals>
+      <Local name="nNummove" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  movej(pfrmCad[0],tTool,mNomSpeed)
+  waitEndMove()
+  bSignal=true
+  nNummove=0
+
+  do
+    movej(pfrmCad[nNummove],tTool,mNomSpeed)
+    nNumrecord=nNumrecord+1
+
+    if nNummove==600
+      bTxt1=true
+    endIf
+    if nNummove==1100
+      bTxt2=true
+    endIf
+    if nNummove==100
+      bTxt3=true
+    endIf
+    delay(0)
+    if nNummove==1499
+      nNummove=0
+    else
+      nNummove=nNummove+1
+    endIf
+  until nNumrecord==nNumTotal
+  waitEndMove()
+  bSignal=false
+  taskKill("PositionTrigger")
+  ndelay=clock()-ntime
+end]]></Code>
+  </Program>
+</Programs>

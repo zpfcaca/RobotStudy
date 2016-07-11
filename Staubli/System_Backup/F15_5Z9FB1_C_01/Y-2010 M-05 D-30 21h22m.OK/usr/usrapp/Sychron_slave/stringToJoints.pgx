@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="stringToJoints" access="private" >
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1" >
+      <Parameter name="x_sStr" type="string" use="value" xsi:type="element" dimensions="1" />
+      <Parameter name="x_jTemp" type="joint" use="reference" xsi:type="array" dimensions="1" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sX" type="string" xsi:type="array" size="1" />
+      <Local name="l_sY" type="string" xsi:type="array" size="1" />
+      <Local name="l_nPosX" type="num" xsi:type="array" size="1" />
+      <Local name="l_nPosY" type="num" xsi:type="array" size="1" />
+      <Local name="l_bOk" type="bool" xsi:type="array" size="1" />
+      <Local name="l_nPosZ" type="num" xsi:type="array" size="1" />
+      <Local name="l_sZ" type="string" xsi:type="array" size="1" />
+      <Local name="l_bTemp" type="bool" xsi:type="array" size="1" />
+      <Local name="l_ni" type="num" xsi:type="array" size="1" />
+      <Local name="l_sRX" type="string" xsi:type="array" size="1" />
+      <Local name="l_sRY" type="string" xsi:type="array" size="1" />
+      <Local name="l_sRZ" type="string" xsi:type="array" size="1" />
+      <Local name="l_nPosRX" type="num" xsi:type="array" size="1" />
+      <Local name="l_nPosRY" type="num" xsi:type="array" size="1" />
+      <Local name="l_nPosRZ" type="num" xsi:type="array" size="1" />
+      <Local name="l_nDbg" type="num" xsi:type="array" size="1" />
+      <Local name="l_ptest" type="point" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //  l_sX=mid(x_sStr,7,13)
+  //  call FC_chrdeal(l_sX)
+  //  l_sY=mid(x_sStr,7,23)
+  //  call FC_chrdeal(l_sY)
+  //  l_sZ=mid(x_sStr,7,33)
+  //  call FC_chrdeal(l_sZ)
+  //  l_sRX=mid(x_sStr,7,43)
+  //  call FC_chrdeal(l_sRX)
+  //  l_sRY=mid(x_sStr,7,53)
+  //  call FC_chrdeal(l_sRY)
+  //  l_sRZ=mid(x_sStr,7,63)
+  //  call FC_chrdeal(l_sRZ)
+  //  toNum(l_sX,l_nPosX,l_bOk)
+  //  toNum(l_sY,l_nPosY,l_bOk)
+  //  toNum(l_sZ,l_nPosZ,l_bOk)
+  //  toNum(l_sRX,l_nPosRX,l_bOk)
+  //  toNum(l_sRY,l_nPosRY,l_bOk)
+  //  toNum(l_sRZ,l_nPosRZ,l_bOk)
+  //
+  //  MoveTo.trsf.x=l_nPosX
+  //  MoveTo.trsf.y=l_nPosY
+  //  MoveTo.trsf.z=l_nPosZ
+  //  MoveTo.trsf.rx=l_nPosRX
+  //  MoveTo.trsf.ry=l_nPosRY
+  //  MoveTo.trsf.rz=l_nPosRZ
+  //  //MoveTo=position(l_ptest,FrmDraw)
+  //  l_bTemp=pointToJoint(tTool,jConfig,MoveTo,x_jTemp)
+  //  if l_bTemp==false
+  //    io:socket="(RBERRO)"
+  //    popUpMsg("wrong point position!!!")
+  //  endIf
+end]]></Code>
+  </Program>
+</Programs>

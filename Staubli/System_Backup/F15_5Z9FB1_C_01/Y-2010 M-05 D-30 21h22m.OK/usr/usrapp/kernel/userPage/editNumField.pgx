@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="editNumField" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sTitle" type="string" xsi:type="element" />
+      <Parameter name="x_sItemName" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_nItem" type="num" xsi:type="array" use="reference" />
+      <Parameter name="x_nMin" type="num" xsi:type="array" use="reference" />
+      <Parameter name="x_nMax" type="num" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="j" type="num" xsi:type="array" size="1" />
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+      <Local name="l_nKey" type="num" xsi:type="array" size="1" />
+      <Local name="l_sEvent" type="string" xsi:type="array" size="1" />
+      <Local name="l_nIndex" type="num" xsi:type="array" size="1" />
+      <Local name="l_nField" type="num" xsi:type="array" size="1" />
+      <Local name="l_sItem" type="string" xsi:type="array" size="1" />
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_sString" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // clear & copy
+  //
+  // nView=nFirst=0
+  //call listempty()
+  call numCopy(x_nItem,nOldValue)
+  call numCopy(x_nItem,nOffSet)
+  for j=0 to size(nOffSet)-1
+    nOffSet[j]=0
+  endFor
+  // take the size
+  l_nSize=size(x_nItem)-1
+  // create the LIST
+  call setSizeList(2,max((6-l_nSize/2)-2,2),34,min((l_nSize+1),8))
+  call listcreate(x_sTitle)
+  //
+  // insert items
+  //
+  for j=0 to l_nSize
+    l_sItem=x_sItemName[j]
+    if l_sItem!=""
+      call strlength(l_sItem,26)
+      call listadd(l_sItem+": "+toString(".1",x_nItem[j]))
+      nOffSet[j]=nOffSet[max(j-1,0)]
+    else
+      nOffSet[j]=nOffSet[max(j-1,0)]+1
+    endIf
+  endFor
+  // update the list
+  call listupdate(0)
+  do
+    call clear(0,13)
+    call typeMenu(8,"OK")
+    l_nKey=get()
+    call listevent(l_nKey,l_nIndex,l_sEvent)
+    // use the offset
+    i=l_nIndex+nOffSet[max(l_nIndex,0)]
+    // on Enter Key
+    if l_nKey==270
+      call listcursor(l_nIndex,false)
+      l_sString=""
+      if size(x_nMin)==size(x_nItem)
+        // use min and max
+        call changeValue(x_nItem[i],x_nMin[i],x_nMax[i],31,nView+nTopY+1,l_sString)
+      else
+        call changeValue(x_nItem[i],x_nMin,x_nMax,31,nView+nTopY+1,l_sString)
+      endIf
+      // UPDATE
+      call listdel(l_nIndex)
+      l_sItem=x_sItemName[i]
+      call strlength(l_sItem,26)
+      call listins(l_sItem+": "+toString(".1",x_nItem[i]),l_nIndex)
+      call listupdate(l_nIndex-nView)
+    endIf
+    delay(0)
+  until l_nKey==278 or l_nKey==255
+  // escape use????
+  if l_nKey==255
+    bUseEscape=true
+    call numCopy(nOldValue,x_nItem)
+  else
+    bUseEscape=false
+  endIf
+  // exit
+  call nullKey(l_nKey)
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

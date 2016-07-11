@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onF6Event">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_bSave" type="bool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sName" type="string" xsi:type="array" size="1" />
+      <Local name="l_nResult" type="num" xsi:type="array" size="1" />
+      <Local name="l_sSwap" type="string" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_bYes" type="bool" xsi:type="array" size="1" />
+      <Local name="l_sButton" type="string" xsi:type="array" size="2" />
+    </Locals>
+    <Code><![CDATA[begin
+  // look if the bButton is enable
+  if bButton[5]
+    //
+    // delete the selected ITEM
+    //
+    call axis:get(l_sName,nIndex)
+    if l_sName=="workPos"
+      call use:timerDialog("该点为系统所有，无法删除",1)
+      return
+    endIf
+      
+    if nIndex>=0
+      call axis:get(l_sName,nIndex)
+      if l_sName!=""
+        l_sSwap=l_sName="AXIS8>"+l_sName
+        
+        if l_nResult==0
+          
+          if l_nResult==0
+            //delete it
+            call language:message(l_sMessage,80)
+            call language:getYesNo(l_sButton)
+            call use:yes_no(l_sMessage,l_sButton,l_bYes)
+            if l_bYes
+              call axis:del(nIndex)
+              logMsg("[KERNEL] INTERFACE:Delete the AXIS8: "+sEvent+" at position: "+toString("",nIndex))
+              // for the refresh
+              if nIndex>0
+                nIndex=nIndex-1
+                if nIndex<nView
+                  nView=nIndex
+                endIf
+              endIf
+              nSelected=nIndex
+              call buildList()
+              call refreshStatic()
+              // save it
+              x_bSave=true
+            endIf
+          endIf
+        endIf
+        if l_nResult!=0
+          // TODO
+          call showExist(l_sName,l_sSwap)
+        endIf
+      endIf
+    endIf
+  endIf
+
+end]]></Code>
+  </Program>
+</Programs>

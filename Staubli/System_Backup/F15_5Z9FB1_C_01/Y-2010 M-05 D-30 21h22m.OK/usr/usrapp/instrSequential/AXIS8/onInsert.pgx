@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onInsert" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItem" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sItem" type="string" xsi:type="array" size="1" />
+      <Local name="l_sEvent" type="string" xsi:type="array" size="1" />
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+      <Local name="l_nKey" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // compose the string
+  // call getType(l_sItem)
+  // x_sItem=l_sItem+" ???"
+  //
+  // insert all the saveAxis value from the list
+  cls()
+  call language:message(l_sEvent,65)
+  call use:clear(0,13)
+  call use:typeCenter(13,l_sEvent,40,true)
+  x_sItem=""
+  call use:setSizeList(19,0,19,10)
+  call use:listcreate("AXIS8")
+  l_nSize=size(nSaveaxis)
+  for i=0 to l_nSize-1
+    l_sEvent=sSaveaxis[i]
+    call use:listadd(l_sEvent)
+  endFor
+  call use:listupdate(0)
+  do
+    l_nKey=getKey()
+    call use:listevent(l_nKey,i,l_sEvent)
+    delay(0)
+  until l_nKey==255 or l_nKey==270
+  if l_nKey==270
+    x_sItem="AXIS8>"+l_sEvent
+  endIf
+  call use:nullKey(l_nKey)
+  delay(0)
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

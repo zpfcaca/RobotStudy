@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="listevent" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="pkey" type="num" xsi:type="element" />
+      <Parameter name="pIndex" type="num" xsi:type="array" use="reference" />
+      <Parameter name="pItem" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="lVal" type="num" xsi:type="array" size="1" />
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+      <Local name="l_bEmpty" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // Toneage Staubli product
+  //
+  //
+  // get the item in the list and scroll it
+  //
+  call isListEmpty(l_bEmpty)
+  if !l_bEmpty
+    l_nSize=size(sItems)-1
+    // check the overFlow
+    l_nSize=size(sItems)-1
+    if (nFirst+nView>l_nSize)
+      // reset the value
+      nFirst=nView=0
+    endIf
+    // security...
+    switch (pkey)
+      //Up
+      case 261
+        if ((nView-1)>=0)
+          // no need to scroll only change cursor position
+          call listcursor(nView,false)
+          nView=nView-1
+          call listcursor(nView,true)
+          // print the scroll
+          //call printScroll()
+        else
+          if nView==0
+            // scroll up
+            if ((nFirst-1)>=0)
+              nFirst=nFirst-1
+              call listupdate(nFirst)
+            else
+              // go to the end
+              if nView+nFirst!=l_nSize
+                call listcursor(nView,false)
+                call selectNewField(l_nSize,nFirst+nView,nView)
+              endIf
+            endIf
+          endIf
+        endIf
+      break
+      //Down
+      case 266
+        if ((nView+nFirst+1)<size(sItems))
+          // no need to scroll only chenge cursor position
+          if ((nView+1)<nBottomY)
+            call listcursor(nView,false)
+            nView=nView+1
+            call listcursor(nView,true)
+            // print the scroll
+            //call printScroll()
+          else
+            // move UP
+            nFirst=nFirst+1
+            call listupdate(nFirst)
+          endIf
+        else
+          // go to the top
+          if !(nView==0 and nFirst==0)
+            call listcursor(nView,false)
+            nView=0
+            call listupdate(0)
+          endIf
+        endIf
+      break
+      //Page Up
+      case 262
+        if !(nView==0 and nFirst==0)
+          call listcursor(nView,false)
+          if ((nFirst+nView-nBottomY)>=0)
+            // move one page up
+            call selectNewField(nFirst+nView-nBottomY,nFirst+nView,nView)
+          else
+            // go to home
+            nView=0
+            call listupdate(0)
+          endIf
+        endIf
+      break
+      //Page Down
+      case 267
+        if nView+nFirst!=l_nSize
+          call listcursor(nView,false)
+          if ((nView+nFirst+nBottomY)<size(sItems)-1)
+            // move one page down
+            call selectNewField(nFirst+nView+nBottomY,nFirst+nView,nView)
+          else
+            // go to the end
+            call selectNewField(l_nSize,nFirst+nView,nView)
+          endIf
+        endIf
+      break
+      //End
+      case 269
+        if nView+nFirst!=l_nSize
+          // move to end
+          call listcursor(nView,false)
+          call selectNewField(l_nSize,nFirst+nView,nView)
+        endIf
+      break
+      //Home
+      case 265
+        if !(nView==0 and nFirst==0)
+          // move to home
+          call listcursor(nView,false)
+          nView=0
+          call listupdate(0)
+        endIf
+      break
+      default
+      break
+    endSwitch
+    pIndex=nFirst+nView
+    pItem=sItems[pIndex]
+    //
+  else
+    // reset the item
+    pItem=""
+    pIndex=0
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

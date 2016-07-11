@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device>
+	<SDDML_Version>
+		<MajorRevision>3</MajorRevision>
+		<MinorRevision>0</MinorRevision>
+	</SDDML_Version>
+	<DeviceInfo>
+		<UserName lang="en" />
+		<UserText lang="en" />
+	</DeviceInfo>
+	<FileInfo>
+		<MajorRevision>1</MajorRevision>
+		<MinorRevision>1</MinorRevision>
+	</FileInfo>
+	<DeviceStructure>
+		<SERCOSIII_Interface>
+			<DeviceType>
+				<Slave />
+			</DeviceType>
+			<SubDevice>
+				<SCP SERCOSIIIProfileRevisionNumber="1" ProfileName="SCP_VarCFG" />
+				<GDP SERCOSIIIProfileRevisionNumber="1" ProfileName="GDP_Basic">
+					<ElectronicLabel>
+						<VendorName>Staubli</VendorName>
+						<VendorCode>29472</VendorCode>
+						<DeviceName>unival_s3</DeviceName>
+						<DeviceID>unival_s3</DeviceID>
+					</ElectronicLabel>
+				</GDP>
+				<FSP SERCOSIIIProfileRevisionNumber="1" ProfileName="FSP_Drive" />
+			</SubDevice>
+			<SubDevice>
+				<SCP SERCOSIIIProfileRevisionNumber="1" ProfileName="SCP_VarCFG" />
+				<GDP SERCOSIIIProfileRevisionNumber="1" ProfileName="GDP_Basic">
+					<ElectronicLabel>
+						<VendorName>Staubli</VendorName>
+						<VendorCode>29472</VendorCode>
+						<DeviceName>unival_s3</DeviceName>
+						<DeviceID>unival_s3</DeviceID>
+					</ElectronicLabel>
+				</GDP>
+				<FSP SERCOSIIIProfileRevisionNumber="1" ProfileName="FSP_Drive" />
+			</SubDevice>
+			<SubDevice>
+				<SCP SERCOSIIIProfileRevisionNumber="1" ProfileName="SCP_VarCFG" />
+				<GDP SERCOSIIIProfileRevisionNumber="1" ProfileName="GDP_Basic">
+					<ElectronicLabel>
+						<VendorName>Staubli</VendorName>
+						<VendorCode>29472</VendorCode>
+						<DeviceName>unival_s3</DeviceName>
+						<DeviceID>unival_s3</DeviceID>
+					</ElectronicLabel>
+				</GDP>
+				<FSP SERCOSIIIProfileRevisionNumber="1" ProfileName="FSP_Drive" />
+			</SubDevice>
+			<SubDevice>
+				<SCP SERCOSIIIProfileRevisionNumber="1" ProfileName="SCP_VarCFG" />
+				<GDP SERCOSIIIProfileRevisionNumber="1" ProfileName="GDP_Basic">
+					<ElectronicLabel>
+						<VendorName>Staubli</VendorName>
+						<VendorCode>29472</VendorCode>
+						<DeviceName>unival_s3</DeviceName>
+						<DeviceID>unival_s3</DeviceID>
+					</ElectronicLabel>
+				</GDP>
+				<FSP SERCOSIIIProfileRevisionNumber="1" ProfileName="FSP_Drive" />
+			</SubDevice>
+			<SubDevice>
+				<SCP SERCOSIIIProfileRevisionNumber="1" ProfileName="SCP_VarCFG" />
+				<GDP SERCOSIIIProfileRevisionNumber="1" ProfileName="GDP_Basic">
+					<ElectronicLabel>
+						<VendorName>Staubli</VendorName>
+						<VendorCode>29472</VendorCode>
+						<DeviceName>unival_s3</DeviceName>
+						<DeviceID>unival_s3</DeviceID>
+					</ElectronicLabel>
+				</GDP>
+				<FSP SERCOSIIIProfileRevisionNumber="1" ProfileName="FSP_Drive" />
+			</SubDevice>
+			<SubDevice>
+				<SCP SERCOSIIIProfileRevisionNumber="1" ProfileName="SCP_VarCFG" />
+				<GDP SERCOSIIIProfileRevisionNumber="1" ProfileName="GDP_Basic">
+					<ElectronicLabel>
+						<VendorName>Staubli</VendorName>
+						<VendorCode>29472</VendorCode>
+						<DeviceName>unival_s3</DeviceName>
+						<DeviceID>unival_s3</DeviceID>
+					</ElectronicLabel>
+				</GDP>
+				<FSP SERCOSIIIProfileRevisionNumber="1" ProfileName="FSP_Drive" />
+			</SubDevice>
+			<ElectronicLabel>
+				<VendorName>Staubli</VendorName>
+				<VendorCode>29472</VendorCode>
+				<DeviceName>unival_s3</DeviceName>
+				<DeviceID>unival_s3</DeviceID>
+			</ElectronicLabel>
+		</SERCOSIII_Interface>
+	</DeviceStructure>
+</Device>

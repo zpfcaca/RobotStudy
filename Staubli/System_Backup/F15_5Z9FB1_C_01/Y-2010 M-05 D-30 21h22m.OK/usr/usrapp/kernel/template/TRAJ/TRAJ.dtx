@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Data/2">
+  <Datas>
+    <Data name="distance" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="moveType" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="1" />
+    </Data>
+    <Data name="nFrameIndex" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nGasPressure" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="90" />
+    </Data>
+    <Data name="nIndexGun" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="1" />
+    </Data>
+    <Data name="nLaserPower" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="60" />
+    </Data>
+    <Data name="nPWMPercent" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="100" />
+    </Data>
+    <Data name="nStop" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nTcpAction" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nTime" access="public" xsi:type="array" type="num" size="1" />
+    <Data name="nJointMode" access="public" xsi:type="array" type="num" size="1">
+      <Value key="0" value="1" />
+    </Data>
+    <Data name="comment" access="public" xsi:type="array" type="string" size="1">
+      <Value key="0" value="moveL" />
+    </Data>
+    <Data name="instruction" access="public" xsi:type="array" type="string" size="1" />
+    <Data name="toStop" access="public" xsi:type="array" type="bool" size="1" />
+    <Data name="fTrack" access="public" xsi:type="array" type="frame" size="1">
+      <Value key="0" fatherId="world[0]" />
+    </Data>
+    <Data name="pCircle" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" fatherId="fTrack[0]" />
+    </Data>
+    <Data name="pO" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" fatherId="world[0]" />
+    </Data>
+    <Data name="pX" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" fatherId="world[0]" />
+    </Data>
+    <Data name="pY" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" fatherId="world[0]" />
+    </Data>
+    <Data name="points" access="public" xsi:type="array" type="pointRx" size="1">
+      <Value key="0" wrist="wfree" fatherId="fTrack[0]" />
+    </Data>
+    <Data name="nom_speed" access="public" xsi:type="array" type="mdesc" size="1">
+      <Value key="0" accel="7.5" vel="50" decel="7.5" tmax="100" rmax="600" leave="1" reach="1" />
+    </Data>
+  </Datas>
+</Database>

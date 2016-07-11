@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="listupdate" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="pFirst" type="num" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="lI" type="num" xsi:type="array" size="1" />
+      <Local name="lLen" type="num" xsi:type="array" size="1" />
+      <Local name="lStr" type="string" xsi:type="array" size="1" />
+      <Local name="lStr2" type="string" xsi:type="array" size="1" />
+      <Local name="lValue" type="num" xsi:type="array" size="1" />
+      <Local name="lView" type="num" xsi:type="array" size="1" />
+      <Local name="lX" type="num" xsi:type="array" size="1" />
+      <Local name="lY" type="num" xsi:type="array" size="1" />
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+      <Local name="l_bEmpty" type="bool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // insert into the box all the data
+  //
+  // to prevent a negative value
+  if pFirst>=0
+    nFirst=pFirst
+  else
+    nFirst=0
+  endIf
+  // save the coordinate
+  lValue=nBottomY-1
+  // check the overFlow
+  l_nSize=size(sItems)-1
+  if (nFirst+nView>l_nSize)
+    // reset the value
+    nFirst=nView=0
+  endIf
+  lI=0
+  // check the unKnow poblem
+  if l_nSize<lValue
+    if nFirst!=0
+      nView=nView+nFirst
+      nFirst=0
+    endIf
+  endIf
+  do
+    lX=nTopX+1
+    lY=nBottomY+lI-1
+    lY=nTopY+lI+1
+    lLen=nBottomX
+    if ((lI+nFirst)<size(sItems))
+      // print the item
+      if (l_nSize>=0)
+        lStr=mid(sItems[(lI+nFirst)],lLen,0)
+      endIf
+    else
+      // print the blank line
+      lStr="                                        "
+    endIf
+    // fill the line
+    call strfill(lStr,lLen,lStr2)
+    gotoxy(lX,lY)
+    put(lStr2)
+    lI=lI+1
+  until (lI>lValue)
+  // underlien the actual line
+  call isListEmpty(l_bEmpty)
+  if !l_bEmpty
+    call listcursor(nView,true)
+  else
+    call listcursor(nView,false)
+    nView=0
+    nFirst=0
+  endIf
+  // print the scroll
+  call printScroll()
+  // leave the resourse
+  delay(0)
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

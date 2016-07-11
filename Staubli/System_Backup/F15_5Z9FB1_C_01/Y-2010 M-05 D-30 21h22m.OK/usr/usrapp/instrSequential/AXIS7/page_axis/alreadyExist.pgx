@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="alreadyExist">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sName" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_bUndo" type="bool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nX" type="num" xsi:type="array" size="1" />
+      <Local name="l_nY" type="num" xsi:type="array" size="1" />
+      <Local name="l_sString" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  l_nX=40-use:nBottomX
+  l_nY=use:nBottomY+1
+  call language:message(l_sString,21)
+  call use:type(l_nX,l_nY,l_sString)
+  call use:read(l_nX+len(l_sString),l_nY,x_sName,10,false)
+  if !use:bUseEscape
+    call axis:find(x_sName,x_bUndo)
+    if x_bUndo
+      call language:message(x_sName,-2)
+      popUpMsg(x_sName)
+    endIf
+  else
+    x_bUndo=true
+  endIf
+end]]></Code>
+  </Program>
+</Programs>

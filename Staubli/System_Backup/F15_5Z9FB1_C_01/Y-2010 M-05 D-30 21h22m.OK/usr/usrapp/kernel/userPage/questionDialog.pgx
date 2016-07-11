@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="questionDialog" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sMsg" type="string" xsi:type="element" />
+      <Parameter name="x_sButton" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_nResult" type="num" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="lExit" type="bool" xsi:type="array" size="1" />
+      <Local name="nLine" type="num" xsi:type="array" size="1" />
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="nStartLine" type="num" xsi:type="array" size="1" />
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //---------------------------------
+  //      D I A L O G    B O X
+  //---------------------------------
+  //
+  // Show one dialog box. with an confirm question
+  //
+  if watch(bShowDialog==false,2)==false
+    bShowDialog=false
+    logMsg("error dialog resoursing")
+    return
+  else
+    setMutex(bShowDialog)
+    //call listempty()
+    //
+    //
+    if x_sMsg!=""
+      call stringCopy(x_sMsg,sMessage)
+      call divideString(sMessage,nLine)
+      nStartLine=round(5-nLine/2)
+      // Start LINE
+      call type(0,nStartLine-2,"┌──────────────────────────────────────┐")
+      call type(0,nStartLine-1,"│                                      │")
+      // write the message
+      for i=0 to nLine
+        l_sMessage=sMessage[i]
+        call typeCenter(i+nStartLine,l_sMessage,38,false)
+        call type(0,nStartLine+i,"│"+l_sMessage+"│")
+      endFor
+      // end LINE
+      call type(0,nStartLine+nLine+1,"│                                      │")
+      call type(0,nStartLine+nLine+2,"└──────────────────────────────────────┘")
+    endIf
+    // write the button message
+    call clear(0,13)
+    for i=0 to size(x_sButton)-1
+      call typeMenu(8-i,x_sButton[i])
+    endFor
+    lExit=false
+    x_nResult=-100
+    do
+      nKey=get()
+      switch (nKey)
+        case 270
+          x_nResult=0
+        break
+        case 255
+          x_nResult=-1
+          bUseEscape=true
+        break
+        default
+          // look if the button press is defined
+          if (nKey>=271 and nKey<=278) and ((279-nKey)<=size(x_sButton))
+            if x_sButton[278-nKey]!=""
+              x_nResult=279-nKey
+            endIf
+          endIf
+        break
+      endSwitch
+      delay(0)
+    until (x_nResult!=-100)
+    //
+    call nullKey(nKey)
+    //
+    // release
+    bShowDialog=false
+    bUseRefresh=true
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

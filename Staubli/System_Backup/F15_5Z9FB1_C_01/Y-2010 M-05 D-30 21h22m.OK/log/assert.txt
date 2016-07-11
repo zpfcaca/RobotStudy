@@ -1,0 +1,13 @@
+Assertion failed tSoapClt : l_ret, file D:/ccm_liv/s7.7.2/noyau_db/u_util/src/u_fifo.cpp, line 165
+24 MAY 10 23:56:01
+0x02d19783 S_Task::entry(S_Task*)+0x41 : 0x045f1001 ([0x468b628, 0xffffffff, 0xeeeeeeee, 0xeeeeeeee, &vxTaskEntry])
+0x045f11f6 SoapServer::_SoapServer::_Task::Client::body()+0x1fe: soap_serve_SCSV3__moveL(soap *) ([0x468b65c, 0x3dca53c, 0x400, 0, 0])
+0x0464ebc4 soap_serve_SCSV3__moveL(soap *)+0xdc : SCSV3__moveL(soap *, int, SCSV3__Frame, SCSV3__MotionDesc, SCSV3__moveResponse  ([0x468b65c, 0, 0, 0xbff00000, 0x1])
+0x045fdb5c SCSV3__moveL(soap *, int, SCSV3__Frame, SCSV3__MotionDesc, SCSV3__moveResponse +0x19a: Staubli::Motion::MOT_Generator::pushStraightLine(const KIN_CartPos &, const Staubli::Motion::MOT_Descriptor  ([0x2baab30, 0x45d4a40, 0x45d4aa4, 0, 0x45d4f24])
+0x02e7e99d Staubli::Motion::MOT_Generator::pushStraightLine(const KIN_CartPos &, const Staubli::Motion::MOT_Descriptor +0x25 : 0x02e7e218 ([0x2baab30, 0x45d4aa8, 0, 0, 0])
+0x02e7e256 Staubli::Motion::MOT_Generator::initIfNecessary(const KIN_Set &)+0xd2 : Staubli::Motion::PreProc::_MOT_PreProcessor::pushFixedStartPnt(const U_Array<double> &, bool, const KIN_Set  ([0x2c71b40, 0x2baacd0, 0, 0x45d4aa8, 0x45d4aa4])
+0x02e8756e Staubli::Motion::PreProc::_MOT_PreProcessor::pushFixedStartPnt(const U_Array<double> &, bool, const KIN_Set +0x48 : U_Fifo::lock() ([0x2c71b60, 0x206, 0x246, 0x60a29a, 0x551a5b8])
+0x030a0930 U_Fifo::lock()+0x46 : S_assert(const char *, const char *, unsigned int) ([0x3102c52, 0x3102bc0, 0xa5, 0x1, 0])
+0x02d189d7 S_assert(const char *, const char *, unsigned int)+0x74 : _TtTask::trace(int, const char *, const char *, unsigned int, bool) ([0x327e8a0, 0x3d77848, 0x3102bc0, 0x3102c52, 0xa5])
+0x02d1895d _TtTask::trace(int, const char *, const char *, unsigned int, bool)+0x67 : S_MsgQ<_TtTask::TraceInfo>::send(const _TtTask::TraceInfo &, int, int) (0x327e8d4, 0x45d47c8, 0xffffffff, 0, 0, 0x79, 0x3d77848, 0x88, 0x3102bc0, 0x3dcaa20, 0x3102c52, 0xa5, 0x3102c01)
+0x031dd2c9 S_MsgQ<_TtTask::TraceInfo>::send(const _TtTask::TraceInfo &, int, int)+0x41 : msgQSend ([0x98d9d0, 0x45d47c8, 0x1c, 0xffffffff, 0])

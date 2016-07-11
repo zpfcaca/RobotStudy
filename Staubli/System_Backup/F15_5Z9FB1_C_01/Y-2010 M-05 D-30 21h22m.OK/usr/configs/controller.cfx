@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controller>
+  <String name="testMode" value="d9b636ae47271c00" />
+  <String name="mcpMode" value="4809c45fb6433653" />
+  <String name="VAL 3" value="fb44b42a5f7df0c1" />
+  <String name="uniVAL" value="c9f67d8f03f29b3a" />
+  <Bool name="buildBio" value="false" />
+  <Bool name="buildBio2" value="false" />
+  <Bool name="buildMio" value="false" />
+  <Bool name="buildCio" value="false" />
+  <String name="cioBoardConfig" value="" />
+  <Bool name="buildSerial1" value="true" />
+  <Bool name="buildSerial2" value="true" />
+  <Bool name="buildStarc2" value="false" />
+  <starc2Slot index="0"  board="" />
+  <starc2Slot index="1"  board="" />
+  <starc2Slot index="2"  board="" />
+  <uniVALparams>
+    <String name="config" value="axis" />
+    <String name="fieldbus" value="sercos3" />
+  </uniVALparams>
+  <String name="simulMode" value="real" />
+  <String name="serialNumber" value="F15_5Z9FB1_C_01" />
+  <Bool name="buttonWorkingMode" value="true" />
+  <Bool name="traceSignals" value="false" />
+  <Bool name="logging" value="true" />
+  <Float name="powerShutdownDelay" value="-1" />
+  <String name="standardFiles" value="" />
+  <Float name="lliCycleTime" value="-1" />
+  <Float name="powerHourCount" value="171.766305" />
+</controller>

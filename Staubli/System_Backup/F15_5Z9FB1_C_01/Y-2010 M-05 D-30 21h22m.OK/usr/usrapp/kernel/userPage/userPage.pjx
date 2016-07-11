@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://www.staubli.com/robotics/VAL3/Project/3">
+  <Parameters version="s7.2.1" stackSize="5000" millimeterUnit="true" />
+  <Programs>
+    <Program file="changeValue.pgx" />
+    <Program file="clear.pgx" />
+    <Program file="divideString.pgx" />
+    <Program file="editNumField.pgx" />
+    <Program file="findPos.pgx" />
+    <Program file="getListPosition.pgx" />
+    <Program file="getMenu.pgx" />
+    <Program file="getView.pgx" />
+    <Program file="insertDialog.pgx" />
+    <Program file="isListEmpty.pgx" />
+    <Program file="leftPos.pgx" />
+    <Program file="listadd.pgx" />
+    <Program file="listcreate.pgx" />
+    <Program file="listcursor.pgx" />
+    <Program file="listdel.pgx" />
+    <Program file="listempty.pgx" />
+    <Program file="listevent.pgx" />
+    <Program file="listframe.pgx" />
+    <Program file="listins.pgx" />
+    <Program file="listredraw.pgx" />
+    <Program file="listupdate.pgx" />
+    <Program file="midPos.pgx" />
+    <Program file="nullKey.pgx" />
+    <Program file="numCopy.pgx" />
+    <Program file="printScroll.pgx" />
+    <Program file="questionDialog.pgx" />
+    <Program file="read.pgx" />
+    <Program file="rightPos.pgx" />
+    <Program file="scroll.pgx" />
+    <Program file="selectNewField.pgx" />
+    <Program file="setCenter.pgx" />
+    <Program file="setMenu.pgx" />
+    <Program file="setSizeList.pgx" />
+    <Program file="setView.pgx" />
+    <Program file="showBoolStatus.pgx" />
+    <Program file="strfill.pgx" />
+    <Program file="strfillchr.pgx" />
+    <Program file="stringCopy.pgx" />
+    <Program file="stringToArray.pgx" />
+    <Program file="strlength.pgx" />
+    <Program file="timerDialog.pgx" />
+    <Program file="type.pgx" />
+    <Program file="typeCenter.pgx" />
+    <Program file="typeLen.pgx" />
+    <Program file="typeMenu.pgx" />
+    <Program file="yes_no.pgx" />
+    <Program file="yes_no_cancel.pgx" />
+  </Programs>
+  <Database>
+    <Data file="userPage.dtx" />
+  </Database>
+  <Libraries />
+</Project>

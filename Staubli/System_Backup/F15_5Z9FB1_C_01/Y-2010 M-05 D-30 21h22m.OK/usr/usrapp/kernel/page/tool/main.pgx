@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="main" access="public">
+    <Locals>
+      <Local name="l_tTool" type="tool" xsi:type="array" size="1" />
+      <Local name="l_nSize" type="num" xsi:type="array" size="1" />
+      <Local name="l_bSave" type="bool" xsi:type="array" size="1" />
+      <Local name="l_nStatus" type="num" xsi:type="array" size="1" />
+      <Local name="l_bToReset" type="bool" xsi:type="array" size="1" />
+      <Local name="l_bCalcolate" type="bool" xsi:type="array" size="1" />
+      <Local name="l_fNewWorld" type="frame" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // INIT
+  call onStart()
+  // LOOP UNTIL nKey=255
+  do
+    call tcp:getSize(l_nSize)
+    call tcp:getTool(l_tTool,nIndexTool)
+    call refresh()
+    if l_bCalcolate
+      $jogContext(l_tTool,world,0)
+      l_bCalcolate=false
+    endIf
+    nKey=getKey()
+    // tool setting
+
+    // list....
+    call use:listevent(nKey,nIndex,sEvent)
+    nView=use:nView
+    switch nKey
+      case 263
+        // BACKSPACE
+        call onBackSpace(l_tTool)
+        l_bCalcolate=true
+        l_bSave=true
+      break
+      case 264
+        // LEFT CLICK -1
+        if nIndexTool>0
+          nIndexTool=nIndexTool-1
+          l_bSave=true
+          l_bCalcolate=true
+        endIf
+      break
+      case 268
+        // RIGHT CLICK +1
+        if nIndexTool<l_nSize-1
+          nIndexTool=nIndexTool+1
+          l_bSave=true
+          l_bCalcolate=true
+        endIf
+      break
+      case 271
+        call onF1Event()
+      break
+      case 272
+        call onF2Event()
+      break
+      case 273
+        // HERE
+        call onF3Event(l_bSave)
+      break
+      case 274
+        // COMPUTE
+        call onF4Event(l_bSave)
+        l_bCalcolate=true
+      break
+      case 275
+        // MOVE
+        call onF5Event()
+      break
+      case 276
+        // DUPLICATE
+        call onF6Event(l_tTool.trsf,l_bSave)
+      break
+      case 277
+        // DELETE
+        call onF7Event(l_bSave)
+      break
+      case 278
+        // NEW
+        call onF8Event(l_bSave)
+      break
+      case 270
+        // USE ALSO BACKSPACE
+        // EDIT FIELD
+        call onEnterEvent(l_tTool)
+        l_bCalcolate=true
+        l_bSave=true
+      break
+    endSwitch
+    // release the resource
+    delay(0)
+  until nKey==255
+  // on Exit
+  $jogContext(l_tTool,world,0)
+  call onExit(l_bSave)
+end
+
+      
+]]></Code>
+  </Program>
+</Programs>

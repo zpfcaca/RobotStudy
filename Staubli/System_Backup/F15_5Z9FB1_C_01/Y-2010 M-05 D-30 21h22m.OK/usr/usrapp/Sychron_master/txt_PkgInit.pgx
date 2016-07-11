@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="txt_PkgInit" access="private" >
+    <Locals>
+      <Local name="l_config" type="bool" xsi:type="array" size="1" />
+      <Local name="l_jTemp1" type="joint" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  resetMotion()
+  call Txt_initData()
+
+
+  n_sTxt=0
+  call TxtReadRoom1()
+  if nTxtTotal>1
+    call TxtReadRoom2()
+  endIf
+  l_config=pointToJoint(tTool,jConfig,pfrmCad[0],jConfig)
+
+  bTxtPrSv=true
+  sScrPts="OK"
+  call hmi_refreshmain()
+end]]></Code>
+  </Program>
+</Programs>

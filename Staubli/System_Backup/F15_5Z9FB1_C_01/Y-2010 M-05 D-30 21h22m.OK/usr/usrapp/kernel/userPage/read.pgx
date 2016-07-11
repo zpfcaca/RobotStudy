@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="read" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="pX" type="num" xsi:type="element" />
+      <Parameter name="pY" type="num" xsi:type="element" />
+      <Parameter name="pMsg" type="string" xsi:type="array" use="reference" />
+      <Parameter name="pLen" type="num" xsi:type="element" />
+      <Parameter name="pCrypt" type="bool" xsi:type="element" />
+    </Parameters>
+    <Locals>
+      <Local name="lLen" type="num" xsi:type="array" size="1" />
+      <Local name="lExit" type="bool" xsi:type="array" size="1" />
+      <Local name="lBlk" type="bool" xsi:type="array" size="1" />
+      <Local name="l" type="num" xsi:type="array" size="1" />
+      <Local name="p" type="num" xsi:type="array" size="1" />
+      <Local name="lTps" type="num" xsi:type="array" size="1" />
+      <Local name="lMsg" type="string" xsi:type="array" size="1" />
+      <Local name="lView" type="string" xsi:type="array" size="1" />
+      <Local name="lStr" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //---------------------------------
+  //  R E A D   O N E   S T R I N G
+  //---------------------------------
+  // Read one string from the pX
+  // column and pY line
+  //
+  lTps=clock()
+  lMsg=pMsg
+  p=len(lMsg)
+  // cryptage
+  if pCrypt
+    do
+      l=len(lMsg)
+      nKey=getKey()
+      if ((clock()-lTps)>=0.5)
+        if lBlk==true
+          lBlk=false
+        else
+          lBlk=true
+        endIf
+        lTps=clock()
+      endIf
+      if (nKey>=32) and (nKey<=126)
+        if ((len(lMsg)+1)<=pLen)
+          lMsg=lMsg+chr(nKey)
+        endIf
+      else
+        if (nKey==263) and (len(lMsg)>0)
+          lMsg=mid(lMsg,len(lMsg)-1,0)
+        endIf
+      endIf
+      if (lStr!=lMsg)
+        call strfillchr(lMsg,lView,"*")
+        lStr=lMsg
+      endIf
+      if lBlk==true
+        call typeLen(pX,pY,lView+"|",pLen+1)
+      else
+        call typeLen(pX,pY,lView+" ",pLen+1)
+      endIf
+      //
+      // release the resource
+      delay(0)
+    until (nKey==270) or (nKey==255)
+  else
+    // normal read
+    // delete the old value
+    setTextMode(0)
+    call strfillchr(lMsg,lView," ")
+    call typeLen(pX,pY,lView,40-pX-1)
+    // read the new one
+    gotoxy(pX,pY)
+    get(lMsg)
+  endIf
+  // result
+  if isKeyPressed(270) or lMsg!=""
+    pMsg=lMsg
+  endIf
+  if isKeyPressed(255)
+    bUseEscape=true
+  else
+    bUseEscape=false
+  endIf
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

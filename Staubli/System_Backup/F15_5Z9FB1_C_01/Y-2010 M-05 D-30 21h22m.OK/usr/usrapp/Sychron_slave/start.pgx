@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2" >
+  <Program name="start" access="private" >
+    <Code><![CDATA[begin
+  call initCmdBuf()
+  call FC_InitData()
+  waitEndMove()
+  taskCreate "tcprec",100,TcpStrRec:SockRec(datar,ststu)
+  call InitSocket()
+
+  taskCreate "CmdManage",100,CmdManage()
+  taskCreate "HMI",99,HMI()
+  taskCreate "CmdDeal",99,CmdDealTest()
+  taskCreate "CmdTxtReading",85,CmdTxtReading()
+end]]></Code>
+  </Program>
+</Programs>

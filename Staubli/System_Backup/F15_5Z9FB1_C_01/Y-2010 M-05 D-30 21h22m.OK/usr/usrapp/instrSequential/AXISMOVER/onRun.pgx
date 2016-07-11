@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="onRun" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sItem" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nValue" type="num" xsi:type="array" size="1" />
+      <Local name="l_nVelocity" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //
+  // convert to a num
+
+  bAxisMove=true
+  aioSet(io:MbAO_b8Axis,1)
+  aioSet(io:MbAO_bMoveToPos,0)
+  toNum(x_sItem,l_nValue,true)
+  // NB the robot will no STOP
+//  aioSet(io:MbAI_bAxis8Reac,0)
+  delay(0.5)
+  l_nVelocity=speedScale()
+  l_nVelocity=700*l_nVelocity/100
+  l_nVelocity=round(l_nVelocity)
+  l_nValue=round(l_nValue)
+  aioSet(io:MbAO_aMovePosL8,0)
+  aioSet(io:MbAO_aMovePosH8,2.554265*l_nValue)
+  aioSet(io:MbAO_aMoveDis8,1)
+  aioSet(io:MbAO_aVelocity8,l_nVelocity)
+  aioSet(io:MbAO_bMovePos8,1)
+  delay(0.5)
+  wait(aioGet(io:MbAI_bAxis8Reac)==0)
+  wait(aioGet(io:MbAI_bAxis8Reac)==1)
+  aioSet(io:MbAO_bMovePos8,0)
+  aioSet(io:MbAO_aMoveDis8,0)
+  aioSet(io:MbAO_b8Axis,0)
+  bAxisMove=false
+end
+
+      ]]></Code>
+  </Program>
+</Programs>

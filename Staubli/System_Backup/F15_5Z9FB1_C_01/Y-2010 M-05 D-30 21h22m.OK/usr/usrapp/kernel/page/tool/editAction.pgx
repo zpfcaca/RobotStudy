@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="editAction">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sAction" type="string" xsi:type="array" use="reference" />
+      <Parameter name="x_bSave" type="bool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_sMessage" type="string" xsi:type="array" size="1" />
+      <Local name="l_sAction" type="string" xsi:type="array" size="3" />
+      <Local name="l_sInstruction" type="string" xsi:type="array" size="1" />
+      <Local name="l_bYes" type="bool" xsi:type="array" size="1" />
+      <Local name="i" type="num" xsi:type="array" size="1" />
+      <Local name="l_nKey" type="num" xsi:type="array" size="1" />
+      <Local name="l_nIndex" type="num" xsi:type="array" size="1" />
+      <Local name="l_sButton" type="string" xsi:type="array" size="2" />
+      <Local name="l_sString" type="string" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  // make a copy
+  call use:stringCopy(x_sAction,l_sAction)
+  // refresh
+  call refreshAction(l_nIndex,x_sAction)
+  // loop
+  do 
+    l_nKey=getKey()
+    l_sString=""
+    call use:listevent(l_nKey,l_nIndex,l_sString)
+    if l_nKey==270
+      //
+      //  edit the instruction
+      //
+      // insert a new one
+      if l_sAction[l_nIndex]==""
+        call insertInstr(l_sMessage)
+        if l_sMessage!=""
+          l_sAction[l_nIndex]=l_sMessage
+        endIf
+      else
+        // delete 
+        call language:message(l_sMessage,171)
+        // get the yes_no button
+        call language:getYesNo(l_sButton)
+        // ask the question 
+        call use:yes_no(l_sMessage,l_sButton,l_bYes)
+        if l_bYes
+          l_sAction[l_nIndex]=""
+        endIf
+      endIf
+      // copy back
+      l_sInstruction=""
+      if l_sAction[0]!="" or l_sAction[1]!="" or l_sAction[2]!=""
+        for i=0 to 1
+          l_sInstruction=l_sInstruction+l_sAction[i]+"^"
+        endFor
+        l_sInstruction=l_sInstruction+l_sAction[2]
+      endIf
+      // refresh
+      call refreshAction(l_nIndex,l_sAction)
+    endIf
+    delay(0)
+    // use left to go bak or escape to no validate
+  until l_nKey==264 or l_nKey==255 or l_nKey==278
+  //
+  if l_nKey!=255
+    x_bSave=true
+    call use:stringCopy(l_sAction,x_sAction)
+  endIf
+end
+]]></Code>
+  </Program>
+</Programs>
